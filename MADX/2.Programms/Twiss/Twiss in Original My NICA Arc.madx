@@ -1,0 +1,20 @@
+CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX/1.Sequences/Some elements";
+CALL FILE = "Original My NICA Arc.seq";
+OPTION, -ECHO;
+
+beam, MASS=2.32283962,CHARGE=1, ENERGY=13.54435861,
+      EX= 3.96e-005, EY=  3.1e-005, SIGE=   0.00156;
+
+ARC_begin: BETA0,
+	      BETX = 8.532621034, ALFX = -0.7302018781,
+      	BETY = 14.87943163, ALFY = 1.742740153,
+	      DX = 0.01627405869, DPX = -0.002545875821,
+	      DY = 0.08356336328, DPY = -0.008980419953;
+
+USE, SEQUENCE = ARC;
+CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX";
+
+twiss, BETA0 = ARC_begin, file=tbl/twiss_Arc_My_NICA.tbl;
+plot, haxis=s, vaxis=betx,bety,colour=100, style=100,file=img/twiss_plot_Arc_My_NICA;
+plot, haxis=s, vaxis=dx,dy,colour=100, style=100,file=img/twiss_plot_Arc_My_NICA;
+stop;
