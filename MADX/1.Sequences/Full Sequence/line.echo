@@ -3,40 +3,16 @@ enter Twiss module
 ++++++ table: summ
 
             length             orbit5               alfa            gammatr 
-            503.04                 -0      0.01991272251        7.086547119 
+            505.78                 -0                  0                  0 
 
                 q1                dq1            betxmax              dxmax 
-       9.439999863      -0.6467454473         144.746688        2.584971437 
+       9.794340865                  0        210.4834948        6.213513075 
 
              dxrms             xcomax             xcorms                 q2 
-       1.522165558                  0                  0        9.440028134 
+       2.044751637                  0                  0          9.4511844 
 
                dq2            betymax              dymax              dyrms 
-        -1.3667977         145.629967       0.1912205332      0.07107115019 
-
-            ycomax             ycorms             deltap            synch_1 
-                 0                  0                  0                  0 
-
-           synch_2            synch_3            synch_4            synch_5 
-                 0                  0                  0                  0 
-
-            nflips 
-                 0 
-enter Twiss module
-
-++++++ table: summ
-
-            length             orbit5               alfa            gammatr 
-            503.04                 -0      0.01991272251        7.086547119 
-
-                q1                dq1            betxmax              dxmax 
-       9.439999863      -0.6467454473         144.746688        2.584971437 
-
-             dxrms             xcomax             xcorms                 q2 
-       1.522165558                  0                  0        9.440028134 
-
-               dq2            betymax              dymax              dyrms 
-        -1.3667977         145.629967       0.1912205332      0.07107115019 
+                 0        244.5122101       0.8523718627       0.2109552645 
 
             ycomax             ycorms             deltap            synch_1 
                  0                  0                  0                  0 

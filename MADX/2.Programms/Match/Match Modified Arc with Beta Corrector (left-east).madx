@@ -1,0 +1,30 @@
+CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX/1.Sequences/Some elements";
+CALL FILE = "Modified My NICA Arc + Beta Corrector (east).seq";
+
+beam, MASS=2.32283962,CHARGE=1, ENERGY=13.54435861,
+      EX= 3.96e-005, EY=  3.1e-005, SIGE=   0.00156;
+
+CORRECTOR_BEGIN: BETA0,
+	      BETX = 12.79267075, ALFX = 3.093126,
+      	BETY = 10.33139667, ALFY = -2.987678476,
+	      DX = -0.04241762475, DPX = -0.005990881446,
+	      DY = 0.09490704754, DPY = -0.001667639293;
+
+
+CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX";
+
+USE, SEQUENCE = BETA_CORRECTOR;
+MATCH, SEQUENCE=BETA_CORRECTOR, BETA0=CORRECTOR_BEGIN;
+
+CONSTRAINT, SEQUENCE=BETA_CORRECTOR, range=#e,
+	    			BETX = 11.190241268, ALFX = 0.0,
+      	    BETY = 15.95727477, ALFY = 0.0,
+				    DX = 0.0, DPX = 0.0,
+	     			DY = 0.0, DPY = 0.0;
+vary,name=Q5E2->K1,step=1.0e-5;
+vary,name=Q6E2->K1,step=1.0e-5;
+
+LMDIF,calls=1000,tolerance=1.e-29;
+endmatch,knobfile='knobs.tfs';
+
+stop;
