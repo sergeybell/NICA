@@ -8,7 +8,6 @@ beam, MASS=2.32283962,CHARGE=1, ENERGY=13.54435861,
 USE, SEQUENCE = MACHINE;
 CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX";
 
-twiss;
 twiss, file=tbl/twiss_full_NICA.tbl;
 plot, haxis=s, vaxis=betx,bety,colour=100, style=100,file=img/twiss_plot_full_NICA;
 plot, haxis=s, vaxis=dx,dy,colour=100, style=100,file=img/twiss_plot_full_NICA;
