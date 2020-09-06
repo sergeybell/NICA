@@ -500,10 +500,10 @@ $BV4E="H_BV1 BV4E H_BV1";
 OptiM
 Energy[MeV]=$W*$A/$Z  Mass[MeV]=$NMASS*$A/$Z
 Emittances:         ex[cm]=$EmitX            ey[cm]=$EmitY            DP/P=$dp_p
-Initial:            BetaX[cm]=853.2621034   BetaY[cm]=1487.943163
-                    AlfaX=-0.7302018781  AlfaY=1.742740153
-                    DispX[cm]=0.1627405869 DispY[cm]=0.8356336328
-                    DispPX=-0.002545875821  DispPY=-0.008980419953
+Initial:            BetaX[cm]=1135.61   BetaY[cm]=1593.53
+                    AlfaX=0.0  AlfaY=0.0
+                    DispX[cm]=0.0 DispY[cm]=0.0
+                    DispPX=0.0  DispPY=0.0
 X[cm]=0             Y[cm]=0             Z[cm]=0             S[cm]=0
 tetaX[deg]=0        tetaY[deg]=0
 
