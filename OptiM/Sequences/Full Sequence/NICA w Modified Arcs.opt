@@ -580,7 +580,7 @@ begin list
 HD	Ax[cm]=6.04	Ay[cm]=3.535	Shape=1	OffsetX[cm]=0.	OffsetY[cm]=0.	Tilt[deg]=0.
 MB2L	Order:	m=2	Bm*L[kG/cm^(m-1)]=$B2L	Tilt[deg]=0.
 G	B[kG]=$BM_B*$BV_FLAG	Angle[deg]=$PHI	EffLen[cm]=$BM_HGAP	Tilt[deg]=0.
-BH	L[cm]=$BM_L	B[kG]=$BM_B*$BV_FLAG*48/40	G[kG/cm]=0.	Tilt[deg]=0.
+BH	L[cm]=$BM_L	B[kG]=$BM_B*$BV_FLAG*40/48	G[kG/cm]=0.	Tilt[deg]=0.
 
 OMC	L[cm]=30.;
 OQLBM	L[cm]=66.5;
