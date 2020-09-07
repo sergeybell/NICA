@@ -1,0 +1,1063 @@
+@ NAME             %08s "TRACKONE"
+@ TYPE             %08s "TRACKONE"
+@ XC               %le                   0
+@ PXC              %le                   0
+@ YC               %le                   0
+@ PYC              %le                   0
+@ TC               %le                   0
+@ PTC              %le                   0
+@ EX               %le            3.96e-05
+@ EY               %le             3.1e-05
+@ ET               %le               0.001
+@ E11              %le         50473896.28
+@ E12              %le     3.725290298e-09
+@ E13              %le        -4578462.998
+@ E14              %le        -31817999.97
+@ E15              %le                   0
+@ E16              %le                   0
+@ E21              %le        -12524797.28
+@ E22              %le         8206.181663
+@ E23              %le        -2335601.682
+@ E24              %le        -15893536.72
+@ E25              %le                   0
+@ E26              %le                   0
+@ E31              %le         17914486.88
+@ E32              %le         20334250.18
+@ E33              %le         98370835.43
+@ E34              %le                   0
+@ E35              %le                   0
+@ E36              %le                   0
+@ E41              %le        -7829416.836
+@ E42              %le        -8910080.414
+@ E43              %le         24183158.57
+@ E44              %le         15718.11882
+@ E45              %le                   0
+@ E46              %le                   0
+@ E51              %le                   0
+@ E52              %le                   0
+@ E53              %le                   0
+@ E54              %le                   0
+@ E55              %le                   1
+@ E56              %le                   0
+@ E61              %le                   0
+@ E62              %le                   0
+@ E63              %le                   0
+@ E64              %le                   0
+@ E65              %le                   0
+@ E66              %le                   1
+@ TITLE            %08s "no-title"
+@ ORIGIN           %17s "5.05.02 Darwin 64"
+@ DATE             %08s "07/09/20"
+@ TIME             %08s "17.57.53"
+*             NUMBER               TURN                  X                 PX                  Y                 PY                  T                 PT                  S                  E 
+$                %le                %le                %le                %le                %le                %le                %le                %le                %le                %le 
+#segment       1     501       9       0 start                                                                         
+                  1                  0                  0                  0                  0                  0                  0                  0                  0                  0
+                  2                  0             0.0005                  0                  0                  0                  0                  0                  0                  0
+                  3                  0              0.001                  0                  0                  0                  0                  0                  0                  0
+                  4                  0             0.0015                  0                  0                  0                  0                  0                  0                  0
+                  5                  0              0.002                  0                  0                  0                  0                  0                  0                  0
+                  6                  0             0.0025                  0                  0                  0                  0                  0                  0                  0
+                  7                  0              0.003                  0                  0                  0                  0                  0                  0                  0
+                  8                  0             0.0035                  0                  0                  0                  0                  0                  0                  0
+                  9                  0              0.004                  0                  0                  0                  0                  0                  0                  0
+#segment       2     501       1    2291 machine$end                                                                   
+                  1                  1                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment       3     501       1    2291 machine$end                                                                   
+                  1                  2                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment       4     501       1    2291 machine$end                                                                   
+                  1                  3                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment       5     501       1    2291 machine$end                                                                   
+                  1                  4                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment       6     501       1    2291 machine$end                                                                   
+                  1                  5                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment       7     501       1    2291 machine$end                                                                   
+                  1                  6                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment       8     501       1    2291 machine$end                                                                   
+                  1                  7                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment       9     501       1    2291 machine$end                                                                   
+                  1                  8                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      10     501       1    2291 machine$end                                                                   
+                  1                  9                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      11     501       1    2291 machine$end                                                                   
+                  1                 10                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      12     501       1    2291 machine$end                                                                   
+                  1                 11                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      13     501       1    2291 machine$end                                                                   
+                  1                 12                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      14     501       1    2291 machine$end                                                                   
+                  1                 13                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      15     501       1    2291 machine$end                                                                   
+                  1                 14                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      16     501       1    2291 machine$end                                                                   
+                  1                 15                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      17     501       1    2291 machine$end                                                                   
+                  1                 16                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      18     501       1    2291 machine$end                                                                   
+                  1                 17                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      19     501       1    2291 machine$end                                                                   
+                  1                 18                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      20     501       1    2291 machine$end                                                                   
+                  1                 19                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      21     501       1    2291 machine$end                                                                   
+                  1                 20                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      22     501       1    2291 machine$end                                                                   
+                  1                 21                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      23     501       1    2291 machine$end                                                                   
+                  1                 22                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      24     501       1    2291 machine$end                                                                   
+                  1                 23                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      25     501       1    2291 machine$end                                                                   
+                  1                 24                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      26     501       1    2291 machine$end                                                                   
+                  1                 25                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      27     501       1    2291 machine$end                                                                   
+                  1                 26                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      28     501       1    2291 machine$end                                                                   
+                  1                 27                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      29     501       1    2291 machine$end                                                                   
+                  1                 28                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      30     501       1    2291 machine$end                                                                   
+                  1                 29                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      31     501       1    2291 machine$end                                                                   
+                  1                 30                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      32     501       1    2291 machine$end                                                                   
+                  1                 31                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      33     501       1    2291 machine$end                                                                   
+                  1                 32                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      34     501       1    2291 machine$end                                                                   
+                  1                 33                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      35     501       1    2291 machine$end                                                                   
+                  1                 34                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      36     501       1    2291 machine$end                                                                   
+                  1                 35                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      37     501       1    2291 machine$end                                                                   
+                  1                 36                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      38     501       1    2291 machine$end                                                                   
+                  1                 37                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      39     501       1    2291 machine$end                                                                   
+                  1                 38                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      40     501       1    2291 machine$end                                                                   
+                  1                 39                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      41     501       1    2291 machine$end                                                                   
+                  1                 40                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      42     501       1    2291 machine$end                                                                   
+                  1                 41                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      43     501       1    2291 machine$end                                                                   
+                  1                 42                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      44     501       1    2291 machine$end                                                                   
+                  1                 43                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      45     501       1    2291 machine$end                                                                   
+                  1                 44                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      46     501       1    2291 machine$end                                                                   
+                  1                 45                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      47     501       1    2291 machine$end                                                                   
+                  1                 46                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      48     501       1    2291 machine$end                                                                   
+                  1                 47                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      49     501       1    2291 machine$end                                                                   
+                  1                 48                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      50     501       1    2291 machine$end                                                                   
+                  1                 49                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      51     501       1    2291 machine$end                                                                   
+                  1                 50                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      52     501       1    2291 machine$end                                                                   
+                  1                 51                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      53     501       1    2291 machine$end                                                                   
+                  1                 52                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      54     501       1    2291 machine$end                                                                   
+                  1                 53                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      55     501       1    2291 machine$end                                                                   
+                  1                 54                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      56     501       1    2291 machine$end                                                                   
+                  1                 55                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      57     501       1    2291 machine$end                                                                   
+                  1                 56                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      58     501       1    2291 machine$end                                                                   
+                  1                 57                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      59     501       1    2291 machine$end                                                                   
+                  1                 58                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      60     501       1    2291 machine$end                                                                   
+                  1                 59                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      61     501       1    2291 machine$end                                                                   
+                  1                 60                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      62     501       1    2291 machine$end                                                                   
+                  1                 61                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      63     501       1    2291 machine$end                                                                   
+                  1                 62                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      64     501       1    2291 machine$end                                                                   
+                  1                 63                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      65     501       1    2291 machine$end                                                                   
+                  1                 64                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      66     501       1    2291 machine$end                                                                   
+                  1                 65                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      67     501       1    2291 machine$end                                                                   
+                  1                 66                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      68     501       1    2291 machine$end                                                                   
+                  1                 67                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      69     501       1    2291 machine$end                                                                   
+                  1                 68                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      70     501       1    2291 machine$end                                                                   
+                  1                 69                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      71     501       1    2291 machine$end                                                                   
+                  1                 70                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      72     501       1    2291 machine$end                                                                   
+                  1                 71                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      73     501       1    2291 machine$end                                                                   
+                  1                 72                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      74     501       1    2291 machine$end                                                                   
+                  1                 73                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      75     501       1    2291 machine$end                                                                   
+                  1                 74                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      76     501       1    2291 machine$end                                                                   
+                  1                 75                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      77     501       1    2291 machine$end                                                                   
+                  1                 76                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      78     501       1    2291 machine$end                                                                   
+                  1                 77                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      79     501       1    2291 machine$end                                                                   
+                  1                 78                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      80     501       1    2291 machine$end                                                                   
+                  1                 79                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      81     501       1    2291 machine$end                                                                   
+                  1                 80                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      82     501       1    2291 machine$end                                                                   
+                  1                 81                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      83     501       1    2291 machine$end                                                                   
+                  1                 82                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      84     501       1    2291 machine$end                                                                   
+                  1                 83                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      85     501       1    2291 machine$end                                                                   
+                  1                 84                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      86     501       1    2291 machine$end                                                                   
+                  1                 85                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      87     501       1    2291 machine$end                                                                   
+                  1                 86                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      88     501       1    2291 machine$end                                                                   
+                  1                 87                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      89     501       1    2291 machine$end                                                                   
+                  1                 88                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      90     501       1    2291 machine$end                                                                   
+                  1                 89                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      91     501       1    2291 machine$end                                                                   
+                  1                 90                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      92     501       1    2291 machine$end                                                                   
+                  1                 91                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      93     501       1    2291 machine$end                                                                   
+                  1                 92                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      94     501       1    2291 machine$end                                                                   
+                  1                 93                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      95     501       1    2291 machine$end                                                                   
+                  1                 94                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      96     501       1    2291 machine$end                                                                   
+                  1                 95                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      97     501       1    2291 machine$end                                                                   
+                  1                 96                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      98     501       1    2291 machine$end                                                                   
+                  1                 97                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment      99     501       1    2291 machine$end                                                                   
+                  1                 98                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     100     501       1    2291 machine$end                                                                   
+                  1                 99                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     101     501       1    2291 machine$end                                                                   
+                  1                100                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     102     501       1    2291 machine$end                                                                   
+                  1                101                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     103     501       1    2291 machine$end                                                                   
+                  1                102                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     104     501       1    2291 machine$end                                                                   
+                  1                103                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     105     501       1    2291 machine$end                                                                   
+                  1                104                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     106     501       1    2291 machine$end                                                                   
+                  1                105                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     107     501       1    2291 machine$end                                                                   
+                  1                106                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     108     501       1    2291 machine$end                                                                   
+                  1                107                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     109     501       1    2291 machine$end                                                                   
+                  1                108                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     110     501       1    2291 machine$end                                                                   
+                  1                109                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     111     501       1    2291 machine$end                                                                   
+                  1                110                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     112     501       1    2291 machine$end                                                                   
+                  1                111                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     113     501       1    2291 machine$end                                                                   
+                  1                112                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     114     501       1    2291 machine$end                                                                   
+                  1                113                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     115     501       1    2291 machine$end                                                                   
+                  1                114                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     116     501       1    2291 machine$end                                                                   
+                  1                115                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     117     501       1    2291 machine$end                                                                   
+                  1                116                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     118     501       1    2291 machine$end                                                                   
+                  1                117                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     119     501       1    2291 machine$end                                                                   
+                  1                118                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     120     501       1    2291 machine$end                                                                   
+                  1                119                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     121     501       1    2291 machine$end                                                                   
+                  1                120                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     122     501       1    2291 machine$end                                                                   
+                  1                121                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     123     501       1    2291 machine$end                                                                   
+                  1                122                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     124     501       1    2291 machine$end                                                                   
+                  1                123                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     125     501       1    2291 machine$end                                                                   
+                  1                124                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     126     501       1    2291 machine$end                                                                   
+                  1                125                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     127     501       1    2291 machine$end                                                                   
+                  1                126                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     128     501       1    2291 machine$end                                                                   
+                  1                127                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     129     501       1    2291 machine$end                                                                   
+                  1                128                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     130     501       1    2291 machine$end                                                                   
+                  1                129                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     131     501       1    2291 machine$end                                                                   
+                  1                130                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     132     501       1    2291 machine$end                                                                   
+                  1                131                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     133     501       1    2291 machine$end                                                                   
+                  1                132                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     134     501       1    2291 machine$end                                                                   
+                  1                133                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     135     501       1    2291 machine$end                                                                   
+                  1                134                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     136     501       1    2291 machine$end                                                                   
+                  1                135                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     137     501       1    2291 machine$end                                                                   
+                  1                136                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     138     501       1    2291 machine$end                                                                   
+                  1                137                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     139     501       1    2291 machine$end                                                                   
+                  1                138                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     140     501       1    2291 machine$end                                                                   
+                  1                139                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     141     501       1    2291 machine$end                                                                   
+                  1                140                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     142     501       1    2291 machine$end                                                                   
+                  1                141                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     143     501       1    2291 machine$end                                                                   
+                  1                142                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     144     501       1    2291 machine$end                                                                   
+                  1                143                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     145     501       1    2291 machine$end                                                                   
+                  1                144                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     146     501       1    2291 machine$end                                                                   
+                  1                145                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     147     501       1    2291 machine$end                                                                   
+                  1                146                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     148     501       1    2291 machine$end                                                                   
+                  1                147                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     149     501       1    2291 machine$end                                                                   
+                  1                148                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     150     501       1    2291 machine$end                                                                   
+                  1                149                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     151     501       1    2291 machine$end                                                                   
+                  1                150                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     152     501       1    2291 machine$end                                                                   
+                  1                151                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     153     501       1    2291 machine$end                                                                   
+                  1                152                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     154     501       1    2291 machine$end                                                                   
+                  1                153                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     155     501       1    2291 machine$end                                                                   
+                  1                154                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     156     501       1    2291 machine$end                                                                   
+                  1                155                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     157     501       1    2291 machine$end                                                                   
+                  1                156                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     158     501       1    2291 machine$end                                                                   
+                  1                157                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     159     501       1    2291 machine$end                                                                   
+                  1                158                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     160     501       1    2291 machine$end                                                                   
+                  1                159                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     161     501       1    2291 machine$end                                                                   
+                  1                160                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     162     501       1    2291 machine$end                                                                   
+                  1                161                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     163     501       1    2291 machine$end                                                                   
+                  1                162                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     164     501       1    2291 machine$end                                                                   
+                  1                163                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     165     501       1    2291 machine$end                                                                   
+                  1                164                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     166     501       1    2291 machine$end                                                                   
+                  1                165                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     167     501       1    2291 machine$end                                                                   
+                  1                166                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     168     501       1    2291 machine$end                                                                   
+                  1                167                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     169     501       1    2291 machine$end                                                                   
+                  1                168                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     170     501       1    2291 machine$end                                                                   
+                  1                169                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     171     501       1    2291 machine$end                                                                   
+                  1                170                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     172     501       1    2291 machine$end                                                                   
+                  1                171                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     173     501       1    2291 machine$end                                                                   
+                  1                172                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     174     501       1    2291 machine$end                                                                   
+                  1                173                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     175     501       1    2291 machine$end                                                                   
+                  1                174                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     176     501       1    2291 machine$end                                                                   
+                  1                175                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     177     501       1    2291 machine$end                                                                   
+                  1                176                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     178     501       1    2291 machine$end                                                                   
+                  1                177                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     179     501       1    2291 machine$end                                                                   
+                  1                178                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     180     501       1    2291 machine$end                                                                   
+                  1                179                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     181     501       1    2291 machine$end                                                                   
+                  1                180                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     182     501       1    2291 machine$end                                                                   
+                  1                181                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     183     501       1    2291 machine$end                                                                   
+                  1                182                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     184     501       1    2291 machine$end                                                                   
+                  1                183                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     185     501       1    2291 machine$end                                                                   
+                  1                184                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     186     501       1    2291 machine$end                                                                   
+                  1                185                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     187     501       1    2291 machine$end                                                                   
+                  1                186                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     188     501       1    2291 machine$end                                                                   
+                  1                187                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     189     501       1    2291 machine$end                                                                   
+                  1                188                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     190     501       1    2291 machine$end                                                                   
+                  1                189                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     191     501       1    2291 machine$end                                                                   
+                  1                190                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     192     501       1    2291 machine$end                                                                   
+                  1                191                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     193     501       1    2291 machine$end                                                                   
+                  1                192                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     194     501       1    2291 machine$end                                                                   
+                  1                193                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     195     501       1    2291 machine$end                                                                   
+                  1                194                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     196     501       1    2291 machine$end                                                                   
+                  1                195                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     197     501       1    2291 machine$end                                                                   
+                  1                196                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     198     501       1    2291 machine$end                                                                   
+                  1                197                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     199     501       1    2291 machine$end                                                                   
+                  1                198                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     200     501       1    2291 machine$end                                                                   
+                  1                199                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     201     501       1    2291 machine$end                                                                   
+                  1                200                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     202     501       1    2291 machine$end                                                                   
+                  1                201                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     203     501       1    2291 machine$end                                                                   
+                  1                202                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     204     501       1    2291 machine$end                                                                   
+                  1                203                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     205     501       1    2291 machine$end                                                                   
+                  1                204                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     206     501       1    2291 machine$end                                                                   
+                  1                205                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     207     501       1    2291 machine$end                                                                   
+                  1                206                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     208     501       1    2291 machine$end                                                                   
+                  1                207                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     209     501       1    2291 machine$end                                                                   
+                  1                208                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     210     501       1    2291 machine$end                                                                   
+                  1                209                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     211     501       1    2291 machine$end                                                                   
+                  1                210                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     212     501       1    2291 machine$end                                                                   
+                  1                211                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     213     501       1    2291 machine$end                                                                   
+                  1                212                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     214     501       1    2291 machine$end                                                                   
+                  1                213                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     215     501       1    2291 machine$end                                                                   
+                  1                214                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     216     501       1    2291 machine$end                                                                   
+                  1                215                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     217     501       1    2291 machine$end                                                                   
+                  1                216                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     218     501       1    2291 machine$end                                                                   
+                  1                217                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     219     501       1    2291 machine$end                                                                   
+                  1                218                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     220     501       1    2291 machine$end                                                                   
+                  1                219                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     221     501       1    2291 machine$end                                                                   
+                  1                220                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     222     501       1    2291 machine$end                                                                   
+                  1                221                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     223     501       1    2291 machine$end                                                                   
+                  1                222                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     224     501       1    2291 machine$end                                                                   
+                  1                223                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     225     501       1    2291 machine$end                                                                   
+                  1                224                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     226     501       1    2291 machine$end                                                                   
+                  1                225                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     227     501       1    2291 machine$end                                                                   
+                  1                226                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     228     501       1    2291 machine$end                                                                   
+                  1                227                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     229     501       1    2291 machine$end                                                                   
+                  1                228                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     230     501       1    2291 machine$end                                                                   
+                  1                229                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     231     501       1    2291 machine$end                                                                   
+                  1                230                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     232     501       1    2291 machine$end                                                                   
+                  1                231                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     233     501       1    2291 machine$end                                                                   
+                  1                232                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     234     501       1    2291 machine$end                                                                   
+                  1                233                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     235     501       1    2291 machine$end                                                                   
+                  1                234                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     236     501       1    2291 machine$end                                                                   
+                  1                235                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     237     501       1    2291 machine$end                                                                   
+                  1                236                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     238     501       1    2291 machine$end                                                                   
+                  1                237                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     239     501       1    2291 machine$end                                                                   
+                  1                238                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     240     501       1    2291 machine$end                                                                   
+                  1                239                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     241     501       1    2291 machine$end                                                                   
+                  1                240                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     242     501       1    2291 machine$end                                                                   
+                  1                241                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     243     501       1    2291 machine$end                                                                   
+                  1                242                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     244     501       1    2291 machine$end                                                                   
+                  1                243                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     245     501       1    2291 machine$end                                                                   
+                  1                244                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     246     501       1    2291 machine$end                                                                   
+                  1                245                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     247     501       1    2291 machine$end                                                                   
+                  1                246                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     248     501       1    2291 machine$end                                                                   
+                  1                247                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     249     501       1    2291 machine$end                                                                   
+                  1                248                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     250     501       1    2291 machine$end                                                                   
+                  1                249                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     251     501       1    2291 machine$end                                                                   
+                  1                250                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     252     501       1    2291 machine$end                                                                   
+                  1                251                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     253     501       1    2291 machine$end                                                                   
+                  1                252                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     254     501       1    2291 machine$end                                                                   
+                  1                253                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     255     501       1    2291 machine$end                                                                   
+                  1                254                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     256     501       1    2291 machine$end                                                                   
+                  1                255                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     257     501       1    2291 machine$end                                                                   
+                  1                256                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     258     501       1    2291 machine$end                                                                   
+                  1                257                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     259     501       1    2291 machine$end                                                                   
+                  1                258                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     260     501       1    2291 machine$end                                                                   
+                  1                259                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     261     501       1    2291 machine$end                                                                   
+                  1                260                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     262     501       1    2291 machine$end                                                                   
+                  1                261                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     263     501       1    2291 machine$end                                                                   
+                  1                262                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     264     501       1    2291 machine$end                                                                   
+                  1                263                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     265     501       1    2291 machine$end                                                                   
+                  1                264                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     266     501       1    2291 machine$end                                                                   
+                  1                265                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     267     501       1    2291 machine$end                                                                   
+                  1                266                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     268     501       1    2291 machine$end                                                                   
+                  1                267                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     269     501       1    2291 machine$end                                                                   
+                  1                268                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     270     501       1    2291 machine$end                                                                   
+                  1                269                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     271     501       1    2291 machine$end                                                                   
+                  1                270                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     272     501       1    2291 machine$end                                                                   
+                  1                271                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     273     501       1    2291 machine$end                                                                   
+                  1                272                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     274     501       1    2291 machine$end                                                                   
+                  1                273                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     275     501       1    2291 machine$end                                                                   
+                  1                274                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     276     501       1    2291 machine$end                                                                   
+                  1                275                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     277     501       1    2291 machine$end                                                                   
+                  1                276                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     278     501       1    2291 machine$end                                                                   
+                  1                277                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     279     501       1    2291 machine$end                                                                   
+                  1                278                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     280     501       1    2291 machine$end                                                                   
+                  1                279                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     281     501       1    2291 machine$end                                                                   
+                  1                280                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     282     501       1    2291 machine$end                                                                   
+                  1                281                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     283     501       1    2291 machine$end                                                                   
+                  1                282                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     284     501       1    2291 machine$end                                                                   
+                  1                283                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     285     501       1    2291 machine$end                                                                   
+                  1                284                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     286     501       1    2291 machine$end                                                                   
+                  1                285                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     287     501       1    2291 machine$end                                                                   
+                  1                286                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     288     501       1    2291 machine$end                                                                   
+                  1                287                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     289     501       1    2291 machine$end                                                                   
+                  1                288                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     290     501       1    2291 machine$end                                                                   
+                  1                289                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     291     501       1    2291 machine$end                                                                   
+                  1                290                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     292     501       1    2291 machine$end                                                                   
+                  1                291                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     293     501       1    2291 machine$end                                                                   
+                  1                292                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     294     501       1    2291 machine$end                                                                   
+                  1                293                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     295     501       1    2291 machine$end                                                                   
+                  1                294                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     296     501       1    2291 machine$end                                                                   
+                  1                295                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     297     501       1    2291 machine$end                                                                   
+                  1                296                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     298     501       1    2291 machine$end                                                                   
+                  1                297                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     299     501       1    2291 machine$end                                                                   
+                  1                298                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     300     501       1    2291 machine$end                                                                   
+                  1                299                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     301     501       1    2291 machine$end                                                                   
+                  1                300                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     302     501       1    2291 machine$end                                                                   
+                  1                301                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     303     501       1    2291 machine$end                                                                   
+                  1                302                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     304     501       1    2291 machine$end                                                                   
+                  1                303                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     305     501       1    2291 machine$end                                                                   
+                  1                304                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     306     501       1    2291 machine$end                                                                   
+                  1                305                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     307     501       1    2291 machine$end                                                                   
+                  1                306                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     308     501       1    2291 machine$end                                                                   
+                  1                307                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     309     501       1    2291 machine$end                                                                   
+                  1                308                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     310     501       1    2291 machine$end                                                                   
+                  1                309                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     311     501       1    2291 machine$end                                                                   
+                  1                310                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     312     501       1    2291 machine$end                                                                   
+                  1                311                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     313     501       1    2291 machine$end                                                                   
+                  1                312                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     314     501       1    2291 machine$end                                                                   
+                  1                313                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     315     501       1    2291 machine$end                                                                   
+                  1                314                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     316     501       1    2291 machine$end                                                                   
+                  1                315                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     317     501       1    2291 machine$end                                                                   
+                  1                316                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     318     501       1    2291 machine$end                                                                   
+                  1                317                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     319     501       1    2291 machine$end                                                                   
+                  1                318                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     320     501       1    2291 machine$end                                                                   
+                  1                319                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     321     501       1    2291 machine$end                                                                   
+                  1                320                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     322     501       1    2291 machine$end                                                                   
+                  1                321                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     323     501       1    2291 machine$end                                                                   
+                  1                322                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     324     501       1    2291 machine$end                                                                   
+                  1                323                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     325     501       1    2291 machine$end                                                                   
+                  1                324                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     326     501       1    2291 machine$end                                                                   
+                  1                325                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     327     501       1    2291 machine$end                                                                   
+                  1                326                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     328     501       1    2291 machine$end                                                                   
+                  1                327                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     329     501       1    2291 machine$end                                                                   
+                  1                328                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     330     501       1    2291 machine$end                                                                   
+                  1                329                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     331     501       1    2291 machine$end                                                                   
+                  1                330                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     332     501       1    2291 machine$end                                                                   
+                  1                331                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     333     501       1    2291 machine$end                                                                   
+                  1                332                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     334     501       1    2291 machine$end                                                                   
+                  1                333                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     335     501       1    2291 machine$end                                                                   
+                  1                334                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     336     501       1    2291 machine$end                                                                   
+                  1                335                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     337     501       1    2291 machine$end                                                                   
+                  1                336                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     338     501       1    2291 machine$end                                                                   
+                  1                337                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     339     501       1    2291 machine$end                                                                   
+                  1                338                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     340     501       1    2291 machine$end                                                                   
+                  1                339                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     341     501       1    2291 machine$end                                                                   
+                  1                340                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     342     501       1    2291 machine$end                                                                   
+                  1                341                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     343     501       1    2291 machine$end                                                                   
+                  1                342                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     344     501       1    2291 machine$end                                                                   
+                  1                343                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     345     501       1    2291 machine$end                                                                   
+                  1                344                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     346     501       1    2291 machine$end                                                                   
+                  1                345                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     347     501       1    2291 machine$end                                                                   
+                  1                346                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     348     501       1    2291 machine$end                                                                   
+                  1                347                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     349     501       1    2291 machine$end                                                                   
+                  1                348                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     350     501       1    2291 machine$end                                                                   
+                  1                349                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     351     501       1    2291 machine$end                                                                   
+                  1                350                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     352     501       1    2291 machine$end                                                                   
+                  1                351                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     353     501       1    2291 machine$end                                                                   
+                  1                352                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     354     501       1    2291 machine$end                                                                   
+                  1                353                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     355     501       1    2291 machine$end                                                                   
+                  1                354                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     356     501       1    2291 machine$end                                                                   
+                  1                355                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     357     501       1    2291 machine$end                                                                   
+                  1                356                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     358     501       1    2291 machine$end                                                                   
+                  1                357                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     359     501       1    2291 machine$end                                                                   
+                  1                358                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     360     501       1    2291 machine$end                                                                   
+                  1                359                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     361     501       1    2291 machine$end                                                                   
+                  1                360                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     362     501       1    2291 machine$end                                                                   
+                  1                361                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     363     501       1    2291 machine$end                                                                   
+                  1                362                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     364     501       1    2291 machine$end                                                                   
+                  1                363                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     365     501       1    2291 machine$end                                                                   
+                  1                364                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     366     501       1    2291 machine$end                                                                   
+                  1                365                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     367     501       1    2291 machine$end                                                                   
+                  1                366                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     368     501       1    2291 machine$end                                                                   
+                  1                367                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     369     501       1    2291 machine$end                                                                   
+                  1                368                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     370     501       1    2291 machine$end                                                                   
+                  1                369                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     371     501       1    2291 machine$end                                                                   
+                  1                370                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     372     501       1    2291 machine$end                                                                   
+                  1                371                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     373     501       1    2291 machine$end                                                                   
+                  1                372                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     374     501       1    2291 machine$end                                                                   
+                  1                373                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     375     501       1    2291 machine$end                                                                   
+                  1                374                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     376     501       1    2291 machine$end                                                                   
+                  1                375                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     377     501       1    2291 machine$end                                                                   
+                  1                376                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     378     501       1    2291 machine$end                                                                   
+                  1                377                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     379     501       1    2291 machine$end                                                                   
+                  1                378                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     380     501       1    2291 machine$end                                                                   
+                  1                379                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     381     501       1    2291 machine$end                                                                   
+                  1                380                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     382     501       1    2291 machine$end                                                                   
+                  1                381                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     383     501       1    2291 machine$end                                                                   
+                  1                382                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     384     501       1    2291 machine$end                                                                   
+                  1                383                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     385     501       1    2291 machine$end                                                                   
+                  1                384                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     386     501       1    2291 machine$end                                                                   
+                  1                385                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     387     501       1    2291 machine$end                                                                   
+                  1                386                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     388     501       1    2291 machine$end                                                                   
+                  1                387                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     389     501       1    2291 machine$end                                                                   
+                  1                388                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     390     501       1    2291 machine$end                                                                   
+                  1                389                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     391     501       1    2291 machine$end                                                                   
+                  1                390                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     392     501       1    2291 machine$end                                                                   
+                  1                391                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     393     501       1    2291 machine$end                                                                   
+                  1                392                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     394     501       1    2291 machine$end                                                                   
+                  1                393                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     395     501       1    2291 machine$end                                                                   
+                  1                394                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     396     501       1    2291 machine$end                                                                   
+                  1                395                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     397     501       1    2291 machine$end                                                                   
+                  1                396                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     398     501       1    2291 machine$end                                                                   
+                  1                397                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     399     501       1    2291 machine$end                                                                   
+                  1                398                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     400     501       1    2291 machine$end                                                                   
+                  1                399                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     401     501       1    2291 machine$end                                                                   
+                  1                400                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     402     501       1    2291 machine$end                                                                   
+                  1                401                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     403     501       1    2291 machine$end                                                                   
+                  1                402                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     404     501       1    2291 machine$end                                                                   
+                  1                403                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     405     501       1    2291 machine$end                                                                   
+                  1                404                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     406     501       1    2291 machine$end                                                                   
+                  1                405                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     407     501       1    2291 machine$end                                                                   
+                  1                406                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     408     501       1    2291 machine$end                                                                   
+                  1                407                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     409     501       1    2291 machine$end                                                                   
+                  1                408                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     410     501       1    2291 machine$end                                                                   
+                  1                409                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     411     501       1    2291 machine$end                                                                   
+                  1                410                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     412     501       1    2291 machine$end                                                                   
+                  1                411                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     413     501       1    2291 machine$end                                                                   
+                  1                412                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     414     501       1    2291 machine$end                                                                   
+                  1                413                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     415     501       1    2291 machine$end                                                                   
+                  1                414                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     416     501       1    2291 machine$end                                                                   
+                  1                415                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     417     501       1    2291 machine$end                                                                   
+                  1                416                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     418     501       1    2291 machine$end                                                                   
+                  1                417                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     419     501       1    2291 machine$end                                                                   
+                  1                418                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     420     501       1    2291 machine$end                                                                   
+                  1                419                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     421     501       1    2291 machine$end                                                                   
+                  1                420                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     422     501       1    2291 machine$end                                                                   
+                  1                421                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     423     501       1    2291 machine$end                                                                   
+                  1                422                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     424     501       1    2291 machine$end                                                                   
+                  1                423                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     425     501       1    2291 machine$end                                                                   
+                  1                424                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     426     501       1    2291 machine$end                                                                   
+                  1                425                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     427     501       1    2291 machine$end                                                                   
+                  1                426                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     428     501       1    2291 machine$end                                                                   
+                  1                427                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     429     501       1    2291 machine$end                                                                   
+                  1                428                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     430     501       1    2291 machine$end                                                                   
+                  1                429                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     431     501       1    2291 machine$end                                                                   
+                  1                430                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     432     501       1    2291 machine$end                                                                   
+                  1                431                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     433     501       1    2291 machine$end                                                                   
+                  1                432                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     434     501       1    2291 machine$end                                                                   
+                  1                433                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     435     501       1    2291 machine$end                                                                   
+                  1                434                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     436     501       1    2291 machine$end                                                                   
+                  1                435                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     437     501       1    2291 machine$end                                                                   
+                  1                436                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     438     501       1    2291 machine$end                                                                   
+                  1                437                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     439     501       1    2291 machine$end                                                                   
+                  1                438                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     440     501       1    2291 machine$end                                                                   
+                  1                439                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     441     501       1    2291 machine$end                                                                   
+                  1                440                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     442     501       1    2291 machine$end                                                                   
+                  1                441                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     443     501       1    2291 machine$end                                                                   
+                  1                442                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     444     501       1    2291 machine$end                                                                   
+                  1                443                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     445     501       1    2291 machine$end                                                                   
+                  1                444                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     446     501       1    2291 machine$end                                                                   
+                  1                445                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     447     501       1    2291 machine$end                                                                   
+                  1                446                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     448     501       1    2291 machine$end                                                                   
+                  1                447                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     449     501       1    2291 machine$end                                                                   
+                  1                448                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     450     501       1    2291 machine$end                                                                   
+                  1                449                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     451     501       1    2291 machine$end                                                                   
+                  1                450                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     452     501       1    2291 machine$end                                                                   
+                  1                451                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     453     501       1    2291 machine$end                                                                   
+                  1                452                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     454     501       1    2291 machine$end                                                                   
+                  1                453                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     455     501       1    2291 machine$end                                                                   
+                  1                454                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     456     501       1    2291 machine$end                                                                   
+                  1                455                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     457     501       1    2291 machine$end                                                                   
+                  1                456                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     458     501       1    2291 machine$end                                                                   
+                  1                457                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     459     501       1    2291 machine$end                                                                   
+                  1                458                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     460     501       1    2291 machine$end                                                                   
+                  1                459                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     461     501       1    2291 machine$end                                                                   
+                  1                460                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     462     501       1    2291 machine$end                                                                   
+                  1                461                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     463     501       1    2291 machine$end                                                                   
+                  1                462                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     464     501       1    2291 machine$end                                                                   
+                  1                463                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     465     501       1    2291 machine$end                                                                   
+                  1                464                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     466     501       1    2291 machine$end                                                                   
+                  1                465                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     467     501       1    2291 machine$end                                                                   
+                  1                466                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     468     501       1    2291 machine$end                                                                   
+                  1                467                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     469     501       1    2291 machine$end                                                                   
+                  1                468                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     470     501       1    2291 machine$end                                                                   
+                  1                469                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     471     501       1    2291 machine$end                                                                   
+                  1                470                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     472     501       1    2291 machine$end                                                                   
+                  1                471                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     473     501       1    2291 machine$end                                                                   
+                  1                472                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     474     501       1    2291 machine$end                                                                   
+                  1                473                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     475     501       1    2291 machine$end                                                                   
+                  1                474                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     476     501       1    2291 machine$end                                                                   
+                  1                475                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     477     501       1    2291 machine$end                                                                   
+                  1                476                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     478     501       1    2291 machine$end                                                                   
+                  1                477                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     479     501       1    2291 machine$end                                                                   
+                  1                478                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     480     501       1    2291 machine$end                                                                   
+                  1                479                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     481     501       1    2291 machine$end                                                                   
+                  1                480                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     482     501       1    2291 machine$end                                                                   
+                  1                481                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     483     501       1    2291 machine$end                                                                   
+                  1                482                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     484     501       1    2291 machine$end                                                                   
+                  1                483                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     485     501       1    2291 machine$end                                                                   
+                  1                484                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     486     501       1    2291 machine$end                                                                   
+                  1                485                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     487     501       1    2291 machine$end                                                                   
+                  1                486                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     488     501       1    2291 machine$end                                                                   
+                  1                487                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     489     501       1    2291 machine$end                                                                   
+                  1                488                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     490     501       1    2291 machine$end                                                                   
+                  1                489                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     491     501       1    2291 machine$end                                                                   
+                  1                490                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     492     501       1    2291 machine$end                                                                   
+                  1                491                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     493     501       1    2291 machine$end                                                                   
+                  1                492                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     494     501       1    2291 machine$end                                                                   
+                  1                493                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     495     501       1    2291 machine$end                                                                   
+                  1                494                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     496     501       1    2291 machine$end                                                                   
+                  1                495                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     497     501       1    2291 machine$end                                                                   
+                  1                496                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     498     501       1    2291 machine$end                                                                   
+                  1                497                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     499     501       1    2291 machine$end                                                                   
+                  1                498                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     500     501       1    2291 machine$end                                                                   
+                  1                499                  0                  0                  0                  0                  0                  0             505.78                  0
+#segment     501     501       1    2291 machine$end                                                                   
+                  1                500                  0                  0                  0                  0                  0                  0             505.78                  0

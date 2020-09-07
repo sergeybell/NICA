@@ -4,9 +4,6 @@
 !  BetaX=0.6 m,  AlphaX=0,  BetaY=0.6 m,  AlphaY=0
 !  DispX=0 m,  DispPX=0,  DispY=0 m,  DispPY=0
 
-OPTION, -ECHO;
-ASSIGN, ECHO="line.echo";
-
 HD: MONITOR ;
 MB2L: MULTIPOLE,  KNL:={0,0,0.05750859885};
 BH: SBEND,  L=      1.94,  ANGLE=0.07853981634
