@@ -500,17 +500,45 @@ $BV4E="H_BV1 BV4E H_BV1";
 OptiM
 Energy[MeV]=$W*$A/$Z  Mass[MeV]=$NMASS*$A/$Z
 Emittances:         ex[cm]=$EmitX            ey[cm]=$EmitY            DP/P=$dp_p
-Initial:	BetaX[cm]=830.05 	BetaY[cm]=1806.17 
-	AlfaX=-0.269863 	AlfaY=0.0586335 
-	DispersX[cm]=0.698878 	DispersY[cm]=0.0976263 
-	Dsp_PrimeX=-0.000194042 	DspPrimeY=4.63984e-005 
+Initial:            BetaX[cm]=60.   BetaY[cm]=60.
+                    AlfaX=0.  AlfaY=0.
+                    DispX[cm]=0. DispY[cm]=0.
+                    DispPX=0.  DispPY=0.
 X[cm]=0             Y[cm]=0             Z[cm]=0             S[cm]=0
 tetaX[deg]=0        tetaY[deg]=0
 
 begin lattice. Number of periods=1
+C_SPD $QFF6W OO1 $QFF5W OO2 $QFF4W OQ2 $MC2W OQ0 $BV4W OBV12 $BV3W2 OQ1 $MC1W2 OQ3 OSW1 ARF3W21 OSW1 OQ1 OMC OQ4 OSW2
+$Q1W2 OQ1 $MCS_0 OQ1 $Q2W2 OQ5 $Q3W2 OQ1 $MC3W2 OQ1 $Q4W2 OSW3 ARF3W22 ARF3W22 OSW3O85 
+$Q5W2 OQ1 $MC4W2 OQ6 $Q6W2 O85
+# End of straight section SSB1
 
-$Q1W2 OQ1 $MCS_0 OQ1 $Q2W2 OQ5 $Q3W2 OQ1 $MCS_0 OQ1 $Q4W2 OSW3 ARF3W22 ARF3W22 OSW3O85 
-$Q5W2 OQ1 $MCS_0 OQ6 $Q6W2 O85
+# West arc
+OQLBMD $BM OBMBM $BM OBMMC1 $MCS_0 OMCQL $Q7W2 OMISS1 $MCS_0 OMCQL $QD $QD
+OMISS2 $MCS_0 OMCQL $Q9W2 OQLBM1 $BM OBMBM $BM OBMMC $MCS_1 OMCQL $QD $QD
+OQLBM $BM OBMBM $BM OBMMC $MCS_2 OMCQL $QF2 OQLBM $BM OBMBM $BM OBMMC $MCS_3 OMCQL $QD $QD
+
+OQLBM $BM OBMBM $BM OBMMC $MCS_4 OMCQL $QF2 OQLBM $BM OBMBM $BM OBMMC $MCS_1 OMCQL $QD $QD
+OQLBM $BM OBMBM $BM OBMMC $MCS_2 OMCQL $QF1 OQLBM $BM OBMBM $BM OBMMC $MCS_3 OMCQL $QD $QD
+OQLBM $BM OBMBM $BM OBMMC $MCS_4 OMCQL $QF2 OQLBM $BM OBMBM $BM OBMMC $MCS_1 OMCQL $QD $QD
+
+OQLBM $BM OBMBM $BM OBMMC $MCS_2 OMCQL $QF2 OQLBM $BM OBMBM $BM OBMMC $MCS_3 OMCQL $QD $QD
+OQLBM $BM OBMBM $BM OBMMC $MCS_4 OMCQL $QF1 OQLBM $BM OBMBM $BM OBMMC $MCS_1 OMCQL $QD $QD
+OQLBM $BM OBMBM $BM OBMMC $MCS_2 OMCQL $QF2 OQLBM $BM OBMBM $BM OBMMC $MCS_3 OMCQL $QD $QD
+
+OQLBM $BM OBMBM $BM OBMMC $MCS_4 OMCQL $QF2 OQLBM $BM OBMBM $BM OBMMC $MCS_0 OMCQL $QD $QD
+OQLBM $BM OBMBM $BM OBMMC2 $MCS_0 OMCQL $Q27W2 OMISS3 $MCS_0 OMCQL $QD $QD
+OMISS4 $MCS_0 OMCQL $Q29W2 OQLBM2 $BM OBMBM $BM OBMMCOMCOMCQL
+# End of west arc
+
+# Straight section SSA2
+O85 $Q30W2 OQ6 $MC30W2 OQ1 $Q31W2 ONW3O85 C_EC ONW3 
+$Q32W2 OQ1 $MCS_0 OQ1 $Q33W2 OQ5 $Q34W2 OQ1 $MCS_0 OQ1 $Q35W2
+ONW2 OQ4 OMC OQ1 ONW1 OQ3 $MC33W2 OQ1 $BV2W2 OBV12 $BV1W OQ0 $MC1W OQ2 $QFF3W OO2 $QFF2W OO1 $QFF1W C_MPD
+
+C_SPD $QFF6W OO1 $QFF5W OO2 $QFF4W OQ2 $MC2W OQ0 $BV4W OBV12 $BV3W2 OQ1 $MC1W2 OQ3 OSW1 ARF3W21 OSW1 OQ1 OMC OQ4 OSW2
+$Q1W2 OQ1 $MCS_0 OQ1 $Q2W2 OQ5 $Q3W2 OQ1 $MC3W2 OQ1 $Q4W2 OSW3 ARF3W22 ARF3W22 OSW3O85 
+$Q5W2 OQ1 $MC4W2 OQ6 $Q6W2 O85
 # End of straight section SSB1
 
 # West arc
@@ -534,6 +562,7 @@ OMISS4 $MCS_0 OMCQL $Q29W2 OQLBM2 $BM OBMBM $BM OBMMCOMCOMCQL
 # Straight section SSA2
 O85 $Q30W2 OQ6 $MCS_0 OQ1 $Q31W2 ONW3O85 C_EC ONW3 
 $Q32W2 OQ1 $MCS_0 OQ1 $Q33W2 OQ5 $Q34W2 OQ1 $MCS_0 OQ1 $Q35W2
+ONW2 OQ4 OMC OQ1 ONW1 OQ3 $MC33W2 OQ1 $BV2W2 OBV12 $BV1W OQ0 $MC1W OQ2 $QFF3W OO2 $QFF2W OO1 $QFF1W C_MPD
 
 end lattice
 
@@ -622,27 +651,27 @@ QFF6W	L[cm]=$LQFF1	G[kG/cm]=-$K1QFF1	Tilt[deg]=0.
 QFF5W	L[cm]=$LQFF2	G[kG/cm]=$K1QFF2	Tilt[deg]=0.
 QFF4W	L[cm]=$LQFF3	G[kG/cm]=-$K1QFF3	Tilt[deg]=0.
 
-Q1W2 	L[cm]=54.5       	G[kG/cm]=-1.374832 	Tilt[deg]=0
-Q2W2 	L[cm]=59         	G[kG/cm]=2.092491 	Tilt[deg]=0
-Q3W2 	L[cm]=56         	G[kG/cm]=1.840673 	Tilt[deg]=0
-Q4W2 	L[cm]=67         	G[kG/cm]=-1.929677 	Tilt[deg]=0
-Q5W2 	L[cm]=69         	G[kG/cm]=2.088088 	Tilt[deg]=0
-Q6W2 	L[cm]=78.5       	G[kG/cm]=-2.022766 	Tilt[deg]=0
+Q1W2 	L[cm]=54.5       	G[kG/cm]=-1.544832 	Tilt[deg]=0
+Q2W2 	L[cm]=59         	G[kG/cm]=1.902491 	Tilt[deg]=0
+Q3W2 	L[cm]=56         	G[kG/cm]=1.740673 	Tilt[deg]=0
+Q4W2 	L[cm]=67         	G[kG/cm]=-2.119677 	Tilt[deg]=0
+Q5W2 	L[cm]=69         	G[kG/cm]=1.768088 	Tilt[deg]=0
+Q6W2 	L[cm]=78.5       	G[kG/cm]=-2.172766 	Tilt[deg]=0
 
 #---------------------------------------------------------------------------------
-Q7W2 	L[cm]=37.5       	G[kG/cm]=2.155079 	Tilt[deg]=0
-Q9W2 	L[cm]=45         	G[kG/cm]=3.094218 	Tilt[deg]=0
+Q7W2 	L[cm]=37.5       	G[kG/cm]=2.335079 	Tilt[deg]=0
+Q9W2 	L[cm]=45         	G[kG/cm]=3.119218 	Tilt[deg]=0
 
-Q27W2 	L[cm]=45         	G[kG/cm]=3.074218 	Tilt[deg]=0
-Q29W2 	L[cm]=37.5       	G[kG/cm]=2.180079 	Tilt[deg]=0
+Q27W2 	L[cm]=45         	G[kG/cm]=3.119218 	Tilt[deg]=0
+Q29W2 	L[cm]=37.5       	G[kG/cm]=2.335079 	Tilt[deg]=0
 #---------------------------------------------------------------------------------
 
-Q30W2 	L[cm]=78.5       	G[kG/cm]=-2.342766 	Tilt[deg]=0
-Q31W2 	L[cm]=69         	G[kG/cm]=2.298088 	Tilt[deg]=0
-Q32W2 	L[cm]=67         	G[kG/cm]=-2.059677 	Tilt[deg]=0
-Q33W2 	L[cm]=56         	G[kG/cm]=2.480855 	Tilt[deg]=0
-Q34W2 	L[cm]=59         	G[kG/cm]=1.63441 		Tilt[deg]=0
-Q35W2 	L[cm]=54.5       	G[kG/cm]=-1.910843 	Tilt[deg]=0
+Q30W2 	L[cm]=78.5       	G[kG/cm]=-2.282766 	Tilt[deg]=0
+Q31W2 	L[cm]=69         	G[kG/cm]=1.798088 	Tilt[deg]=0
+Q32W2 	L[cm]=67         	G[kG/cm]=-2.424677 	Tilt[deg]=0
+Q33W2 	L[cm]=56         	G[kG/cm]=1.770855 	Tilt[deg]=0
+Q34W2 	L[cm]=59         	G[kG/cm]=2.25941 	Tilt[deg]=0
+Q35W2 	L[cm]=54.5       	G[kG/cm]=-1.890843 	Tilt[deg]=0
 
 QFF3W	L[cm]=$LQFF3	G[kG/cm]=$K1QFF3_SSA2	Tilt[deg]=0.
 QFF2W	L[cm]=$LQFF2	G[kG/cm]=-$K1QFF2_SSA2	Tilt[deg]=0.
@@ -660,7 +689,7 @@ Q5E2	L[cm]=$LQSS5	G[kG/cm]=$K1QSS5_SSA1	Tilt[deg]=0.
 Q6E2	L[cm]=$LQSS6	G[kG/cm]=-$K1QSS6_SSA1	Tilt[deg]=0.
 
 #---------------------------------------------------------------------------------
-QD 	L[cm]=23.5       	G[kG/cm]=-2.247009 	Tilt[deg]=0
+QD 	L[cm]=23.5       	G[kG/cm]=-2.252009 	Tilt[deg]=0
 QF1 	L[cm]=47         	G[kG/cm]=2.876529 	Tilt[deg]=0
 QF2 	L[cm]=47         	G[kG/cm]=2.021529 	Tilt[deg]=0
 
@@ -773,3 +802,14 @@ ARF3W22	L[cm]=$RF3W22_L	Ncell=1	Eff_L[cm]=$RF3W22_L	A[MeV]=0.5*$ON_RF/8.	Phase[d
 ARF3W25	L[cm]=$RF3W25_L	Ncell=1	Eff_L[cm]=$RF3W25_L	A[MeV]=0.5*$ON_RF/8.	Phase[deg]=-90.	WaveL[cm]=$RF3W2_LAMBDA
 
 end list of elements
+
+
+OptiM
+Energy[MeV]=$W*$A/$Z  Mass[MeV]=$NMASS*$A/$Z
+Emittances:         ex[cm]=$EmitX            ey[cm]=$EmitY            DP/P=$dp_p
+Initial:	BetaX[cm]=1484.999985 	BetaY[cm]=1682.28505 
+	AlfaX=-1.307893453 	AlfaY=-1.522157923 
+	DispersX[cm]=0.0	DispersY[cm]=0.0 
+	Dsp_PrimeX=0.0 DspPrimeY=0.0
+X[cm]=0             Y[cm]=0             Z[cm]=0             S[cm]=0
+tetaX[deg]=0        tetaY[deg]=0
