@@ -497,21 +497,41 @@ $BV2E2="H_BV2 BV2E2 H_BV2";
 $BV3E2="H_BV2 BV3E2 H_BV2";
 $BV4E="H_BV1 BV4E H_BV1";
 
-OptiM
+$A1 =-1.544832   
+$A2 =1.597491    
+$A3 =1.720673    
+$A4 =-1.804677   
+$A5 =2.068088    
+$A6 =-2.267766   
 
+$C0 =0.0   
+$C1 =0.0
+$C2 =0.0      
+
+#Q1W2 	L[cm]=54.5       	G[kG/cm]=-1.549832 	Tilt[deg]=0
+#Q2W2 	L[cm]=59         	G[kG/cm]=1.797491 	Tilt[deg]=0
+#Q3W2 	L[cm]=56         	G[kG/cm]=1.985673 	Tilt[deg]=0
+#Q4W2 	L[cm]=67         	G[kG/cm]=-2.354677 	Tilt[deg]=0
+#Q5W2 	L[cm]=69         	G[kG/cm]=1.768088 	Tilt[deg]=0
+#Q6W2 	L[cm]=78.5       	G[kG/cm]=-2.187766 	Tilt[deg]=0 
+
+
+
+OptiM
 Energy[MeV]=$W*$A/$Z  Mass[MeV]=$NMASS*$A/$Z
+
 Emittances:         ex[cm]=$EmitX            ey[cm]=$EmitY            DP/P=$dp_p
-Initial:	BetaX[cm]    =      1985.23 BetaY[cm]    =      2348.06
-	AlfaX        =     -1.42004 AlfaY        =      2.69408
-	DispX[cm]    =     0.410556 DispX[cm]    =    0.0194433
-	DispPrX      =   0.00153275 DispPrY      = -3.23476e-05
+Initial:	BetaX[cm]=1484.999985 	BetaY[cm]=1682.28505 
+	AlfaX=-1.307893453 	AlfaY=-1.522157923 
+	DispersX[cm]=0.0		DispersY[cm]=0.0
+	Dsp_PrimeX=0.0	 	DspPrimeY=0.0
 X[cm]=0             Y[cm]=0             Z[cm]=0             S[cm]=0
 tetaX[deg]=0        tetaY[deg]=0
 
 begin lattice. Number of periods=1
 
-#$Q1W2 OQ1 $MCS_0 OQ1 $Q2W2 OQ5 $Q3W2 OQ1 $MCS_0 OQ1 $Q4W2 OSW3 ARF3W22 ARF3W22 OSW3O85 
-#$Q5W2 OQ1 $MCS_0 OQ6 $Q6W2 O85
+$Q1W2 OQ1 $MCS_0 OQ1 $Q2W2 OQ5 $Q3W2 OQ1 $MCS_0 OQ1 $Q4W2 OSW3 ARF3W22 ARF3W22 OSW3O85 
+$Q5W2 OQ1 $MCS_0 OQ6 $Q6W2 O85
 # End of straight section SSB1
 
 # West arc
@@ -533,8 +553,8 @@ OMISS4 $MCS_0 OMCQL $Q29W2 OQLBM2 $BM OBMBM $BM OBMMCOMCOMCQL
 # End of west arc
 
 # Straight section SSA2
-#$Q30W2 OQ6 $MCS_0 OQ1 $Q31W2
-#ONW3O85 C_EC ONW3  $Q32W2 OQ1 $MCS_0 OQ1 $Q33W2 OQ5 $Q34W2 OQ1 $MCS_0 OQ1 $Q35W2
+O85 $Q30W2 OQ6 $MC30W2 OQ1 $Q31W2 ONW3O85 C_EC ONW3 
+$Q32W2 OQ1 $MC31W2 OQ1 $Q33W2 OQ5 $Q34W2 OQ1 $MC32W2 OQ1 $Q35W2
 
 end lattice
 
@@ -623,27 +643,27 @@ QFF6W	L[cm]=$LQFF1	G[kG/cm]=-$K1QFF1	Tilt[deg]=0.
 QFF5W	L[cm]=$LQFF2	G[kG/cm]=$K1QFF2	Tilt[deg]=0.
 QFF4W	L[cm]=$LQFF3	G[kG/cm]=-$K1QFF3	Tilt[deg]=0.
 
-Q1W2 	L[cm]=54.5       	G[kG/cm]=-1.549832 	Tilt[deg]=0
-Q2W2 	L[cm]=59         	G[kG/cm]=1.797491 	Tilt[deg]=0
-Q3W2 	L[cm]=56         	G[kG/cm]=1.985673 	Tilt[deg]=0
-Q4W2 	L[cm]=67         	G[kG/cm]=-2.354677 	Tilt[deg]=0
-Q5W2 	L[cm]=69         	G[kG/cm]=1.738088 	Tilt[deg]=0
-Q6W2 	L[cm]=78.5       	G[kG/cm]=-2.132766 	Tilt[deg]=0
+Q1W2 	L[cm]=54.5       	G[kG/cm]=$A1	 	Tilt[deg]=0
+Q2W2 	L[cm]=59         	G[kG/cm]=$A2	 	Tilt[deg]=0
+Q3W2 	L[cm]=56         	G[kG/cm]=$A3	 	Tilt[deg]=0
+Q4W2 	L[cm]=67         	G[kG/cm]=$A4	 	Tilt[deg]=0
+Q5W2 	L[cm]=69         	G[kG/cm]=$A5	 	Tilt[deg]=0
+Q6W2 	L[cm]=78.5       	G[kG/cm]=$A6	 	Tilt[deg]=0
 
 #---------------------------------------------------------------------------------
-Q7W2 	L[cm]=37.5       	G[kG/cm]=2.295079 	Tilt[deg]=0
+Q7W2 	L[cm]=37.5       	G[kG/cm]=2.315079 	Tilt[deg]=0
 Q9W2 	L[cm]=45         	G[kG/cm]=2.979218 	Tilt[deg]=0
 
 Q27W2 	L[cm]=45         	G[kG/cm]=2.979218 	Tilt[deg]=0
-Q29W2 	L[cm]=37.5       	G[kG/cm]=2.295079 	Tilt[deg]=0
+Q29W2 	L[cm]=37.5       	G[kG/cm]=2.315079 	Tilt[deg]=0
 #---------------------------------------------------------------------------------
 
-Q30W2 	L[cm]=78.5       	G[kG/cm]=-2.132766 	Tilt[deg]=0
-Q31W2 	L[cm]=69         	G[kG/cm]=1.738088 	Tilt[deg]=0
-Q32W2 	L[cm]=67         	G[kG/cm]=-2.354677	Tilt[deg]=0
-Q33W2 	L[cm]=56         	G[kG/cm]=1.985673 	Tilt[deg]=0
-Q34W2 	L[cm]=59         	G[kG/cm]=1.797491		Tilt[deg]=0
-Q35W2 	L[cm]=54.5       	G[kG/cm]=-1.549832 	Tilt[deg]=0
+Q30W2 	L[cm]=78.5       	G[kG/cm]=$A6	 	Tilt[deg]=0
+Q31W2 	L[cm]=69         	G[kG/cm]=$A5		Tilt[deg]=0
+Q32W2 	L[cm]=67         	G[kG/cm]=$A4		Tilt[deg]=0
+Q33W2 	L[cm]=56         	G[kG/cm]=$A3	 	Tilt[deg]=0
+Q34W2 	L[cm]=59         	G[kG/cm]=$A2		Tilt[deg]=0
+Q35W2 	L[cm]=54.5       	G[kG/cm]=$A1	 	Tilt[deg]=0
 
 QFF3W	L[cm]=$LQFF3	G[kG/cm]=$K1QFF3_SSA2	Tilt[deg]=0.
 QFF2W	L[cm]=$LQFF2	G[kG/cm]=-$K1QFF2_SSA2	Tilt[deg]=0.
@@ -715,13 +735,13 @@ MCS4	Order:	m=2	Bm*L[kG/cm^(m-1)]=$MCS4	Tilt[deg]=0.
 MCO0	Order:	m=3	Bm*L[kG/cm^(m-1)]=$MCO0	Tilt[deg]=0.
 
 
-MC30W2Q	Order:	m=1	Bm*L[kG/cm^(m-1)]=$MC30W2Q_A1	Tilt[deg]=45.
+MC30W2Q 	Order:	m=1   	Bm*L[kG/cm^(m-1)]=$C0  	Tilt[deg]=45
 MC30W2S	Order:	m=2	Bm*L[kG/cm^(m-1)]=$MC30W2S_B2	Tilt[deg]=0.
 MC30W2O	Order:	m=3	Bm*L[kG/cm^(m-1)]=$MC30W2O_B3	Tilt[deg]=0.
-MC31W2Q	Order:	m=1	Bm*L[kG/cm^(m-1)]=$MC31W2Q_A1	Tilt[deg]=45.
+MC31W2Q 	Order:	m=1   	Bm*L[kG/cm^(m-1)]=$C1   	Tilt[deg]=45
 MC31W2S	Order:	m=2	Bm*L[kG/cm^(m-1)]=$MC31W2S_B2	Tilt[deg]=0.
 MC31W2O	Order:	m=3	Bm*L[kG/cm^(m-1)]=$MC31W2O_B3	Tilt[deg]=0.
-MC32W2Q	Order:	m=1	Bm*L[kG/cm^(m-1)]=$MC32W2Q_A1	Tilt[deg]=45.
+MC32W2Q 	Order:	m=1   	Bm*L[kG/cm^(m-1)]=$C2   	Tilt[deg]=45
 MC32W2S	Order:	m=2	Bm*L[kG/cm^(m-1)]=$MC32W2S_B2	Tilt[deg]=0.
 MC32W2O	Order:	m=3	Bm*L[kG/cm^(m-1)]=$MC32W2O_B3	Tilt[deg]=0.
 MC33W2Q	Order:	m=1	Bm*L[kG/cm^(m-1)]=$MC33W2Q_A1	Tilt[deg]=45.
@@ -766,7 +786,7 @@ MC1EO	Order:	m=3	Bm*L[kG/cm^(m-1)]=$MC1EO_B3	Tilt[deg]=0.
 # MPD, SPD and EC solenoids
 C_MPD	L[cm]=$MPD_L	B[kG]=5.*$ON_COUPLING*$BV_FLAG
 C_SPD	L[cm]=$SPD_L	B[kG]=0.
-C_EC	L[cm]=$EC_L	B[kG]=2.*$ON_COUPLING*$BV_FLAG
+C_EC 	L[cm]=600        	B[kG]=2.       	Aperture[cm]=0       
 
 # RF-3 cavities
 ARF3W21	L[cm]=$RF3W21_L	Ncell=1	Eff_L[cm]=$RF3W21_L	A[MeV]=0.5*$ON_RF/8.	Phase[deg]=-90.	WaveL[cm]=$RF3W2_LAMBDA
@@ -774,3 +794,27 @@ ARF3W22	L[cm]=$RF3W22_L	Ncell=1	Eff_L[cm]=$RF3W22_L	A[MeV]=0.5*$ON_RF/8.	Phase[d
 ARF3W25	L[cm]=$RF3W25_L	Ncell=1	Eff_L[cm]=$RF3W25_L	A[MeV]=0.5*$ON_RF/8.	Phase[deg]=-90.	WaveL[cm]=$RF3W2_LAMBDA
 
 end list of elements
+
+
+
+BetaFitBlock dL[cm]=0.01 dB[kG]=0.01 dG[kG/cm]=0.001
+#Requested parameters and corresponding accuracy are listed below (dPARM<=0. - no fitting)
+#Maximum Betas[cm] and Momentum Compaction (Alfa) are on the next line
+BtXmax=5000.  dBtXmax=0.  BtYmax=5000.  dBtYmax=0.  Alfa=0.  dAlfa=0.
+#Fitting parameters at the end of the lattice
+Beta_X[cm]=100.   dBeta_X[cm]=0.   Alfa_X=0.        dAlfa_X=0.
+Beta_Y[cm]=100.   dBeta_Y[cm]=0.   Alfa_Y=0.        dAlfa_Y=0.
+Disp_X[cm]=0.     dDisp_X[cm]=0.   D_prime_X=0.     dD_prime_X=0.
+Disp_Y[cm]=0.     dDisp_Y[cm]=0.   D_prime_Y=0.     dD_prime_Y=0.
+Qx=0.             dQx=0.
+Qy=0.             dQy=0.
+#Fit at Element with number =2 
+#To create a constraint at an intermediate element: uncomment the line above, 
+# write the correct Element number and insert six lines describing the
+# fit parameters. You can use up to 4 intermediate points
+#Each point has to be specified as described above
+#
+#Insert groups of Elements below. Each group has to be located on one line.
+#Start from the letter describing the type of changeable parameter such as: L:, B:, G: 
+G: q1 q2: min=-1e10   max=1e10
+EndBetaFitBlock
