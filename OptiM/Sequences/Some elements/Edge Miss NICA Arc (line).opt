@@ -497,16 +497,16 @@ $BV2E2="H_BV2 BV2E2 H_BV2";
 $BV3E2="H_BV2 BV3E2 H_BV2";
 $BV4E="H_BV1 BV4E H_BV1";
 
-$A1 =-1.364832   
-$A2 =1.677491    
-$A3 =2.065673    
-$A4 =-2.379677   
-$A5 =1.748088    
-$A6 =-2.162766   
+$A1 =-1.414832   
+$A2 =1.882491    
+$A3 =1.820673    
+$A4 =-2.324677   
+$A5 =1.843088    
+$A6 =-2.192766   
 
-$C0 =-13.16      
-$C1 =12.5        
-$C2 =-10.5       
+$C0 =0.0   
+$C1 =0.0
+$C2 =0.0      
 
 #Q1W2 	L[cm]=54.5       	G[kG/cm]=-1.549832 	Tilt[deg]=0
 #Q2W2 	L[cm]=59         	G[kG/cm]=1.797491 	Tilt[deg]=0
@@ -650,11 +650,11 @@ Q5W2 	L[cm]=69         	G[kG/cm]=$A5	 	Tilt[deg]=0
 Q6W2 	L[cm]=78.5       	G[kG/cm]=$A6	 	Tilt[deg]=0
 
 #---------------------------------------------------------------------------------
-Q7W2 	L[cm]=37.5       	G[kG/cm]=2.385079 	Tilt[deg]=0
-Q9W2 	L[cm]=45         	G[kG/cm]=3.119218 	Tilt[deg]=0
+Q7W2 	L[cm]=37.5       	G[kG/cm]=2.295079 	Tilt[deg]=0
+Q9W2 	L[cm]=45         	G[kG/cm]=3.104218 	Tilt[deg]=0
 
-Q27W2 	L[cm]=45         	G[kG/cm]=3.134218 	Tilt[deg]=0
-Q29W2 	L[cm]=37.5       	G[kG/cm]=2.325079 	Tilt[deg]=0
+Q27W2 	L[cm]=45         	G[kG/cm]=3.104218 	Tilt[deg]=0
+Q29W2 	L[cm]=37.5       	G[kG/cm]=2.295079 	Tilt[deg]=0
 #---------------------------------------------------------------------------------
 
 Q30W2 	L[cm]=78.5       	G[kG/cm]=$A6	 	Tilt[deg]=0
@@ -680,9 +680,9 @@ Q5E2	L[cm]=$LQSS5	G[kG/cm]=$K1QSS5_SSA1	Tilt[deg]=0.
 Q6E2	L[cm]=$LQSS6	G[kG/cm]=-$K1QSS6_SSA1	Tilt[deg]=0.
 
 #---------------------------------------------------------------------------------
-QD 	L[cm]=23.5       	G[kG/cm]=-2.252009 	Tilt[deg]=0
-QF1 	L[cm]=47         	G[kG/cm]=2.876529 	Tilt[deg]=0
-QF2 	L[cm]=47         	G[kG/cm]=2.021529 	Tilt[deg]=0
+QD 	L[cm]=23.5       	G[kG/cm]=-2.267009 	Tilt[deg]=0
+QF1 	L[cm]=47         	G[kG/cm]=2.816529 	Tilt[deg]=0
+QF2 	L[cm]=47         	G[kG/cm]=2.056529 	Tilt[deg]=0
 
 Q7E2	L[cm]=$LDSU1	G[kG/cm]=$K1DSU1	Tilt[deg]=0.
 Q9E2	L[cm]=$LDSU2	G[kG/cm]=$K1DSU2	Tilt[deg]=0.

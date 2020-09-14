@@ -651,11 +651,11 @@ QFF6W	L[cm]=$LQFF1	G[kG/cm]=-$K1QFF1	Tilt[deg]=0.
 QFF5W	L[cm]=$LQFF2	G[kG/cm]=$K1QFF2	Tilt[deg]=0.
 QFF4W	L[cm]=$LQFF3	G[kG/cm]=-$K1QFF3	Tilt[deg]=0.
 
-Q1W2 	L[cm]=54.5       	G[kG/cm]=-1.544832 	Tilt[deg]=0
-Q2W2 	L[cm]=59         	G[kG/cm]=1.902491 	Tilt[deg]=0
-Q3W2 	L[cm]=56         	G[kG/cm]=1.740673 	Tilt[deg]=0
-Q4W2 	L[cm]=67         	G[kG/cm]=-2.119677 	Tilt[deg]=0
-Q5W2 	L[cm]=69         	G[kG/cm]=1.768088 	Tilt[deg]=0
+Q1W2 	L[cm]=54.5       	G[kG/cm]=-1.514832 	Tilt[deg]=0
+Q2W2 	L[cm]=59         	G[kG/cm]=1.867491 	Tilt[deg]=0
+Q3W2 	L[cm]=56         	G[kG/cm]=1.790673 	Tilt[deg]=0
+Q4W2 	L[cm]=67         	G[kG/cm]=-2.129677 	Tilt[deg]=0
+Q5W2 	L[cm]=69         	G[kG/cm]=1.773088 	Tilt[deg]=0
 Q6W2 	L[cm]=78.5       	G[kG/cm]=-2.172766 	Tilt[deg]=0
 
 #---------------------------------------------------------------------------------
@@ -666,8 +666,8 @@ Q27W2 	L[cm]=45         	G[kG/cm]=3.119218 	Tilt[deg]=0
 Q29W2 	L[cm]=37.5       	G[kG/cm]=2.335079 	Tilt[deg]=0
 #---------------------------------------------------------------------------------
 
-Q30W2 	L[cm]=78.5       	G[kG/cm]=-2.282766 	Tilt[deg]=0
-Q31W2 	L[cm]=69         	G[kG/cm]=1.798088 	Tilt[deg]=0
+Q30W2 	L[cm]=78.5       	G[kG/cm]=-2.272766 	Tilt[deg]=0
+Q31W2 	L[cm]=69         	G[kG/cm]=1.773088 	Tilt[deg]=0
 Q32W2 	L[cm]=67         	G[kG/cm]=-2.424677 	Tilt[deg]=0
 Q33W2 	L[cm]=56         	G[kG/cm]=1.770855 	Tilt[deg]=0
 Q34W2 	L[cm]=59         	G[kG/cm]=2.25941 	Tilt[deg]=0
