@@ -16,7 +16,7 @@ USE, SEQUENCE = MACHINE;
 CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX";
 
 
-TRACK, FILE = tbl/basis, onetable = true, aperture = true;
+TRACK, FILE = tbl/basis, onetable = true;!, aperture = true;
 !!!!! x plane !!!!!
 
 start, x=0.000, px=0.0, y=0.0, py=0.0;
@@ -93,6 +93,8 @@ DYNAP, TURNS=1000, FASTUNE=TRUE;
 RUN, TURNS = 500, ffile=1;
 ENDTRACK;
 
+
+
 plot , noversion = true
 	, haxis = x, hmin = -0.02, hmax = 0.02
   , vaxis = px, vmin = -0.006, vmax = 0.006,
@@ -118,10 +120,8 @@ plot	, noversion = true
 		   ,41,42,43,44,45,46
 	, file = img/plot5
 	, trackfile = tbl/basis;
-
+stop;
 !VALUE, TABLE(dynaptune, tunx);
 !VALUE, TABLE(dynaptune, tuny);
 !VALUE, TABLE(summ, q1);
 !VALUE, TABLE(summ, q2);
-
-stop;
