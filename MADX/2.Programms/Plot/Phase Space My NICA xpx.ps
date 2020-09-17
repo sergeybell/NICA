@@ -1,0 +1,7843 @@
+%!PS-Adobe-2.0
+%%Title: Phase Space My NICA xpx.ps
+%%Creator: gnuplot 5.4 patchlevel 0
+%%CreationDate: Thu Sep 17 18:12:48 2020
+%%DocumentFonts: (atend)
+%%BoundingBox: 50 50 554 770
+%%Orientation: Landscape
+%%Pages: (atend)
+%%EndComments
+%%BeginProlog
+/gnudict 256 dict def
+gnudict begin
+%
+% The following true/false flags may be edited by hand if desired.
+% The unit line width and grayscale image gamma correction may also be changed.
+%
+/Color false def
+/Blacktext false def
+/Solid false def
+/Dashlength 1 def
+/Landscape true def
+/Level1 false def
+/Level3 false def
+/Rounded false def
+/ClipToBoundingBox false def
+/SuppressPDFMark false def
+/TransparentPatterns false def
+/gnulinewidth 5.000 def
+/userlinewidth gnulinewidth def
+/Gamma 1.0 def
+/BackgroundColor {-1.000 -1.000 -1.000} def
+%
+/vshift -46 def
+/dl1 {
+  10.0 Dashlength userlinewidth gnulinewidth div mul mul mul
+  Rounded { currentlinewidth 0.75 mul sub dup 0 le { pop 0.01 } if } if
+} def
+/dl2 {
+  10.0 Dashlength userlinewidth gnulinewidth div mul mul mul
+  Rounded { currentlinewidth 0.75 mul add } if
+} def
+/hpt_ 31.5 def
+/vpt_ 31.5 def
+/hpt hpt_ def
+/vpt vpt_ def
+/doclip {
+  ClipToBoundingBox {
+    newpath 50 50 moveto 554 50 lineto 554 770 lineto 50 770 lineto closepath
+    clip
+  } if
+} def
+%
+% Gnuplot Prolog Version 5.2 (Dec 2017)
+%
+%/SuppressPDFMark true def
+%
+/M {moveto} bind def
+/L {lineto} bind def
+/R {rmoveto} bind def
+/V {rlineto} bind def
+/N {newpath moveto} bind def
+/Z {closepath} bind def
+/C {setrgbcolor} bind def
+/f {rlineto fill} bind def
+/g {setgray} bind def
+/Gshow {show} def   % May be redefined later in the file to support UTF-8
+/vpt2 vpt 2 mul def
+/hpt2 hpt 2 mul def
+/Lshow {currentpoint stroke M 0 vshift R 
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
+/Rshow {currentpoint stroke M dup stringwidth pop neg vshift R
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
+/Cshow {currentpoint stroke M dup stringwidth pop -2 div vshift R 
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
+/UP {dup vpt_ mul /vpt exch def hpt_ mul /hpt exch def
+  /hpt2 hpt 2 mul def /vpt2 vpt 2 mul def} def
+/DL {Color {setrgbcolor Solid {pop []} if 0 setdash}
+ {pop pop pop 0 setgray Solid {pop []} if 0 setdash} ifelse} def
+/BL {stroke userlinewidth 2 mul setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/AL {stroke userlinewidth 2 div setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/UL {dup gnulinewidth mul /userlinewidth exch def
+	dup 1 lt {pop 1} if 10 mul /udl exch def} def
+/PL {stroke userlinewidth setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+3.8 setmiterlimit
+% Classic Line colors (version 5.0)
+/LCw {1 1 1} def
+/LCb {0 0 0} def
+/LCa {0 0 0} def
+/LC0 {1 0 0} def
+/LC1 {0 1 0} def
+/LC2 {0 0 1} def
+/LC3 {1 0 1} def
+/LC4 {0 1 1} def
+/LC5 {1 1 0} def
+/LC6 {0 0 0} def
+/LC7 {1 0.3 0} def
+/LC8 {0.5 0.5 0.5} def
+% Default dash patterns (version 5.0)
+/LTB {BL [] LCb DL} def
+/LTw {PL [] 1 setgray} def
+/LTb {PL [] LCb DL} def
+/LTa {AL [1 udl mul 2 udl mul] 0 setdash LCa setrgbcolor} def
+/LT0 {PL [] LC0 DL} def
+/LT1 {PL [2 dl1 3 dl2] LC1 DL} def
+/LT2 {PL [1 dl1 1.5 dl2] LC2 DL} def
+/LT3 {PL [6 dl1 2 dl2 1 dl1 2 dl2] LC3 DL} def
+/LT4 {PL [1 dl1 2 dl2 6 dl1 2 dl2 1 dl1 2 dl2] LC4 DL} def
+/LT5 {PL [4 dl1 2 dl2] LC5 DL} def
+/LT6 {PL [1.5 dl1 1.5 dl2 1.5 dl1 1.5 dl2 1.5 dl1 6 dl2] LC6 DL} def
+/LT7 {PL [3 dl1 3 dl2 1 dl1 3 dl2] LC7 DL} def
+/LT8 {PL [2 dl1 2 dl2 2 dl1 6 dl2] LC8 DL} def
+/SL {[] 0 setdash} def
+/Pnt {stroke [] 0 setdash gsave 1 setlinecap M 0 0 V stroke grestore} def
+/Dia {stroke [] 0 setdash 2 copy vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke
+  Pnt} def
+/Pls {stroke [] 0 setdash vpt sub M 0 vpt2 V
+  currentpoint stroke M
+  hpt neg vpt neg R hpt2 0 V stroke
+ } def
+/Box {stroke [] 0 setdash 2 copy exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke
+  Pnt} def
+/Crs {stroke [] 0 setdash exch hpt sub exch vpt add M
+  hpt2 vpt2 neg V currentpoint stroke M
+  hpt2 neg 0 R hpt2 vpt2 V stroke} def
+/TriU {stroke [] 0 setdash 2 copy vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke
+  Pnt} def
+/Star {2 copy Pls Crs} def
+/BoxF {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath fill} def
+/TriUF {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath fill} def
+/TriD {stroke [] 0 setdash 2 copy vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke
+  Pnt} def
+/TriDF {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath fill} def
+/DiaF {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath fill} def
+/Pent {stroke [] 0 setdash 2 copy gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore Pnt} def
+/PentF {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath fill grestore} def
+/Circle {stroke [] 0 setdash 2 copy
+  hpt 0 360 arc stroke Pnt} def
+/CircleF {stroke [] 0 setdash hpt 0 360 arc fill} def
+/C0 {BL [] 0 setdash 2 copy moveto vpt 90 450 arc} bind def
+/C1 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C2 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C3 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C4 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C5 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc
+	2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc} bind def
+/C6 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C7 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C8 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C9 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 450 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C10 {BL [] 0 setdash 2 copy 2 copy moveto vpt 270 360 arc closepath fill
+	2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C11 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C12 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C13 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C14 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 360 arc closepath fill
+	vpt 0 360 arc} bind def
+/C15 {BL [] 0 setdash 2 copy vpt 0 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/Rec {newpath 4 2 roll moveto 1 index 0 rlineto 0 exch rlineto
+	neg 0 rlineto closepath} bind def
+/Square {dup Rec} bind def
+/Bsquare {vpt sub exch vpt sub exch vpt2 Square} bind def
+/S0 {BL [] 0 setdash 2 copy moveto 0 vpt rlineto BL Bsquare} bind def
+/S1 {BL [] 0 setdash 2 copy vpt Square fill Bsquare} bind def
+/S2 {BL [] 0 setdash 2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S3 {BL [] 0 setdash 2 copy exch vpt sub exch vpt2 vpt Rec fill Bsquare} bind def
+/S4 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S5 {BL [] 0 setdash 2 copy 2 copy vpt Square fill
+	exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S6 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S7 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S8 {BL [] 0 setdash 2 copy vpt sub vpt Square fill Bsquare} bind def
+/S9 {BL [] 0 setdash 2 copy vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S10 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt Square fill
+	Bsquare} bind def
+/S11 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt2 vpt Rec fill
+	Bsquare} bind def
+/S12 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill Bsquare} bind def
+/S13 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S14 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S15 {BL [] 0 setdash 2 copy Bsquare fill Bsquare} bind def
+/D0 {gsave translate 45 rotate 0 0 S0 stroke grestore} bind def
+/D1 {gsave translate 45 rotate 0 0 S1 stroke grestore} bind def
+/D2 {gsave translate 45 rotate 0 0 S2 stroke grestore} bind def
+/D3 {gsave translate 45 rotate 0 0 S3 stroke grestore} bind def
+/D4 {gsave translate 45 rotate 0 0 S4 stroke grestore} bind def
+/D5 {gsave translate 45 rotate 0 0 S5 stroke grestore} bind def
+/D6 {gsave translate 45 rotate 0 0 S6 stroke grestore} bind def
+/D7 {gsave translate 45 rotate 0 0 S7 stroke grestore} bind def
+/D8 {gsave translate 45 rotate 0 0 S8 stroke grestore} bind def
+/D9 {gsave translate 45 rotate 0 0 S9 stroke grestore} bind def
+/D10 {gsave translate 45 rotate 0 0 S10 stroke grestore} bind def
+/D11 {gsave translate 45 rotate 0 0 S11 stroke grestore} bind def
+/D12 {gsave translate 45 rotate 0 0 S12 stroke grestore} bind def
+/D13 {gsave translate 45 rotate 0 0 S13 stroke grestore} bind def
+/D14 {gsave translate 45 rotate 0 0 S14 stroke grestore} bind def
+/D15 {gsave translate 45 rotate 0 0 S15 stroke grestore} bind def
+/DiaE {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke} def
+/BoxE {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke} def
+/TriUE {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke} def
+/TriDE {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke} def
+/PentE {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore} def
+/CircE {stroke [] 0 setdash 
+  hpt 0 360 arc stroke} def
+/Opaque {gsave closepath 1 setgray fill grestore 0 setgray closepath} def
+/DiaW {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V Opaque stroke} def
+/BoxW {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V Opaque stroke} def
+/TriUW {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V Opaque stroke} def
+/TriDW {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V Opaque stroke} def
+/PentW {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  Opaque stroke grestore} def
+/CircW {stroke [] 0 setdash 
+  hpt 0 360 arc Opaque stroke} def
+/BoxFill {gsave Rec 1 setgray fill grestore} def
+/Density {
+  /Fillden exch def
+  currentrgbcolor
+  /ColB exch def /ColG exch def /ColR exch def
+  /ColR ColR Fillden mul Fillden sub 1 add def
+  /ColG ColG Fillden mul Fillden sub 1 add def
+  /ColB ColB Fillden mul Fillden sub 1 add def
+  ColR ColG ColB setrgbcolor} def
+/BoxColFill {gsave Rec PolyFill} def
+/PolyFill {gsave Density fill grestore grestore} def
+/h {rlineto rlineto rlineto closepath gsave fill grestore stroke} bind def
+%
+% PostScript Level 1 Pattern Fill routine for rectangles
+% Usage: x y w h s a XX PatternFill
+%	x,y = lower left corner of box to be filled
+%	w,h = width and height of box
+%	  a = angle in degrees between lines and x-axis
+%	 XX = 0/1 for no/yes cross-hatch
+%
+/PatternFill {gsave /PFa [ 9 2 roll ] def
+  PFa 0 get PFa 2 get 2 div add PFa 1 get PFa 3 get 2 div add translate
+  PFa 2 get -2 div PFa 3 get -2 div PFa 2 get PFa 3 get Rec
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+  clip
+  currentlinewidth 0.5 mul setlinewidth
+  /PFs PFa 2 get dup mul PFa 3 get dup mul add sqrt def
+  0 0 M PFa 5 get rotate PFs -2 div dup translate
+  0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 M 0 PFs V} for
+  0 PFa 6 get ne {
+	0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 2 1 roll M PFs 0 V} for
+ } if
+  stroke grestore} def
+%
+/languagelevel where
+ {pop languagelevel} {1} ifelse
+dup 2 lt
+	{/InterpretLevel1 true def
+	 /InterpretLevel3 false def}
+	{/InterpretLevel1 Level1 def
+	 2 gt
+	    {/InterpretLevel3 Level3 def}
+	    {/InterpretLevel3 false def}
+	 ifelse }
+ ifelse
+%
+% PostScript level 2 pattern fill definitions
+%
+/Level2PatternFill {
+/Tile8x8 {/PaintType 2 /PatternType 1 /TilingType 1 /BBox [0 0 8 8] /XStep 8 /YStep 8}
+	bind def
+/KeepColor {currentrgbcolor [/Pattern /DeviceRGB] setcolorspace} bind def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke} 
+>> matrix makepattern
+/Pat1 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke
+	0 4 M 4 8 L 8 4 L 4 0 L 0 4 L stroke}
+>> matrix makepattern
+/Pat2 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 0 8 L
+	8 8 L 8 0 L 0 0 L fill}
+>> matrix makepattern
+/Pat3 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 8 M 8 -4 L
+	0 12 M 12 0 L stroke}
+>> matrix makepattern
+/Pat4 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 0 M 8 12 L
+	0 -4 M 12 8 L stroke}
+>> matrix makepattern
+/Pat5 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 8 M 4 -4 L
+	0 12 M 8 -4 L 4 12 M 10 0 L stroke}
+>> matrix makepattern
+/Pat6 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 0 M 4 12 L
+	0 -4 M 8 12 L 4 -4 M 10 8 L stroke}
+>> matrix makepattern
+/Pat7 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 8 -2 M -4 4 L
+	12 0 M -4 8 L 12 4 M 0 10 L stroke}
+>> matrix makepattern
+/Pat8 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 -2 M 12 4 L
+	-4 0 M 12 8 L -4 4 M 8 10 L stroke}
+>> matrix makepattern
+/Pat9 exch def
+/Pattern1 {PatternBgnd KeepColor Pat1 setpattern} bind def
+/Pattern2 {PatternBgnd KeepColor Pat2 setpattern} bind def
+/Pattern3 {PatternBgnd KeepColor Pat3 setpattern} bind def
+/Pattern4 {PatternBgnd KeepColor Landscape {Pat5} {Pat4} ifelse setpattern} bind def
+/Pattern5 {PatternBgnd KeepColor Landscape {Pat4} {Pat5} ifelse setpattern} bind def
+/Pattern6 {PatternBgnd KeepColor Landscape {Pat9} {Pat6} ifelse setpattern} bind def
+/Pattern7 {PatternBgnd KeepColor Landscape {Pat8} {Pat7} ifelse setpattern} bind def
+} def
+%
+%
+%End of PostScript Level 2 code
+%
+/PatternBgnd {
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+} def
+%
+% Substitute for Level 2 pattern fill codes with
+% grayscale if Level 2 support is not selected.
+%
+/Level1PatternFill {
+/Pattern1 {0.250 Density} bind def
+/Pattern2 {0.500 Density} bind def
+/Pattern3 {0.750 Density} bind def
+/Pattern4 {0.125 Density} bind def
+/Pattern5 {0.375 Density} bind def
+/Pattern6 {0.625 Density} bind def
+/Pattern7 {0.875 Density} bind def
+} def
+%
+% Now test for support of Level 2 code
+%
+Level1 {Level1PatternFill} {Level2PatternFill} ifelse
+%
+/Symbol-Oblique /Symbol findfont [1 0 .167 1 0 0] makefont
+dup length dict begin {1 index /FID eq {pop pop} {def} ifelse} forall
+currentdict end definefont pop
+%
+/Metrics {ExtendTextBox Gswidth} def
+/Lwidth {currentpoint stroke M 0 vshift R Metrics} def
+/Rwidth {currentpoint stroke M dup stringwidth pop neg vshift R Metrics} def
+/Cwidth {currentpoint stroke M dup stringwidth pop -2 div vshift R Metrics} def
+/GLwidth {currentpoint stroke M 0 vshift R {ExtendTextBox} forall} def
+/GRwidth {currentpoint stroke M dup Gwidth vshift R {ExtendTextBox} forall} def
+/GCwidth {currentpoint stroke M dup Gwidth 2 div vshift R {ExtendTextBox} forall} def
+/GLwidth2 {0 Gwidth AddGlyphWidth} def
+/GRwidth2 {Gwidth -1 mul 0 AddGlyphWidth} def
+/GCwidth2 {Gwidth 2 div dup -1 mul AddGlyphWidth} def
+/AddGlyphWidth { dup TBx2 gt {userdict /TBx2 3 -1 roll put} {pop} ifelse
+                 dup TBx1 lt {userdict /TBx1 3 -1 roll put} {pop} ifelse } def
+/MFshow {
+   { dup 5 get 3 ge
+     { 5 get 3 eq {gsave} {grestore} ifelse }
+     {dup dup 0 get findfont exch 1 get scalefont setfont
+     [ currentpoint ] exch dup 2 get 0 exch R dup 5 get 2 ne {dup dup 6
+     get exch 4 get {textshow} {Metrics pop 0 R} ifelse }if dup 5 get 0 eq
+     {dup 3 get {2 get neg 0 exch R pop} {pop aload pop M} ifelse} {dup 5
+     get 1 eq {dup 2 get exch dup 3 get exch 6 get Gswidth pop -2 div
+     dup 0 R} {dup 6 get Gswidth pop -2 div 0 R 6 get
+     textshow 2 index {aload pop M neg 3 -1 roll neg R pop pop} {pop pop pop
+     pop aload pop M} ifelse }ifelse }ifelse }
+     ifelse }
+   forall} def
+/Gswidth {dup type /stringtype eq {stringwidth} {pop (n) stringwidth} ifelse} def
+/MFwidth {0 exch { dup 5 get 3 ge { 5 get 3 eq { 0 } { pop } ifelse }
+ {dup 3 get{dup dup 0 get findfont exch 1 get scalefont setfont
+     6 get Gswidth pop add} {pop} ifelse} ifelse} forall} def
+/MLshow { currentpoint stroke M
+  0 exch R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/MRshow { currentpoint stroke M
+  exch dup MFwidth neg 3 -1 roll R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/MCshow { currentpoint stroke M
+  exch dup MFwidth -2 div 3 -1 roll R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/XYsave    { [( ) 1 2 true false 3 ()] } bind def
+/XYrestore { [( ) 1 2 true false 4 ()] } bind def
+Level1 SuppressPDFMark or 
+{} {
+/SDict 10 dict def
+systemdict /pdfmark known not {
+  userdict /pdfmark systemdict /cleartomark get put
+} if
+SDict begin [
+  /Title (Phase Space My NICA xpx.ps)
+  /Subject (gnuplot plot)
+  /Creator (gnuplot 5.4 patchlevel 0)
+%  /Producer (gnuplot)
+%  /Keywords ()
+  /CreationDate (Thu Sep 17 18:12:48 2020)
+  /DOCINFO pdfmark
+end
+} ifelse
+%
+% Support for boxed text - Ethan A Merritt Sep 2016
+%
+/InitTextBox { userdict /TBy2 3 -1 roll put userdict /TBx2 3 -1 roll put
+           userdict /TBy1 3 -1 roll put userdict /TBx1 3 -1 roll put
+	   /Boxing true def } def
+/ExtendTextBox { dup type /stringtype eq
+    { Boxing { gsave dup false charpath pathbbox
+      dup TBy2 gt {userdict /TBy2 3 -1 roll put} {pop} ifelse
+      dup TBx2 gt {userdict /TBx2 3 -1 roll put} {pop} ifelse
+      dup TBy1 lt {userdict /TBy1 3 -1 roll put} {pop} ifelse
+      dup TBx1 lt {userdict /TBx1 3 -1 roll put} {pop} ifelse
+      grestore } if }
+    {} ifelse} def
+/PopTextBox { newpath TBx1 TBxmargin sub TBy1 TBymargin sub M
+               TBx1 TBxmargin sub TBy2 TBymargin add L
+	       TBx2 TBxmargin add TBy2 TBymargin add L
+	       TBx2 TBxmargin add TBy1 TBymargin sub L closepath } def
+/DrawTextBox { PopTextBox stroke /Boxing false def} def
+/FillTextBox { gsave PopTextBox fill grestore /Boxing false def} def
+0 0 0 0 InitTextBox
+/TBxmargin 20 def
+/TBymargin 20 def
+/Boxing false def
+/textshow { ExtendTextBox Gshow } def
+%
+end
+%%EndProlog
+%%Page: 1 1
+gnudict begin
+gsave
+doclip
+50 50 translate
+0.100 0.100 scale
+90 rotate
+0 -5040 translate
+0 setgray
+newpath
+(Helvetica) findfont 140 scalefont setfont
+BackgroundColor 0 lt 3 1 roll 0 lt exch 0 lt or or not {gsave BackgroundColor C clippath fill grestore} if
+1.000 UL
+LTb
+LCb setrgbcolor
+0.500 UL
+LTa
+LCa setrgbcolor
+854 448 M
+6093 0 V
+stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+854 448 M
+63 0 V
+6030 0 R
+-63 0 V
+stroke
+770 448 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-0.02)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+/vshift -46 def
+1.000 UL
+LTb
+LCb setrgbcolor
+0.500 UL
+LTa
+LCa setrgbcolor
+854 969 M
+6093 0 V
+stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+854 969 M
+63 0 V
+6030 0 R
+-63 0 V
+stroke
+770 969 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-0.015)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+0.500 UL
+LTa
+LCa setrgbcolor
+854 1491 M
+6093 0 V
+stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+854 1491 M
+63 0 V
+6030 0 R
+-63 0 V
+stroke
+770 1491 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-0.01)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+0.500 UL
+LTa
+LCa setrgbcolor
+854 2012 M
+6093 0 V
+stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+854 2012 M
+63 0 V
+6030 0 R
+-63 0 V
+stroke
+770 2012 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-0.005)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+0.500 UL
+LTa
+LCa setrgbcolor
+854 2534 M
+6093 0 V
+stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+854 2534 M
+63 0 V
+6030 0 R
+-63 0 V
+stroke
+770 2534 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+0.500 UL
+LTa
+LCa setrgbcolor
+854 3055 M
+6093 0 V
+stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+854 3055 M
+63 0 V
+6030 0 R
+-63 0 V
+stroke
+770 3055 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.005)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+0.500 UL
+LTa
+LCa setrgbcolor
+854 3576 M
+6093 0 V
+stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+854 3576 M
+63 0 V
+6030 0 R
+-63 0 V
+stroke
+770 3576 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.01)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+0.500 UL
+LTa
+LCa setrgbcolor
+854 4098 M
+6093 0 V
+stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+854 4098 M
+63 0 V
+6030 0 R
+-63 0 V
+stroke
+770 4098 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.015)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+0.500 UL
+LTa
+LCa setrgbcolor
+854 4619 M
+6093 0 V
+stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+854 4619 M
+63 0 V
+6030 0 R
+-63 0 V
+stroke
+770 4619 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.02)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+0.500 UL
+LTa
+LCa setrgbcolor
+854 448 M
+0 4171 V
+stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+854 448 M
+0 63 V
+0 4108 R
+0 -63 V
+stroke
+854 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-0.02)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+0.500 UL
+LTa
+LCa setrgbcolor
+1616 448 M
+0 4171 V
+stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+1616 448 M
+0 63 V
+0 4108 R
+0 -63 V
+stroke
+1616 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-0.015)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+0.500 UL
+LTa
+LCa setrgbcolor
+2377 448 M
+0 4171 V
+stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+2377 448 M
+0 63 V
+0 4108 R
+0 -63 V
+stroke
+2377 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-0.01)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+0.500 UL
+LTa
+LCa setrgbcolor
+3139 448 M
+0 4171 V
+stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+3139 448 M
+0 63 V
+0 4108 R
+0 -63 V
+stroke
+3139 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-0.005)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+0.500 UL
+LTa
+LCa setrgbcolor
+3901 448 M
+0 4171 V
+stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+3901 448 M
+0 63 V
+0 4108 R
+0 -63 V
+stroke
+3901 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+0.500 UL
+LTa
+LCa setrgbcolor
+4662 448 M
+0 4171 V
+stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+4662 448 M
+0 63 V
+0 4108 R
+0 -63 V
+stroke
+4662 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.005)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+0.500 UL
+LTa
+LCa setrgbcolor
+5424 448 M
+0 4171 V
+stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+5424 448 M
+0 63 V
+0 4108 R
+0 -63 V
+stroke
+5424 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.01)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+0.500 UL
+LTa
+LCa setrgbcolor
+6185 448 M
+0 4171 V
+stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+6185 448 M
+0 63 V
+0 4108 R
+0 -63 V
+stroke
+6185 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.015)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+0.500 UL
+LTa
+LCa setrgbcolor
+6947 448 M
+0 4171 V
+stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+6947 448 M
+0 63 V
+0 4108 R
+0 -63 V
+stroke
+6947 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.02)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTB
+LCb setrgbcolor
+854 4619 N
+854 448 L
+6093 0 V
+0 4171 V
+-6093 0 V
+Z stroke
+0.400 UP
+1.000 UL
+LTb
+LCb setrgbcolor
+LCb setrgbcolor
+133 2533 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (px)]
+] -46.7 MCshow
+grestore
+/Helvetica findfont 140 scalefont setfont
+LTb
+LCb setrgbcolor
+3900 98 M
+[ [(Helvetica) 140.0 0.0 true true 0 (x)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+LTb
+% Begin plot #1
+0.400 UP
+1.000 UL
+LTb
+LCb setrgbcolor
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+3901 2534 Pls
+% End plot #1
+% Begin plot #2
+0.400 UP
+1.000 UL
+LTb
+LT1
+LCb setrgbcolor
+3977 2534 Crs
+3886 2607 Crs
+3826 2522 Crs
+3927 2461 Crs
+3971 2556 Crs
+3863 2602 Crs
+3837 2501 Crs
+3947 2470 Crs
+3958 2577 Crs
+3844 2590 Crs
+3853 2482 Crs
+3964 2484 Crs
+3939 2593 Crs
+3831 2573 Crs
+3873 2468 Crs
+3974 2504 Crs
+3917 2603 Crs
+3824 2552 Crs
+3896 2461 Crs
+3977 2526 Crs
+3893 2607 Crs
+3826 2530 Crs
+3919 2460 Crs
+3974 2549 Crs
+3869 2604 Crs
+3833 2507 Crs
+3941 2466 Crs
+3963 2570 Crs
+3850 2594 Crs
+3847 2488 Crs
+3959 2479 Crs
+3945 2588 Crs
+3835 2579 Crs
+3866 2472 Crs
+3971 2498 Crs
+3924 2600 Crs
+3827 2559 Crs
+3888 2462 Crs
+3977 2519 Crs
+3900 2606 Crs
+3825 2537 Crs
+3911 2460 Crs
+3976 2542 Crs
+3877 2606 Crs
+3830 2515 Crs
+3934 2464 Crs
+3967 2563 Crs
+3856 2598 Crs
+3842 2494 Crs
+3953 2475 Crs
+3951 2582 Crs
+3840 2585 Crs
+3859 2477 Crs
+3968 2491 Crs
+3931 2596 Crs
+3830 2567 Crs
+3880 2465 Crs
+3976 2512 Crs
+3908 2605 Crs
+3825 2545 Crs
+3903 2460 Crs
+3977 2534 Crs
+3885 2607 Crs
+3828 2522 Crs
+3927 2462 Crs
+3970 2556 Crs
+3864 2602 Crs
+3837 2501 Crs
+3948 2471 Crs
+3956 2576 Crs
+3846 2590 Crs
+3852 2482 Crs
+3964 2485 Crs
+3938 2592 Crs
+3833 2573 Crs
+3872 2468 Crs
+3974 2504 Crs
+3916 2603 Crs
+3826 2553 Crs
+3895 2461 Crs
+3977 2526 Crs
+3893 2607 Crs
+3825 2530 Crs
+3919 2461 Crs
+3973 2548 Crs
+3871 2605 Crs
+3832 2507 Crs
+3941 2467 Crs
+3961 2569 Crs
+3852 2595 Crs
+3846 2488 Crs
+3960 2480 Crs
+3945 2587 Crs
+3836 2580 Crs
+3865 2472 Crs
+3972 2497 Crs
+3924 2600 Crs
+3826 2560 Crs
+3888 2463 Crs
+3977 2518 Crs
+3902 2607 Crs
+3824 2537 Crs
+3912 2460 Crs
+3975 2541 Crs
+3879 2607 Crs
+3829 2515 Crs
+3935 2464 Crs
+3966 2563 Crs
+3857 2599 Crs
+3841 2494 Crs
+3954 2474 Crs
+3951 2582 Crs
+3840 2585 Crs
+3859 2477 Crs
+3968 2490 Crs
+3932 2597 Crs
+3828 2566 Crs
+3881 2465 Crs
+3976 2511 Crs
+3910 2606 Crs
+3823 2545 Crs
+3905 2460 Crs
+3976 2533 Crs
+3886 2608 Crs
+3826 2522 Crs
+3928 2461 Crs
+3970 2556 Crs
+3863 2602 Crs
+3836 2500 Crs
+3948 2470 Crs
+3957 2577 Crs
+3844 2590 Crs
+3853 2482 Crs
+3964 2485 Crs
+3939 2593 Crs
+3830 2573 Crs
+3874 2468 Crs
+3974 2504 Crs
+3917 2604 Crs
+3824 2552 Crs
+3897 2461 Crs
+3977 2526 Crs
+3893 2608 Crs
+3825 2529 Crs
+3920 2460 Crs
+3973 2550 Crs
+3869 2604 Crs
+3833 2507 Crs
+3941 2466 Crs
+3963 2571 Crs
+3849 2594 Crs
+3848 2487 Crs
+3959 2479 Crs
+3945 2589 Crs
+3834 2579 Crs
+3867 2472 Crs
+3971 2498 Crs
+3924 2601 Crs
+3826 2559 Crs
+3889 2462 Crs
+3977 2519 Crs
+3900 2607 Crs
+3825 2537 Crs
+3912 2459 Crs
+3976 2542 Crs
+3876 2606 Crs
+3830 2514 Crs
+3934 2464 Crs
+3967 2564 Crs
+3855 2598 Crs
+3843 2493 Crs
+3954 2475 Crs
+3951 2583 Crs
+3839 2584 Crs
+3860 2476 Crs
+3968 2492 Crs
+3931 2597 Crs
+3829 2566 Crs
+3881 2465 Crs
+3976 2512 Crs
+3907 2605 Crs
+3825 2544 Crs
+3904 2460 Crs
+3977 2535 Crs
+3884 2607 Crs
+3828 2522 Crs
+3927 2462 Crs
+3970 2557 Crs
+3863 2601 Crs
+3838 2500 Crs
+3948 2471 Crs
+3956 2576 Crs
+3845 2590 Crs
+3853 2482 Crs
+3964 2486 Crs
+3937 2592 Crs
+3832 2573 Crs
+3873 2468 Crs
+3975 2505 Crs
+3915 2603 Crs
+3826 2552 Crs
+3896 2461 Crs
+3978 2527 Crs
+3892 2607 Crs
+3826 2529 Crs
+3919 2461 Crs
+3973 2549 Crs
+3870 2604 Crs
+3833 2507 Crs
+3942 2467 Crs
+3961 2570 Crs
+3851 2595 Crs
+3846 2487 Crs
+3960 2480 Crs
+3944 2587 Crs
+3836 2579 Crs
+3865 2472 Crs
+3972 2498 Crs
+3923 2600 Crs
+3827 2559 Crs
+3888 2463 Crs
+3977 2519 Crs
+3901 2607 Crs
+3824 2537 Crs
+3912 2460 Crs
+3975 2541 Crs
+3878 2606 Crs
+3829 2514 Crs
+3935 2464 Crs
+3966 2563 Crs
+3857 2599 Crs
+3841 2493 Crs
+3955 2475 Crs
+3951 2582 Crs
+3840 2585 Crs
+3859 2476 Crs
+3969 2491 Crs
+3931 2597 Crs
+3828 2566 Crs
+3881 2465 Crs
+3976 2511 Crs
+3909 2606 Crs
+3824 2544 Crs
+3905 2460 Crs
+3976 2534 Crs
+3886 2608 Crs
+3826 2521 Crs
+3928 2462 Crs
+3970 2556 Crs
+3864 2602 Crs
+3836 2500 Crs
+3949 2470 Crs
+3957 2577 Crs
+3844 2590 Crs
+3853 2481 Crs
+3964 2485 Crs
+3939 2593 Crs
+3831 2573 Crs
+3874 2468 Crs
+3974 2504 Crs
+3917 2604 Crs
+3824 2552 Crs
+3897 2461 Crs
+3977 2526 Crs
+3893 2608 Crs
+3824 2529 Crs
+3921 2460 Crs
+3973 2550 Crs
+3870 2604 Crs
+3833 2507 Crs
+3942 2467 Crs
+3962 2571 Crs
+3849 2594 Crs
+3847 2487 Crs
+3959 2479 Crs
+3945 2589 Crs
+3834 2579 Crs
+3867 2472 Crs
+3971 2498 Crs
+3924 2601 Crs
+3825 2559 Crs
+3890 2462 Crs
+3977 2520 Crs
+3900 2607 Crs
+3824 2536 Crs
+3913 2459 Crs
+3975 2543 Crs
+3876 2606 Crs
+3830 2514 Crs
+3935 2464 Crs
+3967 2565 Crs
+3855 2598 Crs
+3843 2493 Crs
+3954 2475 Crs
+3951 2584 Crs
+3838 2584 Crs
+3860 2476 Crs
+3968 2492 Crs
+3931 2598 Crs
+3828 2565 Crs
+3882 2464 Crs
+3976 2513 Crs
+3907 2605 Crs
+3825 2544 Crs
+3905 2460 Crs
+3977 2535 Crs
+3883 2607 Crs
+3828 2521 Crs
+3928 2462 Crs
+3970 2558 Crs
+3862 2601 Crs
+3838 2500 Crs
+3948 2471 Crs
+3956 2577 Crs
+3844 2589 Crs
+3854 2481 Crs
+3964 2486 Crs
+3937 2593 Crs
+3832 2572 Crs
+3874 2468 Crs
+3975 2506 Crs
+3915 2603 Crs
+3826 2551 Crs
+3896 2461 Crs
+3978 2528 Crs
+3891 2607 Crs
+3826 2529 Crs
+3920 2461 Crs
+3973 2550 Crs
+3869 2604 Crs
+3834 2507 Crs
+3942 2468 Crs
+3961 2571 Crs
+3850 2594 Crs
+3847 2487 Crs
+3960 2481 Crs
+3944 2588 Crs
+3836 2579 Crs
+3866 2472 Crs
+3972 2499 Crs
+3922 2600 Crs
+3827 2559 Crs
+3888 2462 Crs
+3977 2520 Crs
+3900 2606 Crs
+3825 2536 Crs
+3912 2460 Crs
+3975 2542 Crs
+3877 2606 Crs
+3830 2514 Crs
+3935 2465 Crs
+3965 2564 Crs
+3857 2598 Crs
+3841 2493 Crs
+3955 2476 Crs
+3950 2582 Crs
+3840 2585 Crs
+3859 2476 Crs
+3969 2492 Crs
+3930 2597 Crs
+3829 2566 Crs
+3881 2465 Crs
+3976 2512 Crs
+3908 2606 Crs
+3824 2544 Crs
+3905 2460 Crs
+3976 2534 Crs
+3885 2607 Crs
+3827 2521 Crs
+3928 2462 Crs
+3969 2556 Crs
+3863 2602 Crs
+3836 2499 Crs
+3949 2471 Crs
+3956 2577 Crs
+3845 2590 Crs
+3853 2481 Crs
+3965 2485 Crs
+3938 2593 Crs
+3831 2572 Crs
+3874 2468 Crs
+3974 2505 Crs
+3916 2604 Crs
+3824 2551 Crs
+3897 2461 Crs
+3977 2527 Crs
+3893 2608 Crs
+3824 2528 Crs
+3921 2460 Crs
+3972 2550 Crs
+3870 2605 Crs
+3832 2506 Crs
+3943 2467 Crs
+3961 2571 Crs
+3850 2594 Crs
+3847 2487 Crs
+3960 2480 Crs
+3945 2589 Crs
+3834 2578 Crs
+3867 2471 Crs
+3972 2498 Crs
+3924 2602 Crs
+3825 2558 Crs
+3890 2462 Crs
+3977 2520 Crs
+3900 2607 Crs
+3824 2536 Crs
+3914 2459 Crs
+3975 2543 Crs
+3876 2606 Crs
+3830 2513 Crs
+3936 2464 Crs
+3966 2565 Crs
+3855 2598 Crs
+3842 2493 Crs
+3955 2475 Crs
+3951 2584 Crs
+3838 2584 Crs
+3861 2476 Crs
+3968 2492 Crs
+3931 2598 Crs
+3827 2565 Crs
+3882 2464 Crs
+3976 2513 Crs
+3907 2606 Crs
+3824 2543 Crs
+3906 2459 Crs
+3977 2536 Crs
+3883 2607 Crs
+3828 2521 Crs
+3928 2462 Crs
+3970 2558 Crs
+3861 2601 Crs
+3838 2499 Crs
+3949 2471 Crs
+3957 2578 Crs
+3843 2589 Crs
+3854 2481 Crs
+3964 2486 Crs
+3937 2594 Crs
+3831 2572 Crs
+3875 2467 Crs
+3975 2506 Crs
+3915 2604 Crs
+3825 2551 Crs
+3897 2460 Crs
+3978 2528 Crs
+3891 2607 Crs
+3826 2528 Crs
+3920 2460 Crs
+3973 2551 Crs
+3868 2603 Crs
+3834 2506 Crs
+3942 2467 Crs
+3961 2571 Crs
+3849 2594 Crs
+3848 2486 Crs
+3960 2481 Crs
+3943 2588 Crs
+3835 2578 Crs
+3867 2471 Crs
+3972 2499 Crs
+3922 2600 Crs
+3827 2558 Crs
+3889 2462 Crs
+3978 2521 Crs
+3899 2606 Crs
+3826 2536 Crs
+3913 2460 Crs
+3975 2543 Crs
+3876 2605 Crs
+3831 2513 Crs
+3935 2465 Crs
+3965 2564 Crs
+3856 2598 Crs
+3842 2493 Crs
+3955 2476 Crs
+3949 2583 Crs
+3840 2584 Crs
+3860 2476 Crs
+3969 2493 Crs
+3929 2597 Crs
+3829 2565 Crs
+3881 2465 Crs
+3977 2513 Crs
+3907 2605 Crs
+3825 2544 Crs
+3905 2460 Crs
+3976 2535 Crs
+3884 2607 Crs
+3827 2521 Crs
+3928 2462 Crs
+3969 2557 Crs
+3863 2601 Crs
+3837 2499 Crs
+3949 2471 Crs
+3955 2577 Crs
+3845 2589 Crs
+3853 2481 Crs
+3965 2486 Crs
+3937 2593 Crs
+% End plot #2
+% Begin plot #3
+0.400 UP
+1.000 UL
+LTb
+LT2
+LCb setrgbcolor
+4053 2534 Star
+3871 2681 Star
+3752 2511 Star
+3955 2389 Star
+4040 2580 Star
+3824 2670 Star
+3774 2466 Star
+3996 2407 Star
+4014 2622 Star
+3786 2645 Star
+3808 2429 Star
+4028 2438 Star
+3976 2654 Star
+3760 2610 Star
+3850 2402 Star
+4048 2478 Star
+3929 2674 Star
+3749 2567 Star
+3896 2387 Star
+4054 2524 Star
+3880 2680 Star
+3753 2521 Star
+3943 2388 Star
+4045 2571 Star
+3833 2672 Star
+3771 2477 Star
+3986 2403 Star
+4021 2612 Star
+3794 2651 Star
+3801 2438 Star
+4020 2431 Star
+3984 2646 Star
+3767 2618 Star
+3839 2408 Star
+4044 2470 Star
+3938 2668 Star
+3754 2577 Star
+3884 2391 Star
+4054 2514 Star
+3890 2678 Star
+3754 2533 Star
+3930 2388 Star
+4048 2559 Star
+3844 2674 Star
+3767 2488 Star
+3974 2400 Star
+4026 2601 Star
+3806 2656 Star
+3792 2448 Star
+4012 2425 Star
+3992 2636 Star
+3777 2627 Star
+3827 2416 Star
+4039 2460 Star
+3949 2661 Star
+3759 2589 Star
+3870 2395 Star
+4052 2502 Star
+3903 2675 Star
+3754 2546 Star
+3916 2388 Star
+4050 2546 Star
+3858 2676 Star
+3762 2501 Star
+3962 2396 Star
+4032 2588 Star
+3818 2663 Star
+3783 2459 Star
+4003 2418 Star
+4000 2625 Star
+3786 2637 Star
+3815 2424 Star
+4033 2450 Star
+3961 2654 Star
+3764 2601 Star
+3856 2400 Star
+4050 2489 Star
+3917 2673 Star
+3754 2559 Star
+3903 2389 Star
+4051 2532 Star
+3873 2678 Star
+3756 2513 Star
+3951 2393 Star
+4037 2575 Star
+3831 2669 Star
+3773 2470 Star
+3994 2410 Star
+4010 2615 Star
+3795 2646 Star
+3803 2432 Star
+4027 2439 Star
+3974 2648 Star
+3768 2612 Star
+3844 2405 Star
+4047 2476 Star
+3931 2671 Star
+3752 2571 Star
+3891 2390 Star
+4052 2519 Star
+3886 2680 Star
+3751 2525 Star
+3940 2389 Star
+4042 2564 Star
+3842 2674 Star
+3765 2480 Star
+3985 2403 Star
+4019 2607 Star
+3802 2654 Star
+3793 2440 Star
+4021 2428 Star
+3986 2643 Star
+3770 2622 Star
+3834 2409 Star
+4044 2464 Star
+3945 2669 Star
+3751 2582 Star
+3881 2391 Star
+4053 2507 Star
+3899 2681 Star
+3747 2536 Star
+3930 2387 Star
+4047 2554 Star
+3851 2678 Star
+3759 2490 Star
+3976 2396 Star
+4028 2599 Star
+3808 2661 Star
+3786 2448 Star
+4013 2420 Star
+3997 2638 Star
+3773 2631 Star
+3825 2415 Star
+4040 2454 Star
+3956 2666 Star
+3752 2591 Star
+3871 2393 Star
+4052 2498 Star
+3909 2680 Star
+3746 2546 Star
+3920 2385 Star
+4051 2545 Star
+3859 2680 Star
+3756 2499 Star
+3966 2392 Star
+4035 2591 Star
+3814 2665 Star
+3781 2456 Star
+4005 2413 Star
+4006 2631 Star
+3778 2638 Star
+3817 2421 Star
+4034 2447 Star
+3965 2661 Star
+3755 2600 Star
+3861 2397 Star
+4051 2489 Star
+3917 2677 Star
+3748 2556 Star
+3908 2386 Star
+4053 2536 Star
+3868 2680 Star
+3755 2510 Star
+3954 2390 Star
+4040 2582 Star
+3822 2668 Star
+3777 2466 Star
+3995 2408 Star
+4013 2622 Star
+3786 2644 Star
+3809 2429 Star
+4027 2440 Star
+3974 2653 Star
+3762 2609 Star
+3850 2402 Star
+4048 2480 Star
+3927 2672 Star
+3752 2566 Star
+3896 2388 Star
+4054 2525 Star
+3878 2678 Star
+3755 2521 Star
+3942 2389 Star
+4044 2570 Star
+3833 2671 Star
+3772 2477 Star
+3984 2404 Star
+4019 2611 Star
+3797 2650 Star
+3800 2439 Star
+4020 2433 Star
+3982 2644 Star
+3771 2618 Star
+3838 2409 Star
+4044 2470 Star
+3937 2666 Star
+3756 2578 Star
+3882 2392 Star
+4053 2513 Star
+3891 2677 Star
+3755 2534 Star
+3928 2389 Star
+4047 2557 Star
+3847 2674 Star
+3766 2490 Star
+3973 2401 Star
+4025 2598 Star
+3809 2657 Star
+3790 2449 Star
+4011 2425 Star
+3991 2634 Star
+3779 2628 Star
+3825 2417 Star
+4039 2459 Star
+3950 2660 Star
+3760 2590 Star
+3868 2396 Star
+4052 2500 Star
+3905 2675 Star
+3753 2547 Star
+3915 2389 Star
+4049 2543 Star
+3861 2677 Star
+3760 2502 Star
+3962 2396 Star
+4031 2586 Star
+3821 2664 Star
+3780 2460 Star
+4003 2417 Star
+4001 2624 Star
+3787 2638 Star
+3813 2424 Star
+4033 2448 Star
+3963 2655 Star
+3763 2602 Star
+3855 2400 Star
+4050 2487 Star
+3920 2674 Star
+3751 2559 Star
+3903 2389 Star
+4051 2530 Star
+3875 2680 Star
+3753 2514 Star
+3952 2392 Star
+4038 2575 Star
+3832 2670 Star
+3771 2470 Star
+3995 2408 Star
+4012 2616 Star
+3794 2647 Star
+3802 2432 Star
+4028 2437 Star
+3976 2650 Star
+3765 2613 Star
+3845 2404 Star
+4047 2474 Star
+3933 2673 Star
+3749 2571 Star
+3893 2389 Star
+4053 2518 Star
+3887 2682 Star
+3749 2524 Star
+3942 2388 Star
+4043 2565 Star
+3841 2675 Star
+3764 2479 Star
+3986 2401 Star
+4021 2609 Star
+3799 2655 Star
+3794 2439 Star
+4021 2427 Star
+3987 2646 Star
+3767 2622 Star
+3835 2408 Star
+4044 2464 Star
+3945 2671 Star
+3749 2580 Star
+3883 2390 Star
+4053 2509 Star
+3897 2682 Star
+3747 2534 Star
+3931 2386 Star
+4048 2556 Star
+3848 2678 Star
+3760 2488 Star
+3976 2396 Star
+4029 2601 Star
+3805 2660 Star
+3788 2447 Star
+4013 2420 Star
+3997 2639 Star
+3771 2629 Star
+3827 2414 Star
+4040 2456 Star
+3954 2666 Star
+3752 2590 Star
+3873 2393 Star
+4053 2500 Star
+3906 2680 Star
+3748 2544 Star
+3920 2385 Star
+4051 2547 Star
+3856 2679 Star
+3759 2498 Star
+3965 2393 Star
+4035 2592 Star
+3812 2664 Star
+3783 2456 Star
+4004 2415 Star
+4004 2631 Star
+3778 2636 Star
+3819 2421 Star
+4034 2449 Star
+3963 2659 Star
+3757 2599 Star
+3861 2397 Star
+4051 2491 Star
+3915 2675 Star
+3751 2555 Star
+3908 2387 Star
+4053 2537 Star
+3867 2678 Star
+3758 2510 Star
+3953 2391 Star
+4039 2581 Star
+3823 2667 Star
+3778 2467 Star
+3994 2410 Star
+4011 2620 Star
+3788 2643 Star
+3809 2430 Star
+4027 2441 Star
+3972 2651 Star
+3765 2609 Star
+3849 2403 Star
+4048 2481 Star
+3926 2670 Star
+3754 2567 Star
+3894 2389 Star
+4053 2525 Star
+3879 2677 Star
+3757 2522 Star
+3940 2390 Star
+4043 2568 Star
+3836 2671 Star
+3772 2479 Star
+3984 2405 Star
+4018 2608 Star
+3800 2651 Star
+3799 2440 Star
+4019 2433 Star
+3981 2641 Star
+3773 2619 Star
+3836 2410 Star
+4043 2469 Star
+3938 2665 Star
+3758 2580 Star
+3880 2393 Star
+4053 2511 Star
+3893 2677 Star
+3754 2536 Star
+3927 2390 Star
+4046 2555 Star
+3850 2675 Star
+3764 2491 Star
+3973 2400 Star
+4025 2596 Star
+3812 2658 Star
+3788 2450 Star
+4012 2424 Star
+3992 2633 Star
+3780 2630 Star
+3823 2417 Star
+4039 2457 Star
+3952 2661 Star
+3759 2592 Star
+3867 2396 Star
+4052 2498 Star
+3908 2677 Star
+3751 2548 Star
+3916 2388 Star
+4049 2541 Star
+3864 2678 Star
+3757 2502 Star
+3963 2395 Star
+4032 2585 Star
+3822 2666 Star
+3778 2459 Star
+4004 2415 Star
+4003 2625 Star
+3786 2640 Star
+3812 2424 Star
+4034 2446 Star
+3965 2657 Star
+3760 2603 Star
+3856 2399 Star
+4050 2485 Star
+3922 2676 Star
+3748 2559 Star
+3905 2388 Star
+4051 2530 Star
+3875 2681 Star
+3751 2513 Star
+3953 2390 Star
+4039 2576 Star
+3830 2671 Star
+3770 2469 Star
+3996 2407 Star
+4013 2618 Star
+3791 2648 Star
+3803 2431 Star
+4028 2436 Star
+3977 2653 Star
+3762 2612 Star
+3846 2403 Star
+4048 2475 Star
+3933 2675 Star
+3747 2569 Star
+3895 2388 Star
+4053 2520 Star
+3885 2682 Star
+3748 2523 Star
+3943 2387 Star
+4044 2567 Star
+3837 2675 Star
+3766 2478 Star
+3986 2401 Star
+4022 2611 Star
+3796 2654 Star
+3797 2438 Star
+4021 2428 Star
+3987 2647 Star
+3765 2620 Star
+3838 2408 Star
+4044 2466 Star
+3943 2671 Star
+3749 2579 Star
+3884 2390 Star
+4054 2511 Star
+3894 2681 Star
+3748 2533 Star
+3932 2386 Star
+4049 2558 Star
+3845 2677 Star
+3763 2487 Star
+3976 2397 Star
+4029 2603 Star
+3803 2658 Star
+3791 2446 Star
+4013 2422 Star
+3995 2639 Star
+3771 2628 Star
+3829 2414 Star
+4039 2458 Star
+3952 2665 Star
+3754 2588 Star
+3873 2393 Star
+4053 2502 Star
+3903 2678 Star
+3750 2544 Star
+3919 2386 Star
+4051 2548 Star
+3855 2677 Star
+3761 2499 Star
+3964 2394 Star
+4034 2592 Star
+3813 2662 Star
+3785 2457 Star
+4004 2417 Star
+4003 2629 Star
+3781 2635 Star
+3819 2422 Star
+4033 2450 Star
+3961 2657 Star
+3761 2599 Star
+3860 2398 Star
+4051 2492 Star
+3914 2674 Star
+3753 2556 Star
+3906 2388 Star
+4052 2536 Star
+3867 2677 Star
+3759 2511 Star
+3952 2393 Star
+4038 2579 Star
+3826 2667 Star
+3778 2468 Star
+3994 2411 Star
+4010 2618 Star
+3792 2644 Star
+3807 2431 Star
+4027 2441 Star
+3971 2649 Star
+3768 2610 Star
+3847 2404 Star
+4047 2480 Star
+3927 2669 Star
+3756 2569 Star
+3892 2390 Star
+4053 2523 Star
+3882 2677 Star
+% End plot #3
+% Begin plot #4
+0.400 UP
+1.000 UL
+LTb
+LT3
+LCb setrgbcolor
+4129 2534 Box
+3856 2755 Box
+3679 2498 Box
+3984 2317 Box
+4110 2606 Box
+3783 2737 Box
+3713 2430 Box
+4047 2346 Box
+4068 2670 Box
+3724 2697 Box
+3767 2373 Box
+4095 2395 Box
+4007 2718 Box
+3687 2641 Box
+3834 2333 Box
+4123 2460 Box
+3934 2746 Box
+3673 2574 Box
+3906 2314 Box
+4129 2532 Box
+3856 2751 Box
+3684 2503 Box
+3977 2318 Box
+4111 2602 Box
+3786 2734 Box
+3716 2436 Box
+4039 2346 Box
+4070 2664 Box
+3731 2697 Box
+3766 2380 Box
+4088 2395 Box
+4009 2710 Box
+3696 2644 Box
+3828 2340 Box
+4119 2457 Box
+3936 2738 Box
+3682 2580 Box
+3896 2319 Box
+4127 2526 Box
+3862 2745 Box
+3690 2512 Box
+3965 2321 Box
+4111 2593 Box
+3796 2733 Box
+3717 2447 Box
+4028 2347 Box
+4071 2652 Box
+3744 2700 Box
+3760 2391 Box
+4079 2392 Box
+4012 2698 Box
+3709 2651 Box
+3816 2348 Box
+4113 2450 Box
+3944 2728 Box
+3692 2590 Box
+3882 2325 Box
+4124 2514 Box
+3875 2741 Box
+3693 2525 Box
+3950 2325 Box
+4111 2578 Box
+3812 2734 Box
+3712 2461 Box
+4015 2346 Box
+4074 2636 Box
+3760 2706 Box
+3749 2403 Box
+4069 2386 Box
+4020 2684 Box
+3722 2661 Box
+3801 2358 Box
+4107 2438 Box
+3957 2720 Box
+3698 2604 Box
+3865 2331 Box
+4123 2499 Box
+3892 2740 Box
+3691 2541 Box
+3935 2325 Box
+4113 2561 Box
+3830 2738 Box
+3703 2475 Box
+4003 2341 Box
+4081 2621 Box
+3775 2715 Box
+3735 2414 Box
+4061 2375 Box
+4032 2674 Box
+3730 2674 Box
+3786 2365 Box
+4103 2424 Box
+3973 2717 Box
+3698 2619 Box
+3851 2334 Box
+4122 2482 Box
+3910 2742 Box
+3684 2555 Box
+3923 2323 Box
+4117 2546 Box
+3846 2745 Box
+3691 2487 Box
+3994 2333 Box
+4090 2610 Box
+3785 2726 Box
+3722 2423 Box
+4056 2363 Box
+4046 2669 Box
+3733 2686 Box
+3773 2370 Box
+4101 2410 Box
+3989 2717 Box
+3694 2631 Box
+3840 2333 Box
+4123 2469 Box
+3925 2746 Box
+3675 2565 Box
+3915 2318 Box
+4122 2535 Box
+3856 2752 Box
+3681 2495 Box
+3988 2325 Box
+4099 2604 Box
+3789 2734 Box
+3713 2428 Box
+4052 2353 Box
+4058 2669 Box
+3730 2695 Box
+3766 2371 Box
+4099 2399 Box
+4001 2719 Box
+3688 2639 Box
+3835 2332 Box
+4125 2460 Box
+3934 2749 Box
+3669 2571 Box
+3910 2314 Box
+4127 2531 Box
+3860 2756 Box
+3677 2499 Box
+3985 2319 Box
+4107 2603 Box
+3788 2738 Box
+3710 2430 Box
+4049 2346 Box
+4067 2669 Box
+3727 2699 Box
+3764 2373 Box
+4097 2394 Box
+4008 2719 Box
+3685 2642 Box
+3832 2332 Box
+4125 2457 Box
+3937 2749 Box
+3669 2574 Box
+3907 2313 Box
+4129 2530 Box
+3860 2755 Box
+3678 2502 Box
+3980 2317 Box
+4111 2603 Box
+3787 2738 Box
+3711 2434 Box
+4044 2344 Box
+4071 2667 Box
+3727 2699 Box
+3764 2376 Box
+4092 2392 Box
+4011 2716 Box
+3689 2644 Box
+3830 2335 Box
+4122 2456 Box
+3938 2744 Box
+3674 2578 Box
+3901 2315 Box
+4129 2528 Box
+3861 2751 Box
+3683 2507 Box
+3972 2318 Box
+4113 2598 Box
+3790 2736 Box
+3714 2441 Box
+4035 2345 Box
+4072 2660 Box
+3734 2700 Box
+3763 2384 Box
+4085 2392 Box
+4012 2707 Box
+3698 2648 Box
+3823 2342 Box
+4117 2453 Box
+3940 2736 Box
+3683 2584 Box
+3891 2320 Box
+4127 2521 Box
+3867 2745 Box
+3690 2517 Box
+3960 2321 Box
+4112 2588 Box
+3801 2734 Box
+3715 2452 Box
+4023 2346 Box
+4074 2647 Box
+3748 2703 Box
+3757 2395 Box
+4075 2389 Box
+4016 2694 Box
+3712 2655 Box
+3812 2351 Box
+4111 2446 Box
+3948 2726 Box
+3693 2595 Box
+3877 2326 Box
+4124 2510 Box
+3880 2740 Box
+3693 2530 Box
+3945 2324 Box
+4113 2573 Box
+3817 2735 Box
+3710 2466 Box
+4010 2344 Box
+4077 2632 Box
+3764 2709 Box
+3745 2407 Box
+4066 2382 Box
+4024 2681 Box
+3724 2665 Box
+3797 2360 Box
+4105 2434 Box
+3962 2718 Box
+3699 2609 Box
+3860 2332 Box
+4122 2494 Box
+3897 2739 Box
+3690 2546 Box
+3930 2325 Box
+4114 2556 Box
+3835 2740 Box
+3700 2480 Box
+3998 2339 Box
+4084 2616 Box
+3779 2718 Box
+3731 2418 Box
+4058 2371 Box
+4036 2671 Box
+3733 2678 Box
+3781 2368 Box
+4101 2419 Box
+3978 2715 Box
+3699 2624 Box
+3846 2335 Box
+4122 2478 Box
+3915 2742 Box
+3683 2560 Box
+3918 2322 Box
+4118 2541 Box
+3851 2746 Box
+3689 2491 Box
+3990 2331 Box
+4093 2606 Box
+3789 2728 Box
+3718 2426 Box
+4052 2360 Box
+4050 2666 Box
+3735 2690 Box
+3769 2372 Box
+4099 2406 Box
+3994 2715 Box
+3695 2635 Box
+3836 2335 Box
+4123 2464 Box
+3929 2746 Box
+3675 2569 Box
+3910 2318 Box
+4123 2531 Box
+3860 2752 Box
+3680 2499 Box
+3984 2323 Box
+4102 2601 Box
+3792 2736 Box
+3710 2431 Box
+4049 2350 Box
+4062 2666 Box
+3732 2698 Box
+3762 2374 Box
+4097 2396 Box
+4006 2717 Box
+3689 2642 Box
+3830 2333 Box
+4124 2456 Box
+3938 2748 Box
+3669 2575 Box
+3906 2314 Box
+4128 2527 Box
+3864 2756 Box
+3675 2503 Box
+3981 2318 Box
+4109 2600 Box
+3791 2740 Box
+3707 2434 Box
+4046 2344 Box
+4070 2666 Box
+3729 2701 Box
+3761 2375 Box
+4095 2390 Box
+4012 2717 Box
+3687 2645 Box
+3829 2334 Box
+4123 2453 Box
+3941 2748 Box
+3669 2578 Box
+3903 2313 Box
+4130 2526 Box
+3864 2755 Box
+3677 2506 Box
+3976 2316 Box
+4113 2599 Box
+3790 2739 Box
+3709 2437 Box
+4040 2342 Box
+4074 2663 Box
+3730 2702 Box
+3761 2379 Box
+4090 2389 Box
+4014 2713 Box
+3691 2647 Box
+3826 2337 Box
+4120 2453 Box
+3942 2743 Box
+3675 2582 Box
+3897 2316 Box
+4129 2524 Box
+3865 2751 Box
+3683 2512 Box
+3967 2317 Box
+4114 2594 Box
+3794 2737 Box
+3713 2445 Box
+4031 2343 Box
+4075 2656 Box
+3738 2702 Box
+3760 2387 Box
+4082 2389 Box
+4016 2704 Box
+3701 2651 Box
+3819 2345 Box
+4115 2450 Box
+3945 2734 Box
+3685 2588 Box
+3886 2321 Box
+4127 2517 Box
+3871 2744 Box
+3689 2521 Box
+3955 2321 Box
+4114 2584 Box
+3805 2735 Box
+3713 2456 Box
+4019 2344 Box
+4076 2643 Box
+3752 2705 Box
+3753 2399 Box
+4072 2386 Box
+4020 2691 Box
+3715 2658 Box
+3807 2354 Box
+4109 2442 Box
+3953 2724 Box
+3694 2599 Box
+3871 2328 Box
+4124 2505 Box
+3885 2740 Box
+3692 2535 Box
+3940 2324 Box
+4114 2568 Box
+3822 2736 Box
+3708 2471 Box
+4005 2342 Box
+4080 2627 Box
+3769 2712 Box
+3742 2411 Box
+4062 2379 Box
+4028 2677 Box
+3727 2669 Box
+3792 2363 Box
+4103 2430 Box
+3967 2716 Box
+3700 2614 Box
+3855 2333 Box
+4122 2489 Box
+3902 2739 Box
+3690 2551 Box
+3925 2325 Box
+4116 2551 Box
+3840 2741 Box
+3698 2485 Box
+3994 2337 Box
+4087 2612 Box
+3783 2721 Box
+3728 2422 Box
+4054 2368 Box
+4040 2668 Box
+3735 2682 Box
+3777 2371 Box
+4099 2415 Box
+3983 2713 Box
+3700 2628 Box
+3841 2336 Box
+4121 2473 Box
+3920 2741 Box
+3683 2564 Box
+3913 2322 Box
+4120 2536 Box
+3855 2747 Box
+3687 2496 Box
+3985 2329 Box
+4096 2602 Box
+3793 2730 Box
+3715 2430 Box
+4049 2357 Box
+4054 2663 Box
+3737 2693 Box
+3765 2375 Box
+4097 2402 Box
+3999 2713 Box
+3696 2639 Box
+3831 2336 Box
+4122 2460 Box
+3934 2745 Box
+3674 2574 Box
+3906 2318 Box
+4124 2527 Box
+3865 2753 Box
+3678 2503 Box
+3980 2321 Box
+4105 2597 Box
+3796 2738 Box
+3707 2435 Box
+4046 2347 Box
+4065 2663 Box
+3735 2701 Box
+3759 2377 Box
+4095 2392 Box
+4010 2715 Box
+3690 2646 Box
+3826 2335 Box
+4123 2452 Box
+3942 2748 Box
+3669 2579 Box
+3902 2314 Box
+4128 2523 Box
+3868 2756 Box
+3674 2507 Box
+3977 2316 Box
+4111 2596 Box
+3794 2741 Box
+3705 2437 Box
+4042 2341 Box
+4073 2663 Box
+3732 2704 Box
+3758 2378 Box
+4092 2387 Box
+4016 2715 Box
+3688 2649 Box
+3825 2336 Box
+4122 2450 Box
+3945 2747 Box
+3670 2582 Box
+3899 2314 Box
+4130 2522 Box
+3867 2755 Box
+3677 2510 Box
+3972 2315 Box
+4115 2595 Box
+3794 2740 Box
+3708 2441 Box
+4036 2340 Box
+4076 2660 Box
+3733 2704 Box
+3758 2383 Box
+4087 2386 Box
+4018 2710 Box
+3693 2651 Box
+3822 2340 Box
+4119 2449 Box
+3946 2741 Box
+3676 2586 Box
+3892 2317 Box
+4129 2520 Box
+3869 2750 Box
+3683 2516 Box
+3963 2317 Box
+4115 2590 Box
+3798 2737 Box
+3711 2449 Box
+4027 2341 Box
+4078 2652 Box
+3742 2705 Box
+3756 2391 Box
+4079 2386 Box
+4020 2700 Box
+3704 2655 Box
+% End plot #4
+% Begin plot #5
+0.400 UP
+2.000 UL
+LTb
+LCb setrgbcolor
+4205 2534 BoxF
+3840 2829 BoxF
+3605 2484 BoxF
+4017 2247 BoxF
+4177 2635 BoxF
+3739 2801 BoxF
+3655 2390 BoxF
+4103 2288 BoxF
+4118 2723 BoxF
+3659 2744 BoxF
+3733 2313 BoxF
+4166 2360 BoxF
+4031 2786 BoxF
+3611 2663 BoxF
+3828 2262 BoxF
+4200 2452 BoxF
+3926 2819 BoxF
+3599 2568 BoxF
+3929 2241 BoxF
+4201 2553 BoxF
+3819 2819 BoxF
+3622 2471 BoxF
+4024 2255 BoxF
+4169 2648 BoxF
+3725 2788 BoxF
+3675 2383 BoxF
+4104 2303 BoxF
+4103 2727 BoxF
+3658 2729 BoxF
+3750 2313 BoxF
+4162 2378 BoxF
+4012 2781 BoxF
+3621 2650 BoxF
+3839 2267 BoxF
+4193 2468 BoxF
+3909 2807 BoxF
+3616 2559 BoxF
+3932 2250 BoxF
+4193 2562 BoxF
+3810 2805 BoxF
+3641 2469 BoxF
+4021 2268 BoxF
+4157 2648 BoxF
+3729 2775 BoxF
+3689 2388 BoxF
+4096 2317 BoxF
+4090 2718 BoxF
+3672 2720 BoxF
+3756 2322 BoxF
+4153 2388 BoxF
+4001 2766 BoxF
+3641 2645 BoxF
+3836 2277 BoxF
+4184 2471 BoxF
+3905 2792 BoxF
+3635 2562 BoxF
+3923 2262 BoxF
+4184 2557 BoxF
+3818 2794 BoxF
+3652 2479 BoxF
+4008 2280 BoxF
+4149 2635 BoxF
+3747 2771 BoxF
+3690 2402 BoxF
+4083 2324 BoxF
+4084 2699 BoxF
+3694 2721 BoxF
+3747 2335 BoxF
+4142 2387 BoxF
+4002 2749 BoxF
+3659 2653 BoxF
+3821 2289 BoxF
+4177 2461 BoxF
+3917 2781 BoxF
+3645 2576 BoxF
+3906 2272 BoxF
+4179 2540 BoxF
+3839 2792 BoxF
+3650 2497 BoxF
+3992 2283 BoxF
+4147 2614 BoxF
+3770 2775 BoxF
+3678 2417 BoxF
+4071 2319 BoxF
+4089 2681 BoxF
+3713 2731 BoxF
+3729 2347 BoxF
+4135 2374 BoxF
+4016 2738 BoxF
+3669 2668 BoxF
+3802 2297 BoxF
+4174 2444 BoxF
+3939 2781 BoxF
+3642 2594 BoxF
+3889 2274 BoxF
+4180 2520 BoxF
+3862 2799 BoxF
+3636 2512 BoxF
+3980 2277 BoxF
+4153 2596 BoxF
+3788 2786 BoxF
+3659 2427 BoxF
+4066 2306 BoxF
+4102 2671 BoxF
+3720 2746 BoxF
+3711 2352 BoxF
+4136 2357 BoxF
+4035 2740 BoxF
+3664 2685 BoxF
+3788 2296 BoxF
+4178 2426 BoxF
+3958 2790 BoxF
+3626 2607 BoxF
+3881 2266 BoxF
+4187 2505 BoxF
+3876 2811 BoxF
+3617 2518 BoxF
+3979 2264 BoxF
+4164 2590 BoxF
+3792 2799 BoxF
+3642 2427 BoxF
+4071 2291 BoxF
+4116 2676 BoxF
+3712 2759 BoxF
+3701 2347 BoxF
+4143 2344 BoxF
+4049 2753 BoxF
+3646 2693 BoxF
+3785 2287 BoxF
+4186 2416 BoxF
+3967 2804 BoxF
+3607 2608 BoxF
+3885 2253 BoxF
+4196 2504 BoxF
+3875 2823 BoxF
+3602 2512 BoxF
+3989 2252 BoxF
+4175 2600 BoxF
+3779 2808 BoxF
+3636 2417 BoxF
+4083 2282 BoxF
+4126 2693 BoxF
+3691 2762 BoxF
+3704 2334 BoxF
+4154 2340 BoxF
+4053 2769 BoxF
+3625 2689 BoxF
+3796 2273 BoxF
+4195 2420 BoxF
+3961 2817 BoxF
+3593 2597 BoxF
+3901 2243 BoxF
+4204 2518 BoxF
+3858 2830 BoxF
+3599 2497 BoxF
+4006 2246 BoxF
+4179 2620 BoxF
+3756 2808 BoxF
+3643 2401 BoxF
+4096 2282 BoxF
+4125 2712 BoxF
+3669 2754 BoxF
+3718 2320 BoxF
+4163 2347 BoxF
+4043 2783 BoxF
+3612 2675 BoxF
+3815 2264 BoxF
+4200 2437 BoxF
+3943 2822 BoxF
+3591 2580 BoxF
+3919 2239 BoxF
+4205 2539 BoxF
+3834 2827 BoxF
+3609 2480 BoxF
+4020 2248 BoxF
+4176 2640 BoxF
+3734 2798 BoxF
+3660 2387 BoxF
+4105 2291 BoxF
+4114 2725 BoxF
+3657 2740 BoxF
+3738 2312 BoxF
+4166 2364 BoxF
+4026 2786 BoxF
+3612 2659 BoxF
+3832 2262 BoxF
+4199 2457 BoxF
+3921 2817 BoxF
+3602 2565 BoxF
+3931 2243 BoxF
+4199 2557 BoxF
+3815 2815 BoxF
+3627 2469 BoxF
+4025 2258 BoxF
+4166 2650 BoxF
+3724 2784 BoxF
+3679 2383 BoxF
+4103 2307 BoxF
+4100 2726 BoxF
+3660 2726 BoxF
+3753 2315 BoxF
+4161 2381 BoxF
+4008 2778 BoxF
+3626 2647 BoxF
+3839 2269 BoxF
+4191 2470 BoxF
+3906 2803 BoxF
+3621 2558 BoxF
+3931 2253 BoxF
+4190 2562 BoxF
+3810 2802 BoxF
+3644 2470 BoxF
+4018 2271 BoxF
+4155 2646 BoxF
+3732 2773 BoxF
+3691 2391 BoxF
+4094 2320 BoxF
+4088 2714 BoxF
+3677 2719 BoxF
+3755 2325 BoxF
+4150 2389 BoxF
+4000 2762 BoxF
+3646 2646 BoxF
+3833 2280 BoxF
+4182 2470 BoxF
+3907 2788 BoxF
+3638 2564 BoxF
+3919 2265 BoxF
+4182 2554 BoxF
+3822 2793 BoxF
+3653 2483 BoxF
+4004 2282 BoxF
+4148 2630 BoxF
+3752 2771 BoxF
+3688 2406 BoxF
+4080 2324 BoxF
+4084 2695 BoxF
+3699 2722 BoxF
+3743 2338 BoxF
+4140 2384 BoxF
+4005 2745 BoxF
+3663 2656 BoxF
+3817 2292 BoxF
+4176 2458 BoxF
+3922 2780 BoxF
+3645 2580 BoxF
+3902 2273 BoxF
+4179 2535 BoxF
+3844 2793 BoxF
+3648 2501 BoxF
+3988 2283 BoxF
+4148 2609 BoxF
+3775 2777 BoxF
+3673 2420 BoxF
+4069 2316 BoxF
+4091 2677 BoxF
+3716 2734 BoxF
+3725 2349 BoxF
+4135 2370 BoxF
+4020 2737 BoxF
+3669 2673 BoxF
+3798 2298 BoxF
+4175 2439 BoxF
+3944 2783 BoxF
+3639 2598 BoxF
+3886 2273 BoxF
+4181 2515 BoxF
+3866 2802 BoxF
+3632 2514 BoxF
+3979 2274 BoxF
+4156 2593 BoxF
+3790 2789 BoxF
+3654 2428 BoxF
+4066 2302 BoxF
+4105 2671 BoxF
+3719 2749 BoxF
+3708 2351 BoxF
+4137 2354 BoxF
+4039 2742 BoxF
+3660 2688 BoxF
+3786 2295 BoxF
+4180 2423 BoxF
+3962 2794 BoxF
+3622 2608 BoxF
+3881 2263 BoxF
+4189 2503 BoxF
+3877 2814 BoxF
+3613 2517 BoxF
+3981 2261 BoxF
+4167 2591 BoxF
+3790 2802 BoxF
+3640 2425 BoxF
+4073 2288 BoxF
+4119 2680 BoxF
+3707 2760 BoxF
+3700 2344 BoxF
+4146 2342 BoxF
+4051 2757 BoxF
+3641 2693 BoxF
+3787 2283 BoxF
+4189 2416 BoxF
+3967 2808 BoxF
+3602 2606 BoxF
+3889 2250 BoxF
+4198 2506 BoxF
+3872 2826 BoxF
+3600 2509 BoxF
+3993 2250 BoxF
+4176 2604 BoxF
+3774 2809 BoxF
+3637 2413 BoxF
+4087 2281 BoxF
+4126 2698 BoxF
+3685 2761 BoxF
+3706 2330 BoxF
+4157 2341 BoxF
+4051 2773 BoxF
+3621 2686 BoxF
+3800 2270 BoxF
+4197 2424 BoxF
+3957 2819 BoxF
+3591 2593 BoxF
+3906 2241 BoxF
+4204 2523 BoxF
+3852 2830 BoxF
+3600 2493 BoxF
+4010 2245 BoxF
+4179 2625 BoxF
+3750 2806 BoxF
+3647 2397 BoxF
+4099 2283 BoxF
+4123 2717 BoxF
+3665 2751 BoxF
+3723 2317 BoxF
+4165 2351 BoxF
+4039 2785 BoxF
+3610 2671 BoxF
+3820 2262 BoxF
+4201 2442 BoxF
+3937 2822 BoxF
+3593 2576 BoxF
+3923 2239 BoxF
+4204 2544 BoxF
+3828 2825 BoxF
+3613 2477 BoxF
+4022 2250 BoxF
+4174 2643 BoxF
+3730 2795 BoxF
+3665 2385 BoxF
+4105 2295 BoxF
+4111 2727 BoxF
+3656 2736 BoxF
+3743 2312 BoxF
+4165 2369 BoxF
+4021 2786 BoxF
+3614 2655 BoxF
+3835 2263 BoxF
+4197 2462 BoxF
+3916 2814 BoxF
+3607 2562 BoxF
+3932 2245 BoxF
+4197 2559 BoxF
+3812 2812 BoxF
+3631 2468 BoxF
+4024 2261 BoxF
+4163 2650 BoxF
+3725 2781 BoxF
+3683 2384 BoxF
+4102 2310 BoxF
+4096 2724 BoxF
+3663 2723 BoxF
+3755 2317 BoxF
+4158 2385 BoxF
+4005 2775 BoxF
+3630 2646 BoxF
+3839 2271 BoxF
+4189 2472 BoxF
+3905 2799 BoxF
+3626 2558 BoxF
+3929 2256 BoxF
+4188 2561 BoxF
+3811 2799 BoxF
+3648 2472 BoxF
+4016 2274 BoxF
+4153 2643 BoxF
+3736 2772 BoxF
+3691 2394 BoxF
+4090 2322 BoxF
+4086 2710 BoxF
+3682 2719 BoxF
+3753 2328 BoxF
+4148 2389 BoxF
+3999 2757 BoxF
+3650 2647 BoxF
+3830 2283 BoxF
+4180 2468 BoxF
+3909 2786 BoxF
+3641 2567 BoxF
+3915 2268 BoxF
+4181 2550 BoxF
+3827 2792 BoxF
+3653 2487 BoxF
+4000 2283 BoxF
+4147 2626 BoxF
+3758 2772 BoxF
+3686 2410 BoxF
+4077 2323 BoxF
+4085 2690 BoxF
+3704 2724 BoxF
+3739 2341 BoxF
+4138 2382 BoxF
+4007 2742 BoxF
+3666 2659 BoxF
+3812 2294 BoxF
+4175 2454 BoxF
+3927 2780 BoxF
+3645 2585 BoxF
+3897 2274 BoxF
+4179 2530 BoxF
+3850 2795 BoxF
+3645 2504 BoxF
+3985 2282 BoxF
+4149 2605 BoxF
+3780 2780 BoxF
+3669 2423 BoxF
+4067 2313 BoxF
+4094 2675 BoxF
+3718 2738 BoxF
+3720 2350 BoxF
+4135 2366 BoxF
+4025 2738 BoxF
+3668 2677 BoxF
+3795 2298 BoxF
+4175 2435 BoxF
+3949 2785 BoxF
+3635 2601 BoxF
+3884 2271 BoxF
+4183 2511 BoxF
+3870 2805 BoxF
+3627 2516 BoxF
+3978 2271 BoxF
+4158 2591 BoxF
+3791 2793 BoxF
+3650 2428 BoxF
+4067 2298 BoxF
+4109 2672 BoxF
+3718 2753 BoxF
+3705 2350 BoxF
+4139 2350 BoxF
+4043 2745 BoxF
+3656 2690 BoxF
+3785 2292 BoxF
+4182 2420 BoxF
+3964 2797 BoxF
+3617 2609 BoxF
+3882 2260 BoxF
+4191 2503 BoxF
+3877 2817 BoxF
+3609 2516 BoxF
+3983 2258 BoxF
+4170 2593 BoxF
+3787 2805 BoxF
+3638 2423 BoxF
+4076 2286 BoxF
+4122 2684 BoxF
+3703 2761 BoxF
+3701 2341 BoxF
+4149 2341 BoxF
+4052 2761 BoxF
+3636 2692 BoxF
+3789 2280 BoxF
+4191 2417 BoxF
+3966 2811 BoxF
+3598 2604 BoxF
+3892 2247 BoxF
+4200 2509 BoxF
+3868 2828 BoxF
+3599 2505 BoxF
+3997 2248 BoxF
+4178 2609 BoxF
+3768 2810 BoxF
+3638 2409 BoxF
+4090 2281 BoxF
+4126 2703 BoxF
+3680 2759 BoxF
+3710 2326 BoxF
+4159 2342 BoxF
+4049 2777 BoxF
+3617 2683 BoxF
+3805 2267 BoxF
+4199 2428 BoxF
+3953 2821 BoxF
+3590 2589 BoxF
+3910 2240 BoxF
+4205 2528 BoxF
+3846 2830 BoxF
+3602 2489 BoxF
+4014 2246 BoxF
+4178 2630 BoxF
+3744 2804 BoxF
+3651 2393 BoxF
+% End plot #5
+% Begin plot #6
+0.400 UP
+1.200 UL
+LTb
+[8.0 dl1 4.0 dl2 1.0 dl1 2.5 dl2 1.0 dl1 2.5 dl2 1.0 dl1 4.0 dl2 ] 0 setdash
+LCb setrgbcolor
+4281 2534 Circle
+3824 2902 Circle
+% End plot #6
+% Begin plot #7
+0.400 UP
+1.000 UL
+LTb
+LT6
+LCb setrgbcolor
+4357 2534 CircleF
+% End plot #7
+% Begin plot #8
+0.400 UP
+1.000 UL
+LTb
+LT7
+LCb setrgbcolor
+4434 2534 TriU
+% End plot #8
+% Begin plot #9
+0.400 UP
+1.000 UL
+LTb
+LT8
+LCb setrgbcolor
+4510 2534 TriUF
+% End plot #9
+% Begin plot #10
+0.400 UP
+1.000 UL
+LTb
+LT0
+LCb setrgbcolor
+4586 2534 TriD
+% End plot #10
+% Begin plot #11
+0.400 UP
+1.000 UL
+LTb
+LT1
+LCb setrgbcolor
+4662 2534 TriDF
+% End plot #11
+% Begin plot #12
+0.400 UP
+1.000 UL
+LTb
+LT2
+LCb setrgbcolor
+4738 2534 Dia
+% End plot #12
+% Begin plot #13
+0.400 UP
+1.000 UL
+LTb
+LT3
+LCb setrgbcolor
+4814 2534 DiaF
+% End plot #13
+% Begin plot #14
+0.400 UP
+1.000 UL
+LTb
+LT4
+LCb setrgbcolor
+4891 2534 Pent
+% End plot #14
+% Begin plot #15
+0.400 UP
+1.000 UL
+LTb
+LT5
+LCb setrgbcolor
+4967 2534 PentF
+% End plot #15
+% Begin plot #16
+0.400 UP
+1.000 UL
+LTb
+LT6
+LCb setrgbcolor
+5043 2534 C0
+% End plot #16
+% Begin plot #17
+0.400 UP
+1.000 UL
+LTb
+LT7
+LCb setrgbcolor
+5119 2534 C1
+% End plot #17
+% Begin plot #18
+0.400 UP
+1.000 UL
+LTb
+LT8
+LCb setrgbcolor
+5195 2534 C2
+% End plot #18
+% Begin plot #19
+0.400 UP
+1.000 UL
+LTb
+LT0
+LCb setrgbcolor
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+% End plot #19
+% Begin plot #20
+0.400 UP
+1.000 UL
+LTb
+LT1
+LCb setrgbcolor
+3901 2534 C4
+3897 2522 C4
+3916 2542 C4
+3884 2535 C4
+3907 2532 C4
+3897 2525 C4
+3915 2544 C4
+3885 2536 C4
+3906 2530 C4
+3902 2531 C4
+3907 2542 C4
+3890 2537 C4
+3900 2526 C4
+3910 2536 C4
+3895 2538 C4
+3898 2536 C4
+3895 2521 C4
+3917 2539 C4
+3887 2535 C4
+3905 2535 C4
+3894 2523 C4
+3918 2541 C4
+3886 2537 C4
+3905 2533 C4
+3899 2528 C4
+3911 2541 C4
+3891 2540 C4
+3899 2528 C4
+3908 2533 C4
+3900 2538 C4
+3898 2539 C4
+3893 2523 C4
+3916 2536 C4
+3891 2535 C4
+3904 2538 C4
+3891 2522 C4
+3919 2538 C4
+3889 2537 C4
+3904 2536 C4
+3896 2526 C4
+3914 2539 C4
+3892 2541 C4
+3898 2531 C4
+3904 2530 C4
+3904 2536 C4
+3898 2542 C4
+3891 2525 C4
+3913 2533 C4
+3895 2534 C4
+3904 2541 C4
+3888 2522 C4
+3919 2535 C4
+3892 2536 C4
+3904 2539 C4
+3892 2525 C4
+3916 2536 C4
+3894 2541 C4
+3898 2535 C4
+3900 2529 C4
+3908 2534 C4
+3899 2543 C4
+3890 2528 C4
+3910 2531 C4
+3899 2532 C4
+3905 2543 C4
+3885 2524 C4
+3917 2532 C4
+3894 2534 C4
+3906 2542 C4
+3888 2525 C4
+3917 2533 C4
+3896 2540 C4
+3900 2539 C4
+3895 2528 C4
+3910 2532 C4
+3901 2543 C4
+3890 2532 C4
+3905 2530 C4
+3901 2530 C4
+3906 2544 C4
+3884 2527 C4
+3914 2530 C4
+3897 2531 C4
+3908 2544 C4
+3884 2527 C4
+3916 2531 C4
+3898 2537 C4
+3902 2542 C4
+3891 2529 C4
+3911 2530 C4
+3903 2542 C4
+3892 2536 C4
+3901 2530 C4
+3903 2527 C4
+3908 2545 C4
+3884 2530 C4
+3910 2530 C4
+3898 2528 C4
+3910 2545 C4
+3882 2529 C4
+3914 2530 C4
+3899 2534 C4
+3906 2544 C4
+3888 2531 C4
+3911 2529 C4
+3904 2540 C4
+3895 2539 C4
+3897 2531 C4
+3903 2525 C4
+3910 2543 C4
+3885 2533 C4
+3906 2530 C4
+3899 2525 C4
+3913 2545 C4
+3882 2531 C4
+3911 2530 C4
+3899 2530 C4
+3909 2545 C4
+3885 2533 C4
+3909 2528 C4
+3905 2537 C4
+3899 2542 C4
+3893 2533 C4
+3903 2524 C4
+3911 2541 C4
+3888 2536 C4
+3903 2532 C4
+3898 2523 C4
+3915 2543 C4
+3883 2533 C4
+3908 2531 C4
+3898 2527 C4
+3913 2545 C4
+3884 2535 C4
+3907 2529 C4
+3904 2533 C4
+3904 2543 C4
+3891 2536 C4
+3901 2525 C4
+3911 2538 C4
+3892 2538 C4
+3900 2534 C4
+3896 2521 C4
+3917 2541 C4
+3885 2535 C4
+3906 2533 C4
+3896 2524 C4
+3916 2543 C4
+3885 2537 C4
+3906 2531 C4
+3902 2530 C4
+3908 2542 C4
+3890 2538 C4
+3900 2526 C4
+3910 2535 C4
+3897 2538 C4
+3898 2537 C4
+3894 2522 C4
+3917 2538 C4
+3888 2536 C4
+3904 2536 C4
+3893 2522 C4
+3918 2540 C4
+3887 2537 C4
+3904 2533 C4
+3898 2527 C4
+3912 2540 C4
+3891 2540 C4
+3899 2529 C4
+3907 2532 C4
+3901 2537 C4
+3898 2540 C4
+3892 2523 C4
+3915 2535 C4
+3892 2535 C4
+3904 2539 C4
+3890 2522 C4
+3919 2537 C4
+3890 2537 C4
+3904 2537 C4
+3894 2525 C4
+3915 2538 C4
+3893 2541 C4
+3898 2532 C4
+3903 2530 C4
+3905 2536 C4
+3899 2542 C4
+3890 2526 C4
+3912 2532 C4
+3896 2534 C4
+3904 2542 C4
+3887 2523 C4
+3918 2534 C4
+3893 2536 C4
+3905 2540 C4
+3890 2525 C4
+3917 2535 C4
+3895 2541 C4
+3899 2536 C4
+3899 2528 C4
+3909 2534 C4
+3900 2544 C4
+3890 2530 C4
+3908 2530 C4
+3900 2531 C4
+3905 2544 C4
+3885 2525 C4
+3916 2531 C4
+3895 2533 C4
+3906 2543 C4
+3886 2526 C4
+3917 2533 C4
+3897 2539 C4
+3900 2540 C4
+3894 2528 C4
+3910 2531 C4
+3902 2543 C4
+3891 2533 C4
+3904 2529 C4
+3902 2529 C4
+3907 2545 C4
+3884 2528 C4
+3913 2530 C4
+3897 2530 C4
+3909 2545 C4
+3884 2527 C4
+3915 2531 C4
+3899 2536 C4
+3903 2543 C4
+3890 2529 C4
+3911 2529 C4
+3904 2542 C4
+3893 2537 C4
+3900 2530 C4
+3903 2527 C4
+3909 2544 C4
+3884 2531 C4
+3909 2530 C4
+3898 2527 C4
+3911 2545 C4
+3882 2530 C4
+3913 2530 C4
+3899 2533 C4
+3907 2545 C4
+3887 2531 C4
+3910 2528 C4
+3905 2539 C4
+3896 2540 C4
+3896 2532 C4
+3903 2525 C4
+3911 2543 C4
+3886 2534 C4
+3905 2531 C4
+3898 2524 C4
+3914 2545 C4
+3882 2532 C4
+3910 2530 C4
+3899 2529 C4
+3911 2545 C4
+3885 2533 C4
+3909 2528 C4
+3904 2536 C4
+3901 2542 C4
+3893 2534 C4
+3902 2524 C4
+3911 2540 C4
+3889 2537 C4
+3902 2533 C4
+3897 2522 C4
+3916 2543 C4
+3883 2534 C4
+3907 2531 C4
+3898 2526 C4
+3914 2544 C4
+3885 2536 C4
+3907 2529 C4
+3903 2532 C4
+3905 2542 C4
+3891 2537 C4
+3901 2525 C4
+3911 2537 C4
+3894 2538 C4
+3899 2535 C4
+3895 2521 C4
+3917 2540 C4
+3886 2535 C4
+3905 2534 C4
+3895 2523 C4
+3917 2542 C4
+3886 2537 C4
+3905 2532 C4
+3901 2529 C4
+3910 2542 C4
+3891 2539 C4
+3899 2527 C4
+3909 2534 C4
+3898 2538 C4
+3898 2538 C4
+3893 2522 C4
+3916 2537 C4
+3890 2536 C4
+3904 2537 C4
+3892 2522 C4
+3919 2539 C4
+3888 2538 C4
+3904 2535 C4
+3897 2527 C4
+3913 2540 C4
+3892 2541 C4
+3898 2530 C4
+3906 2531 C4
+3903 2537 C4
+3898 2541 C4
+3891 2524 C4
+3914 2534 C4
+3894 2535 C4
+3904 2540 C4
+3889 2522 C4
+3919 2536 C4
+3891 2537 C4
+3904 2538 C4
+3893 2525 C4
+3916 2537 C4
+3893 2541 C4
+3898 2534 C4
+3902 2529 C4
+3907 2535 C4
+3899 2543 C4
+3890 2527 C4
+3911 2531 C4
+3897 2533 C4
+3904 2542 C4
+3886 2523 C4
+3918 2533 C4
+3894 2535 C4
+3905 2541 C4
+3889 2525 C4
+3917 2534 C4
+3896 2540 C4
+3899 2537 C4
+3897 2528 C4
+3909 2533 C4
+3901 2544 C4
+3890 2531 C4
+3907 2530 C4
+3900 2530 C4
+3906 2544 C4
+3884 2526 C4
+3915 2531 C4
+3896 2532 C4
+3907 2544 C4
+3885 2526 C4
+3916 2532 C4
+3898 2538 C4
+3901 2541 C4
+3893 2529 C4
+3911 2531 C4
+3903 2543 C4
+3891 2535 C4
+3903 2530 C4
+3902 2528 C4
+3908 2545 C4
+3884 2529 C4
+3911 2530 C4
+3898 2529 C4
+3910 2545 C4
+3883 2528 C4
+3915 2530 C4
+3899 2535 C4
+3904 2543 C4
+3889 2530 C4
+3911 2529 C4
+3904 2541 C4
+3894 2538 C4
+3898 2530 C4
+3903 2526 C4
+3910 2544 C4
+3884 2532 C4
+3908 2530 C4
+3899 2526 C4
+3912 2545 C4
+3882 2530 C4
+3912 2530 C4
+3900 2532 C4
+3908 2545 C4
+3886 2532 C4
+3910 2528 C4
+3905 2538 C4
+3897 2541 C4
+3895 2532 C4
+3903 2524 C4
+3911 2542 C4
+3887 2535 C4
+3904 2531 C4
+3898 2523 C4
+3915 2544 C4
+3882 2533 C4
+3909 2530 C4
+3899 2528 C4
+3912 2545 C4
+3885 2534 C4
+3908 2528 C4
+3904 2535 C4
+3902 2542 C4
+3892 2535 C4
+3902 2524 C4
+3911 2539 C4
+3891 2537 C4
+3901 2533 C4
+3897 2522 C4
+3916 2542 C4
+3884 2535 C4
+3907 2532 C4
+3897 2525 C4
+3915 2544 C4
+3885 2536 C4
+3906 2530 C4
+3903 2531 C4
+3907 2542 C4
+3891 2538 C4
+3900 2525 C4
+3910 2536 C4
+3895 2538 C4
+3899 2536 C4
+3895 2521 C4
+3917 2539 C4
+3887 2535 C4
+3905 2535 C4
+3894 2523 C4
+3918 2541 C4
+3886 2537 C4
+3905 2532 C4
+3900 2528 C4
+3911 2541 C4
+3891 2540 C4
+3899 2528 C4
+3908 2533 C4
+3900 2538 C4
+3898 2539 C4
+3892 2522 C4
+3916 2536 C4
+3891 2535 C4
+3904 2538 C4
+3891 2522 C4
+3919 2538 C4
+3889 2538 C4
+3904 2536 C4
+3896 2526 C4
+3914 2539 C4
+3892 2541 C4
+3898 2531 C4
+3905 2530 C4
+3904 2536 C4
+3898 2542 C4
+3890 2525 C4
+3914 2533 C4
+3895 2534 C4
+3904 2541 C4
+3888 2522 C4
+3919 2535 C4
+3892 2537 C4
+3904 2539 C4
+3892 2525 C4
+3916 2536 C4
+3894 2541 C4
+3898 2535 C4
+3900 2529 C4
+3907 2534 C4
+3900 2543 C4
+3890 2528 C4
+3910 2531 C4
+3898 2532 C4
+3905 2543 C4
+3885 2524 C4
+3917 2532 C4
+3894 2534 C4
+3906 2542 C4
+3888 2525 C4
+3917 2533 C4
+3896 2540 C4
+3899 2539 C4
+3896 2528 C4
+3910 2532 C4
+3901 2544 C4
+3890 2532 C4
+3906 2530 C4
+3901 2530 C4
+3907 2544 C4
+3884 2527 C4
+3914 2530 C4
+3897 2531 C4
+3908 2544 C4
+3885 2527 C4
+3916 2531 C4
+3898 2537 C4
+3902 2542 C4
+3891 2529 C4
+3911 2530 C4
+3903 2542 C4
+3892 2536 C4
+3901 2530 C4
+% End plot #20
+% Begin plot #21
+0.400 UP
+1.000 UL
+LTb
+LT2
+LCb setrgbcolor
+3901 2534 C5
+3892 2509 C5
+3932 2548 C5
+3869 2534 C5
+3914 2531 C5
+3893 2516 C5
+3931 2554 C5
+3872 2540 C5
+3913 2531 C5
+3904 2532 C5
+3914 2553 C5
+3882 2544 C5
+3900 2522 C5
+3918 2540 C5
+3890 2542 C5
+3897 2539 C5
+3888 2510 C5
+3931 2542 C5
+3875 2535 C5
+3910 2536 C5
+3888 2513 C5
+3935 2548 C5
+3875 2541 C5
+3912 2535 C5
+3898 2526 C5
+3922 2550 C5
+3883 2548 C5
+3899 2527 C5
+3912 2535 C5
+3899 2541 C5
+3897 2545 C5
+3884 2513 C5
+3928 2537 C5
+3882 2533 C5
+3909 2541 C5
+3881 2511 C5
+3936 2542 C5
+3879 2540 C5
+3911 2541 C5
+3890 2523 C5
+3928 2546 C5
+3886 2550 C5
+3898 2534 C5
+3905 2531 C5
+3907 2539 C5
+3898 2550 C5
+3881 2519 C5
+3922 2532 C5
+3889 2531 C5
+3909 2546 C5
+3875 2513 C5
+3934 2535 C5
+3884 2537 C5
+3912 2546 C5
+3883 2521 C5
+3932 2540 C5
+3890 2549 C5
+3900 2541 C5
+3897 2529 C5
+3914 2536 C5
+3900 2553 C5
+3880 2526 C5
+3915 2529 C5
+3896 2527 C5
+3911 2550 C5
+3870 2516 C5
+3930 2530 C5
+3889 2532 C5
+3915 2551 C5
+3875 2521 C5
+3932 2535 C5
+3894 2546 C5
+3903 2548 C5
+3889 2528 C5
+3919 2532 C5
+3903 2554 C5
+3882 2534 C5
+3907 2527 C5
+3901 2523 C5
+3914 2553 C5
+3868 2521 C5
+3924 2526 C5
+3893 2526 C5
+3918 2554 C5
+3869 2523 C5
+3931 2530 C5
+3897 2541 C5
+3908 2554 C5
+3881 2529 C5
+3921 2529 C5
+3906 2552 C5
+3886 2542 C5
+3899 2528 C5
+3904 2520 C5
+3917 2553 C5
+3868 2527 C5
+3917 2525 C5
+3896 2520 C5
+3923 2555 C5
+3865 2526 C5
+3927 2528 C5
+3899 2534 C5
+3914 2557 C5
+3875 2532 C5
+3921 2527 C5
+3908 2548 C5
+3892 2548 C5
+3891 2531 C5
+3905 2518 C5
+3919 2552 C5
+3871 2533 C5
+3910 2526 C5
+3896 2514 C5
+3927 2554 C5
+3864 2529 C5
+3922 2527 C5
+3899 2527 C5
+3921 2558 C5
+3871 2535 C5
+3919 2527 C5
+3908 2542 C5
+3900 2553 C5
+3886 2536 C5
+3905 2517 C5
+3920 2548 C5
+3877 2538 C5
+3903 2530 C5
+3895 2511 C5
+3930 2551 C5
+3866 2532 C5
+3917 2528 C5
+3896 2520 C5
+3927 2557 C5
+3870 2538 C5
+3916 2528 C5
+3906 2536 C5
+3909 2554 C5
+3882 2540 C5
+3903 2519 C5
+3919 2544 C5
+3885 2541 C5
+3899 2535 C5
+3892 2509 C5
+3931 2547 C5
+3870 2534 C5
+3912 2532 C5
+3892 2515 C5
+3933 2553 C5
+3872 2540 C5
+3914 2532 C5
+3902 2530 C5
+3917 2553 C5
+3881 2545 C5
+3901 2523 C5
+3916 2539 C5
+3893 2543 C5
+3896 2541 C5
+3888 2511 C5
+3930 2541 C5
+3877 2535 C5
+3909 2536 C5
+3886 2512 C5
+3935 2547 C5
+3875 2540 C5
+3912 2536 C5
+3896 2525 C5
+3925 2550 C5
+3883 2548 C5
+3900 2529 C5
+3910 2534 C5
+3902 2542 C5
+3895 2546 C5
+3884 2515 C5
+3926 2536 C5
+3884 2533 C5
+3908 2542 C5
+3880 2511 C5
+3936 2540 C5
+3880 2539 C5
+3911 2542 C5
+3888 2521 C5
+3930 2545 C5
+3886 2549 C5
+3900 2536 C5
+3903 2530 C5
+3910 2539 C5
+3897 2551 C5
+3882 2521 C5
+3920 2531 C5
+3891 2531 C5
+3909 2547 C5
+3874 2513 C5
+3933 2534 C5
+3885 2535 C5
+3913 2547 C5
+3881 2520 C5
+3933 2539 C5
+3890 2548 C5
+3901 2543 C5
+3895 2528 C5
+3917 2536 C5
+3900 2553 C5
+3882 2529 C5
+3913 2528 C5
+3898 2527 C5
+3911 2551 C5
+3870 2517 C5
+3929 2529 C5
+3890 2530 C5
+3915 2552 C5
+3874 2520 C5
+3933 2534 C5
+3894 2544 C5
+3905 2550 C5
+3886 2528 C5
+3920 2532 C5
+3903 2553 C5
+3884 2537 C5
+3904 2528 C5
+3903 2523 C5
+3914 2553 C5
+3868 2523 C5
+3922 2526 C5
+3894 2524 C5
+3919 2554 C5
+3868 2523 C5
+3930 2530 C5
+3897 2539 C5
+3910 2555 C5
+3879 2529 C5
+3922 2529 C5
+3906 2551 C5
+3889 2544 C5
+3896 2529 C5
+3906 2520 C5
+3917 2553 C5
+3869 2529 C5
+3915 2525 C5
+3896 2518 C5
+3923 2555 C5
+3865 2526 C5
+3926 2527 C5
+3899 2532 C5
+3916 2558 C5
+3874 2532 C5
+3921 2527 C5
+3908 2547 C5
+3895 2550 C5
+3889 2532 C5
+3907 2518 C5
+3919 2551 C5
+3873 2535 C5
+3907 2527 C5
+3896 2513 C5
+3927 2554 C5
+3864 2529 C5
+3921 2527 C5
+3898 2524 C5
+3923 2558 C5
+3870 2535 C5
+3919 2527 C5
+3907 2541 C5
+3903 2554 C5
+3884 2537 C5
+3906 2518 C5
+3919 2548 C5
+3879 2540 C5
+3901 2531 C5
+3895 2510 C5
+3930 2550 C5
+3867 2532 C5
+3916 2528 C5
+3895 2518 C5
+3929 2556 C5
+3870 2538 C5
+3917 2529 C5
+3905 2534 C5
+3912 2555 C5
+3881 2541 C5
+3904 2521 C5
+3918 2543 C5
+3887 2543 C5
+3897 2536 C5
+3892 2510 C5
+3930 2546 C5
+3872 2534 C5
+3911 2532 C5
+3891 2513 C5
+3934 2551 C5
+3871 2539 C5
+3914 2532 C5
+3900 2528 C5
+3920 2553 C5
+3881 2545 C5
+3902 2525 C5
+3914 2537 C5
+3896 2544 C5
+3895 2542 C5
+3888 2512 C5
+3928 2540 C5
+3878 2535 C5
+3908 2537 C5
+3885 2511 C5
+3936 2545 C5
+3875 2539 C5
+3912 2537 C5
+3894 2523 C5
+3927 2550 C5
+3882 2548 C5
+3901 2531 C5
+3908 2533 C5
+3905 2543 C5
+3894 2547 C5
+3885 2517 C5
+3924 2535 C5
+3886 2533 C5
+3907 2543 C5
+3879 2511 C5
+3935 2539 C5
+3880 2537 C5
+3912 2543 C5
+3886 2520 C5
+3932 2544 C5
+3886 2549 C5
+3901 2538 C5
+3901 2529 C5
+3913 2540 C5
+3896 2551 C5
+3883 2523 C5
+3918 2531 C5
+3893 2531 C5
+3908 2548 C5
+3874 2513 C5
+3932 2533 C5
+3886 2534 C5
+3913 2548 C5
+3879 2519 C5
+3933 2538 C5
+3890 2547 C5
+3903 2545 C5
+3892 2528 C5
+3919 2536 C5
+3899 2553 C5
+3884 2531 C5
+3910 2528 C5
+3900 2527 C5
+3910 2552 C5
+3870 2518 C5
+3927 2528 C5
+3891 2528 C5
+3916 2552 C5
+3872 2520 C5
+3933 2533 C5
+3894 2542 C5
+3907 2551 C5
+3884 2528 C5
+3922 2532 C5
+3903 2553 C5
+3886 2539 C5
+3901 2528 C5
+3904 2523 C5
+3913 2553 C5
+3869 2524 C5
+3920 2526 C5
+3895 2523 C5
+3920 2554 C5
+3867 2523 C5
+3930 2529 C5
+3897 2536 C5
+3912 2556 C5
+3877 2529 C5
+3923 2529 C5
+3905 2550 C5
+3891 2547 C5
+3893 2530 C5
+3907 2521 C5
+3916 2553 C5
+3871 2531 C5
+3912 2525 C5
+3897 2517 C5
+3924 2555 C5
+3864 2526 C5
+3925 2527 C5
+3898 2529 C5
+3918 2558 C5
+3872 2532 C5
+3922 2527 C5
+3907 2545 C5
+3898 2552 C5
+3887 2533 C5
+3908 2519 C5
+3918 2551 C5
+3875 2537 C5
+3905 2528 C5
+3896 2513 C5
+3927 2553 C5
+3865 2530 C5
+3919 2527 C5
+3897 2522 C5
+3925 2558 C5
+3869 2535 C5
+3920 2527 C5
+3906 2539 C5
+3906 2555 C5
+3882 2537 C5
+3907 2520 C5
+3918 2547 C5
+3882 2541 C5
+3899 2532 C5
+3895 2510 C5
+3929 2549 C5
+3868 2533 C5
+3914 2529 C5
+3894 2516 C5
+3930 2555 C5
+3869 2538 C5
+3917 2529 C5
+3903 2532 C5
+3915 2555 C5
+3880 2542 C5
+3905 2522 C5
+3916 2542 C5
+3891 2544 C5
+3895 2537 C5
+3892 2511 C5
+3929 2545 C5
+3873 2535 C5
+3910 2533 C5
+3890 2512 C5
+3934 2550 C5
+3871 2539 C5
+3914 2533 C5
+3898 2526 C5
+3923 2553 C5
+3880 2546 C5
+3903 2527 C5
+3912 2536 C5
+3900 2545 C5
+3893 2543 C5
+3888 2513 C5
+3927 2539 C5
+3880 2535 C5
+3907 2538 C5
+3884 2510 C5
+3936 2544 C5
+3876 2538 C5
+3912 2538 C5
+3892 2521 C5
+3929 2549 C5
+3882 2548 C5
+3902 2533 C5
+3906 2532 C5
+3908 2543 C5
+3894 2548 C5
+3886 2519 C5
+3922 2534 C5
+3888 2533 C5
+3907 2544 C5
+3878 2511 C5
+3935 2538 C5
+3881 2536 C5
+3912 2543 C5
+3884 2519 C5
+3933 2543 C5
+3886 2548 C5
+3903 2540 C5
+3898 2529 C5
+3916 2540 C5
+3896 2552 C5
+3885 2526 C5
+3915 2530 C5
+3896 2531 C5
+3908 2549 C5
+3873 2514 C5
+3931 2532 C5
+3887 2532 C5
+3913 2548 C5
+3877 2518 C5
+3934 2537 C5
+3890 2545 C5
+3905 2547 C5
+3890 2527 C5
+3921 2536 C5
+3899 2553 C5
+3885 2534 C5
+3907 2528 C5
+3902 2527 C5
+3910 2552 C5
+3870 2520 C5
+3925 2528 C5
+3892 2527 C5
+3916 2552 C5
+3871 2520 C5
+3932 2532 C5
+3894 2540 C5
+3909 2552 C5
+3882 2527 C5
+3924 2532 C5
+3902 2552 C5
+3889 2542 C5
+3899 2528 C5
+% End plot #21
+% Begin plot #22
+0.400 UP
+1.000 UL
+LTb
+LT3
+LCb setrgbcolor
+3901 2534 C6
+3885 2496 C6
+3946 2551 C6
+3856 2532 C6
+3922 2531 C6
+3890 2509 C6
+3948 2563 C6
+% End plot #22
+% Begin plot #23
+0.400 UP
+1.000 UL
+LTb
+LT4
+LCb setrgbcolor
+3901 2534 C7
+3877 2482 C7
+3961 2552 C7
+% End plot #23
+% Begin plot #24
+0.400 UP
+1.000 UL
+LTb
+LT5
+LCb setrgbcolor
+3901 2534 C8
+3868 2467 C8
+% End plot #24
+% Begin plot #25
+0.400 UP
+1.000 UL
+LTb
+LT6
+LCb setrgbcolor
+3901 2534 C9
+% End plot #25
+% Begin plot #26
+0.400 UP
+1.000 UL
+LTb
+LT7
+LCb setrgbcolor
+3901 2534 C10
+% End plot #26
+% Begin plot #27
+0.400 UP
+1.000 UL
+LTb
+LT8
+LCb setrgbcolor
+3901 2534 C11
+% End plot #27
+% Begin plot #28
+0.400 UP
+1.000 UL
+LTb
+LT0
+LCb setrgbcolor
+3901 2534 C12
+% End plot #28
+% Begin plot #29
+0.400 UP
+1.000 UL
+LTb
+LT1
+LCb setrgbcolor
+3901 2534 C13
+% End plot #29
+% Begin plot #30
+0.400 UP
+1.000 UL
+LTb
+LT2
+LCb setrgbcolor
+3901 2534 C14
+% End plot #30
+% Begin plot #31
+0.400 UP
+1.000 UL
+LTb
+LT3
+LCb setrgbcolor
+3901 2534 C15
+% End plot #31
+% Begin plot #32
+0.400 UP
+1.000 UL
+LTb
+LT4
+LCb setrgbcolor
+3901 2534 S0
+% End plot #32
+% Begin plot #33
+0.400 UP
+1.000 UL
+LTb
+LT5
+LCb setrgbcolor
+3901 2534 S1
+% End plot #33
+% Begin plot #34
+0.400 UP
+1.000 UL
+LTb
+LT6
+LCb setrgbcolor
+3901 2534 S2
+% End plot #34
+% Begin plot #35
+0.400 UP
+1.000 UL
+LTb
+LT7
+LCb setrgbcolor
+3901 2534 S3
+% End plot #35
+% Begin plot #36
+0.400 UP
+1.000 UL
+LTb
+LT8
+LCb setrgbcolor
+3901 2534 S4
+% End plot #36
+% Begin plot #37
+0.400 UP
+1.000 UL
+LTb
+LT0
+LCb setrgbcolor
+5728 2534 S5
+% End plot #37
+% Begin plot #38
+0.400 UP
+1.000 UL
+LTb
+LT1
+LCb setrgbcolor
+6033 2534 S6
+% End plot #38
+% Begin plot #39
+0.400 UP
+1.000 UL
+LTb
+LT2
+LCb setrgbcolor
+6338 2534 S7
+% End plot #39
+% Begin plot #40
+0.400 UP
+1.000 UL
+LTb
+LT3
+LCb setrgbcolor
+6642 2534 S8
+% End plot #40
+% Begin plot #41
+0.400 UP
+1.000 UL
+LTb
+LT4
+LCb setrgbcolor
+6947 2534 S9
+% End plot #41
+% Begin plot #42
+0.400 UP
+1.000 UL
+LTb
+LT5
+LCb setrgbcolor
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+3901 2534 S10
+% End plot #42
+% Begin plot #43
+0.400 UP
+1.000 UL
+LTb
+LT6
+LCb setrgbcolor
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+3901 2534 S11
+% End plot #43
+% Begin plot #44
+0.400 UP
+1.000 UL
+LTb
+LT7
+LCb setrgbcolor
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+3901 2534 S12
+% End plot #44
+% Begin plot #45
+0.400 UP
+1.000 UL
+LTb
+LT8
+LCb setrgbcolor
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+3901 2534 S13
+% End plot #45
+% Begin plot #46
+0.400 UP
+1.000 UL
+LTb
+LT0
+LCb setrgbcolor
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+3901 2534 S14
+% End plot #46
+2.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTB
+LCb setrgbcolor
+854 4619 N
+854 448 L
+6093 0 V
+0 4171 V
+-6093 0 V
+Z stroke
+0.400 UP
+1.000 UL
+LTb
+LCb setrgbcolor
+LCb setrgbcolor
+3900 4829 M
+[ [(Helvetica) 140.0 0.0 true true 0 (Tracking Original)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+LTb
+stroke
+grestore
+end
+showpage
+%%Trailer
+%%DocumentFonts: Helvetica
+%%Pages: 1
