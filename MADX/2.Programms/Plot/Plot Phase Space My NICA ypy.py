@@ -5,8 +5,8 @@ set pointsize 0.4
 set title "Tracking Original"
 set xlabel 'y'
 set ylabel 'py'
-set xrange [-0.02:0.02]
-set yrange [-0.02:0.02]
+set xrange [-0.03:0.03]
+set yrange [-0.03:0.03]
 set grid
 plot 'tracking_my_nicaone' using 5:($1==1 ? $6 : NaN) notitle with points pointtype 1, \
 'tracking_my_nicaone' using 5:($1==2 ? $6 : NaN) notitle with points pointtype 2, \
