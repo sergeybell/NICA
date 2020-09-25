@@ -106,8 +106,9 @@ $MCQ0=0.;
 $MCS0=0.;
 $MCS1=(-0.6993539224)*$K1E+(-0.7352453273)*$K3E+(-1.05624831)*$K45E;  => -1.05624831
 $MCS2=(0.4966068893)*$K1E+(0.4611258989)*$K3E+(0.2436156071)*$K45E;  => 0.243615607
-$MCS3=(-0.6993532044)*$K1E+(-0.7522556693)*$K3E+(-1.07475952)*$K45E;  => -1.07475952
-$MCS4=(0.4966066999)*$K1E+(0.4540392897)*$K3E+(0.2345129729)*$K45E;  => 0.234512973
+
+$MCS1=0.0;
+$MCS2=0.0;
 
 $MCO1=-3;
 $MCO2=-6;
@@ -415,7 +416,7 @@ end lattice
 begin list
 
 HD	Ax[cm]=6.04	Ay[cm]=3.535	Shape=1	OffsetX[cm]=0.	OffsetY[cm]=0.	Tilt[deg]=0.
-MB2L	Order:	m=2	Bm*L[kG/cm^(m-1)]=$B2L	Tilt[deg]=0.
+MB2L 	Order:m=2   	Bm*L[kG/cm^(m-1)]=0.0   	Tilt[deg]=0
 G	B[kG]=$BM_B*$BV_FLAG	Angle[deg]=$PHI	EffLen[cm]=$BM_HGAP	Tilt[deg]=0.
 BH	L[cm]=$BM_L	B[kG]=$BM_B*$BV_FLAG	G[kG/cm]=0.	Tilt[deg]=0.
 
@@ -549,4 +550,23 @@ ARF3W21	L[cm]=$RF3W21_L	Ncell=1	Eff_L[cm]=$RF3W21_L	A[MeV]=0.5*$ON_RF/8.	Phase[d
 ARF3W22	L[cm]=$RF3W22_L	Ncell=1	Eff_L[cm]=$RF3W22_L	A[MeV]=0.5*$ON_RF/8.	Phase[deg]=-90.	WaveL[cm]=$RF3W2_LAMBDA
 ARF3W25	L[cm]=$RF3W25_L	Ncell=1	Eff_L[cm]=$RF3W25_L	A[MeV]=0.5*$ON_RF/8.	Phase[deg]=-90.	WaveL[cm]=$RF3W2_LAMBDA
 
-end list of elements
+end list of elementsSpaceChargeBlock
+  BeamCurrent[A]=0.1
+  BunchLength[cm]=1.0   dP/P=0.001   Alpha[-1,1]=0.   S_Offset[cm]=0.
+EndSpaceChargeBlock
+
+SpaceChargeBlock
+  BeamCurrent[A]=0.1
+  BunchLength[cm]=1.0   dP/P=0.001   Alpha[-1,1]=0.   S_Offset[cm]=0.
+EndSpaceChargeBlock
+
+4D_BetaBlock
+	Beta_X_1[cm]=100. 	Beta_X_2[cm]=0.
+	Alfa_X_1=.1      	Alfa_X_2=0.
+	Beta_Y_1[cm]=0.  	Beta_Y_2[cm]=100.
+	Alfa_Y_1=0.      	Alfa_Y_2=0.1 
+	Teta_1[deg]=0.   	Teta_2[deg]=0    U=0
+	Emit1[cm]=1.e-5. 	Emit2[cm]=1.e-5
+	DispX[cm]=0.     	DispY[cm]=0
+	DispXpr[cm]=0.   	DispYpr[cm]=0
+End4DBetaBlock

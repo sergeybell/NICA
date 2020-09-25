@@ -5,8 +5,8 @@ set pointsize 0.48
 set title "Tracking Original"
 set xlabel 'x'
 set ylabel 'px'
-set xrange [-0.02:0.02]
-set yrange [-0.02:0.02]
+set xrange [-0.005:0.005]
+set yrange [-0.005:0.005]
 set grid
 plot 'tracking_nica_g_15_5one' using 3:($1==1 ? $4 : NaN) notitle with points pointtype 1, \
 'tracking_nica_g_15_5one' using 3:($1==2 ? $4 : NaN) notitle with points pointtype 2, \
@@ -53,4 +53,8 @@ plot 'tracking_nica_g_15_5one' using 3:($1==1 ? $4 : NaN) notitle with points po
 'tracking_nica_g_15_5one' using 3:($1==43 ? $4 : NaN) notitle with points pointtype 43, \
 'tracking_nica_g_15_5one' using 3:($1==44 ? $4 : NaN) notitle with points pointtype 44, \
 'tracking_nica_g_15_5one' using 3:($1==45 ? $4 : NaN) notitle with points pointtype 45, \
-'tracking_nica_g_15_5one' using 3:($1==46 ? $4 : NaN) notitle with points pointtype 46
+'tracking_nica_g_15_5one' using 3:($1==46 ? $4 : NaN) notitle with points pointtype 46, \
+'tracking_nica_g_15_5one' using 3:($1==47 ? $4 : NaN) notitle with points pointtype 47, \
+'tracking_nica_g_15_5one' using 3:($1==48 ? $4 : NaN) notitle with points pointtype 48, \
+'tracking_nica_g_15_5one' using 3:($1==49 ? $4 : NaN) notitle with points pointtype 49, \
+'tracking_nica_g_15_5one' using 3:($1==50 ? $4 : NaN) notitle with points pointtype 50, \

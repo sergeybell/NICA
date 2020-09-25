@@ -110,8 +110,10 @@ $MCS2=(0.4966068893)*$K1E+(0.4611258989)*$K3E+(0.2436156071)*$K45E;  => 0.243615
 #$MCS1=-2.7;
 #$MCS2=-0.37;
 
-$MCS1=0;
-#MCS2=0;
+$MCS1=-2.3;
+$MCS2=-0.45;
+
+
 
 $MCO1=-3;
 $MCO2=-6;
@@ -334,12 +336,12 @@ $BV2E2="H_BV2 BV2E2 H_BV2";
 $BV3E2="H_BV2 BV3E2 H_BV2";
 $BV4E="H_BV1 BV4E H_BV1";
 
-$A1 =-1.739832   
-$A2 =1.837491    
-$A3 =2.020673    
-$A4 =-2.294677   
-$A5 =1.813088    
-$A6 =-2.237766   
+$A1 =-1.744832   
+$A2 =1.942491    
+$A3 =1.890673    
+$A4 =-2.329677   
+$A5 =1.903088    
+$A6 =-2.347766   
 
 OptiM
 Energy[MeV]=$W*$A/$Z  Mass[MeV]=$NMASS*$A/$Z
@@ -558,9 +560,9 @@ ARF3W25	L[cm]=$RF3W25_L	Ncell=1	Eff_L[cm]=$RF3W25_L	A[MeV]=0.5*$ON_RF/8.	Phase[d
 
 end list of elements
 TrajParamBlock
-	X[cm]=0.0 	Teta_X[rad]=0.0
-	Y[cm]=0.0 	Teta_Y[rad]=0.0
-	s[cm]=0.0 	DeltaP/P=0.0
+	X[cm]=-5.86614e-031 	Teta_X[rad]=-2.87852e-033
+	Y[cm]=-8.97417e-015 	Teta_Y[rad]=-9.41492e-018
+	s[cm]=-2.29846e-012 	DeltaP/P=2.22045e-016
 EndTrajParamBlock
 
 SpaceChargeBlock
@@ -568,13 +570,18 @@ SpaceChargeBlock
   BunchLength[cm]=1.0   dP/P=0.001   Alpha[-1,1]=0.   S_Offset[cm]=0.
 EndSpaceChargeBlock
 
+SpaceChargeBlock
+  BeamCurrent[A]=0.1
+  BunchLength[cm]=1.0   dP/P=0.001   Alpha[-1,1]=0.   S_Offset[cm]=0.
+EndSpaceChargeBlock
+
 4D_BetaBlock
-	Beta_X_1[cm]=100. 	Beta_X_2[cm]=0.
-	Alfa_X_1=.1      	Alfa_X_2=0.
-	Beta_Y_1[cm]=0.  	Beta_Y_2[cm]=100.
-	Alfa_Y_1=0.      	Alfa_Y_2=0.1 
-	Teta_1[deg]=0.   	Teta_2[deg]=0    U=0
-	Emit1[cm]=1.e-5. 	Emit2[cm]=1.e-5
-	DispX[cm]=0.     	DispY[cm]=0
-	DispXpr[cm]=0.   	DispYpr[cm]=0
+	Beta_X_1[cm]=50.2768 	Beta_X_2[cm]=8.58611
+	Alfa_X_1=0.014493  	Alfa_X_2=0.00423398
+	Beta_Y_1[cm]=8.76349 	Beta_Y_2[cm]=52.2569
+	Alfa_Y_1=0.0114856  	Alfa_Y_2=-0.00212032
+	Teta_1[deg]=81.2775 	Teta_2[deg]=101.624 	U=0.120564
+	Emit1[cm]=0.00396  	Emit2[cm]=0.00396
+	DispX[cm]=-0.155858 	DispY[cm]=-2.78211
+	DispXpr[cm]=0.00129025 	DispYpr[cm]=-0.000971036
 End4DBetaBlock

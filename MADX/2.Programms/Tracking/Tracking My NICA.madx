@@ -4,12 +4,12 @@ beam, MASS=1. ,CHARGE=1., ENERGY = 13.221,
 CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX/1.Sequences/Full Sequence";
 call file = "My NICA.seq";
 use, sequence=MACHINE;
-!MAKETHIN, sequence=MACHINE;
-!use, sequence=MACHINE;
+MAKETHIN, sequence=MACHINE;
+use, sequence=MACHINE;
 
 CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX/2.Programms/Plot";
 
-TRACK, FILE = tracking_my_nica, onetable = true, aperture = true;
+TRACK, FILE = tracking_my_nica, onetable = true;!, aperture = true;
 !!!!! x plane !!!!!
 
 start, x=0.000, px=0.0, y=0.0, py=0.0;

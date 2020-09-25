@@ -89,6 +89,7 @@ start, y=0.030, px=0.0, y=0.0, py=0.0; !deltap=0.00;
 !DYNAP, TURNS=1000, FASTUNE=TRUE;
 RUN, TURNS = 500, ffile=1;
 ENDTRACK;
+
 stop;
 
 plot
@@ -117,8 +118,6 @@ plot	, noversion = true
 		   ,41,42,43,44,45,46
 	, file = img/plot5
 	, trackfile = tbl/basis;
-
-
 
 !VALUE, TABLE(dynaptune, tunx);
 !VALUE, TABLE(dynaptune, tuny);
