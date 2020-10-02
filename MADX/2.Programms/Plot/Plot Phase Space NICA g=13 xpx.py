@@ -53,4 +53,8 @@ plot 'tracking_nica_g_13one' using 3:($1==1 ? $4 : NaN) notitle with points poin
 'tracking_nica_g_13one' using 3:($1==43 ? $4 : NaN) notitle with points pointtype 43, \
 'tracking_nica_g_13one' using 3:($1==44 ? $4 : NaN) notitle with points pointtype 44, \
 'tracking_nica_g_13one' using 3:($1==45 ? $4 : NaN) notitle with points pointtype 45, \
-'tracking_nica_g_13one' using 3:($1==46 ? $4 : NaN) notitle with points pointtype 46
+'tracking_nica_g_13one' using 3:($1==46 ? $4 : NaN) notitle with points pointtype 46, \
+'tracking_nica_g_13one' using 3:($1==47 ? $4 : NaN) notitle with points pointtype 47, \
+'tracking_nica_g_13one' using 3:($1==48 ? $4 : NaN) notitle with points pointtype 48, \
+'tracking_nica_g_13one' using 3:($1==49 ? $4 : NaN) notitle with points pointtype 49, \
+'tracking_nica_g_13one' using 3:($1==50 ? $4 : NaN) notitle with points pointtype 50, \

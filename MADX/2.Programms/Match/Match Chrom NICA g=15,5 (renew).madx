@@ -21,8 +21,8 @@ MATCH, SEQUENCE = MACHINE;
 GLOBAL, SEQUENCE=MACHINE, DQ1 = 0.0;
 GLOBAL, SEQUENCE=MACHINE, DQ2 = 0.0;
 
-vary,name=S1,step=1.0e-5;
-vary,name=S2,step=1.0e-5;
+vary,name=s1, step=1.0e-5;
+vary,name=s2, step=1.0e-5;
 
 !vary,name=S1,step=1.0e-5, LOWER =-2.0, UPPER = 0.0;
 !vary,name=S2,step=1.0e-5, LOWER =0.0, UPPER = 2.0;
@@ -32,8 +32,8 @@ vary,name=S2,step=1.0e-5;
 
 !GWEIGHT, Q1 = 1.0, Q2 = 1.0;
 
-!JACOBIAN,calls=1000,tolerance=1.e-21;
-SIMPLEX,calls=1000,tolerance=1.e-21;
+JACOBIAN,calls=1000,tolerance=1.e-21;
+!SIMPLEX,calls=1000,tolerance=1.e-21;
 !MIGRAD,calls=1000,tolerance=1.e-21;
 !LMDIF,calls=1000,tolerance=1.e-24;
 endmatch,knobfile='knobs.tfs';

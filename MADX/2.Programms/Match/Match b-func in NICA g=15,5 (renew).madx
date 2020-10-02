@@ -15,12 +15,13 @@ CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX/Match";
 USE, SEQUENCE = MACHINE;
 MATCH, SEQUENCE = MACHINE, BETA0=BEGIN;
 
-GLOBAL, SEQUENCE=MACHINE, Q1 = 9.44;
-GLOBAL, SEQUENCE=MACHINE, Q2 = 9.44;
+GLOBAL, SEQUENCE=MACHINE, Q1 = 9.44, Q2 = 9.44;
 
-CONSTRAINT, SEQUENCE=ARC, range=#e,
-      BETX = 0.6, ALFX = 0.0,
-      BETY = 0.6, ALFY = 0.0;
+!CONSTRAINT, SEQUENCE=MACHINE, range=#e,
+!      BETX < 0.6, BETY < 0.6;
+
+CONSTRAINT, SEQUENCE=MACHINE, range=IP,
+      BETX < 0.6, BETY < 0.6;
 
 vary,name=Q1W2->K1, step=1.0e-5;
 vary,name=Q2W2->K1, step=1.0e-5;
@@ -34,5 +35,4 @@ JACOBIAN,calls=1000,tolerance=1.e-21;
 !MIGRAD,calls=1000,tolerance=1.e-21;
 !LMDIF,calls=1000,tolerance=1.e-24;
 endmatch,knobfile='knobs.tfs';
-
 stop;

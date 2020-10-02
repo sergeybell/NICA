@@ -62,8 +62,10 @@ OSW3O85: DRIFT, L=    4.4825 ;
 OSE3O85: DRIFT, L=    12.915 ;
 ONE3O85: DRIFT, L=    1.8125 ;
 ONW3O85: DRIFT, L=     3.415 ;
+
 H_BV1: MONITOR ;
 H_BV2: MONITOR ;
+
 BV1E: SBEND,  L=      1.38,  ANGLE=-0.04100340928,  TILT=1.570796327 ;
 BV1W: SBEND,  L=      1.38,  ANGLE=-0.04100340928,  TILT=1.570796327 ;
 BV2E2: SBEND,  L=      1.38,  ANGLE=0.04100340928,  TILT=1.570796327 ;
@@ -72,8 +74,10 @@ BV3E2: SBEND,  L=      1.38,  ANGLE=0.04100340928,  TILT=1.570796327 ;
 BV3W2: SBEND,  L=      1.38,  ANGLE=0.04100340928,  TILT=1.570796327 ;
 BV4E: SBEND,  L=      1.38,  ANGLE=-0.04100340928,  TILT=1.570796327 ;
 BV4W: SBEND,  L=      1.38,  ANGLE=-0.04100340928,  TILT=1.570796327 ;
+
 HQ: MONITOR ;
 HQFF: MONITOR ;
+
 QFF6W: QUADRUPOLE,  L=     0.945,  K1=-0.4320256018;
 QFF5W: QUADRUPOLE,  L=     1.415,  K1=0.432038535;
 QFF4W: QUADRUPOLE,  L=      0.68,  K1=-0.4309241608;
@@ -156,6 +160,7 @@ Q35E2: QUADRUPOLE,  L=     0.545,  K1=-0.5144561001;
 QFF3E: QUADRUPOLE,  L=      0.68,  K1=0.4309241608;
 QFF2E: QUADRUPOLE,  L=     1.415,  K1=-0.432038535;
 QFF1E: QUADRUPOLE,  L=     0.945,  K1=0.4320256018;
+
 KMC:  kicker, L=      0.15, hkick=         0, vkick=         0;
 KHV2W:  kicker, L=         0, hkick=         0, vkick=         0;
 KHV1W2:  kicker, L=         0, hkick=         0, vkick=         0;
@@ -223,6 +228,7 @@ KHV31E2:  kicker, L=         0, hkick=         0, vkick=         0;
 KHV32E2:  kicker, L=         0, hkick=         0, vkick=         0;
 KHV33E2:  kicker, L=         0, hkick=         0, vkick=         0;
 KHV1E:  kicker, L=         0, hkick=         0, vkick=         0;
+
 MC2WQ: MULTIPOLE, TILT=0.7853981634,  KNL:={0,         0};
 MC2WS: MULTIPOLE,  KNL:={0,0,         0};
 MC2WO: MULTIPOLE,  KNL:={0,0,0,         0};

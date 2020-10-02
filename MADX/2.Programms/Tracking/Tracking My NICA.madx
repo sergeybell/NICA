@@ -4,8 +4,8 @@ beam, MASS=1. ,CHARGE=1., ENERGY = 13.221,
 CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX/1.Sequences/Full Sequence";
 call file = "My NICA.seq";
 use, sequence=MACHINE;
-MAKETHIN, sequence=MACHINE;
-use, sequence=MACHINE;
+!MAKETHIN, sequence=MACHINE;
+!use, sequence=MACHINE;
 
 CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX/2.Programms/Plot";
 
@@ -67,6 +67,7 @@ start, y=0.020, px=0.0, y=0.0, py=0.0; !deltap=0.00;
 !DYNAP, TURNS=1000, FASTUNE=TRUE;
 RUN, TURNS = 500, ffile=1;
 ENDTRACK;
+twiss;
 stop;
 
 !VALUE, TABLE(dynaptune, tunx);
