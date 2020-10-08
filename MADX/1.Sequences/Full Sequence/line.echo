@@ -1,0 +1,72 @@
+enter Twiss module
+
+++++++ table: summ
+
+            length             orbit5               alfa            gammatr 
+            503.04                 -0      0.01991272251        7.086547119 
+
+                q1                dq1            betxmax              dxmax 
+       9.439999863      -0.6467454473         144.746688        2.584971437 
+
+             dxrms             xcomax             xcorms                 q2 
+       1.536480271                  0                  0        9.440028134 
+
+               dq2            betymax              dymax              dyrms 
+        -1.3667977         145.629967       0.1912205332      0.07022526875 
+
+            ycomax             ycorms             deltap            synch_1 
+                 0                  0                  0                  0 
+
+           synch_2            synch_3            synch_4            synch_5 
+                 0                  0                  0                  0 
+
+            nflips 
+                 0 
+enter Twiss module
+
+++++++ table: summ
+
+            length             orbit5               alfa            gammatr 
+            503.04                 -0                  0                  0 
+
+                q1                dq1            betxmax              dxmax 
+       9.439999861                  0        144.7466913        2.636893772 
+
+             dxrms             xcomax             xcorms                 q2 
+       1.538962998                  0                  0        9.440027337 
+
+               dq2            betymax              dymax              dyrms 
+                 0        145.6278856       0.5410946413       0.1479237076 
+
+            ycomax             ycorms             deltap            synch_1 
+                 0                  0                  0                  0 
+
+           synch_2            synch_3            synch_4            synch_5 
+                 0                  0                  0                  0 
+
+            nflips 
+                 0 
+enter Twiss module
+
+++++++ table: summ
+
+            length             orbit5               alfa            gammatr 
+            503.04                 -0      0.01991272251        7.086547119 
+
+                q1                dq1            betxmax              dxmax 
+       9.439999863      -0.6467454473         144.746688        2.584971437 
+
+             dxrms             xcomax             xcorms                 q2 
+       1.536480271                  0                  0        9.440028134 
+
+               dq2            betymax              dymax              dyrms 
+        -1.3667977         145.629967       0.1912205332      0.07022526875 
+
+            ycomax             ycorms             deltap            synch_1 
+                 0                  0                  0                  0 
+
+           synch_2            synch_3            synch_4            synch_5 
+                 0                  0                  0                  0 
+
+            nflips 
+                 0 
