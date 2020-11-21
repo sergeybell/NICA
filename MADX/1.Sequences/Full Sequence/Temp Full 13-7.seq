@@ -100,8 +100,8 @@ MCS0: MULTIPOLE,  KNL:={0,0,0};
 s1:=0.0;
 s2:=0.0;
 
-s1:=-1.99e+00/2;
-s2:=1.32e+00/2;
+s1:=-1.99e+00;
+s2:=1.32e+00;
 
 MCS1: MULTIPOLE,  KNL:={0,0,s1};
 MCS2: MULTIPOLE,  KNL:={0,0,s2};

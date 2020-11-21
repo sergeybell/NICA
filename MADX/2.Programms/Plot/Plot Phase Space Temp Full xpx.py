@@ -1,8 +1,7 @@
 set term postscript
 set output "Phase Space Temp Full.ps"
 
-set pointsize 0.05
-set title "Tracking Original"
+set pointsize 0.025
 set xlabel 'x'
 set ylabel 'px'
 set xrange [-0.03:0.03]
