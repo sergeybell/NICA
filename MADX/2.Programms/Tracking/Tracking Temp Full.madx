@@ -2,13 +2,13 @@ beam, MASS=2.32283962,CHARGE=1, ENERGY=13.54435861,
       EX=3.96e-005, EY=3.1e-005, SIGE=0.00156;
 
 CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX/1.Sequences/Full Sequence/";
-call file = "Temp Full 13-28.seq";
+call file = "Temp Full 13-35.seq";
 !call file = "My NICA (renew).seq";
 use, sequence=MACHINE;
 
 CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX/2.Programms/Plot";
 twiss;
-TRACK, FILE = tracking_temp_full, onetable = true, dump;
+TRACK, FILE = tracking_temp_full, onetable = true;
 
 start, x=0.025, px=0.0, y=0.0, py=0.0;
 start, x=0.000, px=0.0, y=0.0, py=0.0;
@@ -67,7 +67,6 @@ start, x=0.021, px=0.0, y=0.0, py=0.0;
 start, x=0.022, px=0.0, y=0.0, py=0.0;
 start, x=0.023, px=0.0, y=0.0, py=0.0;
 start, x=0.024, px=0.0, y=0.0, py=0.0;
-
 
 RUN, TURNS = 1000, ffile=1;
 ENDTRACK;

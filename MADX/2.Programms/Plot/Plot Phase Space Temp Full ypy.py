@@ -1,8 +1,7 @@
-set term postscript
+set term postscript dashed color
 set output "Phase Space NICA Temp Full ypy.ps"
 
-set pointsize 0.1
-set title "Tracking Original"
+set pointsize 0.025
 set xlabel 'y'
 set ylabel 'py'
 set xrange [-0.03:0.03]

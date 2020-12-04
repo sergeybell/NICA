@@ -1,5 +1,5 @@
 CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX/1.Sequences/Full Sequence";
-CALL FILE = "Temp Full 13-15.seq";
+CALL FILE = "Temp Full 13-32.seq";
 
 beam, MASS=2.32283962,CHARGE=1, ENERGY=13.54435861,
       EX= 3.96e-005, EY=  3.1e-005, SIGE=   0.00156;
@@ -9,8 +9,10 @@ CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX/Match";
 USE, SEQUENCE = MACHINE;
 MATCH, SEQUENCE = MACHINE;
 
+CONSTRAINT, SEQUENCE=MACHINE, range=HB1/HB2,
+          BETX < 300.0, BETY < 300.0;
 CONSTRAINT, SEQUENCE=MACHINE, range=WP1/WP2,
-          BETX <50.0, BETY <50.0;
+          BETX <40.0, BETY <40.0;
 
 GLOBAL, SEQUENCE=MACHINE, Q1 =9.44/2, Q2 = 9.44/2;
 
@@ -22,8 +24,8 @@ vary,name=Q5W2->K1, step=1.0e-5;
 vary,name=Q6W2->K1, step=1.0e-5;
 
 !JACOBIAN,calls=3000,tolerance=1.e-24;
-SIMPLEX,calls=3000,tolerance=1.e-21;
+!SIMPLEX,calls=3000,tolerance=1.e-21;
 !MIGRAD,calls=3000,tolerance=1.e-21;
-!LMDIF,calls=3000,tolerance=1.e-24;
+LMDIF,calls=3000,tolerance=1.e-24;
 endmatch,knobfile='knobs.tfs';
 stop;

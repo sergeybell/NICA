@@ -1,6 +1,6 @@
 CHDIR, DIR = "/Users/Bell 1/
 GIT_REPOS/NICA/MADX/1.Sequences/Full Sequence";
-CALL FILE = "Temp Full 13-28.seq";
+CALL FILE = "Temp Full 13-35.seq";
 
 beam, MASS=2.32283962,CHARGE=1, ENERGY=13.54435861,
       EX= 3.96e-005, EY=  3.1e-005, SIGE=   0.00156;
@@ -15,12 +15,6 @@ GLOBAL, SEQUENCE=MACHINE, DQ2 = 0.0;
 
 vary,name=s1, step=1.0e-5;
 vary,name=s2, step=1.0e-5;
-vary,name=s2e, step=1.0e-5;
-
-
-
-
-
 
 !JACOBIAN,calls=1000,tolerance=1.e-21;
 SIMPLEX,calls=1000,tolerance=1.e-21;
