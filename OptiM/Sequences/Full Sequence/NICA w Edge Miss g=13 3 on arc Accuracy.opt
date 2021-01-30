@@ -368,23 +368,32 @@ $A5 =1.84
 $A6 =-2.04
 
 $b=1.919123
+     
+$A1 =-2.2605     
+$A2 =2.2428      
+$A3 =1.925       
+$A4 =-2.16       
+$A5 =1.725       
+$A6 =-2.01       
 
-$A1 =-2.2555    
-$A2 =2.41521
-$A3 =1.9999      
-$A4 =-2.281365     
-$A5 =1.8655       
-$A6 =-2.007     
+$b=1.921   
 
-$b=1.9197    
+$A1 =-2.2905     
+$A2 =2.2578      
+$A3 =2.06        
+$A4 =-2.215      
+$A5 =1.915       
+$A6 =-2.15       
+
+$b=1.918       
 
 OptiM
 Energy[MeV]=$W*$A/$Z  Mass[MeV]=$NMASS*$A/$Z
 Emittances:         ex[cm]=$EmitX            ey[cm]=$EmitY            DP/P=$dp_p
-Initial:	BetaX[cm]    =      1371.99 BetaY[cm]    =       1114.1
-AlfaX        =    -0.740295 AlfaY        =      1.22426
-DispX[cm]    =      1.04486 DispX[cm]    =         6.28
-DispPrX      =   0.00222067 DispPrY      =  -0.00818816
+Initial:	BetaX[cm]=60.0	BetaY[cm]=60.0
+	AlfaX=0.0 	AlfaY=0.0
+	DispersX[cm]=0.0 	DispersY[cm]=0.0
+	Dsp_PrimeX=0.0 	DspPrimeY=0.0
 
 X[cm]=0             Y[cm]=0             Z[cm]=0             S[cm]=0
 tetaX[deg]=0        tetaY[deg]=0
@@ -423,8 +432,6 @@ ONW3O85 C_EC ONW3 $Q4W2 OQ1 $MCO_2 OQ1 $Q3W2 OQ5 $Q2W2 OQ1 $MCO_1 OQ1 $Q1W2
 ONW2 OQ4 OMC OQ1 ONW1 OQ3 $MCS_0 OQ1 $BV2W2 OBV12 $BV1W OQ0 $MCS_0 OQ2 $QFF3W OO2 $QFF2W OO1 $QFF1W C_MPD
 # End of straight section SSA2
 
-# SPD(IP2)
-
 # Straight section SSB1
 C_SPD $QFF6W OO1 $QFF5W OO2 $QFF4W OQ2 $MCS_0 OQ0 $BV4W OBV12 $BV3W2 OQ1 $MCS_0 OQ3 OSW1 ARF3W21 OSW1 OQ1 OMC OQ4 OSW2 
 $Q1W2 OQ1 $MCO_1 OQ1 $Q2W2 OQ5 $Q3W2 OQ1 $MCO_2 OQ1 $Q4W2 OSW3 ARF3W22 ARF3W22 OSW3O85 
@@ -454,6 +461,7 @@ O85 $Q6W2 OQ6 $MCO_3 OQ1 $Q5W2
 ONW3O85 C_EC ONW3 $Q4W2 OQ1 $MCO_2 OQ1 $Q3W2 OQ5 $Q2W2 OQ1 $MCO_1 OQ1 $Q1W2
 ONW2 OQ4 OMC OQ1 ONW1 OQ3 $MCS_0 OQ1 $BV2W2 OBV12 $BV1W OQ0 $MCS_0 OQ2 $QFF3W OO2 $QFF2W OO1 $QFF1W C_MPD
 # End of straight section SSA2
+
 end lattice
 
 begin list
@@ -560,13 +568,6 @@ Q4W2 	L[cm]=67         	G[kG/cm]=$A4	 	Tilt[deg]=0
 Q5W2 	L[cm]=69         	G[kG/cm]=$A5	 	Tilt[deg]=0
 Q6W2 	L[cm]=78.5       	G[kG/cm]=$A6	 	Tilt[deg]=0
 
-# MPD(IP1)
-QFF6E 	L[cm]=94.5       	G[kG/cm]=-1.905293 	Tilt[deg]=0
-QFF5E 	L[cm]=141.5      	G[kG/cm]=1.924347 	Tilt[deg]=0
-QFF4E 	L[cm]=68         	G[kG/cm]=-1.946176 	Tilt[deg]=0
-QFF3E 	L[cm]=68         	G[kG/cm]=1.918033 	Tilt[deg]=0
-QFF2E 	L[cm]=141.5      	G[kG/cm]=-1.922993 	Tilt[deg]=0
-QFF1E 	L[cm]=94.5       	G[kG/cm]=1.922936 	Tilt[deg]=0
 #---------------------------------------------------------------------------------
 
 KMC	L[cm]=$CORR_L/2.	B[kG]=0.	Tilt[deg]=0.

@@ -1,11 +1,11 @@
 set term postscript dashed color
 set output "Phase Space NICA Temp Full ypy.ps"
 
-set pointsize 0.025
+set pointsize 0.5
 set xlabel 'y'
 set ylabel 'py'
-set xrange [-0.03:0.03]
-set yrange [-0.03:0.03]
+set xrange [-0.01:0.01]
+set yrange [-0.01:0.01]
 set grid
 plot 'tracking_temp_fullone' using 5:($1==1 ? $6 : NaN) notitle with points pointtype 1, \
 'tracking_temp_fullone' using 5:($1==2 ? $6 : NaN) notitle with points pointtype 2, \

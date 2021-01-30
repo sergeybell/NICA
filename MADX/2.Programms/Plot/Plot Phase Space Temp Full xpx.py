@@ -1,11 +1,11 @@
-set term postscript
+set term postscript dashed color
 set output "Phase Space Temp Full.ps"
 
-set pointsize 0.025
+set pointsize 0.5
 set xlabel 'x'
 set ylabel 'px'
-set xrange [-0.03:0.03]
-set yrange [-0.03:0.03]
+set xrange [-0.02:0.02]
+set yrange [-0.02:0.02]
 set grid
 plot 'tracking_temp_fullone' using 3:($1==1 ? $4 : NaN) notitle with points pointtype 1, \
 'tracking_temp_fullone' using 3:($1==2 ? $4 : NaN) notitle with points pointtype 2, \
