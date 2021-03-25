@@ -15,6 +15,7 @@ GLOBAL, SEQUENCE=MACHINE, DQ2 = 0.0;
 
 vary,name=s1, step=1.0e-5;
 vary,name=s2, step=1.0e-5;
+!vary,name=se2, step=1.0e-5;
 
 !JACOBIAN,calls=1000,tolerance=1.e-21;
 SIMPLEX,calls=1000,tolerance=1.e-21;

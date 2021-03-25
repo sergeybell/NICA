@@ -1,5 +1,5 @@
 CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX/1.Sequences/Full Sequence";
-CALL FILE = "NICA 2 families of quadrupoles g=15 9,44 5.seq";
+CALL FILE = "NICA w Edge Miss g=15 9,44 w QFE2 3 on arc 6.seq";
 
 beam, MASS=2.32283962,CHARGE=1, ENERGY=13.54435861,
       EX= 3.96e-005, EY=  3.1e-005, SIGE=   0.00156;
@@ -14,11 +14,11 @@ MATCH, SEQUENCE = MACHINE;
 !CONSTRAINT, SEQUENCE=MACHINE, range=WP1/WP2,
 !          BETX <40.0, BETY <40.0;
 
-GLOBAL, SEQUENCE=MACHINE, Q1 =9.44/2, Q2 = 9.44/2;
+GLOBAL, SEQUENCE=MACHINE, Q1 =9.44, Q2 = 9.44;
 
 vary,name=Q1W2->K1, step=1.0e-6;
-vary,name=Q2W2->K1, step=1.0e-6;
-vary,name=Q3W2->K1, step=1.0e-6;
+vary,name=Q2W2->K1, step=1.0e-6, upper = 5.32e-01;
+vary,name=Q3W2->K1, step=1.0e-6, upper = 5.32e-01;
 vary,name=Q4W2->K1, step=1.0e-6;
 vary,name=Q5W2->K1, step=1.0e-6;
 vary,name=Q6W2->K1, step=1.0e-6;
@@ -26,6 +26,6 @@ vary,name=Q6W2->K1, step=1.0e-6;
 JACOBIAN,calls=1000,tolerance=1.e-24;
 !SIMPLEX,calls=3000,tolerance=1.e-21;
 !MIGRAD,calls=3000,tolerance=1.e-21;
-LMDIF,calls=3000,tolerance=1.e-24;
+!LMDIF,calls=3000,tolerance=1.e-24;
 endmatch,knobfile='knobs.tfs';
 stop;
