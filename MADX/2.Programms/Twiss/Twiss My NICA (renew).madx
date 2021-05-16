@@ -1,0 +1,13 @@
+CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX/1.Sequences/Full Sequence";
+CALL FILE = "0011853_b2_coupling_chromaticity_da.seq";
+
+beam, MASS=2.32283962,CHARGE=1, ENERGY=13.54435861,
+      EX= 3.96e-005, EY=  3.1e-005, SIGE=   0.00156;
+
+USE, PERIOD = MACHINE;
+CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX";
+
+twiss, x=0.0, px=0.0, y=0.0, py=0.0, file=tbl/twiss_my_NICA_renew.tbl;
+plot, haxis=s, vaxis=betx,bety,colour=100, style=100,file=img/twiss_plot_my_NICA_renew;
+plot, haxis=s, vaxis=dx,dy,colour=100, style=100,file=img/twiss_plot_full_NICA_renew;
+stop;

@@ -1,0 +1,19 @@
+CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX/1.Sequences/Some elements";
+CALL FILE = "Modified My NICA Arc + Beta Corrector.seq";
+
+beam, MASS=2.32283962,CHARGE=1, ENERGY=13.54435861,
+      EX= 3.96e-005, EY=  3.1e-005, SIGE=   0.00156;
+
+CORRECTOR_BEGIN: BETA0,
+	      BETX = 14.16151132, ALFX = -1.259540379,
+      	BETY = 8.547480382, ALFY = 0.2122506966,
+	      DX = 0.0, DPX = 0.0,
+	      DY = 0.0, DPY = 0.0;
+
+USE, SEQUENCE = BETA_CORRECTOR_ARC;
+CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX";
+
+twiss, BETA0 = CORRECTOR_BEGIN, file=tbl/twiss_Modified_Arc_and_Beta_Corr.tbl;
+plot, haxis=s, vaxis=betx,bety,colour=100, style=100,file=img/twiss_plot_Modified_Arc_and_Beta_Corr;
+plot, haxis=s, vaxis=dx,dy,colour=100, style=100,file=img/twiss_plot_Modified_Arc_and_Beta_Corr;
+stop;

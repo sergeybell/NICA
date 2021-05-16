@@ -1,0 +1,42 @@
+START MATCHING
+
+number of sequences: 1
+sequence name: edge_arc
+number of beta0s: 1
+BETA0 name: corrector_begin
+number of variables:    11
+user given constraints: 8
+total constraints:      8
+
+START JACOBIAN:
+
+
+MATCH SUMMARY
+
+Node_Name                  Constraint   Type  Target Value       Final Value        Penalty
+--------------------------------------------------------------------------------------------------
+
+
+Final Penalty Function =   4.74473085e+00
+
+
+
+
+
+Variable                 Final Value  Initial Value Lower Limit  Upper Limit 
+--------------------------------------------------------------------------------
+a1                        9.80294e+12 -3.06637e-01 -1.00000e+20  1.00000e+20
+a2                       -3.78993e+11  3.76882e-01 -1.00000e+20  1.00000e+20
+a3                       -1.82815e+10  4.64094e-01 -1.00000e+20  1.00000e+20
+a4                       -5.34886e-01 -5.34642e-01 -1.00000e+20  1.00000e+20
+a5                        3.92742e-01  3.92743e-01 -1.00000e+20  1.00000e+20
+a6                       -4.85908e-01 -4.85908e-01 -1.00000e+20  1.00000e+20
+c0                       -6.21612e-04 -2.95665e-02 -1.00000e+20  1.00000e+20
+c1                        2.56712e-01  2.80837e-02 -1.00000e+20  1.00000e+20
+c2                       -1.44299e-02 -2.35903e-02 -1.00000e+20  1.00000e+20
+b1                        5.35855e-01  5.35855e-01 -1.00000e+20  1.00000e+20
+b2                        7.00794e-01  7.00794e-01 -1.00000e+20  1.00000e+20
+
+END MATCH SUMMARY
+
+VARIABLE "TAR" SET TO   4.74473085e+00

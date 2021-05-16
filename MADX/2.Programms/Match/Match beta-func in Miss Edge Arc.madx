@@ -1,0 +1,47 @@
+CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX/1.Sequences/Some elements";
+CALL FILE = "Edge Miss NICA Arc.seq";
+
+beam, MASS=2.32283962,CHARGE=1, ENERGY=13.54435861,
+      EX= 3.96e-005, EY=  3.1e-005, SIGE=   0.00156;
+
+CORRECTOR_BEGIN: BETA0,
+	      BETX = 14.84999985, ALFX = -1.307893453,
+      	BETY = 16.8228505, ALFY = -1.52215792,
+	      DX = 0.0, DPX = 0.0,
+	      DY = 0.0, DPY = 0.0;
+CORRECTOR_END: BETA0,
+	      BETX = 14.84999985, ALFX = 1.307893453,
+      	BETY = 16.8228505, ALFY = 1.52215792,
+	      DX = 0.0, DPX = 0.0,
+	      DY = 0.0, DPY = 0.0;
+
+CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX";
+
+USE, SEQUENCE = EDGE_ARC;
+MATCH, SEQUENCE=EDGE_ARC, BETA0=CORRECTOR_BEGIN;
+
+CONSTRAINT, SEQUENCE=EDGE_ARC, range=#e,
+            BETX = 14.84999985, ALFX = 1.307893453,
+            BETY = 16.8228505, ALFY = 1.52215792,
+            DX = 0.0, DPX = 0.0,
+            DY = 0.0, DPY = 0.0;
+
+vary,name=A1,step=1.0e-5;
+vary,name=A2,step=1.0e-5;
+vary,name=A3,step=1.0e-5;
+vary,name=A4,step=1.0e-5;
+vary,name=A5,step=1.0e-5;
+vary,name=A6,step=1.0e-5;
+vary,name=C0,step=1.0e-5;
+vary,name=C1,step=1.0e-5;
+vary,name=C2,step=1.0e-5;
+vary,name=B1,step=1.0e-5;
+vary,name=B2,step=1.0e-5;
+
+JACOBIAN,calls=1000,tolerance=1.e-21;
+!SIMPLEX,calls=1000,tolerance=1.e-21;
+!MIGRAD,calls=1000,tolerance=1.e-21;
+!LMDIF,calls=1000,tolerance=1.e-24;
+endmatch,knobfile='knobs.tfs';
+
+stop;

@@ -1,0 +1,41 @@
+CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX/1.Sequences/Full Sequence";
+CALL FILE = "NICA w Miss Edge Arc g=14,8.seq";
+
+beam, MASS=2.32283962,CHARGE=1, ENERGY=13.54435861,
+      EX= 3.96e-005, EY=  3.1e-005, SIGE=   0.00156;
+
+BEGIN: BETA0,
+	      BETX = 0.60000, ALFX = 0.0,
+      	BETY = 0.60000, ALFY = 0.0,
+	      DX = 0.0, DPX = 0.0,
+	      DY = 0.0, DPY = 0.0;
+
+USE, SEQUENCE = MACHINE;
+CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX";
+TWISS;
+SELECT, FLAG = twiss, CLEAR;
+TWISS, SEQUENCE = MACHINE, FILE = twiss.data;
+
+MATCH, SEQUENCE = MACHINE;
+
+GLOBAL, SEQUENCE=MACHINE, DQ1 = 0.0;
+GLOBAL, SEQUENCE=MACHINE, DQ2 = 0.0;
+
+vary,name=S1,step=1.0e-5;
+vary,name=S2,step=1.0e-5;
+
+!vary,name=S1,step=1.0e-5, LOWER =-2.0, UPPER = 0.0;
+!vary,name=S2,step=1.0e-5, LOWER =0.0, UPPER = 2.0;
+
+!vary,name=S1,step=1.0e-5, LOWER=-1, UPPER=-2.0;
+!vary,name=S2,step=1.0e-5, LOWER=0.0, UPPER=+3.0;
+
+!GWEIGHT, Q1 = 1.0, Q2 = 1.0;
+
+!JACOBIAN,calls=1000,tolerance=1.e-21;
+!SIMPLEX,calls=1000,tolerance=1.e-21;
+!MIGRAD,calls=1000,tolerance=1.e-21;
+LMDIF,calls=1000,tolerance=1.e-24;
+endmatch,knobfile='knobs.tfs';
+
+stop;
