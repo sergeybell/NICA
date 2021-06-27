@@ -1,5 +1,5 @@
 CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX/1.Sequences/Full Sequence";
-CALL FILE = "NICA 2 families of quadrupoles g=15 9,44 5.seq";
+CALL FILE = "My NICA (renew).seq";
 
 beam, MASS=2.32283962,CHARGE=1, ENERGY=13.54435861,
       EX= 3.96e-005, EY=  3.1e-005, SIGE=   0.00156;

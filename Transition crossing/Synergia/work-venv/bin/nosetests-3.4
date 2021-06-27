@@ -1,0 +1,10 @@
+#!/bin/sh
+'''exec' "/Users/Bell 1/GIT_REPOS/NICA/Transition crossing/Synergia/work-venv/bin/python" "$0" "$@"
+' '''
+# -*- coding: utf-8 -*-
+import re
+import sys
+from nose import run_exit
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(run_exit())
