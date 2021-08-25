@@ -89,11 +89,11 @@ short FFT(short int dir,long m,double *x,double *y)
 //========================================================
 int main (void){
 FILE *fp, *fp1;
-char *fnameCP=(char *)"/Users/Bell 1/GIT_REPOS/NICA/Transition crossing/Acceleration/Acceleration/AccCycleParam.dat";//file name for particle coordinates: phi, DeltaP_P, ro
-char *fname=(char *)"/Users/Bell 1/GIT_REPOS/NICA/Transition crossing/Acceleration/Acceleration/PartCoord.dat";      // file name for particle coordinates: phi, DeltaP_P, ro
-char *fnameZ=(char *)"/Users/Bell 1/GIT_REPOS/NICA/Transition crossing/Acceleration/Acceleration/impedance.dat";     // file name for effective impedances
-char *fnameOut=(char *)"/Users/Bell 1/GIT_REPOS/NICA/Transition crossing/Acceleration/Acceleration/PartCoordOut.dat";  // file name for final particle coordinates
-char *fnameCB=(char *)"/Users/Bell 1/GIT_REPOS/NICA/Transition crossing/Acceleration/Acceleration/AccCycleBunchPrm.dat";//file name for resulting turn-by-turn bunch parameters
+    char *fnameCP=(char *)"/Users/Bell 1/GIT_REPOS/NICA/Transition crossing/Acceleration/Acceleration/AccCycleParam.dat";//file name for particle coordinates: phi, DeltaP_P, ro
+    char *fname=(char *)"/Users/Bell 1/GIT_REPOS/NICA/Transition crossing/Acceleration/Acceleration/PartCoord.dat";      // file name for particle coordinates: phi, DeltaP_P, ro
+    char *fnameZ=(char *)"/Users/Bell 1/GIT_REPOS/NICA/Transition crossing/Acceleration/Acceleration/impedance.dat";     // file name for effective impedances
+    char *fnameOut=(char *)"/Users/Bell 1/GIT_REPOS/NICA/Transition crossing/Acceleration/Acceleration/PartCoordOut.dat";  // file name for final particle coordinates
+    char *fnameCB=(char *)"/Users/Bell 1/GIT_REPOS/NICA/Transition crossing/Acceleration/Acceleration/AccCycleBunchPrm.dat";//file name for resulting turn-by-turn bunch parameters
 char buf[256];
 int Np, Nt, Nh, Nhh, n, i, k, j, m, nc=0, nh_max, last_turn;
 double capa, capa2, Vd, Vdd, Vd_a, x, y, x_p, s, Vb, dphi;
@@ -109,9 +109,9 @@ time_t t1, t2;
     time(&t1);
 //
     // Booster parameters
-   double alpha=0.03346;
-   double q=84;
-   double Mp=938.256E6;
+    double alpha=0.03346;
+    double q=84;
+    double Mp=938.256E6;
    //
     // reading beam energy and accelerating voltage through the cycle.
    fp=fopen(fnameCP,"r");
@@ -202,7 +202,7 @@ time_t t1, t2;
    //
     // Turn-by-turn tracking
    last_turn=1;
-    fp1=fopen("distr.dat", "w");
+    fp1=fopen("/Users/Bell 1/GIT_REPOS/NICA/Transition crossing/Acceleration/Acceleration/distr.dat", "w");
     printf("Tracking starts\n\tNumber of particles=%d, Number of turns=%d\n",Np, Nt);
    for(n=0; n<Nt-2; n++){
       // computation of avarage beam parameters
@@ -222,11 +222,11 @@ time_t t1, t2;
       P_Phi[n]=0;
       SigmaP[n]=0;
        for(i=0; i<Np; i++){
-          x=phi[i]-PhiAv[n];
-         SigmaPhi[n]=SigmaPhi[n]+x*x*ro[i];
+           x=phi[i]-PhiAv[n];
+           SigmaPhi[n]=SigmaPhi[n]+x*x*ro[i];
            y=Dpp[i]-PAv[n];
-         SigmaP[n]=SigmaP[n]+y*y*ro[i];
-         P_Phi[n]=P_Phi[n]+x*y*ro[i];}
+           SigmaP[n]=SigmaP[n]+y*y*ro[i];
+           P_Phi[n]=P_Phi[n]+x*y*ro[i];}
       SigmaPhi[n]=sqrt(SigmaPhi[n]/Ntot[n]);
       SigmaP[n]=sqrt(SigmaP[n]/Ntot[n]);
       P_Phi[n]=P_Phi[n]/Ntot[n];
@@ -236,7 +236,7 @@ time_t t1, t2;
       x_p=2.*PI*q*eta_p[n];
       dphi=capa*PhiAcc[n]+PhiCor[n]-PhiAcc[n+1]-PhiCor[n+1];
            for(i=0; i<Np; i++)if(ro[i]>0.){
-          phi[i]=capa*phi[i]-Dpp[i]*(x+Dpp[i]*x_p)+dphi;
+               phi[i]=capa*phi[i]-Dpp[i]*(x+Dpp[i]*x_p)+dphi;
          if(eta[n]<0.){
              if(phi[i]>PI)phi[i]=phi[i]-2*PI;
              if(phi[i]<-PI)phi[i]=phi[i]+2*PI;}
@@ -278,13 +278,15 @@ time_t t1, t2;
       if(nh_max<5)nh_max=5;
       if(nh_max>Nh)nh_max=Nh;
       for(k=0; k<nh_max; k++){
-          ReZt=ReZ[k]+Asc*ReZsc[k];
+            ReZt=ReZ[k]+Asc*ReZsc[k];
             ImZt=-(ImZ[k]+Asc*ImZsc[k]);
-         x=ReZt*Ref[k]-ImZt*Imf[k];
-         Imf[k]=-(ReZt*Imf[k]+ImZt*Ref[k]);
-         Ref[k]=-x;
+            x=ReZt*Ref[k]-ImZt*Imf[k];
+            Imf[k]=-(ReZt*Imf[k]+ImZt*Ref[k]);
+            Ref[k]=-x;
       }
-      if(nh_max<(Nh-1))for(k=nh_max; k<Nh; k++)Ref[k]=Imf[k]=0.;
+      if(nh_max<(Nh-1))
+      for(k=nh_max; k<Nh; k++)
+        Ref[k]=Imf[k]=0.;
       for(k=1; k<Nh-1; k++){
          Ref[Nhh-k]=Ref[k];
          Imf[Nhh-k]=-Imf[k];
@@ -307,16 +309,16 @@ time_t t1, t2;
       Vd_a=Vd*(1.+DeltaVQ[n]-DeltaPhiD[n]*tan(PhiAcc[n+1]));
       dphi_tot=DeltaPhiD[n]+DeltaVQ[n]*tan(PhiAcc[n+1]);
           for(i=0; i<Np; i++)if(ro[i]>0.){
-            j=floor((phi[i]+PI)/h);
-         x=(phi[i]+PI-h*j)/h;
+              j=floor((phi[i]+PI)/h);
+              x=(phi[i]+PI-h*j)/h;
          while(j<0)j=j+Nhh;
          while(j>=Nhh)j=j-Nhh;
          if((j+1)==Nhh)Vb=Ref[j+1-Nhh];
          else Vb=Ref[j+1];
-         Vb=(1.-x)*Ref[j] + x*Vb;
-         Dpp[i]=capa*Dpp[i]-Vd_a*sin(phi[i]+dphi_tot)-Vd*s+Vb*Vdd;
-         phi[i]=phi[i]/capa2;
-      }
+          Vb=(1.-x)*Ref[j] + x*Vb;
+          Dpp[i]=capa*Dpp[i]-Vd_a*sin(phi[i]+dphi_tot)-Vd*s+Vb*Vdd;
+          phi[i]=phi[i]/capa2;
+        }
    }
    // computation of beam parameters for the last turn
    n=Nt-2;
@@ -335,7 +337,7 @@ time_t t1, t2;
            SigmaP[n]=0;
            P_Phi[n]=0;
            for(i=0; i<Np; i++){
-               x=phi[i]-PhiAv[n];
+              x=phi[i]-PhiAv[n];
               SigmaPhi[n]=SigmaPhi[n]+x*x*ro[i];
               y=Dpp[i]-PAv[n];
               SigmaP[n]=SigmaP[n]+y*y*ro[i];

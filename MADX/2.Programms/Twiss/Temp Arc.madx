@@ -8,6 +8,6 @@ USE, PERIOD = MACHINE;
 CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX";
 
 twiss, x=0.000, file=tbl/twiss_temp_Arc.tbl;
-plot, haxis=s, vaxis=betx,bety,colour=100, style=100,file=img/twiss_plot_temp_Arc;
-plot, haxis=s, vaxis=dx,dy,colour=100, style=100,file=img/twiss_plot_temp_Arc;
+plot, TITLE = "Suppression by Edge Cell.", haxis=s, hmax = 510, vaxis=betx,bety,colour=100, style=100,file=img/twiss_plot_temp_Arc;
+plot, TITLE = "Suppression by Edge Cell.", haxis=s, hmax = 510, vmin = -6, vmax = 8, vaxis=dx,dy,colour=100, style=100,file=img/twiss_plot_temp_Arc;
 stop;

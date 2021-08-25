@@ -30,6 +30,7 @@
 		A5B040EC262F02E200875A80 /* AccCycleParam.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AccCycleParam.dat; sourceTree = "<group>"; };
 		A5B040ED262F02E200875A80 /* AccCycleBunchPrm.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AccCycleBunchPrm.dat; sourceTree = "<group>"; };
 		A5B040EE262F02E200875A80 /* PartCoord.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PartCoord.dat; sourceTree = "<group>"; };
+		A5B4604F26D3FEE000209687 /* PartCoordOut.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PartCoordOut.dat; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +67,7 @@
 				A5B040EC262F02E200875A80 /* AccCycleParam.dat */,
 				A5B040EB262F02E200875A80 /* distr.dat */,
 				A5B040EA262F02E200875A80 /* impedance.dat */,
+				A5B4604F26D3FEE000209687 /* PartCoordOut.dat */,
 				A5B040E1262EFE2D00875A80 /* main.cpp */,
 				A5B040EE262F02E200875A80 /* PartCoord.dat */,
 			);
