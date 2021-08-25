@@ -385,9 +385,6 @@ MCS0: MULTIPOLE,  KNL:={0,0,0};
 s1:= -1.21885e+00;
 s2:=  5.12e-01;
 
-s1:= -1.34023e+00;
-s2:= 5.18613e-01;
-
 MCS1: MULTIPOLE, KNL:={0,0,s1};
 MCS2: MULTIPOLE, KNL:={0,0,s2};
 

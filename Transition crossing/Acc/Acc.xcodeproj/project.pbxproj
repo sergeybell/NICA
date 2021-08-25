@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A5B040FE262F061000875A80 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = A5B040FD262F061000875A80 /* main.c */; };
+		A5B040FE262F061000875A80 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A5B040FD262F061000875A80 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +24,7 @@
 
 /* Begin PBXFileReference section */
 		A5B040FA262F061000875A80 /* Acc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Acc; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5B040FD262F061000875A80 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		A5B040FD262F061000875A80 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		A5B04105262F062E00875A80 /* AccCycleParam.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = AccCycleParam.dat; path = ../../Acceleration/Acceleration/AccCycleParam.dat; sourceTree = "<group>"; };
 		A5B04106262F062E00875A80 /* distr.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = distr.dat; path = ../../Acceleration/Acceleration/distr.dat; sourceTree = "<group>"; };
 		A5B04107262F062E00875A80 /* impedance.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = impedance.dat; path = ../../Acceleration/Acceleration/impedance.dat; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 				A5B04106262F062E00875A80 /* distr.dat */,
 				A5B04107262F062E00875A80 /* impedance.dat */,
 				A5B04109262F062E00875A80 /* PartCoord.dat */,
-				A5B040FD262F061000875A80 /* main.c */,
+				A5B040FD262F061000875A80 /* main.cpp */,
 			);
 			path = Acc;
 			sourceTree = "<group>";
@@ -128,7 +128,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5B040FE262F061000875A80 /* main.c in Sources */,
+				A5B040FE262F061000875A80 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
