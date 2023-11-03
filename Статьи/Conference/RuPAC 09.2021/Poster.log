@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.15)  11 AUG 2021 14:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2019.5.15)  23 SEP 2021 18:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1186,24 +1186,24 @@ Package: multicol 2018/12/27 v1.8v multicolumn formatting (FMi)
 ) (./Poster.aux)
 \openout1 = `Poster.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 33.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
+LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 32.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 32.
  (/usr/local/texlive/2019/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    ... okay on input line 32.
 
 ABD: EveryShipout initializing macros
 (/usr/local/texlive/2019/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -1300,21 +1300,21 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 33.
+LaTeX Font Info:    Try loading font information for U+msa on input line 32.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 33.
+LaTeX Font Info:    Try loading font information for U+msb on input line 32.
 
 (/usr/local/texlive/2019/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for TS1+aer on input line 33.
-LaTeX Font Info:    No file TS1aer.fd. on input line 33.
+LaTeX Font Info:    Try loading font information for TS1+aer on input line 32.
+LaTeX Font Info:    No file TS1aer.fd. on input line 32.
 
 
 LaTeX Font Warning: Font shape `TS1/aer/m/n' undefined
-(Font)              using `TS1/cmr/m/n' instead on input line 33.
+(Font)              using `TS1/cmr/m/n' instead on input line 32.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
@@ -1323,119 +1323,244 @@ Missing character: There is no = in font nullfont!
 Missing character: There is no 1 in font nullfont!
 
 LaTeX Font Warning: Font shape `TS1/aer/m/n' in size <61.92> not available
-(Font)              size <51.59> substituted on input line 36.
+(Font)              size <51.59> substituted on input line 35.
 
 
-Overfull \hbox (46.68646pt too wide) in paragraph at lines 36--36
+Overfull \hbox (46.68646pt too wide) in paragraph at lines 35--35
  [][] 
  []
 
 
-Overfull \hbox (46.68646pt too wide) in paragraph at lines 36--36
+Overfull \hbox (46.68646pt too wide) in paragraph at lines 35--35
  [][] 
  []
 
 
-./Poster.tex:50: LaTeX Error: File `img/Superperiod' not found.
+Underfull \hbox (badness 10000) in paragraph at lines 41--41
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.50 	}
-       
-? 
-./Poster.tex:50: Emergency stop.
- ...                                              
-                                                  
-l.50 	}
-       
-I could not locate the file with any of these extensions:
-.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+ []
 
- 
-Here is how much of TeX's memory you used:
- 30560 strings out of 492616
- 632064 string characters out of 6129481
- 693637 words of memory out of 5000000
- 33997 multiletter control sequences out of 15000+600000
- 577882 words of font info for 113 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 62i,10n,92p,816b,1378s stack positions out of 5000i,500n,10000p,200000b,80000s
-./Poster.tex:50:  ==> Fatal error occurred, no output PDF file produced!
-ull \hbox (18.25221pt too wide) in paragraph at lines 83--83
+<img/Superperiod.png, id=29, 768.8725pt x 210.7875pt>
+File: img/Superperiod.png Graphic file (type png)
+<use img/Superperiod.png>
+Package pdftex.def Info: img/Superperiod.png  used on input line 55.
+(pdftex.def)             Requested size: 1069.82375pt x 293.33792pt.
+
+Overfull \hbox (18.25221pt too wide) in paragraph at lines 55--55
 [][] 
  []
 
-<img/sextupoles_ES.png, id=33, 524.96124pt x 210.28563pt>
+
+Overfull \hbox (11.76486pt too wide) in paragraph at lines 55--55
+[][]   
+ []
+
+<img/DS_Edge_cell.png, id=31, 475.7775pt x 70.2625pt>
+File: img/DS_Edge_cell.png Graphic file (type png)
+<use img/DS_Edge_cell.png>
+Package pdftex.def Info: img/DS_Edge_cell.png  used on input line 69.
+(pdftex.def)             Requested size: 675.98491pt x 99.83347pt.
+
+Overfull \hbox (18.25221pt too wide) in paragraph at lines 69--69
+[][] 
+ []
+
+<img/DS_2_families.png, id=32, 477.785pt x 50.1875pt>
+File: img/DS_2_families.png Graphic file (type png)
+<use img/DS_2_families.png>
+Package pdftex.def Info: img/DS_2_families.png  used on input line 80.
+(pdftex.def)             Requested size: 670.29445pt x 70.41362pt.
+
+Overfull \hbox (18.25221pt too wide) in paragraph at lines 80--80
+[][] 
+ []
+
+File: img/DS_Edge_cell.png Graphic file (type png)
+<use img/DS_Edge_cell.png>
+Package pdftex.def Info: img/DS_Edge_cell.png  used on input line 90.
+(pdftex.def)             Requested size: 670.29445pt x 98.99399pt.
+
+Overfull \hbox (18.25221pt too wide) in paragraph at lines 90--90
+[][] 
+ []
+
+<img/sextupoles_ES.png, id=33, 834.11626pt x 350.30875pt>
 File: img/sextupoles_ES.png Graphic file (type png)
 <use img/sextupoles_ES.png>
-Package pdftex.def Info: img/sextupoles_ES.png  used on input line 95.
-(pdftex.def)             Requested size: 1075.5142pt x 430.88937pt.
+Package pdftex.def Info: img/sextupoles_ES.png  used on input line 103.
+(pdftex.def)             Requested size: 675.98491pt x 283.91423pt.
 
-Overfull \hbox (18.25221pt too wide) in paragraph at lines 95--95
+Overfull \hbox (18.25221pt too wide) in paragraph at lines 103--103
 [][] 
  []
 
-<img/sextupoles_AS.png, id=34, 476.27937pt x 210.28563pt>
+<img/sextupoles_AS.png, id=34, 834.11626pt x 371.3875pt>
 File: img/sextupoles_AS.png Graphic file (type png)
 <use img/sextupoles_AS.png>
-Package pdftex.def Info: img/sextupoles_AS.png  used on input line 104.
-(pdftex.def)             Requested size: 1069.82375pt x 472.3714pt.
+Package pdftex.def Info: img/sextupoles_AS.png  used on input line 113.
+(pdftex.def)             Requested size: 670.29445pt x 298.46478pt.
 
-Overfull \hbox (18.25221pt too wide) in paragraph at lines 104--104
+Overfull \hbox (18.25221pt too wide) in paragraph at lines 113--113
 [][] 
  []
 
-<img/twiss_beta_ES.png, id=35, 781.92125pt x 629.35126pt>
+<img/sextupoles_ION.png, id=35, 834.11626pt x 370.38374pt>
+File: img/sextupoles_ION.png Graphic file (type png)
+<use img/sextupoles_ION.png>
+Package pdftex.def Info: img/sextupoles_ION.png  used on input line 121.
+(pdftex.def)             Requested size: 670.29445pt x 297.65811pt.
+
+Overfull \hbox (18.25221pt too wide) in paragraph at lines 121--121
+[][] 
+ []
+
+<img/twiss_beta_ES.png, id=36, 820.06375pt x 644.4075pt>
 File: img/twiss_beta_ES.png Graphic file (type png)
 <use img/twiss_beta_ES.png>
-Package pdftex.def Info: img/twiss_beta_ES.png  used on input line 122.
-(pdftex.def)             Requested size: 537.7571pt x 432.85078pt.
+Package pdftex.def Info: img/twiss_beta_ES.png  used on input line 139.
+(pdftex.def)             Requested size: 337.99245pt x 265.59521pt.
 
-Overfull \hbox (18.25221pt too wide) in paragraph at lines 122--122
+Overfull \hbox (18.25221pt too wide) in paragraph at lines 139--139
 [][] 
  []
 
-<img/twiss_disp_ES.png, id=36, 762.34813pt x 630.355pt>
+<img/twiss_disp_ES.png, id=37, 793.96625pt x 636.3775pt>
 File: img/twiss_disp_ES.png Graphic file (type png)
 <use img/twiss_disp_ES.png>
-Package pdftex.def Info: img/twiss_disp_ES.png  used on input line 122.
-(pdftex.def)             Requested size: 537.7571pt x 444.66003pt.
+Package pdftex.def Info: img/twiss_disp_ES.png  used on input line 139.
+(pdftex.def)             Requested size: 337.99245pt x 270.90839pt.
 
-Overfull \hbox (18.25221pt too wide) in paragraph at lines 122--122
+Overfull \hbox (18.25221pt too wide) in paragraph at lines 139--139
 [][] 
  []
 
 
-Overfull \hbox (5.88242pt too wide) in paragraph at lines 122--122
+Overfull \hbox (5.88242pt too wide) in paragraph at lines 139--139
 []$[]$ $[]$ 
  []
 
-<img/twiss_beta_AS.png, id=37, 784.9325pt x 628.84938pt>
+<img/twiss_beta_AS.png, id=38, 794.97pt x 638.385pt>
 File: img/twiss_beta_AS.png Graphic file (type png)
 <use img/twiss_beta_AS.png>
-Package pdftex.def Info: img/twiss_beta_AS.png  used on input line 138.
-(pdftex.def)             Requested size: 534.91187pt x 428.57146pt.
+Package pdftex.def Info: img/twiss_beta_AS.png  used on input line 153.
+(pdftex.def)             Requested size: 335.14722pt x 269.14265pt.
 
-Overfull \hbox (18.25223pt too wide) in paragraph at lines 138--138
+Overfull \hbox (18.25223pt too wide) in paragraph at lines 153--153
 [][] 
  []
 
-<img/twiss_disp_AS.png, id=38, 790.45313pt x 629.35126pt>
+<img/twiss_disp_AS.png, id=39, 795.97375pt x 638.385pt>
 File: img/twiss_disp_AS.png Graphic file (type png)
 <use img/twiss_disp_AS.png>
-Package pdftex.def Info: img/twiss_disp_AS.png  used on input line 138.
-(pdftex.def)             Requested size: 534.91187pt x 425.89812pt.
+Package pdftex.def Info: img/twiss_disp_AS.png  used on input line 153.
+(pdftex.def)             Requested size: 335.14722pt x 268.79199pt.
 
-Overfull \hbox (18.25223pt too wide) in paragraph at lines 138--138
+Overfull \hbox (18.25223pt too wide) in paragraph at lines 153--153
 [][] 
  []
 
 
-Overfull \hbox (5.88242pt too wide) in paragraph at lines 138--138
+Overfull \hbox (5.88242pt too wide) in paragraph at lines 153--153
+[]$[]$ $[]$ 
+ []
+
+<img/twiss_beta_ion.png, id=40, 649.42625pt x 512.91624pt>
+File: img/twiss_beta_ion.png Graphic file (type png)
+<use img/twiss_beta_ion.png>
+Package pdftex.def Info: img/twiss_beta_ion.png  used on input line 166.
+(pdftex.def)             Requested size: 335.14722pt x 264.69875pt.
+
+Overfull \hbox (18.25223pt too wide) in paragraph at lines 166--166
+[][] 
+ []
+
+<img/twiss_disp_ion.png, id=41, 645.41125pt x 518.93875pt>
+File: img/twiss_disp_ion.png Graphic file (type png)
+<use img/twiss_disp_ion.png>
+Package pdftex.def Info: img/twiss_disp_ion.png  used on input line 166.
+(pdftex.def)             Requested size: 335.14722pt x 269.46962pt.
+
+Overfull \hbox (18.25223pt too wide) in paragraph at lines 166--166
+[][] 
+ []
+
+
+Overfull \hbox (5.88242pt too wide) in paragraph at lines 166--166
+[]$[]$ $[]$ 
+ []
+
+<img/dyn_aper_x_ES.png, id=42, 867.24pt x 614.295pt>
+File: img/dyn_aper_x_ES.png Graphic file (type png)
+<use img/dyn_aper_x_ES.png>
+Package pdftex.def Info: img/dyn_aper_x_ES.png  used on input line 182.
+(pdftex.def)             Requested size: 337.99245pt x 239.41473pt.
+
+Overfull \hbox (18.25221pt too wide) in paragraph at lines 182--182
+[][] 
+ []
+
+<img/dyn_aper_y_ES.png, id=43, 866.23625pt x 617.30624pt>
+File: img/dyn_aper_y_ES.png Graphic file (type png)
+<use img/dyn_aper_y_ES.png>
+Package pdftex.def Info: img/dyn_aper_y_ES.png  used on input line 182.
+(pdftex.def)             Requested size: 337.99245pt x 240.8615pt.
+
+Overfull \hbox (18.25221pt too wide) in paragraph at lines 182--182
+[][] 
+ []
+
+
+Overfull \hbox (5.88242pt too wide) in paragraph at lines 182--182
+[]$[]$ $[]$ 
+ []
+
+<img/dyn_aper_x_AS.png, id=44, 867.24pt x 615.29875pt>
+File: img/dyn_aper_x_AS.png Graphic file (type png)
+<use img/dyn_aper_x_AS.png>
+Package pdftex.def Info: img/dyn_aper_x_AS.png  used on input line 195.
+(pdftex.def)             Requested size: 335.14722pt x 237.78737pt.
+
+Overfull \hbox (18.25223pt too wide) in paragraph at lines 195--195
+[][] 
+ []
+
+<img/dyn_aper_y_AS.png, id=45, 862.22125pt x 612.2875pt>
+File: img/dyn_aper_y_AS.png Graphic file (type png)
+<use img/dyn_aper_y_AS.png>
+Package pdftex.def Info: img/dyn_aper_y_AS.png  used on input line 195.
+(pdftex.def)             Requested size: 335.14722pt x 237.99702pt.
+
+Overfull \hbox (18.25223pt too wide) in paragraph at lines 195--195
+[][] 
+ []
+
+
+Overfull \hbox (5.88242pt too wide) in paragraph at lines 195--195
+[]$[]$ $[]$ 
+ []
+
+<img/dyn_aper_x_ion.png, id=46, 709.65125pt x 502.87875pt>
+File: img/dyn_aper_x_ion.png Graphic file (type png)
+<use img/dyn_aper_x_ion.png>
+Package pdftex.def Info: img/dyn_aper_x_ion.png  used on input line 208.
+(pdftex.def)             Requested size: 335.14722pt x 237.49637pt.
+
+Overfull \hbox (18.25223pt too wide) in paragraph at lines 208--208
+[][] 
+ []
+
+<img/dyn_aper_y_ion.png, id=47, 867.24pt x 617.30624pt>
+File: img/dyn_aper_y_ion.png Graphic file (type png)
+<use img/dyn_aper_y_ion.png>
+Package pdftex.def Info: img/dyn_aper_y_ion.png  used on input line 208.
+(pdftex.def)             Requested size: 335.14722pt x 238.56317pt.
+
+Overfull \hbox (18.25223pt too wide) in paragraph at lines 208--208
+[][] 
+ []
+
+
+Overfull \hbox (5.88242pt too wide) in paragraph at lines 208--208
 []$[]$ $[]$ 
  []
 
@@ -1443,8 +1568,11 @@ Overfull \hbox (5.88242pt too wide) in paragraph at lines 138--138
 
 {/usr/local/texlive/2019/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./img/S
 uperperiod.png> <./img/DS_Edge_cell.png> <./img/DS_2_families.png> <./img/sextu
-poles_ES.png> <./img/sextupoles_AS.png> <./img/twiss_beta_ES.png> <./img/twiss_
-disp_ES.png> <./img/twiss_beta_AS.png> <./img/twiss_disp_AS.png>]
+poles_ES.png> <./img/sextupoles_AS.png> <./img/sextupoles_ION.png> <./img/twiss
+_beta_ES.png> <./img/twiss_disp_ES.png> <./img/twiss_beta_AS.png> <./img/twiss_
+disp_AS.png> <./img/twiss_beta_ion.png> <./img/twiss_disp_ion.png> <./img/dyn_a
+per_x_ES.png> <./img/dyn_aper_y_ES.png> <./img/dyn_aper_x_AS.png> <./img/dyn_ap
+er_y_AS.png> <./img/dyn_aper_x_ion.png> <./img/dyn_aper_y_ion.png>]
 (./Poster.aux)
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1455,13 +1583,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 30664 strings out of 492616
- 633950 string characters out of 6129481
- 710690 words of memory out of 5000000
- 34062 multiletter control sequences out of 15000+600000
+ 30709 strings out of 492616
+ 635055 string characters out of 6129481
+ 725615 words of memory out of 5000000
+ 34098 multiletter control sequences out of 15000+600000
  590588 words of font info for 153 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 62i,12n,92p,816b,1449s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 62i,12n,92p,816b,1453s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
 ></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
 ></usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
@@ -1469,10 +1597,10 @@ Here is how much of TeX's memory you used:
 /usr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></u
 sr/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
 r/local/texlive/2019/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on Poster.pdf (1 page, 1177718 bytes).
+Output written on Poster.pdf (1 page, 3635356 bytes).
 PDF statistics:
- 82 PDF objects out of 1000 (max. 8388607)
+ 100 PDF objects out of 1000 (max. 8388607)
  37 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 154 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 199 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,7 +1,7 @@
 set term postscript dashed color
 set output "Phase Space Temp Full.ps"
 
-set pointsize 0.5
+set pointsize 0.7
 set xlabel 'x'
 set ylabel 'px'
 set xrange [-0.02:0.02]
