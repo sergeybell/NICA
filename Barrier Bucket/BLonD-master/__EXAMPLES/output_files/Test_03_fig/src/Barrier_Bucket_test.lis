@@ -1,0 +1,108 @@
+ --- BIN FILE READ: NICA_Gold
+  10916 INCLUDE 'NICA_Gold';
+  10917   FUNCTION FOURIER_COEF SIGN_ETA N_FOURIER H_REFLECTION;
+  10918     VARIABLE SIGN 1;
+  10919     VARIABLE N_F 1;
+  10920     VARIABLE H_R 1;
+  10921     H_R := H_REFLECTION;
+  10922     N_F := N_FOURIER;
+  10923     SIGN := SIGN_ETA;
+  10924     FOURIER_COEF := SIGN*2/(3.14159*N_F) * (1-COS((3.14159*N_F)/(H_R))
+                  );
+  10925     ENDFUNCTION;
+  10926   FUNCTION SIGMA_MOD NUMBER M N_MAX;
+  10927     VARIABLE NUM 1;
+  10928     VARIABLE N 1;
+  10929     VARIABLE ANS 1;
+  10930     VARIABLE I 1;
+  10931     VARIABLE POWER 1;
+  10932     NUM := NUMBER;
+  10933     N := N_MAX;
+  10934     ANS := ((3.1415926535 * NUM)/(2 * (N+1)));
+  10935     SIGMA_MOD := (SIN(ANS)/ANS);
+  10936     POWER := SIGMA_MOD;
+  10937     LOOP I 1 M-1;
+  10938       POWER := POWER * SIGMA_MOD;
+  10939       ENDLOOP;
+  10940     SIGMA_MOD := POWER;
+  10941     ENDFUNCTION;
+  10942   PROCEDURE BARRIER_BUCKET V_PEAK T_REFLECTION HARMONIC_NUMBER N_FOURI
+                  ER ETA_REFERENCE PHI_RF;
+  10943     VARIABLE V_P 1;
+  10944     VARIABLE T_REF 1;
+  10945     VARIABLE T_REV 1;
+  10946     VARIABLE T_DRIFT 1;
+  10947     VARIABLE N_F 1;
+  10948     VARIABLE ETA_R 1;
+  10949     VARIABLE FREQ 1;
+  10950     VARIABLE H_R 1;
+  10951     VARIABLE HNUM 1;
+  10952     VARIABLE PHI_R 1;
+  10953     VARIABLE M 1;
+  10954     VARIABLE I 1;
+  10955     VARIABLE VRF 1 1 1;
+  10956     VARIABLE PHI_0 1;
+  10957     VARIABLE SIGN_ETA 1;
+  10958     VARIABLE C 1;
+  10959     VARIABLE BETA 1;
+  10960     BETA := 0.99;
+  10961     C := 2.988*1E8;
+  10962     V_P := V_PEAK;
+  10963     HNUM := HARMONIC_NUMBER;
+  10964     T_REV := (504.03/C*BETA)*1E9;
+  10965     T_REF := T_REFLECTION;
+  10966     T_DRIFT := (T_REV - 2*T_REF)/(2 * HNUM);
+  10967     PHI_R := (2*T_REF)/T_DRIFT;
+  10968     H_R := (3.14159)/PHI_R;
+  10969     N_F := N_FOURIER;
+  10970     ETA_R := ETA_REFERENCE;
+  10971     M := 3;
+  10972     PHI_0 := PHI_RF;
+  10973     IF (ETA_R < 0);
+  10974       SIGN_ETA := -1;
+  10975       ELSEIF (ETA_R > 0);
+  10976       SIGN_ETA := +1;
+  10977       ENDIF;
+  10978     WRITE 6 'END SIGN';
+  10979     FREQ := HNUM / T_REV *1E9;
+  10980     WRITE 6 '********************************************';
+  10981     WRITE 6 '*    RF BARRIER BUCKET 31 AUG 2022         *';
+  10982     WRITE 6 '********************************************';
+  10983     WRITE 6 'Peak Voltage: '&ST(V_P)&' kV';
+  10984     WRITE 6 'Total Number of Fourier: '&ST(N_F);
+  10985     WRITE 6 'Duration of Barrier Bucket'&ST(T_REF)&' ns';
+  10986     WRITE 6 'Harmonic_number: '&ST(HNUM);
+  10987     WRITE 6 'Initial Phase: '&ST(PHI_0)&' deg';
+  10988     WRITE 6 '********************************************';
+  10989     LOOP I 1 INT(N_F);
+  10990       VRF(1, 1) := (-1) * V_P * FOURIER_COEF(SIGN_ETA, I, H_R) * SIGMA
+                  _MOD(I, M, N_F); %FOURIER_COEF:10917 %SIGMA_MOD:10926
+  10991       WRITE 6 'Number of RF: '&ST(I);
+  10992       WRITE 6 'Frequancy of RF: '&ST(I*FREQ/1E6)&' MHZ';
+  10993       WRITE 6 'Fourier coefficient: '&ST(FOURIER_COEF(SIGN_ETA, I, H_R
+                  )); %FOURIER_COEF:10917
+  10994       WRITE 6 'Sigma modulation: '&ST(SIGMA_MOD(I, M, N_F)); %SIGMA_MO
+                  D:10926
+  10995       WRITE 6 'Voltage of RF: '&ST(VRF(1,1))&' kV';
+  10996       RF VRF 0 I*FREQ PHI_0 0.05; %RF: 8697
+  10997       WRITE 6 '********************************************';
+  10998       ENDLOOP;
+  10999     ENDPROCEDURE;
+  11000   PROCEDURE MAIN;
+  11001     VARIABLE A 1;
+  11002     VARIABLE B 1;
+  11003     A := FOURIER_COEF(-1, 22, 12.574); %FOURIER_COEF:10917
+  11004     B := SIGMA_MOD(24, 3, 25); %SIGMA_MOD:10926
+  11005     WRITE 6 'FOURIER';
+  11006     WRITE 6 A B;
+  11007     OV 4 3 0; %OV:  969
+  11008     SET_FOR_PROTONS 7; %SET_FOR_PROTONS:10543
+  11009     UM; %UM: 1488
+  11010     CR; %CR:  947
+  11011     DL 0.215 ; %DL: 6559
+  11012     BARRIER_BUCKET 5 50 2 25 -1 0; %BARRIER_BUCKET:10942
+  11013     ENDPROCEDURE;
+  11014   PROCEDURE RUN;
+  11015     MAIN; %MAIN:11000
+  11016     ENDPROCEDURE;
+  11017   RUN; %RUN:11014
