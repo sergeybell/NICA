@@ -1,0 +1,94 @@
+{INCLUDE 'BYPASS_REAL_SEQ';}
+{INCLUDE 'BYPASS_REAL_CORR';}
+{INCLUDE 'BYPASS_REAL_3_fam';}
+{INCLUDE 'BYPASS_REAL_4_fam';}
+{INCLUDE 'BYPASS_REAL_4_fam_NEW';}
+INCLUDE 'NICA_Gold';
+
+PROCEDURE MCMCALC ALPHA0 ALPHA1;
+      VARIABLE TMPALPHA 100;
+      VARIABLE I 1;
+      VARIABLE MCM0 1;
+      VARIABLE MCM1 1;
+      VARIABLE MCM2 1;
+      VARIABLE MCM3 1;
+      VARIABLE MCM4 1;
+
+      MCM MAP SPOS TMPALPHA;
+      MCM0 := -TMPALPHA|(0&0&0&0&0&0);
+      MCM1 := -TMPALPHA|(0&0&0&0&0&1);
+      MCM2 := -2*TMPALPHA|(0&0&0&0&0&2);
+      MCM3 := -2*3*TMPALPHA|(0&0&0&0&0&3);
+      MCM4 := -2*3*4*TMPALPHA|(0&0&0&0&0&4);
+
+      ALPHA0:= MCM1;
+      ALPHA1:= MCM2;
+
+      WRITE 6 '++++++++ MOMENTUM COMPACTION FACTOR ++++++++';
+      WRITE 6 'MC0 = '&ST(MCM0);
+      WRITE 6 'MC1 = '&ST(MCM1);
+      WRITE 6 'MC2 = '&ST(MCM2);
+      WRITE 6 'MC3 = '&ST(MCM3);
+      WRITE 6 'MC4 = '&ST(MCM4);
+      WRITE 6 '++++++++++++++++++++++++++++++++++++++++++++';
+
+ENDPROCEDURE;
+
+PROCEDURE OPTIMIZE_CHROM SEXTGx1 SEXTGy1;
+                   VARIABLE OBJ 1;
+                   VARIABLE SGx1 1; VARIABLE SGy1 1;
+                   VARIABLE GAMMA 1;
+                   VARIABLE CHROM_X 1; VARIABLE CHROM_Y 1;
+                   VARIABLE MU_TP 800 3;
+
+  WRITE 6 'BEGIN';
+  SGx1 := SEXTGx1; SGy1 := SEXTGy1;
+  WRITE 6 'SGx1, SGy1 = '&ST(SGx1)&' '&ST(SGy1);
+  GAMMA := 7.040;
+  FIT SGx1 SGy1;
+    LATTICE SGx1 SGy1 1 0;
+    TP MU_TP;
+    CHROM_X := (MU_TP(1)|(0&0&0&0&1))*(1+1/GAMMA);
+    CHROM_Y := (MU_TP(2)|(0&0&0&0&1))*(1+1/GAMMA);
+
+    OBJ := SQRT(SQR(CHROM_X) + SQR(CHROM_Y));
+
+    WRITE 6 'SGx1, SGy1 = '&ST(SGx1)&' '&ST(SGy1);
+    WRITE 6 'CHROM_X, CHROM_Y='&ST(CHROM_X)&' '&ST(CHROM_Y);
+    WRITE 6 'OBJ ='&ST(OBJ);
+  ENDFIT 1E-12 2000 1 OBJ;
+
+    WRITE 6 '====================================';
+    WRITE 6 'SGx1, SGy1 = '&ST(SGx1)&' '&ST(SGy1);
+    WRITE 6 'CHROM_X, CHROM_Y='&ST(CHROM_X)&' '&ST(CHROM_Y);
+    WRITE 6 'OBJ ='&ST(OBJ);
+    SEXTGx1 := SGx1; SEXTGy1 := SGy1;
+ENDPROCEDURE; {OPTIMIZE}
+
+  {optimization}
+PROCEDURE MAIN;
+  VARIABLE GAMMA 1;
+  VARIABLE SGx1 1; VARIABLE SGy1 1;
+
+  GAMMA := 7.040; {before transition procedure}
+  OV 3 2 1;
+  {DAEPS 1E-12;}
+  { SET lattice parameters }
+  SET_FOR_PROTONS GAMMA;
+
+  {SEXTUPOLES}
+  SGx1 := 0.0;
+  SGy1 := 0.0;
+
+  WRITE 6 'SGx1, SGy1 = '&ST(SGx1)&' '&ST(SGy1);
+  OPTIMIZE_CHROM SGx1 SGy1;
+
+  WRITE 6 'SGx1 := '&ST(SGx1)&';';
+  WRITE 6 'SGy1 := '&ST(SGy1)&';';
+
+  ENDPROCEDURE; {MAIN}
+
+PROCEDURE RUN;
+  MAIN;
+ENDPROCEDURE;
+RUN; END;
