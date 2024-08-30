@@ -1,0 +1,430 @@
+!DATA OF WIDE TWISS PARAMETERS FOR MODELING MCF AT TRANSITION
+
+QF             QD
+0.5148373645   -0.5037116682
+
+Delta
+0.0
+
+++++++ table: ptc_twiss_summary
+
+            length            alpha_c          alpha_c_p         alpha_c_p2
+            503.04      0.01991272251     -0.06371671224       0.9684748052
+
+        alpha_c_p3              eta_c           gamma_tr                 q1
+      -72.66774866    -0.000495440753        7.086547118       0.4399998641
+
+                q2                dq1                dq2                 qs
+      0.4400281339      -0.6371640624       -1.353796701                  0
+
+        beta_x_min         beta_x_max         beta_y_min         beta_y_max
+       0.599999987        144.7466881        0.600007631         145.629967
+
+         beta11min          beta11max          beta12min          beta12max
+
+       0.599999987        144.7466881    5.104053166e-12       0.5180177652
+
+         beta13min          beta13max          beta21min          beta21max
+                 0                  0    5.105282261e-12       0.6213169733
+
+         beta22min          beta22max          beta23min          beta23max
+       0.600007631        145.5033581                  0                  0
+
+         beta31min          beta31max          beta32min          beta32max
+                 0                  0                  0                  0
+
+         beta33min          beta33max           disp1min           disp1max
+                 0                  0      -0.1485981417        2.546673404
+
+          disp2min           disp2max           disp3min           disp3max
+     -0.3099211004       0.3104934196      -0.1883874767       0.1461870778
+
+          disp4min           disp4max             deltap            orbit_x
+    -0.03746842724      0.04652354781                  0                  0
+
+          orbit_px            orbit_y           orbit_py           orbit_pt
+                 0                  0                  0                  0
+
+           orbit_t             xcorms             ycorms            pxcorms
+                 0                  0                  0                  0
+
+           pycorms             tcorms            ptcorms             xcomax
+                 0    1.311643044e-14                  0                  0
+
+Delta
+0.001123
+
+++++++ table: ptc_twiss_summary
+
+            length            alpha_c          alpha_c_p         alpha_c_p2
+            503.04      0.01978190032     -0.06210607634        0.901871049
+
+        alpha_c_p3              eta_c           gamma_tr                 q1
+      -71.29990731     -0.00062626295        7.109940977       0.4592812472
+
+                q2                dq1                dq2                 qs
+      0.4365000358      -0.7867482625       -1.456423091                  0
+
+        beta_x_min         beta_x_max         beta_y_min         beta_y_max
+
+      0.5982513042        145.1670953        0.600050704        145.6207636
+
+         beta11min          beta11max          beta12min          beta12max
+      0.5982513042        145.1670953    6.925738547e-18         0.51798479
+
+         beta13min          beta13max          beta21min          beta21max
+                 0                  0    7.931633162e-18       0.6224450969
+
+         beta22min          beta22max          beta23min          beta23max
+       0.600050704        145.4941776                  0                  0
+
+         beta31min          beta31max          beta32min          beta32max
+                 0                  0                  0                  0
+
+         beta33min          beta33max           disp1min           disp1max
+                 0                  0      -0.1510177004        2.540347186
+
+          disp2min           disp2max           disp3min           disp3max
+     -0.3101579877       0.3098445972      -0.1884083909       0.1458814937
+
+          disp4min           disp4max             deltap            orbit_x
+    -0.03746793152      0.04664347355                  0                  0
+
+          orbit_px            orbit_y           orbit_py           orbit_pt
+                 0                  0                  0                  0
+
+           orbit_t             xcorms             ycorms            pxcorms
+                 0                  0                  0                  0
+
+           pycorms             tcorms            ptcorms             xcomax
+                 0    1.311643044e-14                  0                  0
+
+Delta
+0.002247
+
+++++++ table: ptc_twiss_summary
+
+            length            alpha_c          alpha_c_p         alpha_c_p2
+            503.04      0.01965222686     -0.06053533174       0.8358252248
+
+        alpha_c_p3              eta_c           gamma_tr                 q1
+      -70.31710208   -0.0007559364094        7.133359564       0.4785710485
+
+                q2                dq1                dq2                 qs
+      0.4329684732      -0.9301118377       -1.557569946                  0
+
+        beta_x_min         beta_x_max         beta_y_min         beta_y_max
+
+      0.5967927786        145.5196343       0.6001031995        145.6095497
+
+         beta11min          beta11max          beta12min          beta12max
+      0.5967927786        145.5196343    1.467977059e-18       0.5179472374
+
+         beta13min          beta13max          beta21min          beta21max
+                 0                  0    1.945254474e-18       0.6234077406
+
+         beta22min          beta22max          beta23min          beta23max
+      0.6001031995        145.4829735                  0                  0
+
+         beta31min          beta31max          beta32min          beta32max
+                 0                  0                  0                  0
+
+         beta33min          beta33max           disp1min           disp1max
+                 0                  0      -0.1540563387        2.534478986
+
+          disp2min           disp2max           disp3min           disp3max
+     -0.3105177899       0.3096520978      -0.1884355883       0.1455881264
+
+          disp4min           disp4max             deltap            orbit_x
+    -0.03757529683      0.04676711721                  0                  0
+
+          orbit_px            orbit_y           orbit_py           orbit_pt
+                 0                  0                  0                  0
+
+           orbit_t             xcorms             ycorms            pxcorms
+                 0                  0                  0                  0
+
+           pycorms             tcorms            ptcorms             xcomax
+                 0    1.311643044e-14                  0                  0
+
+Delta
+0.003370
+
+++++++ table: ptc_twiss_summary
+
+           length            alpha_c          alpha_c_p         alpha_c_p2
+           503.04      0.01952389924     -0.05900717064       0.7700955958
+
+       alpha_c_p3              eta_c           gamma_tr                 q1
+     -69.75631937    -0.000884264022         7.15676441        0.497836338
+
+               q2                dq1                dq2                 qs
+     0.4294397199       -1.067073167       -1.657036545                  0
+
+       beta_x_min         beta_x_max         beta_y_min         beta_y_max
+     0.5956183247         145.804741       0.6001650983        145.5963309
+
+        beta11min          beta11max          beta12min          beta12max
+     0.5956183247         145.804741    5.311427759e-19       0.5179029705
+
+        beta13min          beta13max          beta21min          beta21max
+                0                  0    8.305648621e-19       0.6241866206
+
+        beta22min          beta22max          beta23min          beta23max
+     0.6001650983        145.4697662                  0                  0
+
+        beta31min          beta31max          beta32min          beta32max
+                0                  0                  0                  0
+
+        beta33min          beta33max           disp1min           disp1max
+                0                  0      -0.1577150573        2.529086304
+
+         disp2min           disp2max           disp3min           disp3max
+    -0.3110111271       0.3095812671      -0.1884690615       0.1453065281
+
+         disp4min           disp4max             deltap            orbit_x
+   -0.03768483471       0.0468943131                  0                  0
+
+         orbit_px            orbit_y           orbit_py           orbit_pt
+                0                  0                  0                  0
+
+          orbit_t             xcorms             ycorms            pxcorms
+                0                  0                  0                  0
+
+          pycorms             tcorms            ptcorms             xcomax
+                0    1.311643044e-14                  0                  0
+
+Delta
+0.004493
+
+++++++ table: ptc_twiss_summary
+
+            length            alpha_c          alpha_c_p         alpha_c_p2
+            503.04      0.01939676669     -0.05752036047       0.7042092828
+
+        alpha_c_p3              eta_c           gamma_tr                 q1
+      -69.66583436     -0.00101139657        7.180179954       0.5170956513
+
+                q2                dq1                dq2                 qs
+      0.4259106241       -1.197766248       -1.754885173                  0
+
+        beta_x_min         beta_x_max         beta_y_min         beta_y_max
+      0.5947228173        146.0229589        0.600236523        145.5810829
+
+         beta11min          beta11max          beta12min          beta12max
+      0.5947228173        146.0229589    2.474251839e-19       0.5178519084
+
+         beta13min          beta13max          beta21min          beta21max
+                 0                  0    4.562258157e-19       0.6247846464
+
+         beta22min          beta22max          beta23min          beta23max
+       0.600236523        145.4545315                  0                  0
+
+         beta31min          beta31max          beta32min          beta32max
+                 0                  0                  0                  0
+
+         beta33min          beta33max           disp1min           disp1max
+                 0                  0      -0.1620132938        2.524176005
+
+          disp2min           disp2max           disp3min           disp3max
+     -0.3116519252       0.3096451662      -0.1885088767       0.1450363542
+
+          disp4min           disp4max             deltap            orbit_x
+    -0.03779668346      0.04702522621                  0                  0
+
+          orbit_px            orbit_y           orbit_py           orbit_pt
+                 0                  0                  0                  0
+
+           orbit_t             xcorms             ycorms            pxcorms
+                 0                  0                  0                  0
+
+           pycorms             tcorms            ptcorms             xcomax
+                 0    1.311643044e-14                  0                  0
+
+Delta
+-0.001123
+
+++++++ table: ptc_twiss_summary
+
+            length            alpha_c          alpha_c_p         alpha_c_p2
+            503.04      0.02004484093     -0.06536895341        1.036013251
+
+        alpha_c_p3              eta_c           gamma_tr                 q1
+      -74.39709923   -0.0003633223343        7.063154285       0.4207083035
+
+                q2                dq1                dq2                 qs
+      0.4435559196      -0.4810766703       -1.249618568                  0
+
+        beta_x_min         beta_x_max         beta_y_min         beta_y_max
+       0.601962408        144.2560915       0.5999694577         145.637184
+
+         beta11min          beta11max          beta12min          beta12max
+       0.601962408        144.2560915    6.612444265e-18       0.5180397863
+
+         beta13min          beta13max          beta21min          beta21max
+                 0                  0    7.564170796e-18       0.6199638115
+
+         beta22min          beta22max          beta23min          beta23max
+      0.5999694577        145.5105837                  0                  0
+
+         beta31min          beta31max          beta32min          beta32max
+                 0                  0                  0                  0
+
+         beta33min          beta33max           disp1min           disp1max
+                 0                  0      -0.1467988597        2.557718687
+
+          disp2min           disp2max           disp3min           disp3max
+     -0.3106720343       0.3127360573      -0.1883727814       0.1465985576
+
+          disp4min           disp4max             deltap            orbit_x
+    -0.03748981768      0.04640717634                  0                  0
+
+          orbit_px            orbit_y           orbit_py           orbit_pt
+                 0                  0                  0                  0
+
+           orbit_t             xcorms             ycorms            pxcorms
+                 0                  0                  0                  0
+
+           pycorms             tcorms            ptcorms             xcomax
+                 0    1.311643044e-14                  0                  0
+
+Delta
+-0.002247
+
+++++++ table: ptc_twiss_summary
+
+            length            alpha_c          alpha_c_p         alpha_c_p2
+            503.04        0.020178407     -0.06706485433        1.104836188
+
+        alpha_c_p3              eta_c           gamma_tr                 q1
+      -76.47451892   -0.0002297562622        7.039739054        0.401387863
+
+                q2                dq1                dq2                 qs
+      0.4470865437      -0.3180955447       -1.143802487                  0
+
+        beta_x_min         beta_x_max         beta_y_min         beta_y_max
+      0.6042372992        143.6916707       0.5999406987        145.6424308
+
+         beta11min          beta11max          beta12min          beta12max
+      0.6042372992        143.6916707    1.392786484e-18        0.518057357
+
+         beta13min          beta13max          beta21min          beta21max
+                 0                  0    1.790954452e-18       0.6184310777
+
+         beta22min          beta22max          beta23min          beta23max
+      0.5999406987         145.515826                  0                  0
+
+         beta31min          beta31max          beta32min          beta32max
+                 0                  0                  0                  0
+
+         beta33min          beta33max           disp1min           disp1max
+                 0                  0      -0.1456342853        2.578549977
+
+          disp2min           disp2max           disp3min           disp3max
+     -0.3123508695       0.3149298514      -0.1883642668       0.1470225042
+
+          disp4min           disp4max             deltap            orbit_x
+     -0.0375118589      0.04629421036                  0                  0
+
+          orbit_px            orbit_y           orbit_py           orbit_pt
+                 0                  0                  0                  0
+
+           orbit_t             xcorms             ycorms            pxcorms
+                 0                  0                  0                  0
+
+           pycorms             tcorms            ptcorms             xcomax
+                 0    1.311643044e-14                  0                  0
+
+Delta
+-0.003370
+
+++++++ table: ptc_twiss_summary
+
+            length            alpha_c          alpha_c_p         alpha_c_p2
+            503.04      0.02031321464     -0.06880208624        1.175087151
+
+        alpha_c_p3              eta_c           gamma_tr                 q1
+      -78.88812258   -9.494862775e-05        7.016340731       0.3820713113
+
+                q2                dq1                dq2                 qs
+      0.4506137339      -0.1481654489       -1.036543354                  0
+
+        beta_x_min         beta_x_max         beta_y_min         beta_y_max
+      0.6068456488        143.0501168       0.5999227362        145.6457096
+
+         beta11min          beta11max          beta12min          beta12max
+      0.6068456488        143.0501168    5.168401467e-19        0.518068338
+
+         beta13min          beta13max          beta21min          beta21max
+                 0                  0    7.392353355e-19       0.6166932425
+
+         beta22min          beta22max          beta23min          beta23max
+      0.5999227362         145.519102                  0                  0
+
+         beta31min          beta31max          beta32min          beta32max
+                 0                  0                  0                  0
+
+         beta33min          beta33max           disp1min           disp1max
+                 0                  0      -0.1451336199        2.599457852
+
+          disp2min           disp2max           disp3min           disp3max
+     -0.3147207604       0.3171102207      -0.1883619183       0.1474582885
+
+          disp4min           disp4max             deltap            orbit_x
+    -0.03753451519       0.0461848031                  0                  0
+
+          orbit_px            orbit_y           orbit_py           orbit_pt
+                 0                  0                  0                  0
+
+           orbit_t             xcorms             ycorms            pxcorms
+                 0                  0                  0                  0
+
+           pycorms             tcorms            ptcorms             xcomax
+                 0    1.311643044e-14                  0                  0
+
+Delta
+-0.004493;
+
+++++++ table: ptc_twiss_summary
+
+            length            alpha_c          alpha_c_p         alpha_c_p2
+            503.04      0.02044941335     -0.07058296581        1.247076701
+
+        alpha_c_p3              eta_c           gamma_tr                 q1
+      -81.63763192    4.125008201e-05        6.992936317       0.3627397189
+
+                q2                dq1                dq2                 qs
+      0.4541406411      0.02931846841       -0.927750031                  0
+
+        beta_x_min         beta_x_max         beta_y_min         beta_y_max
+      0.6098221288        142.3252232         0.59991548        145.6470365
+
+         beta11min          beta11max          beta12min          beta12max
+      0.6098221288        142.3252232     2.39229709e-19       0.5180727825
+
+         beta13min          beta13max          beta21min          beta21max
+                 0                  0    3.786348405e-19       0.6147353089
+
+         beta22min          beta22max          beta23min          beta23max
+        0.59991548        145.5204277                  0                  0
+
+         beta31min          beta31max          beta32min          beta32max
+                 0                  0                  0                  0
+
+         beta33min          beta33max           disp1min           disp1max
+                 0                  0      -0.1453360932        2.620504583
+
+          disp2min           disp2max           disp3min           disp3max
+     -0.3170690775       0.3192774728      -0.1883656992       0.1479064138
+
+          disp4min           disp4max             deltap            orbit_x
+    -0.03755780973      0.04607880684                  0                  0
+
+          orbit_px            orbit_y           orbit_py           orbit_pt
+                 0                  0                  0                  0
+
+           orbit_t             xcorms             ycorms            pxcorms
+                 0                  0                  0                  0
+
+           pycorms             tcorms            ptcorms             xcomax
+                 0    1.311643044e-14                  0                  0

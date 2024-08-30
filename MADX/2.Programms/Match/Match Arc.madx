@@ -1,0 +1,25 @@
+CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX/1.Sequences/Full Sequence";
+CALL FILE = "Temp Arc.seq";
+
+beam, MASS=2.32283962,CHARGE=1, ENERGY=13.54435861,
+      EX= 3.96e-005, EY=  3.1e-005, SIGE=   0.00156;
+
+CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX/Match";
+
+USE, SEQUENCE = MACHINE;
+MATCH, SEQUENCE = MACHINE;
+
+CONSTRAINT, SEQUENCE=MACHINE, range=#e,
+              MUX=3.0, MUY=3.0;
+
+vary,name=QFE2_1->K1, step=1.0e-5;
+vary,name=QFE2->K1, step=1.0e-5;
+vary,name=QFE1->K1, step=1.0e-5;
+vary,name=QDE->K1, step=1.0e-5;
+
+!JACOBIAN,calls=3000,tolerance=1.e-24;
+!SIMPLEX,calls=3000,tolerance=1.e-21;
+!MIGRAD,calls=3000,tolerance=1.e-21;
+LMDIF,calls=1000,tolerance=1.e-24;
+endmatch,knobfile='knobs.tfs';
+stop;

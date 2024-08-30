@@ -1,0 +1,29 @@
+CHDIR, DIR = "/Users/Bell 1/
+GIT_REPOS/NICA/MADX/1.Sequences/Full Sequence";
+!CALL FILE = "My NICA (renew).seq";
+!CALL FILE = "NICA 2 families of quadrupoles g=15 9,44 7.seq"
+!CALL FILE = "My NICA (renew).seq";
+!call file = "NICA w Miss Edge Arc g=15 w QFE2 3 on arc(actual).seq";
+CALL FILE = "Gold NICA.seq";
+beam, MASS=2.32283962,CHARGE=1, ENERGY=13.54435861,
+      EX=3.96e-005, EY=3.1e-005, SIGE=0.00156;
+
+USE, SEQUENCE = MACHINE;
+CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX";
+
+MATCH, SEQUENCE = MACHINE;
+
+GLOBAL, SEQUENCE=MACHINE, DQ1 = 0.0;
+GLOBAL, SEQUENCE=MACHINE, DQ2 = 0.0;
+
+vary,name=DeltaS1, step=1.0e-5;
+vary,name=DeltaS2, step=1.0e-5;
+!vary,name=se2, step=1.0e-5;
+
+!JACOBIAN,calls=1000,tolerance=1.e-21;
+SIMPLEX,calls=1000,tolerance=1.e-21;
+!MIGRAD,calls=1000,tolerance=1.e-21;
+!LMDIF,calls=1000,tolerance=1.e-24;
+endmatch,knobfile='knobs.tfs';
+
+stop;

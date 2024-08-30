@@ -1,0 +1,59 @@
+@ NAME             %19s "TRACK.OBS0001.P0018"
+@ TYPE             %08s "TRACKOBS"
+@ TITLE            %08s "no-title"
+@ ORIGIN           %17s "5.05.02 Darwin 64"
+@ DATE             %08s "23/05/24"
+@ TIME             %08s "13.32.11"
+*     NUMBER       TURN                  X                 PX                  Y                 PY                  T                 PT                  S                  E 
+$         %d         %d                %le                %le                %le                %le                %le                %le                %le                %le 
+         18          0             0.0085                  0                  0                  0                  0                  0                  0                 13
+         18         20                nan                nan                nan                nan                nan                  0                  0                 13
+         18         40                nan                nan                nan                nan                nan                  0                  0                 13
+         18         60                nan                nan                nan                nan                nan                  0                  0                 13
+         18         80                nan                nan                nan                nan                nan                  0                  0                 13
+         18        100                nan                nan                nan                nan                nan                  0                  0                 13
+         18        120                nan                nan                nan                nan                nan                  0                  0                 13
+         18        140                nan                nan                nan                nan                nan                  0                  0                 13
+         18        160                nan                nan                nan                nan                nan                  0                  0                 13
+         18        180                nan                nan                nan                nan                nan                  0                  0                 13
+         18        200                nan                nan                nan                nan                nan                  0                  0                 13
+         18        220                nan                nan                nan                nan                nan                  0                  0                 13
+         18        240                nan                nan                nan                nan                nan                  0                  0                 13
+         18        260                nan                nan                nan                nan                nan                  0                  0                 13
+         18        280                nan                nan                nan                nan                nan                  0                  0                 13
+         18        300                nan                nan                nan                nan                nan                  0                  0                 13
+         18        320                nan                nan                nan                nan                nan                  0                  0                 13
+         18        340                nan                nan                nan                nan                nan                  0                  0                 13
+         18        360                nan                nan                nan                nan                nan                  0                  0                 13
+         18        380                nan                nan                nan                nan                nan                  0                  0                 13
+         18        400                nan                nan                nan                nan                nan                  0                  0                 13
+         18        420                nan                nan                nan                nan                nan                  0                  0                 13
+         18        440                nan                nan                nan                nan                nan                  0                  0                 13
+         18        460                nan                nan                nan                nan                nan                  0                  0                 13
+         18        480                nan                nan                nan                nan                nan                  0                  0                 13
+         18        500                nan                nan                nan                nan                nan                  0                  0                 13
+         18        520                nan                nan                nan                nan                nan                  0                  0                 13
+         18        540                nan                nan                nan                nan                nan                  0                  0                 13
+         18        560                nan                nan                nan                nan                nan                  0                  0                 13
+         18        580                nan                nan                nan                nan                nan                  0                  0                 13
+         18        600                nan                nan                nan                nan                nan                  0                  0                 13
+         18        620                nan                nan                nan                nan                nan                  0                  0                 13
+         18        640                nan                nan                nan                nan                nan                  0                  0                 13
+         18        660                nan                nan                nan                nan                nan                  0                  0                 13
+         18        680                nan                nan                nan                nan                nan                  0                  0                 13
+         18        700                nan                nan                nan                nan                nan                  0                  0                 13
+         18        720                nan                nan                nan                nan                nan                  0                  0                 13
+         18        740                nan                nan                nan                nan                nan                  0                  0                 13
+         18        760                nan                nan                nan                nan                nan                  0                  0                 13
+         18        780                nan                nan                nan                nan                nan                  0                  0                 13
+         18        800                nan                nan                nan                nan                nan                  0                  0                 13
+         18        820                nan                nan                nan                nan                nan                  0                  0                 13
+         18        840                nan                nan                nan                nan                nan                  0                  0                 13
+         18        860                nan                nan                nan                nan                nan                  0                  0                 13
+         18        880                nan                nan                nan                nan                nan                  0                  0                 13
+         18        900                nan                nan                nan                nan                nan                  0                  0                 13
+         18        920                nan                nan                nan                nan                nan                  0                  0                 13
+         18        940                nan                nan                nan                nan                nan                  0                  0                 13
+         18        960                nan                nan                nan                nan                nan                  0                  0                 13
+         18        980                nan                nan                nan                nan                nan                  0                  0                 13
+         18       1000                nan                nan                nan                nan                nan                  0                  0                 13

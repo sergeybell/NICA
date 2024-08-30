@@ -1,0 +1,32 @@
+beam, MASS=2.32283962,CHARGE=1, ENERGY=13.54435861;
+      EX=3.96e-005, EY=3.1e-005, SIGE=0.00156;
+
+CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX/1.Sequences/Full Sequence/";
+call file = "NICA w Miss Edge Arc g=13.seq";
+use, sequence=MACHINE;
+!MAKETHIN, sequence=MACHINE;
+!use, sequence=MACHINE;
+
+CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX/2.Programms/Plot";
+!twiss, save, centre, file=twiss.out; stop;
+
+option,-echo;
+
+TRACK, FILE = tracking_nica_g_13, onetable = true;!, aperture = true;
+!!!!! x plane !!!!!
+
+start, x=0.000, px=0.0, y=0.0, py=0.0;
+start, x=0.0005, px=0.0, y=0.0, py=0.0;
+start, x=0.001, px=0.0, y=0.0, py=0.0;
+start, x=0.0015, px=0.0, y=0.0, py=0.0;
+start, x=0.002, px=0.0, y=0.0, py=0.0;
+start, y=0.000, px=0.0, x=0.0, py=0.0;
+
+RUN, TURNS = 500, ffile=1;
+ENDTRACK;
+stop;
+
+!VALUE, TABLE(dynaptune, tunx);
+!VALUE, TABLE(dynaptune, tuny);
+!VALUE, TABLE(summ, q1);
+!VALUE, TABLE(summ, q2);

@@ -1,0 +1,496 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?validation-md5-digest 501926422a206641a29c472a6db0c5f1?>
+<worksheet version="3.0.3" xmlns="http://schemas.mathsoft.com/worksheet30" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ws="http://schemas.mathsoft.com/worksheet30" xmlns:ml="http://schemas.mathsoft.com/math30" xmlns:u="http://schemas.mathsoft.com/units10" xmlns:p="http://schemas.mathsoft.com/provenance10">
+	<pointReleaseData/>
+	<metadata>
+		<generator>Mathcad Professional 14.1</generator>
+		<userData>
+			<title/>
+			<description/>
+			<author>User Windows</author>
+			<company/>
+			<keywords/>
+			<revisedBy>User Windows</revisedBy>
+		</userData>
+		<identityInfo>
+			<revision>12</revision>
+			<documentID>CC2C4F70-9863-44F5-9CE2-57CBBAA5F404</documentID>
+			<versionID>72E543BE-FE1C-4257-BB6E-742F1FA86095</versionID>
+			<parentVersionID>00000000-0000-0000-0000-000000000000</parentVersionID>
+			<branchID>00000000-0000-0000-0000-000000000000</branchID>
+		</identityInfo>
+	</metadata>
+	<settings>
+		<presentation>
+			<textRendering>
+				<textStyles>
+					<textStyle name="Обычный">
+						<blockAttr margin-left="0" margin-right="0" text-indent="0" text-align="left" list-style-type="none" tabs="inherit"/>
+						<inlineAttr font-family="Arial" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false" line-through="false" vertical-align="baseline"/>
+					</textStyle>
+					<textStyle name="Normal">
+						<blockAttr margin-left="0" margin-right="0" text-indent="0" text-align="left" list-style-type="none" tabs="inherit"/>
+						<inlineAttr font-family="Arial" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false" line-through="false" vertical-align="baseline"/>
+					</textStyle>
+				</textStyles>
+			</textRendering>
+			<mathRendering equation-color="#000">
+				<operators multiplication="dot" derivative="derivative" literal-subscript="small" definition="colon-equal" global-definition="triple-equal" local-definition="left-arrow" equality="bold-equal" symbolic-evaluation="right-arrow"/>
+				<mathStyles>
+					<mathStyle name="Переменные" font-family="Times New Roman" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false"/>
+					<mathStyle name="Константы" font-family="Times New Roman" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false"/>
+					<mathStyle name="Пользовательский 1" font-family="Arial" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false"/>
+					<mathStyle name="Пользовательский 2" font-family="Courier New" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false"/>
+					<mathStyle name="Пользовательский 3" font-family="Arial" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false"/>
+					<mathStyle name="Пользовательский 4" font-family="Times New Roman" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false"/>
+					<mathStyle name="Пользовательский 5" font-family="Times New Roman" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false"/>
+					<mathStyle name="Пользовательский 6" font-family="Arial" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false"/>
+					<mathStyle name="Пользовательский 7" font-family="Times New Roman" font-charset="0" font-size="10" font-weight="normal" font-style="normal" underline="false"/>
+					<mathStyle name="Шрифт математического текста" font-family="Times New Roman" font-charset="0" font-size="14" font-weight="normal" font-style="normal" underline="false"/>
+				</mathStyles>
+				<dimensionNames mass="масса" length="длина" time="время" current="сила тока" thermodynamic-temperature="температура" luminous-intensity="сила света" amount-of-substance="количество вещества" display="false"/>
+				<symbolics derivation-steps-style="vertical-insert" show-comments="false" evaluate-in-place="false"/>
+				<results numeric-only="true">
+					<general precision="3" show-trailing-zeros="false" radix="dec" complex-threshold="10" zero-threshold="15" imaginary-value="i" exponential-threshold="3"/>
+					<matrix display-style="auto" expand-nested-arrays="false"/>
+					<unit format-units="false" simplify-units="false" fractional-unit-exponent="false"/>
+				</results>
+			</mathRendering>
+			<pageModel show-page-frame="false" show-header-frame="false" show-footer-frame="false" header-footer-start-page="1" paper-code="1" orientation="portrait" print-single-page-width="false" page-width="612" page-height="792">
+				<margins left="72" right="72" top="72" bottom="72"/>
+				<header use-full-page-width="false"/>
+				<footer use-full-page-width="false"/>
+			</pageModel>
+			<colorModel background-color="#fff" default-highlight-color="#ffff80"/>
+			<language math="ru" UI="ru"/>
+		</presentation>
+		<calculation>
+			<builtInVariables array-origin="0" convergence-tolerance="0.001" constraint-tolerance="0.001" random-seed="1" prn-precision="4" prn-col-width="8"/>
+			<calculationBehavior automatic-recalculation="true" matrix-strict-singularity-check="false" optimize-expressions="false" exact-boolean="true" strings-use-origin="false" zero-over-zero="error">
+				<compatibility multiple-assignment="MC12" local-assignment="MC11"/>
+			</calculationBehavior>
+			<units>
+				<currentUnitSystem name="si" customized="false"/>
+			</units>
+		</calculation>
+		<editor view-annotations="false" view-regions="false">
+			<ruler is-visible="false" ruler-unit="in"/>
+			<grid granularity-x="6" granularity-y="6"/>
+		</editor>
+		<fileFormat image-type="image/png" image-quality="75" save-numeric-results="true" exclude-large-results="true" save-text-images="false" screen-dpi="96"/>
+		<miscellaneous>
+			<handbook handbook-region-tag-ub="1016" can-delete-original-handbook-regions="true" can-delete-user-regions="true" can-print="true" can-copy="true" can-save="true" file-permission-mask="4294967295"/>
+		</miscellaneous>
+	</settings>
+	<regions>
+		<region region-id="988" left="18" top="15.75" width="112.5" height="18" align-x="18" align-y="30" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+			<text use-page-width="false" push-down="false" lock-width="true">
+				<p style="Normal" margin-left="inherit" margin-right="inherit" text-indent="0" text-align="inherit" list-style-type="none" tabs="inherit">
+					<f size="16">
+						<b>TWISS</b>
+					</f>
+				</p>
+			</text>
+		</region>
+		<region region-id="1016" left="0" top="63" width="6008.25" align-x="0" align-y="63" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="" height="374.25">
+			<area is-collapsed="true" name="" show-name="false" show-border="true" show-icon="true" show-timestamp="true" allow-expand="false" is-locked="false" timestamp="" top-lock-id="760" bottom-lock-id="943">
+				<region region-id="109" left="36" top="23.25" width="132" height="48.75" align-x="74.25" align-y="32.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<component hide-arguments="false" clsid-buddy="01350083-1122-11DB-9380-000D56C6051A" item-idref="1" disable-calc="false">
+						<inputs/>
+						<outputs>
+							<ml:id xml:space="preserve" xmlns:ml="http://schemas.mathsoft.com/math30">BETAX</ml:id>
+						</outputs>
+					</component>
+				</region>
+				<region region-id="434" left="174" top="23.25" width="131.25" height="48.75" align-x="211.5" align-y="32.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<component hide-arguments="false" clsid-buddy="01350083-1122-11DB-9380-000D56C6051A" item-idref="2" disable-calc="false">
+						<inputs/>
+						<outputs>
+							<ml:id xml:space="preserve" xmlns:ml="http://schemas.mathsoft.com/math30">BETAY</ml:id>
+						</outputs>
+					</component>
+				</region>
+				<region region-id="437" left="312" top="23.25" width="127.5" height="48.75" align-x="345.75" align-y="32.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<component hide-arguments="false" clsid-buddy="01350083-1122-11DB-9380-000D56C6051A" item-idref="3" disable-calc="false">
+						<inputs/>
+						<outputs>
+							<ml:id xml:space="preserve" xmlns:ml="http://schemas.mathsoft.com/math30">DISPX</ml:id>
+						</outputs>
+					</component>
+				</region>
+				<region region-id="439" left="444" top="23.25" width="126.75" height="48.75" align-x="477" align-y="32.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<component hide-arguments="false" clsid-buddy="01350083-1122-11DB-9380-000D56C6051A" item-idref="4" disable-calc="false">
+						<inputs/>
+						<outputs>
+							<ml:id xml:space="preserve" xmlns:ml="http://schemas.mathsoft.com/math30">DISPY</ml:id>
+						</outputs>
+					</component>
+				</region>
+				<region region-id="113" left="36" top="77.25" width="87" height="12.75" align-x="96" align-y="86.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:eval placeholderMultiplicationStyle="default" xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:apply>
+								<ml:id xml:space="preserve">rows</ml:id>
+								<ml:id xml:space="preserve">DISPX</ml:id>
+							</ml:apply>
+							<result xmlns="http://schemas.mathsoft.com/math30">
+								<ml:real>273</ml:real>
+							</result>
+						</ml:eval>
+					</math>
+				</region>
+				<region region-id="114" left="126" top="77.25" width="74.25" height="12.75" align-x="182.25" align-y="86.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:eval placeholderMultiplicationStyle="default" xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:apply>
+								<ml:id xml:space="preserve">cols</ml:id>
+								<ml:id xml:space="preserve">DISPX</ml:id>
+							</ml:apply>
+							<result xmlns="http://schemas.mathsoft.com/math30">
+								<ml:real>2</ml:real>
+							</result>
+						</ml:eval>
+					</math>
+				</region>
+				<region region-id="115" left="216" top="77.25" width="90.75" height="12.75" align-x="279.75" align-y="86.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:eval placeholderMultiplicationStyle="default" xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:provenance expr-id="1">
+								<originRef doc-id="D5F931C7-F762-4665-BF71-03CA6807A427" version-id="08F0D2CE-8537-4855-A224-BE05CF62319A" branch-id="00000000-0000-0000-0000-000000000000" revision-num="736356300" is-modified="true" region-id="0" href="Y:\GIT_REPOS\By Pass project\COSY\True ByPass\analysis\Orbital Tracking.xmcd" xmlns="http://schemas.mathsoft.com/provenance10">
+									<hash/>
+								</originRef>
+								<parentRef doc-id="D5F931C7-F762-4665-BF71-03CA6807A427" version-id="08F0D2CE-8537-4855-A224-BE05CF62319A" branch-id="00000000-0000-0000-0000-000000000000" revision-num="742324476" is-modified="true" region-id="0" href="Y:\GIT_REPOS\By Pass project\COSY\True ByPass\analysis\Orbital Tracking.xmcd" xmlns="http://schemas.mathsoft.com/provenance10">
+									<hash/>
+								</parentRef>
+								<comment xmlns="http://schemas.mathsoft.com/provenance10"/>
+								<originComment xmlns="http://schemas.mathsoft.com/provenance10"/>
+								<contentHash xmlns="http://schemas.mathsoft.com/provenance10">df9834ec6215aed8885258f47a03e8c2</contentHash>
+								<ml:apply>
+									<ml:id xml:space="preserve">rows</ml:id>
+									<ml:id xml:space="preserve">BETAY</ml:id>
+								</ml:apply>
+							</ml:provenance>
+							<result xmlns="http://schemas.mathsoft.com/math30">
+								<ml:real>273</ml:real>
+							</result>
+						</ml:eval>
+					</math>
+				</region>
+				<region region-id="116" left="306" top="77.25" width="78" height="12.75" align-x="366" align-y="86.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:eval placeholderMultiplicationStyle="default" xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:provenance expr-id="1">
+								<originRef doc-id="D5F931C7-F762-4665-BF71-03CA6807A427" version-id="08F0D2CE-8537-4855-A224-BE05CF62319A" branch-id="00000000-0000-0000-0000-000000000000" revision-num="742324236" is-modified="true" region-id="0" href="Y:\GIT_REPOS\By Pass project\COSY\True ByPass\analysis\Orbital Tracking.xmcd" xmlns="http://schemas.mathsoft.com/provenance10">
+									<hash/>
+								</originRef>
+								<parentRef doc-id="D5F931C7-F762-4665-BF71-03CA6807A427" version-id="08F0D2CE-8537-4855-A224-BE05CF62319A" branch-id="00000000-0000-0000-0000-000000000000" revision-num="736356300" is-modified="true" region-id="0" href="Y:\GIT_REPOS\By Pass project\COSY\True ByPass\analysis\Orbital Tracking.xmcd" xmlns="http://schemas.mathsoft.com/provenance10">
+									<hash/>
+								</parentRef>
+								<comment xmlns="http://schemas.mathsoft.com/provenance10"/>
+								<originComment xmlns="http://schemas.mathsoft.com/provenance10"/>
+								<contentHash xmlns="http://schemas.mathsoft.com/provenance10">21e685ce1d62ccb929b6b28dad221c4c</contentHash>
+								<ml:apply>
+									<ml:id xml:space="preserve">cols</ml:id>
+									<ml:id xml:space="preserve">BETAY</ml:id>
+								</ml:apply>
+							</ml:provenance>
+							<result xmlns="http://schemas.mathsoft.com/math30">
+								<ml:real>2</ml:real>
+							</result>
+						</ml:eval>
+					</math>
+				</region>
+				<region region-id="472" left="390" top="77.25" width="87" height="12.75" align-x="450" align-y="86.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:eval placeholderMultiplicationStyle="default" xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:provenance expr-id="1">
+								<originRef doc-id="D5F931C7-F762-4665-BF71-03CA6807A427" version-id="08F0D2CE-8537-4855-A224-BE05CF62319A" branch-id="00000000-0000-0000-0000-000000000000" revision-num="742323996" is-modified="true" region-id="0" href="Y:\GIT_REPOS\By Pass project\COSY\True ByPass\analysis\Orbital Tracking.xmcd" xmlns="http://schemas.mathsoft.com/provenance10">
+									<hash/>
+								</originRef>
+								<parentRef doc-id="D5F931C7-F762-4665-BF71-03CA6807A427" version-id="08F0D2CE-8537-4855-A224-BE05CF62319A" branch-id="00000000-0000-0000-0000-000000000000" revision-num="742324236" is-modified="true" region-id="0" href="Y:\GIT_REPOS\By Pass project\COSY\True ByPass\analysis\Orbital Tracking.xmcd" xmlns="http://schemas.mathsoft.com/provenance10">
+									<hash/>
+								</parentRef>
+								<comment xmlns="http://schemas.mathsoft.com/provenance10"/>
+								<originComment xmlns="http://schemas.mathsoft.com/provenance10"/>
+								<contentHash xmlns="http://schemas.mathsoft.com/provenance10">3dfe0a61cd89064c769525f01bf41b19</contentHash>
+								<ml:apply>
+									<ml:id xml:space="preserve">rows</ml:id>
+									<ml:id xml:space="preserve">DISPX</ml:id>
+								</ml:apply>
+							</ml:provenance>
+							<result xmlns="http://schemas.mathsoft.com/math30">
+								<ml:real>273</ml:real>
+							</result>
+						</ml:eval>
+					</math>
+				</region>
+				<region region-id="651" left="492" top="77.25" width="77.25" height="12.75" align-x="551.25" align-y="86.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math error="Эта переменная не определена." optimize="false" disable-calc="false">
+						<ml:eval placeholderMultiplicationStyle="default" xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:apply>
+								<ml:id xml:space="preserve">rows</ml:id>
+								<ml:id xml:space="preserve">DISPY</ml:id>
+							</ml:apply>
+						</ml:eval>
+					</math>
+				</region>
+				<region region-id="220" left="36" top="95.25" width="100.5" height="12.75" align-x="45" align-y="104.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:id xml:space="preserve">i</ml:id>
+							<ml:range>
+								<ml:real>0</ml:real>
+								<ml:apply>
+									<ml:minus/>
+									<ml:apply>
+										<ml:id xml:space="preserve">rows</ml:id>
+										<ml:id xml:space="preserve">DISPX</ml:id>
+									</ml:apply>
+									<ml:real>1</ml:real>
+								</ml:apply>
+							</ml:range>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="621" left="36" top="113.25" width="67.5" height="18" align-x="52.5" align-y="122.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:provenance expr-id="1" xmlns:ml="http://schemas.mathsoft.com/math30">
+							<originRef doc-id="D5F931C7-F762-4665-BF71-03CA6807A427" version-id="08F0D2CE-8537-4855-A224-BE05CF62319A" branch-id="00000000-0000-0000-0000-000000000000" revision-num="742324756" is-modified="true" region-id="0" href="Y:\GIT_REPOS\By Pass project\COSY\True ByPass\analysis\Orbital Tracking.xmcd" xmlns="http://schemas.mathsoft.com/provenance10">
+								<hash/>
+							</originRef>
+							<parentRef doc-id="D5F931C7-F762-4665-BF71-03CA6807A427" version-id="08F0D2CE-8537-4855-A224-BE05CF62319A" branch-id="00000000-0000-0000-0000-000000000000" revision-num="742323996" is-modified="true" region-id="0" href="Y:\GIT_REPOS\By Pass project\COSY\True ByPass\analysis\Orbital Tracking.xmcd" xmlns="http://schemas.mathsoft.com/provenance10">
+								<hash/>
+							</parentRef>
+							<comment xmlns="http://schemas.mathsoft.com/provenance10"/>
+							<originComment xmlns="http://schemas.mathsoft.com/provenance10"/>
+							<contentHash xmlns="http://schemas.mathsoft.com/provenance10">663b16e42fd84a0085ae7eb9e7741f14</contentHash>
+							<ml:define>
+								<ml:apply>
+									<ml:indexer/>
+									<ml:id xml:space="preserve">el</ml:id>
+									<ml:id xml:space="preserve">i</ml:id>
+								</ml:apply>
+								<ml:apply>
+									<ml:indexer/>
+									<ml:id xml:space="preserve">BETAX</ml:id>
+									<ml:sequence>
+										<ml:id xml:space="preserve">i</ml:id>
+										<ml:real>1</ml:real>
+									</ml:sequence>
+								</ml:apply>
+							</ml:define>
+						</ml:provenance>
+					</math>
+				</region>
+				<region region-id="622" left="36" top="131.25" width="69.75" height="18.75" align-x="54.75" align-y="140.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:provenance expr-id="1" xmlns:ml="http://schemas.mathsoft.com/math30">
+							<originRef doc-id="D5F931C7-F762-4665-BF71-03CA6807A427" version-id="08F0D2CE-8537-4855-A224-BE05CF62319A" branch-id="00000000-0000-0000-0000-000000000000" revision-num="742323956" is-modified="true" region-id="0" href="Y:\GIT_REPOS\By Pass project\COSY\True ByPass\analysis\Orbital Tracking.xmcd" xmlns="http://schemas.mathsoft.com/provenance10">
+								<hash/>
+							</originRef>
+							<parentRef doc-id="D5F931C7-F762-4665-BF71-03CA6807A427" version-id="08F0D2CE-8537-4855-A224-BE05CF62319A" branch-id="00000000-0000-0000-0000-000000000000" revision-num="742324756" is-modified="true" region-id="0" href="Y:\GIT_REPOS\By Pass project\COSY\True ByPass\analysis\Orbital Tracking.xmcd" xmlns="http://schemas.mathsoft.com/provenance10">
+								<hash/>
+							</parentRef>
+							<comment xmlns="http://schemas.mathsoft.com/provenance10"/>
+							<originComment xmlns="http://schemas.mathsoft.com/provenance10"/>
+							<contentHash xmlns="http://schemas.mathsoft.com/provenance10">5922733874684a582cb0a32c8c3a3caa</contentHash>
+							<ml:define>
+								<ml:apply>
+									<ml:indexer/>
+									<ml:id xml:space="preserve" subscript="x">β</ml:id>
+									<ml:id xml:space="preserve">i</ml:id>
+								</ml:apply>
+								<ml:apply>
+									<ml:indexer/>
+									<ml:id xml:space="preserve">BETAX</ml:id>
+									<ml:sequence>
+										<ml:id xml:space="preserve">i</ml:id>
+										<ml:real>0</ml:real>
+									</ml:sequence>
+								</ml:apply>
+							</ml:define>
+						</ml:provenance>
+					</math>
+				</region>
+				<region region-id="649" left="114" top="131.25" width="69" height="18.75" align-x="132.75" align-y="140.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
+							<ml:apply>
+								<ml:indexer/>
+								<ml:id xml:space="preserve" subscript="y">β</ml:id>
+								<ml:id xml:space="preserve">i</ml:id>
+							</ml:apply>
+							<ml:apply>
+								<ml:indexer/>
+								<ml:id xml:space="preserve">BETAY</ml:id>
+								<ml:sequence>
+									<ml:id xml:space="preserve">i</ml:id>
+									<ml:real>0</ml:real>
+								</ml:sequence>
+							</ml:apply>
+						</ml:define>
+					</math>
+				</region>
+				<region region-id="624" left="36" top="149.25" width="66" height="18.75" align-x="55.5" align-y="158.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math optimize="false" disable-calc="false">
+						<ml:provenance expr-id="1" xmlns:ml="http://schemas.mathsoft.com/math30">
+							<originRef doc-id="D5F931C7-F762-4665-BF71-03CA6807A427" version-id="08F0D2CE-8537-4855-A224-BE05CF62319A" branch-id="00000000-0000-0000-0000-000000000000" revision-num="742324996" is-modified="true" region-id="0" href="Y:\GIT_REPOS\By Pass project\COSY\True ByPass\analysis\Orbital Tracking.xmcd" xmlns="http://schemas.mathsoft.com/provenance10">
+								<hash/>
+							</originRef>
+							<parentRef doc-id="D5F931C7-F762-4665-BF71-03CA6807A427" version-id="08F0D2CE-8537-4855-A224-BE05CF62319A" branch-id="00000000-0000-0000-0000-000000000000" revision-num="742324476" is-modified="true" region-id="0" href="Y:\GIT_REPOS\By Pass project\COSY\True ByPass\analysis\Orbital Tracking.xmcd" xmlns="http://schemas.mathsoft.com/provenance10">
+								<hash/>
+							</parentRef>
+							<comment xmlns="http://schemas.mathsoft.com/provenance10"/>
+							<originComment xmlns="http://schemas.mathsoft.com/provenance10"/>
+							<contentHash xmlns="http://schemas.mathsoft.com/provenance10">7d11dbb01fc193bc0813a2be8f88bc46</contentHash>
+							<ml:define>
+								<ml:apply>
+									<ml:indexer/>
+									<ml:id xml:space="preserve" subscript="x">D</ml:id>
+									<ml:id xml:space="preserve">i</ml:id>
+								</ml:apply>
+								<ml:apply>
+									<ml:indexer/>
+									<ml:id xml:space="preserve">DISPX</ml:id>
+									<ml:sequence>
+										<ml:id xml:space="preserve">i</ml:id>
+										<ml:real>0</ml:real>
+									</ml:sequence>
+								</ml:apply>
+							</ml:define>
+						</ml:provenance>
+					</math>
+				</region>
+				<region region-id="625" left="114" top="149.25" width="65.25" height="18.75" align-x="133.5" align-y="158.25" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<math error="Эта переменная не определена." optimize="false" disable-calc="false">
+						<ml:provenance expr-id="1" xmlns:ml="http://schemas.mathsoft.com/math30">
+							<originRef doc-id="D5F931C7-F762-4665-BF71-03CA6807A427" version-id="08F0D2CE-8537-4855-A224-BE05CF62319A" branch-id="00000000-0000-0000-0000-000000000000" revision-num="742324996" is-modified="true" region-id="0" href="Y:\GIT_REPOS\By Pass project\COSY\True ByPass\analysis\Orbital Tracking.xmcd" xmlns="http://schemas.mathsoft.com/provenance10">
+								<hash/>
+							</originRef>
+							<parentRef doc-id="D5F931C7-F762-4665-BF71-03CA6807A427" version-id="08F0D2CE-8537-4855-A224-BE05CF62319A" branch-id="00000000-0000-0000-0000-000000000000" revision-num="742323956" is-modified="true" region-id="0" href="Y:\GIT_REPOS\By Pass project\COSY\True ByPass\analysis\Orbital Tracking.xmcd" xmlns="http://schemas.mathsoft.com/provenance10">
+								<hash/>
+							</parentRef>
+							<comment xmlns="http://schemas.mathsoft.com/provenance10"/>
+							<originComment xmlns="http://schemas.mathsoft.com/provenance10"/>
+							<contentHash xmlns="http://schemas.mathsoft.com/provenance10">887c5a508a30b133fa8277cbda125d07</contentHash>
+							<ml:define>
+								<ml:apply>
+									<ml:indexer/>
+									<ml:id xml:space="preserve" subscript="y">D</ml:id>
+									<ml:id xml:space="preserve">i</ml:id>
+								</ml:apply>
+								<ml:apply>
+									<ml:indexer/>
+									<ml:id xml:space="preserve">DISPY</ml:id>
+									<ml:sequence>
+										<ml:id xml:space="preserve">i</ml:id>
+										<ml:real>0</ml:real>
+									</ml:sequence>
+								</ml:apply>
+							</ml:define>
+						</ml:provenance>
+					</math>
+				</region>
+				<region region-id="1015" left="246" top="181.5" width="252" height="158.25" align-x="246" align-y="181.5" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+					<plot disable-calc="false" item-idref="5"/>
+				</region>
+				<region region-id="755" left="6" top="182.25" width="245.25" height="158.25" align-x="6" align-y="182.25" show-border="false" show-highlight="false" is-protected="true" z-order="2" background-color="inherit" tag="">
+					<plot disable-calc="false" item-idref="6"/>
+				</region>
+			</area>
+			<rendering item-idref="7"/>
+		</region>
+	</regions>
+	<binaryContent>
+		<item item-id="1" content-encoding="gzip">H4sIAAAAAAAA/+xWzW7TQBAeO3GaUKeOU2ggPVD1CqrAhQOlQqRRDkigIDcqVIpaiGO1qZo4
+P65Eb1G5cOcBEC+AxCP0whWuiEt5A3gAYr7djd0lAtQCF9R80uf1zuz87Ni7Gp2IFHAVPMff
+VTzjftd1Z4nBApNNp1zbcR2fS8gGl2F0N2a9OiTqx62Nrxg0K93m+sRwPmGpBlE9AYm2QiWq
+UIEew5uwSqQs7iTJArOgqeLaaqlzz3ebCnejM1eyIA1O8qVJt2O7Ww2vpXHFDWZd9xwhi3PZ
+rWgzid52e8V7JnK/D05AYEe7eQBeAy+DR+AT0AGvCDU1wQwSUEnVeamyUaSC73cbtT3fFfkt
+gQbJSC/N/zCfCktkiBJNZUSJjJESmaJERlaUyGQlmraY877J7ZXQ43m+RR2lK3rNmseKJRQZ
+tlGIjyUstWV8Yw/jAdgBF8EgYKuxtLzrFncbbsvnNggxHUXiT9h+eG8evX6b/0wjuEMxGgQp
+SkgyRc4zQzxRNh8ELKJAMMZ/hW/gQOIYZws2bg+PfJrDXdXC2KX90avgt5ghLTrz7C54TjeV
+efOT+bJP6bV3Wl5e++Xg6ovbhx+VGN77Q1kR0Vlclz97p4rNkCVVkfdzUrvWqSP9Gn8S/1/i
+b+KH9/cYZxMamjDGN5NEJdF8oS1AC8cZ/iHhyCzCMR7KBoG+QAtUxentotGq0nHfA11ItUDX
+ccu0scajHZx3B+e9ivNfRqu6jrcKNHuQz8F+nx7SU/jrncirjdU2NOu0SY/gbxMeS1hXQVZ1
++PFHLBZhM4aEC6ITFV9coZmft/m5YZt/UfSwOfajXBKWOWGZlzSzsgbz7wAAAP//AwByVTAE
+mAwAAA==</item>
+		<item item-id="2" content-encoding="gzip">H4sIAAAAAAAA/+xWPW/TQBh+7cRuQp06TqGBdKDqwIIUCReQKBUijTIggYLcqlCpohDnBKma
+OB+uRLcIFnYGRsQfQIJ/0IUVVsQCGys/gJjn7mLXjQC1wIKaJ3p85/fz7nXu9BpEpIAr4Akx
+V/FM+l3GZonDBlNNt1rbYq4vJOSAS3C6nrBf7hH1k/a9bxg0O9MWen34PmGrJlFdh0Rbpgqt
+UonWEU166WlbBEnxxDxpury2Uunc8FlTEWEMHiouyICTwjTFOg572PBamlBc5N51z5WypJBd
+iTaj9x61l73Hcu03wQkInGg3t8Cv4FnwBRLdx1jAeF6q6S3mWVAl1RClykWZSr7fbdR2fCbX
+twiaFEdmcf7A+1RYIlOWaCorS2SOlMiSJTJzskQWL9G0zYP3LeGvhBFPii0aKF3Za9Y8Xiyp
+yPKNQrwv4Utbwjc+B+cnmHfABTAIuDVMq9usvN1gLV/4wGo6yiSe8P3w3vr86k3hC43gGiVo
+EKRJj8mU+DqzJBbK3wcBzygRjPFf4Ts4iHGM4wWHPPx8msNd1cLYpd3Rq+C3mCEtOvP8LnhK
+l5R565P1vE+ZtXda4YBx6/Kzq3sflQSm/aGojOw8LxPP3pFyc+RIVeL7Oaxf68iZfo0/yf8v
+8Tf5w/t7jOMJDU0Y5+tJoopsvtAWoIUTDP8h4cg9wjEZygaBUaQibeD0dsnFuN/3QBdSLdEF
+3DJt2Hi0hfPu4rxv4PxX0aquY7YKzQ7kc/Dfpdv0APF6h4rqwNoRmk26g3ibiFihu7AuUh1x
+/BGPBfiMEcMp2YnKL67QzM/b/PywzT8te9g8/6OckZ556VmIaWbjGrz/AAAA//8DAE/apxaY
+DAAA</item>
+		<item item-id="3" content-encoding="gzip">H4sIAAAAAAAA/+xWy27TQBS9dmI3oU4Tp9BAuiDqFqlSXVjQVog0ZFEESuVWBaSKQpxRSdXE
+ebgS7CLYsGfP4weQWPAB3bBDsK3YwCfwAcScmYldEwFqgQ1qjnU8M3fuY+baM7oGESngGnhK
+9FW8416HsWnisMBEw6lUd5jjCQnZ4BKMrsasF/tEvbh19ysazUq1xLw+GI9ZapqopkOiXaMV
+xFil2/AmrfSkJZwkeGAeNFnaWCu3VzzWUIQbg7uKClLguFBNsLbNtutuUxMTF7l1zXWkLC5k
+l8PN6N0HrWX3oVz7DXAMAjvczU3wJQKcR3sd+vfQvsf4gpymt+hnQJVUQ6QqG0Yqel6nXt3z
+mFzfApimKFILMz+MJ4IUpWWKJjIyRemhFJkyRemsTJHJUzRpcec9U9grgcfTYosGUldyG1WX
+J0tOZPhGIT6U8KUt4RsfwPgx+m1wHvR9rg3Vyi4r7dZZ0xM20JoMI4k3bD9+MD+/epP/QkO4
+QjHq+0nSIzIlus4MiYXycd/nESX8Ef4rfAP7EY5wsmCTi8ejApWpibZDj4avgt9iirTwzPO7
+4AldUmbMT+azHqU23mn5qG7h+eLTxf0DJYZ+byArITqPy8S7e6zYHFlSleh+jmrXPHakX+NP
+4v9L/E384P4e4WRCQxHG+XqcqCyLL5QFKOEEgz8kaLlF0MYDWd83ZmmWNnF6O+SgPax7MBdQ
+LdIcbpkWdFzawXl3cN43cf4r0L2D3jpm9iAv0DLuoFW6D3/dI3m1IbWpCC9bdAv+tqBXht46
+VlWDH2/IYh42I0RwRlai8osrNPXzMj83KPPPyho2x3+Uc9IyJy3zkZnp6AzG3wEAAP//AwAX
+88+YmAwAAA==</item>
+		<item item-id="4" content-encoding="gzip">H4sIAAAAAAAA/+xWz28SQRR+C+wWWhAWsAqoIB5NSNzqwUpMKXJoooFsTbVJYy2wUZrC8mOb
+aOKB6KV3/wDjP2DiyXMvXvVqvOif4NGDrN/MsNuVqGnViylf8+2befN+zDw6kxcmIglcBWf5
+2IdvwOobRoYYNDDYblTr20bD4hrSwSKclvzai32iYUC79wVC1hJLEIoW6XKzmfGcgmJ9JqT5
+okTNIJEi36AV5KzROtKKKME5jQfFLsJ8E6Hy2mqlt2IZbYnHC4OKVxHhZKZBo6cbD1pmR+YL
+l5l302wIXYDrrrqHUwYPu8vmI3GWm2yjUOju6W6BNdhlIb9C3od8AnlRLNMbJFdBH/lO8NLF
+3Uwly+q36ruWIfa3CEbJi+hi/od5zKmVKmoVo7iolZoQtYpP1CopahU/KWqVZFWZ11iWYZIH
+ktzYp/hhwyhi2WzXTVa2cVJ2ZKgPNGyTRdR9Dx5PMe6BC6BtM2uYVneM8k7L6FjcBzkSbir+
+he/7d+qnl6/Tn2kC18lPIztEikcneTcaI75RNh/ZLKOAPcV/hW/gyMMpjhd0MvFnUY4q1IHs
+0+PJp+C3mCfZvfPsLXhGV6S8+lF9PqTI2ls57bXtbhX3ru1/kPwYD8e6MrKzvAb/Do6UmyFO
+Psl7nsP6dY6c6df4k/z/En+T33m/pziekNGKMb6aI6qINgxtAXo9Tuc/xJHMw5EBRzeywwUq
+0AZub58akAeND9Yc+kp0Ca9MFzYmbeO+N3DfN3D/q7Bdx+g2Vnahz9Ey3qAabSHe4FBRdWh1
+KmFlk+4g3ibsKnQXEQvURBxrwmMBPlN4cFq0orN8wn7TlGhnlbRoZ1MT7WxGtLOpM6KdzbB2
+9qyIkRnHOPdzz+zYMyc8s8zzvPDMCs+8Z+WCdwXz7wAAAP//AwDz3En59gwAAA==</item>
+		<item item-id="5" content-encoding="gzip">H4sIAAAAAAAA/1RTTU8TYRCed/ux29LSgmBbtlAoiqLE6Gpi5ISkMSQqGkw4mZClXWGV0rpd
+Erz1T5h48+JPMN6N8Q958WTqMzPdAm8znY99ZuaZd2cLRGQgbyB5sVP4d4KPe8FR2DvNEJ9H
+kFyn19ZYWmJPGNZtvzp8H7RjidCe5Fv4zw6O+9u9cw2/gNgI7E2ALyE76PoH+gvwv82Fz+cv
+OJThW2SlhN3spPnTOI7Cw7M4MILchJTo8klvNq/4GSmQjqMgcCXgQYp9MbNe7SfRMGN7X6G3
+so5qO6fayavOTXkWmsS4H8uYh0QF8b+rf5/rCXCYm/aYzXaRWYk5LEqjspf/BceZ8dL/ULA8
+KwU6MyCWatE9wk1dk9C3Ga4ZImVOoMPyvELnEugnousKnUugRBXtb1eVcKWmurqgxGtEKWM9
+IFB1vc/PgaxRXWdwLx4RLWqZ6pKOsYhQQ8dYlDbL6lTEWVFwtqm9VlZVN29oz1UQNimPHvOF
+35TYj9XJha1pcvOWVHy9xotzW6uvSfV1HX/ljo6/DppWQCdEd3X49cnwG7JxpY53cBT5/eOD
+d72o68e2VJnnxZVwy499XYiF8WLwnksq78cyL5nY7OX983DwTOrostchS2aM5W/CZi4BdSGn
+hK0e4UemPsE4XKVFIQ2oD0wEHVIP2AT5NkHymdrHsxPU8ekI6A3Q+UD7Y2xCyo4jvx14LeFN
+7ji9YcpkXDNiy8BAUsNYHBnCSBkX8JFrmTRbI7YyxrWGW4Bn5SEM27hpKeAkBXLAoHfD5IEZ
+cWQKGOQ3TAEYSS8yhrOmBQOjxBgGK+HS7lk3iMK2f6JX6QjxHUgHlxHKC+BvN5+8jKuncNn5
+DwAA//8DAB2mJlmnBAAA</item>
+		<item item-id="6" content-encoding="gzip">H4sIAAAAAAAA/1RTXU8TURCdu7vt9pMWBGlZSqEoWiUENn5EnpAQY6KIwYQnE7K0a1mlFMuS
+4Fv/hM+++AuM8d2Y+Id4NvXMTFvobaZ37rlnzszcTnNEZGDvYBnxbXynws/7YSvqnCaI1yNY
+utlpKOYI9oxp7cbe0cewEQtC+xJv4Tt5fny23blU+DXMBbA/Iu5yLOwKtofsf831mdcVNIrA
+LLJsqW5qlPx5HHejo4s4NMLchBXo5nI2a2PnhAg4cTcMPQF8WP5M3KRf/k3US7j+N+xbyZTu
+blr3VEb3dNa3kCTG+zjG3qDHtE6UE+wXsKRJrNOaoE9YW4J66QmfK9vOc4Xi9vKStOhn/uCQ
+mvSdfxAvTolQcxLi9g97jfBqtwT6DsgyEUKmhdorzih1ekj9QnRbqdNDKtGs5ndLWvxsWffS
+nDZRJrKNtcEteP7XV2CWaV6ufnrXV0QVlSktaBsVQFVtoyJpFvUwK4clJSdrmmtpWffaHc25
+LA/n01N+/Lv6cMtcseFUKxpcuyeKb1d4iO6r+oqo17X9pQfafh1lWiGdED3U5uuj5ldl+gpN
+/7DVDc6ODz90uu0gdkVlhodY4J0gDnQ45gZDwjMvoTwrizxw4vMpE1xG5y9ERwd/HrZgBlz+
+f7hcS0ht2Clhwvv4kJkf4zjbuI0pGN2+H97yyh5QBxp83wJvFSV8ooMBd1iIG3eDRujvSK3k
+DcKrpkjGM332DBwEVY3FSA+ObTzQ+55lHPb67CWMZ/W2QE/KJRzXeI4IpIYCaXCQu2oy4PQZ
+yYKD+KrJgSPheeZw1IRw4BSYw2QtuPDmoh12o0Zwos+XksJfwpoU4WMP/ruZ4Q8wvnI3D/8B
+AAD//wMA2MD3QqcEAAA=</item>
+		<item item-id="7">iVBORw0KGgoAAAANSUhEUgAAH0sAAAAMCAYAAAAXHXAzAAAAAXNSR0IArs4c6QAAAARnQU1B
+AACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAH1SURBVHhe7d1BCsNADARBPX1/vk4O
+AoFnwfExVEGD0CemPvbTAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAFo9HUE3lg4A
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABMxtIBAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACAV25j6adRdGPpAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwBTH0tMw
+urF0AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYDqOpac/AAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAQKs0ij5rfa+1JEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmSJEmS
+JEmSJEmSJEmSJEmSJEmSJP1pv6g5iP7VI+npDwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAANAqjaKnYXRj6QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAUx9ITY+kAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAdBtLPzGWDgAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAEzG0gEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAX9r4AjWeEBz4Z
+ahkAAAAASUVORK5CYII=</item>
+	</binaryContent>
+</worksheet>

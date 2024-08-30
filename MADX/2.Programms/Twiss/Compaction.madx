@@ -1,0 +1,28 @@
+CHDIR, DIR = "/Users/Bell/GIT_REPOS/NICA/MADX/1.Sequences/Full Sequence";
+!CALL FILE = "Gold NICA.seq";
+CALL FILE = "My NICA (renew).seq";
+!CALL FILE = "coupling1.seq";
+
+!beam, MASS=2.32283962,CHARGE=1, ENERGY=13.54435861,
+!      EX= 3.96e-005, EY=  3.1e-005, SIGE=   0.00156;
+
+!Protons
+!Kinetic energy, GeV/u
+real const t=4.;
+beam, particle=proton, energy=t+pmass;
+!beam, MASS=1,CHARGE=1, ENERGY=5.6,
+!      EX= 3.96e-005, EY=  3.1e-005, SIGE=   0.00156;
+
+USE, PERIOD = MACHINE;
+CHDIR, DIR = "/Users/Bell/GIT_REPOS/NICA/MADX";
+
+ptc_create_universe;
+ptc_create_layout,model=2,method=6,nst=20,
+exact=true, closed_layout=true,time=false;
+select,flag=twiss,clear;
+select,FLAG=twiss,column=name ,s,l,beta11,
+beta22,beta33,disp1,disp2,disp3,disp4,
+beta12,beta13;
+ptc_twiss,table=twiss,icase=56,no=5, file=tbl/Twiss.tbl,
+closed_orbit, writetmap,deltap=0.0;
+ptc_end;

@@ -1,0 +1,139 @@
+ --- BIN FILE READ: elements
+  10533 INCLUDE 'elements';
+  10534   FUNCTION FACCLEN DUMMY;
+  10535     FACCLEN := 503;
+  10536     ENDFUNCTION;
+  10537   FUNCTION FEKIN MOM         RESTMASS      ;
+  10538     FEKIN := SQRT(SQR(MOM) + SQR(RESTMASS)) - RESTMASS;
+  10539     ENDFUNCTION;
+  10540   FUNCTION FMOM EKIN       RESTMASS      ;
+  10541     FMOM := SQRT(SQR(EKIN)+2*EKIN*RESTMASS);
+  10542     ENDFUNCTION;
+  10543   PROCEDURE SET_FOR_PROTONS Y;
+  10544     VARIABLE RESTMASSAMU 1;
+  10545     VARIABLE RESTMASSMEV 1;
+  10546     VARIABLE EKIN 1;
+  10547     VARIABLE GAMMA 1;
+  10548     VARIABLE BETA 1;
+  10549     GAMMA := Y;
+  10550     RESTMASSAMU := 1.00728;
+  10551     RESTMASSMEV := RESTMASSAMU*AMUMEV;
+  10552     BETA := SQRT(GAMMA*GAMMA - 1)/GAMMA;
+  10553     EKIN := (GAMMA-1)*RESTMASSMEV;
+  10554     RP EKIN*PARA(1) RESTMASSAMU 1; %RP: 6326 %PARA: 1044
+  10555     RPS 1 1.792847; %RPS: 6403
+  10556     WRITE 6 '++++++++++ SETTING UP FOR PROTONS:';
+  10557     WRITE 6 'EKIN [MeV]          GAMMA          BETA';
+  10558     WRITE 6 SF(EKIN, '(F15.7)')&SF(GAMMA, '(F15.7)')&SF(BETA, '(F15.7)
+                  '); %SF:  285 %SF:  285 %SF:  285
+  10559     WRITE 6 '+++++++++++++++++++++++++++++++++++';
+  10560     ENDPROCEDURE;
+  10561   PROCEDURE SET_FOR_DEUTERONS Y;
+  10562     VARIABLE RESTMASSAMU 1;
+  10563     VARIABLE RESTMASSMEV 1;
+  10564     VARIABLE EKIN 1;
+  10565     VARIABLE GAMMA 1;
+  10566     VARIABLE BETA 1;
+  10567     GAMMA := Y;
+  10568     RESTMASSAMU := 2.01410;
+  10569     RESTMASSMEV := RESTMASSAMU*AMUMEV;
+  10570     BETA := SQRT(GAMMA*GAMMA - 1)/GAMMA;
+  10571     EKIN := (GAMMA-1)*RESTMASSMEV;
+  10572     RP EKIN*PARA(1) RESTMASSAMU 1; %RP: 6326 %PARA: 1044
+  10573     RPS 1 -.142987; %RPS: 6403
+  10574     WRITE 6 '++++++++++ SETTING UP FOR DEUTERONS:';
+  10575     WRITE 6 'EKIN [MeV]          GAMMA          BETA';
+  10576     WRITE 6 SF(EKIN, '(F15.7)')&SF(GAMMA, '(F15.7)')&SF(BETA, '(F15.7)
+                  '); %SF:  285 %SF:  285 %SF:  285
+  10577     WRITE 6 '+++++++++++++++++++++++++++++++++++';
+  10578     ENDPROCEDURE;
+  10579   FUNCTION FOURIER_COEF SIGN_ETA N_FOURIER H_REFLECTION;
+  10580     VARIABLE SIGN 1;
+  10581     VARIABLE N_F 1;
+  10582     VARIABLE H_R 1;
+  10583     H_R := H_REFLECTION;
+  10584     N_F := N_FOURIER;
+  10585     SIGN := SIGN_ETA;
+  10586     FOURIER_COEF := SIGN*2/(3.14159*N_F) * (1-COS((3.14159*N_F)/(H_R))
+                  );
+  10587     ENDFUNCTION;
+  10588   FUNCTION SIGMA_MOD NUMBER M N_MAX;
+  10589     VARIABLE NUM 1;
+  10590     VARIABLE N 1;
+  10591     VARIABLE ANS 1;
+  10592     VARIABLE I 1;
+  10593     VARIABLE POWER 1;
+  10594     NUM := NUMBER;
+  10595     N := N_MAX;
+  10596     ANS := ((3.1415926535 * NUM)/(2 * (N+1)));
+  10597     SIGMA_MOD := (SIN(ANS)/ANS);
+  10598     POWER := SIGMA_MOD;
+  10599     LOOP I 1 M-1;
+  10600       POWER := POWER * SIGMA_MOD;
+  10601       ENDLOOP;
+  10602     SIGMA_MOD := POWER;
+  10603     ENDFUNCTION;
+  10604   PROCEDURE BARRIER_BUCKET V_PEAK T_REFLECTION HARMONIC_NUMBER N_FOURI
+                  ER ETA_REFERENCE PHI_RF;
+  10605     VARIABLE V_P 1;
+  10606     VARIABLE T_REF 1;
+  10607     VARIABLE T_REV 1;
+  10608     VARIABLE T_DRIFT 1;
+  10609     VARIABLE N_F 1;
+  10610     VARIABLE ETA_R 1;
+  10611     VARIABLE FREQ 1;
+  10612     VARIABLE H_R 1;
+  10613     VARIABLE HNUM 1;
+  10614     VARIABLE PHI_R 1;
+  10615     VARIABLE M 1;
+  10616     VARIABLE I 1;
+  10617     VARIABLE VRF 1 1 1;
+  10618     VARIABLE PHI_0 1;
+  10619     VARIABLE SIGN_ETA 1;
+  10620     VARIABLE C 1;
+  10621     VARIABLE BETA 1;
+  10622     BETA := 0.99;
+  10623     C := 2.988*1E8;
+  10624     V_P := V_PEAK;
+  10625     HNUM := HARMONIC_NUMBER;
+  10626     T_REV := (504.03/C*BETA)*1E9;
+  10627     T_REF := T_REFLECTION;
+  10628     T_DRIFT := (T_REV - 2*T_REF)/(2 * HNUM);
+  10629     PHI_R := (2*T_REF)/T_DRIFT;
+  10630     H_R := (3.14159)/PHI_R;
+  10631     N_F := N_FOURIER;
+  10632     ETA_R := ETA_REFERENCE;
+  10633     M := 3;
+  10634     PHI_0 := PHI_RF;
+  10635     IF (ETA_R < 0);
+  10636       SIGN_ETA := -1;
+  10637       ELSEIF (ETA_R > 0);
+  10638       SIGN_ETA := +1;
+  10639       ENDIF;
+  10640     WRITE 6 'END SIGN';
+  10641     FREQ := HNUM / T_REV *1E9;
+  10642     WRITE 6 '********************************************';
+  10643     WRITE 6 '*    RF BARRIER BUCKET 31 AUG 2022         *';
+  10644     WRITE 6 '********************************************';
+  10645     WRITE 6 'Peak Voltage: '&ST(V_P)&' kV';
+  10646     WRITE 6 'Total Number of Fourier: '&ST(N_F);
+  10647     WRITE 6 'Duration of Barrier Bucket'&ST(T_REF)&' ns';
+  10648     WRITE 6 'Harmonic_number: '&ST(HNUM);
+  10649     WRITE 6 'Initial Phase: '&ST(PHI_0)&' deg';
+  10650     WRITE 6 '********************************************';
+  10651     LOOP I 1 INT(N_F);
+  10652       VRF(1, 1) := (-1) * V_P * FOURIER_COEF(SIGN_ETA, I, H_R) * SIGMA
+                  _MOD(I, M, N_F); %FOURIER_COEF:10579 %SIGMA_MOD:10588
+  10653       WRITE 6 'Number of RF: '&ST(I);
+  10654       WRITE 6 'Frequancy of RF: '&ST(I*FREQ/1E6)&' MHZ';
+  10655       WRITE 6 'Fourier coefficient: '&ST(FOURIER_COEF(SIGN_ETA, I, H_R
+                  )); %FOURIER_COEF:10579
+  10656       WRITE 6 'Sigma modulation: '&ST(SIGMA_MOD(I, M, N_F)); %SIGMA_MO
+                  D:10588
+  10657       WRITE 6 'Voltage of RF: '&ST(VRF(1,1))&' kV';
+  10658       RF VRF 0 I*FREQ PHI_0 0.05; %RF: 8697
+  10659       WRITE 6 '********************************************';
+  10660       ENDLOOP;
+  10661     ENDPROCEDURE;
+ --- BIN FILE WRITTEN: header
+  10662   SAVE 'header';

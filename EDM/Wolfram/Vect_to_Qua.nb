@@ -1,0 +1,674 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     23185,        664]
+NotebookOptionsPosition[     20998,        621]
+NotebookOutlinePosition[     21393,        637]
+CellTagsIndexPosition[     21350,        634]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"\"\<Skin2`QuaSK`\>\"", "//", "Needs"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"q", "[", 
+     RowBox[{"\[CurlyPhi]_", ",", "\[Psi]_"}], "]"}], "=", 
+    RowBox[{"ToQua", "[", 
+     RowBox[{"1", ",", "\[CurlyPhi]", ",", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Sin", "[", "\[Psi]", "]"}], ",", 
+        RowBox[{"Cos", "[", "\[Psi]", "]"}], ",", "0"}], "}"}]}], 
+     "]"}]}]}]}]], "Input",
+ CellLabel->"In[16]:=",ExpressionUUID->"b57b3916-2916-476f-919e-f3edd915f62f"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Qua", "[", 
+  RowBox[{
+   RowBox[{"Cos", "[", 
+    FractionBox["\[CurlyPhi]", "2"], "]"}], ",", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"Sin", "[", 
+      FractionBox["\[CurlyPhi]", "2"], "]"}], " ", 
+     RowBox[{"Sin", "[", "\[Psi]", "]"}]}], 
+    SqrtBox[
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"Cos", "[", "\[Psi]", "]"}], "2"], "+", 
+      SuperscriptBox[
+       RowBox[{"Sin", "[", "\[Psi]", "]"}], "2"]}]]], ",", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"Cos", "[", "\[Psi]", "]"}], " ", 
+     RowBox[{"Sin", "[", 
+      FractionBox["\[CurlyPhi]", "2"], "]"}]}], 
+    SqrtBox[
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"Cos", "[", "\[Psi]", "]"}], "2"], "+", 
+      SuperscriptBox[
+       RowBox[{"Sin", "[", "\[Psi]", "]"}], "2"]}]]], ",", "0"}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"q1", "=", 
+  RowBox[{"q", "[", 
+   RowBox[{
+    RowBox[{
+     RowBox[{"\[Pi]", "/", "180"}], "*", "20"}], ",", "0"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"q2", "=", 
+   RowBox[{"q", "[", 
+    RowBox[{
+     RowBox[{
+      RowBox[{"\[Pi]", "/", "180"}], "*", "20"}], ",", "\[Pi]"}], "]"}]}], 
+  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+ RowBox[{
+  SubscriptBox["p", "mom"], "=", 
+  RowBox[{"Qua", "[", 
+   RowBox[{"0", ",", "0", ",", "0", ",", "1"}], 
+   "]"}]}], "\[IndentingNewLine]", 
+ RowBox[{"S", "=", 
+  RowBox[{"Qua", "[", 
+   RowBox[{"0", ",", "0", ",", "0", ",", "1"}], 
+   "]"}]}], "\[IndentingNewLine]"}], "Input",
+ CellLabel->"In[48]:=",ExpressionUUID->"f5071900-3672-48e2-af66-508f0ea32a66"],
+
+Cell[BoxData[
+ RowBox[{"Qua", "[", 
+  RowBox[{
+   RowBox[{"Cos", "[", 
+    FractionBox["\[CurlyPhi]", "2"], "]"}], ",", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"Sin", "[", 
+      FractionBox["\[CurlyPhi]", "2"], "]"}], " ", 
+     RowBox[{"Sin", "[", "\[Psi]", "]"}]}], 
+    SqrtBox[
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"Cos", "[", "\[Psi]", "]"}], "2"], "+", 
+      SuperscriptBox[
+       RowBox[{"Sin", "[", "\[Psi]", "]"}], "2"]}]]], ",", 
+   FractionBox[
+    RowBox[{
+     RowBox[{"Cos", "[", "\[Psi]", "]"}], " ", 
+     RowBox[{"Sin", "[", 
+      FractionBox["\[CurlyPhi]", "2"], "]"}]}], 
+    SqrtBox[
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"Cos", "[", "\[Psi]", "]"}], "2"], "+", 
+      SuperscriptBox[
+       RowBox[{"Sin", "[", "\[Psi]", "]"}], "2"]}]]], ",", "0"}], 
+  "]"}]], "Output",
+ CellLabel->"Out[48]=",ExpressionUUID->"cfe93469-7dc9-41fe-b657-26b2f9532ca3"],
+
+Cell[BoxData[
+ RowBox[{"Qua", "[", 
+  RowBox[{
+   RowBox[{"Cos", "[", 
+    FractionBox["\[Pi]", "18"], "]"}], ",", "0", ",", 
+   RowBox[{"Sin", "[", 
+    FractionBox["\[Pi]", "18"], "]"}], ",", "0"}], "]"}]], "Output",
+ CellLabel->"Out[49]=",ExpressionUUID->"16e284f3-1b0f-453d-8ec4-ec6cf27cbb28"],
+
+Cell[BoxData[
+ RowBox[{"Qua", "[", 
+  RowBox[{
+   RowBox[{"Cos", "[", 
+    FractionBox["\[Pi]", "18"], "]"}], ",", "0", ",", 
+   RowBox[{"-", 
+    RowBox[{"Sin", "[", 
+     FractionBox["\[Pi]", "18"], "]"}]}], ",", "0"}], "]"}]], "Output",
+ CellLabel->"Out[50]=",ExpressionUUID->"ad7ee3d2-d8cd-4549-bec4-e05e80d8a0d0"],
+
+Cell[BoxData[
+ RowBox[{"Qua", "[", 
+  RowBox[{"0", ",", "0", ",", "0", ",", "1"}], "]"}]], "Output",
+ CellLabel->"Out[51]=",ExpressionUUID->"ffd111db-b001-4409-ba7b-e81724883dc7"],
+
+Cell[BoxData[
+ RowBox[{"Qua", "[", 
+  RowBox[{"0", ",", "0", ",", "0", ",", "1"}], "]"}]], "Output",
+ CellLabel->"Out[52]=",ExpressionUUID->"5274bad0-2525-49a3-9c87-02d9d605eac2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["S", "MDM1"], "=", 
+  RowBox[{"q1", "**", "S", "**", 
+   RowBox[{"q1", "^", 
+    RowBox[{"(", 
+     RowBox[{"-", "1"}], ")"}]}]}]}]], "Input",
+ CellLabel->"In[65]:=",ExpressionUUID->"ae179385-e1ba-4958-99ab-47ca800d127d"],
+
+Cell[BoxData[
+ RowBox[{"Qua", "[", 
+  RowBox[{"0", ",", 
+   FractionBox[
+    RowBox[{"2", " ", 
+     RowBox[{"Cos", "[", 
+      FractionBox["\[Pi]", "18"], "]"}], " ", 
+     RowBox[{"Sin", "[", 
+      FractionBox["\[Pi]", "18"], "]"}]}], 
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"Cos", "[", 
+       FractionBox["\[Pi]", "18"], "]"}], "2"], "+", 
+     SuperscriptBox[
+      RowBox[{"Sin", "[", 
+       FractionBox["\[Pi]", "18"], "]"}], "2"]}]], ",", "0", ",", 
+   RowBox[{
+    FractionBox[
+     SuperscriptBox[
+      RowBox[{"Cos", "[", 
+       FractionBox["\[Pi]", "18"], "]"}], "2"], 
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"Cos", "[", 
+        FractionBox["\[Pi]", "18"], "]"}], "2"], "+", 
+      SuperscriptBox[
+       RowBox[{"Sin", "[", 
+        FractionBox["\[Pi]", "18"], "]"}], "2"]}]], "-", 
+    FractionBox[
+     SuperscriptBox[
+      RowBox[{"Sin", "[", 
+       FractionBox["\[Pi]", "18"], "]"}], "2"], 
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"Cos", "[", 
+        FractionBox["\[Pi]", "18"], "]"}], "2"], "+", 
+      SuperscriptBox[
+       RowBox[{"Sin", "[", 
+        FractionBox["\[Pi]", "18"], "]"}], "2"]}]]}]}], "]"}]], "Output",
+ CellLabel->"Out[65]=",ExpressionUUID->"f20c7674-68c3-4aa1-8722-c2415dc69fe1"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"Qua", "[", 
+  RowBox[{"0", ",", 
+   RowBox[{"2", " ", 
+    RowBox[{"Cos", "[", 
+     FractionBox["\[Pi]", "18"], "]"}], " ", 
+    RowBox[{"Sin", "[", 
+     FractionBox["\[Pi]", "18"], "]"}]}], ",", "0", ",", 
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"Cos", "[", 
+      FractionBox["\[Pi]", "18"], "]"}], "2"], "-", 
+    SuperscriptBox[
+     RowBox[{"Sin", "[", 
+      FractionBox["\[Pi]", "18"], "]"}], "2"]}]}], 
+  "]"}], "\[IndentingNewLine]", 
+ RowBox[{"VectorPart", "[", 
+  SubscriptBox["S", "MDM1"], "]"}]}], "Input",
+ CellLabel->"In[70]:=",ExpressionUUID->"cf182824-6fe6-4a0d-89c5-262bf9e64040"],
+
+Cell[BoxData[
+ RowBox[{"Qua", "[", 
+  RowBox[{"0", ",", 
+   RowBox[{"2", " ", 
+    RowBox[{"Cos", "[", 
+     FractionBox["\[Pi]", "18"], "]"}], " ", 
+    RowBox[{"Sin", "[", 
+     FractionBox["\[Pi]", "18"], "]"}]}], ",", "0", ",", 
+   RowBox[{
+    SuperscriptBox[
+     RowBox[{"Cos", "[", 
+      FractionBox["\[Pi]", "18"], "]"}], "2"], "-", 
+    SuperscriptBox[
+     RowBox[{"Sin", "[", 
+      FractionBox["\[Pi]", "18"], "]"}], "2"]}]}], "]"}]], "Output",
+ CellLabel->"Out[70]=",ExpressionUUID->"e5cc3330-8057-4b52-b767-29784a1722f6"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   FractionBox[
+    RowBox[{"2", " ", 
+     RowBox[{"Cos", "[", 
+      FractionBox["\[Pi]", "18"], "]"}], " ", 
+     RowBox[{"Sin", "[", 
+      FractionBox["\[Pi]", "18"], "]"}]}], 
+    RowBox[{
+     SuperscriptBox[
+      RowBox[{"Cos", "[", 
+       FractionBox["\[Pi]", "18"], "]"}], "2"], "+", 
+     SuperscriptBox[
+      RowBox[{"Sin", "[", 
+       FractionBox["\[Pi]", "18"], "]"}], "2"]}]], ",", "0", ",", 
+   RowBox[{
+    FractionBox[
+     SuperscriptBox[
+      RowBox[{"Cos", "[", 
+       FractionBox["\[Pi]", "18"], "]"}], "2"], 
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"Cos", "[", 
+        FractionBox["\[Pi]", "18"], "]"}], "2"], "+", 
+      SuperscriptBox[
+       RowBox[{"Sin", "[", 
+        FractionBox["\[Pi]", "18"], "]"}], "2"]}]], "-", 
+    FractionBox[
+     SuperscriptBox[
+      RowBox[{"Sin", "[", 
+       FractionBox["\[Pi]", "18"], "]"}], "2"], 
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"Cos", "[", 
+        FractionBox["\[Pi]", "18"], "]"}], "2"], "+", 
+      SuperscriptBox[
+       RowBox[{"Sin", "[", 
+        FractionBox["\[Pi]", "18"], "]"}], "2"]}]]}]}], "}"}]], "Output",
+ CellLabel->"Out[71]=",ExpressionUUID->"ae1163c9-80a9-49e2-9bf8-98f2b29c1b2a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ResourceFunction", "[", "\"\<PlotVector3D\>\"", "]"}], "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"VectorPart", "[", "S", "]"}], ",", 
+    RowBox[{"VectorPart", "[", 
+     SubscriptBox["S", "MDM1"], "]"}]}], "}"}], "]"}]], "Input",
+ CellLabel->"In[72]:=",ExpressionUUID->"c374c418-b496-497c-9462-f91a467c932c"],
+
+Cell[BoxData[
+ Graphics3DBox[{
+   {RGBColor[0.3, 0.4, 0.7], Arrowheads[Large], 
+    Arrow3DBox[{{0, 0, 0}, {0, 0, 1}}]}, 
+   {RGBColor[0.3, 0.4, 0.7], Arrowheads[Large], 
+    Arrow3DBox[
+     NCache[{{0, 0, 0}, {
+       2 Cos[Rational[1, 18] Pi] Sin[Rational[1, 18] Pi]/(
+        Cos[Rational[1, 18] Pi]^2 + Sin[Rational[1, 18] Pi]^2), 0, 
+        Cos[Rational[1, 18] Pi]^2/(Cos[Rational[1, 18] Pi]^2 + 
+         Sin[Rational[1, 18] Pi]^2) - Sin[Rational[1, 18] Pi]^2/(
+        Cos[Rational[1, 18] Pi]^2 + Sin[Rational[1, 18] Pi]^2)}}, {{0, 0, 
+       0}, {0.3420201433256687, 0, 0.9396926207859085}}]]}},
+  Axes->True,
+  PlotRange->All]], "Output",
+ CellLabel->"Out[72]=",ExpressionUUID->"cfb671da-c090-4686-b759-75664df5e475"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  SubscriptBox["S", "MDM2"], "=", 
+  RowBox[{"q2", "**", 
+   SubscriptBox["S", "MDM1"], "**", 
+   RowBox[{"q2", "^", 
+    RowBox[{"(", 
+     RowBox[{"-", "1"}], ")"}]}]}]}]], "Input",
+ CellLabel->"In[73]:=",ExpressionUUID->"44b74a71-48f0-47ea-86d0-e9e74bb6a25b"],
+
+Cell[BoxData[
+ RowBox[{"Qua", "[", 
+  RowBox[{"0", ",", 
+   RowBox[{
+    RowBox[{"-", 
+     FractionBox[
+      RowBox[{
+       RowBox[{"Sin", "[", 
+        FractionBox["\[Pi]", "18"], "]"}], " ", 
+       RowBox[{"(", 
+        RowBox[{
+         FractionBox[
+          RowBox[{"2", " ", 
+           RowBox[{"Cos", "[", 
+            FractionBox["\[Pi]", "18"], "]"}], " ", 
+           SuperscriptBox[
+            RowBox[{"Sin", "[", 
+             FractionBox["\[Pi]", "18"], "]"}], "2"]}], 
+          RowBox[{
+           SuperscriptBox[
+            RowBox[{"Cos", "[", 
+             FractionBox["\[Pi]", "18"], "]"}], "2"], "+", 
+           SuperscriptBox[
+            RowBox[{"Sin", "[", 
+             FractionBox["\[Pi]", "18"], "]"}], "2"]}]], "+", 
+         RowBox[{
+          RowBox[{"Cos", "[", 
+           FractionBox["\[Pi]", "18"], "]"}], " ", 
+          RowBox[{"(", 
+           RowBox[{
+            FractionBox[
+             SuperscriptBox[
+              RowBox[{"Cos", "[", 
+               FractionBox["\[Pi]", "18"], "]"}], "2"], 
+             RowBox[{
+              SuperscriptBox[
+               RowBox[{"Cos", "[", 
+                FractionBox["\[Pi]", "18"], "]"}], "2"], "+", 
+              SuperscriptBox[
+               RowBox[{"Sin", "[", 
+                FractionBox["\[Pi]", "18"], "]"}], "2"]}]], "-", 
+            FractionBox[
+             SuperscriptBox[
+              RowBox[{"Sin", "[", 
+               FractionBox["\[Pi]", "18"], "]"}], "2"], 
+             RowBox[{
+              SuperscriptBox[
+               RowBox[{"Cos", "[", 
+                FractionBox["\[Pi]", "18"], "]"}], "2"], "+", 
+              SuperscriptBox[
+               RowBox[{"Sin", "[", 
+                FractionBox["\[Pi]", "18"], "]"}], "2"]}]]}], ")"}]}]}], 
+        ")"}]}], 
+      RowBox[{
+       SuperscriptBox[
+        RowBox[{"Cos", "[", 
+         FractionBox["\[Pi]", "18"], "]"}], "2"], "+", 
+       SuperscriptBox[
+        RowBox[{"Sin", "[", 
+         FractionBox["\[Pi]", "18"], "]"}], "2"]}]]}], "+", 
+    FractionBox[
+     RowBox[{
+      RowBox[{"Cos", "[", 
+       FractionBox["\[Pi]", "18"], "]"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        FractionBox[
+         RowBox[{"2", " ", 
+          SuperscriptBox[
+           RowBox[{"Cos", "[", 
+            FractionBox["\[Pi]", "18"], "]"}], "2"], " ", 
+          RowBox[{"Sin", "[", 
+           FractionBox["\[Pi]", "18"], "]"}]}], 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"Cos", "[", 
+            FractionBox["\[Pi]", "18"], "]"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"Sin", "[", 
+            FractionBox["\[Pi]", "18"], "]"}], "2"]}]], "-", 
+        RowBox[{
+         RowBox[{"Sin", "[", 
+          FractionBox["\[Pi]", "18"], "]"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           FractionBox[
+            SuperscriptBox[
+             RowBox[{"Cos", "[", 
+              FractionBox["\[Pi]", "18"], "]"}], "2"], 
+            RowBox[{
+             SuperscriptBox[
+              RowBox[{"Cos", "[", 
+               FractionBox["\[Pi]", "18"], "]"}], "2"], "+", 
+             SuperscriptBox[
+              RowBox[{"Sin", "[", 
+               FractionBox["\[Pi]", "18"], "]"}], "2"]}]], "-", 
+           FractionBox[
+            SuperscriptBox[
+             RowBox[{"Sin", "[", 
+              FractionBox["\[Pi]", "18"], "]"}], "2"], 
+            RowBox[{
+             SuperscriptBox[
+              RowBox[{"Cos", "[", 
+               FractionBox["\[Pi]", "18"], "]"}], "2"], "+", 
+             SuperscriptBox[
+              RowBox[{"Sin", "[", 
+               FractionBox["\[Pi]", "18"], "]"}], "2"]}]]}], ")"}]}]}], 
+       ")"}]}], 
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"Cos", "[", 
+        FractionBox["\[Pi]", "18"], "]"}], "2"], "+", 
+      SuperscriptBox[
+       RowBox[{"Sin", "[", 
+        FractionBox["\[Pi]", "18"], "]"}], "2"]}]]}], ",", "0", ",", 
+   RowBox[{
+    FractionBox[
+     RowBox[{
+      RowBox[{"Cos", "[", 
+       FractionBox["\[Pi]", "18"], "]"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        FractionBox[
+         RowBox[{"2", " ", 
+          RowBox[{"Cos", "[", 
+           FractionBox["\[Pi]", "18"], "]"}], " ", 
+          SuperscriptBox[
+           RowBox[{"Sin", "[", 
+            FractionBox["\[Pi]", "18"], "]"}], "2"]}], 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"Cos", "[", 
+            FractionBox["\[Pi]", "18"], "]"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"Sin", "[", 
+            FractionBox["\[Pi]", "18"], "]"}], "2"]}]], "+", 
+        RowBox[{
+         RowBox[{"Cos", "[", 
+          FractionBox["\[Pi]", "18"], "]"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           FractionBox[
+            SuperscriptBox[
+             RowBox[{"Cos", "[", 
+              FractionBox["\[Pi]", "18"], "]"}], "2"], 
+            RowBox[{
+             SuperscriptBox[
+              RowBox[{"Cos", "[", 
+               FractionBox["\[Pi]", "18"], "]"}], "2"], "+", 
+             SuperscriptBox[
+              RowBox[{"Sin", "[", 
+               FractionBox["\[Pi]", "18"], "]"}], "2"]}]], "-", 
+           FractionBox[
+            SuperscriptBox[
+             RowBox[{"Sin", "[", 
+              FractionBox["\[Pi]", "18"], "]"}], "2"], 
+            RowBox[{
+             SuperscriptBox[
+              RowBox[{"Cos", "[", 
+               FractionBox["\[Pi]", "18"], "]"}], "2"], "+", 
+             SuperscriptBox[
+              RowBox[{"Sin", "[", 
+               FractionBox["\[Pi]", "18"], "]"}], "2"]}]]}], ")"}]}]}], 
+       ")"}]}], 
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"Cos", "[", 
+        FractionBox["\[Pi]", "18"], "]"}], "2"], "+", 
+      SuperscriptBox[
+       RowBox[{"Sin", "[", 
+        FractionBox["\[Pi]", "18"], "]"}], "2"]}]], "+", 
+    FractionBox[
+     RowBox[{
+      RowBox[{"Sin", "[", 
+       FractionBox["\[Pi]", "18"], "]"}], " ", 
+      RowBox[{"(", 
+       RowBox[{
+        FractionBox[
+         RowBox[{"2", " ", 
+          SuperscriptBox[
+           RowBox[{"Cos", "[", 
+            FractionBox["\[Pi]", "18"], "]"}], "2"], " ", 
+          RowBox[{"Sin", "[", 
+           FractionBox["\[Pi]", "18"], "]"}]}], 
+         RowBox[{
+          SuperscriptBox[
+           RowBox[{"Cos", "[", 
+            FractionBox["\[Pi]", "18"], "]"}], "2"], "+", 
+          SuperscriptBox[
+           RowBox[{"Sin", "[", 
+            FractionBox["\[Pi]", "18"], "]"}], "2"]}]], "-", 
+        RowBox[{
+         RowBox[{"Sin", "[", 
+          FractionBox["\[Pi]", "18"], "]"}], " ", 
+         RowBox[{"(", 
+          RowBox[{
+           FractionBox[
+            SuperscriptBox[
+             RowBox[{"Cos", "[", 
+              FractionBox["\[Pi]", "18"], "]"}], "2"], 
+            RowBox[{
+             SuperscriptBox[
+              RowBox[{"Cos", "[", 
+               FractionBox["\[Pi]", "18"], "]"}], "2"], "+", 
+             SuperscriptBox[
+              RowBox[{"Sin", "[", 
+               FractionBox["\[Pi]", "18"], "]"}], "2"]}]], "-", 
+           FractionBox[
+            SuperscriptBox[
+             RowBox[{"Sin", "[", 
+              FractionBox["\[Pi]", "18"], "]"}], "2"], 
+            RowBox[{
+             SuperscriptBox[
+              RowBox[{"Cos", "[", 
+               FractionBox["\[Pi]", "18"], "]"}], "2"], "+", 
+             SuperscriptBox[
+              RowBox[{"Sin", "[", 
+               FractionBox["\[Pi]", "18"], "]"}], "2"]}]]}], ")"}]}]}], 
+       ")"}]}], 
+     RowBox[{
+      SuperscriptBox[
+       RowBox[{"Cos", "[", 
+        FractionBox["\[Pi]", "18"], "]"}], "2"], "+", 
+      SuperscriptBox[
+       RowBox[{"Sin", "[", 
+        FractionBox["\[Pi]", "18"], "]"}], "2"]}]]}]}], "]"}]], "Output",
+ CellLabel->"Out[73]=",ExpressionUUID->"0a830af7-1132-4944-8052-c6b35115247d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ResourceFunction", "[", "\"\<PlotVector3D\>\"", "]"}], "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"VectorPart", "[", 
+     SubscriptBox["S", "MDM1"], "]"}], ",", 
+    RowBox[{"VectorPart", "[", 
+     SubscriptBox["S", "MDM2"], "]"}]}], "}"}], "]"}]], "Input",
+ CellLabel->"In[75]:=",ExpressionUUID->"02cbf4ff-40ae-409b-b3db-821c0882df4c"],
+
+Cell[BoxData[
+ Graphics3DBox[{
+   {RGBColor[0.3, 0.4, 0.7], Arrowheads[Large], 
+    Arrow3DBox[
+     NCache[{{0, 0, 0}, {
+       2 Cos[Rational[1, 18] Pi] Sin[Rational[1, 18] Pi]/(
+        Cos[Rational[1, 18] Pi]^2 + Sin[Rational[1, 18] Pi]^2), 0, 
+        Cos[Rational[1, 18] Pi]^2/(Cos[Rational[1, 18] Pi]^2 + 
+         Sin[Rational[1, 18] Pi]^2) - Sin[Rational[1, 18] Pi]^2/(
+        Cos[Rational[1, 18] Pi]^2 + Sin[Rational[1, 18] Pi]^2)}}, {{0, 0, 
+       0}, {0.3420201433256687, 0, 0.9396926207859085}}]]}, 
+   {RGBColor[0.3, 0.4, 0.7], Arrowheads[Large], 
+    Arrow3DBox[
+     NCache[{{0, 0, 
+       0}, {-Sin[
+          Rational[1, 18] Pi] (Cos[Rational[1, 18] Pi]^2 + 
+           Sin[Rational[1, 18] Pi]^2)^(-1) (
+          2 Cos[Rational[1, 18] Pi] Sin[Rational[1, 18] Pi]^2/(
+           Cos[Rational[1, 18] Pi]^2 + Sin[Rational[1, 18] Pi]^2) + 
+          Cos[Rational[1, 18] Pi] (
+            Cos[Rational[1, 18] Pi]^2/(Cos[Rational[1, 18] Pi]^2 + 
+             Sin[Rational[1, 18] Pi]^2) - Sin[Rational[1, 18] Pi]^2/(
+            Cos[Rational[1, 18] Pi]^2 + Sin[Rational[1, 18] Pi]^2))) + 
+        Cos[Rational[1, 18] Pi] (Cos[Rational[1, 18] Pi]^2 + 
+           Sin[Rational[1, 18] Pi]^2)^(-1) (
+          2 Cos[Rational[1, 18] Pi]^2 Sin[Rational[1, 18] Pi]/(
+           Cos[Rational[1, 18] Pi]^2 + Sin[Rational[1, 18] Pi]^2) - 
+          Sin[Rational[1, 18] Pi] (
+           Cos[Rational[1, 18] Pi]^2/(Cos[Rational[1, 18] Pi]^2 + 
+            Sin[Rational[1, 18] Pi]^2) - Sin[Rational[1, 18] Pi]^2/(
+           Cos[Rational[1, 18] Pi]^2 + Sin[Rational[1, 18] Pi]^2))), 0, 
+        Cos[Rational[1, 18] Pi] (Cos[Rational[1, 18] Pi]^2 + 
+           Sin[Rational[1, 18] Pi]^2)^(-1) (
+          2 Cos[Rational[1, 18] Pi] Sin[Rational[1, 18] Pi]^2/(
+           Cos[Rational[1, 18] Pi]^2 + Sin[Rational[1, 18] Pi]^2) + 
+          Cos[Rational[1, 18] Pi] (
+            Cos[Rational[1, 18] Pi]^2/(Cos[Rational[1, 18] Pi]^2 + 
+             Sin[Rational[1, 18] Pi]^2) - Sin[Rational[1, 18] Pi]^2/(
+            Cos[Rational[1, 18] Pi]^2 + Sin[Rational[1, 18] Pi]^2))) + 
+        Sin[Rational[1, 18] Pi] (Cos[Rational[1, 18] Pi]^2 + 
+           Sin[Rational[1, 18] Pi]^2)^(-1) (
+          2 Cos[Rational[1, 18] Pi]^2 Sin[Rational[1, 18] Pi]/(
+           Cos[Rational[1, 18] Pi]^2 + Sin[Rational[1, 18] Pi]^2) - 
+          Sin[Rational[1, 18] Pi] (
+           Cos[Rational[1, 18] Pi]^2/(Cos[Rational[1, 18] Pi]^2 + 
+            Sin[Rational[1, 18] Pi]^2) - Sin[Rational[1, 18] Pi]^2/(
+           Cos[Rational[1, 18] Pi]^2 + Sin[Rational[1, 18] Pi]^2)))}}, {{0, 0,
+        0}, {-5.551115123125783*^-17, 0, 1.0000000000000002`}}]]}},
+  Axes->True,
+  PlotRange->All]], "Output",
+ CellLabel->"Out[75]=",ExpressionUUID->"584d85ba-58af-4597-81aa-d3e48d967d3f"]
+}, Open  ]]
+},
+WindowSize->{808, 747},
+WindowMargins->{{20, Automatic}, {Automatic, 5}},
+FrontEndVersion->"13.0 for Mac OS X x86 (64-bit) (February 4, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"477f0319-27b0-4d5d-8572-a18c096d567b"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 560, 14, 101, "Input",ExpressionUUID->"b57b3916-2916-476f-919e-f3edd915f62f"],
+Cell[CellGroupData[{
+Cell[1143, 38, 1581, 50, 212, InheritFromParent,ExpressionUUID->"f5071900-3672-48e2-af66-508f0ea32a66"],
+Cell[2727, 90, 904, 28, 67, "Output",ExpressionUUID->"cfe93469-7dc9-41fe-b657-26b2f9532ca3"],
+Cell[3634, 120, 297, 7, 47, "Output",ExpressionUUID->"16e284f3-1b0f-453d-8ec4-ec6cf27cbb28"],
+Cell[3934, 129, 318, 8, 47, "Output",ExpressionUUID->"ad7ee3d2-d8cd-4549-bec4-e05e80d8a0d0"],
+Cell[4255, 139, 179, 3, 34, "Output",ExpressionUUID->"ffd111db-b001-4409-ba7b-e81724883dc7"],
+Cell[4437, 144, 179, 3, 34, "Output",ExpressionUUID->"5274bad0-2525-49a3-9c87-02d9d605eac2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4653, 152, 260, 7, 30, InheritFromParent,ExpressionUUID->"ae179385-e1ba-4958-99ab-47ca800d127d"],
+Cell[4916, 161, 1257, 39, 73, "Output",ExpressionUUID->"f20c7674-68c3-4aa1-8722-c2415dc69fe1"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6210, 205, 630, 18, 83, InheritFromParent,ExpressionUUID->"cf182824-6fe6-4a0d-89c5-262bf9e64040"],
+Cell[6843, 225, 537, 15, 47, "Output",ExpressionUUID->"e5cc3330-8057-4b52-b767-29784a1722f6"],
+Cell[7383, 242, 1240, 39, 73, "Output",ExpressionUUID->"ae1163c9-80a9-49e2-9bf8-98f2b29c1b2a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8660, 286, 348, 8, 44, "Input",ExpressionUUID->"c374c418-b496-497c-9462-f91a467c932c"],
+Cell[9011, 296, 728, 15, 449, "Output",ExpressionUUID->"cfb671da-c090-4686-b759-75664df5e475"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9776, 316, 286, 8, 30, "Input",ExpressionUUID->"44b74a71-48f0-47ea-86d0-e9e74bb6a25b"],
+Cell[10065, 326, 7746, 226, 349, "Output",ExpressionUUID->"0a830af7-1132-4944-8052-c6b35115247d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17848, 557, 376, 9, 44, "Input",ExpressionUUID->"02cbf4ff-40ae-409b-b3db-821c0882df4c"],
+Cell[18227, 568, 2755, 50, 449, "Output",ExpressionUUID->"584d85ba-58af-4597-81aa-d3e48d967d3f"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

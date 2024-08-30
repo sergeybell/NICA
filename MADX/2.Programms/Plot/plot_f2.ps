@@ -1,0 +1,4315 @@
+%!PS-Adobe-2.0
+%%Title: tmpplot.ps
+%%Creator: gnuplot 5.4 patchlevel 4
+%%CreationDate: Thu May 23 13:31:29 2024
+%%DocumentFonts: (atend)
+%%BoundingBox: 50 50 554 770
+%%Orientation: Landscape
+%%Pages: (atend)
+%%EndComments
+%%BeginProlog
+/gnudict 256 dict def
+gnudict begin
+%
+% The following true/false flags may be edited by hand if desired.
+% The unit line width and grayscale image gamma correction may also be changed.
+%
+/Color true def
+/Blacktext false def
+/Solid false def
+/Dashlength 1 def
+/Landscape true def
+/Level1 false def
+/Level3 false def
+/Rounded false def
+/ClipToBoundingBox false def
+/SuppressPDFMark false def
+/TransparentPatterns false def
+/gnulinewidth 5.000 def
+/userlinewidth gnulinewidth def
+/Gamma 1.0 def
+/BackgroundColor {-1.000 -1.000 -1.000} def
+%
+/vshift -46 def
+/dl1 {
+  10.0 Dashlength userlinewidth gnulinewidth div mul mul mul
+  Rounded { currentlinewidth 0.75 mul sub dup 0 le { pop 0.01 } if } if
+} def
+/dl2 {
+  10.0 Dashlength userlinewidth gnulinewidth div mul mul mul
+  Rounded { currentlinewidth 0.75 mul add } if
+} def
+/hpt_ 31.5 def
+/vpt_ 31.5 def
+/hpt hpt_ def
+/vpt vpt_ def
+/doclip {
+  ClipToBoundingBox {
+    newpath 50 50 moveto 554 50 lineto 554 770 lineto 50 770 lineto closepath
+    clip
+  } if
+} def
+%
+% Gnuplot Prolog Version 5.2 (Dec 2017)
+%
+%/SuppressPDFMark true def
+%
+/M {moveto} bind def
+/L {lineto} bind def
+/R {rmoveto} bind def
+/V {rlineto} bind def
+/N {newpath moveto} bind def
+/Z {closepath} bind def
+/C {setrgbcolor} bind def
+/f {rlineto fill} bind def
+/g {setgray} bind def
+/Gshow {show} def   % May be redefined later in the file to support UTF-8
+/vpt2 vpt 2 mul def
+/hpt2 hpt 2 mul def
+/Lshow {currentpoint stroke M 0 vshift R 
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
+/Rshow {currentpoint stroke M dup stringwidth pop neg vshift R
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
+/Cshow {currentpoint stroke M dup stringwidth pop -2 div vshift R 
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
+/UP {dup vpt_ mul /vpt exch def hpt_ mul /hpt exch def
+  /hpt2 hpt 2 mul def /vpt2 vpt 2 mul def} def
+/DL {Color {setrgbcolor Solid {pop []} if 0 setdash}
+ {pop pop pop 0 setgray Solid {pop []} if 0 setdash} ifelse} def
+/BL {stroke userlinewidth 2 mul setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/AL {stroke userlinewidth 2 div setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/UL {dup gnulinewidth mul /userlinewidth exch def
+	dup 1 lt {pop 1} if 10 mul /udl exch def} def
+/PL {stroke userlinewidth setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+3.8 setmiterlimit
+% Classic Line colors (version 5.0)
+/LCw {1 1 1} def
+/LCb {0 0 0} def
+/LCa {0 0 0} def
+/LC0 {1 0 0} def
+/LC1 {0 1 0} def
+/LC2 {0 0 1} def
+/LC3 {1 0 1} def
+/LC4 {0 1 1} def
+/LC5 {1 1 0} def
+/LC6 {0 0 0} def
+/LC7 {1 0.3 0} def
+/LC8 {0.5 0.5 0.5} def
+% Default dash patterns (version 5.0)
+/LTB {BL [] LCb DL} def
+/LTw {PL [] 1 setgray} def
+/LTb {PL [] LCb DL} def
+/LTa {AL [1 udl mul 2 udl mul] 0 setdash LCa setrgbcolor} def
+/LT0 {PL [] LC0 DL} def
+/LT1 {PL [2 dl1 3 dl2] LC1 DL} def
+/LT2 {PL [1 dl1 1.5 dl2] LC2 DL} def
+/LT3 {PL [6 dl1 2 dl2 1 dl1 2 dl2] LC3 DL} def
+/LT4 {PL [1 dl1 2 dl2 6 dl1 2 dl2 1 dl1 2 dl2] LC4 DL} def
+/LT5 {PL [4 dl1 2 dl2] LC5 DL} def
+/LT6 {PL [1.5 dl1 1.5 dl2 1.5 dl1 1.5 dl2 1.5 dl1 6 dl2] LC6 DL} def
+/LT7 {PL [3 dl1 3 dl2 1 dl1 3 dl2] LC7 DL} def
+/LT8 {PL [2 dl1 2 dl2 2 dl1 6 dl2] LC8 DL} def
+/SL {[] 0 setdash} def
+/Pnt {stroke [] 0 setdash gsave 1 setlinecap M 0 0 V stroke grestore} def
+/Dia {stroke [] 0 setdash 2 copy vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke
+  Pnt} def
+/Pls {stroke [] 0 setdash vpt sub M 0 vpt2 V
+  currentpoint stroke M
+  hpt neg vpt neg R hpt2 0 V stroke
+ } def
+/Box {stroke [] 0 setdash 2 copy exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke
+  Pnt} def
+/Crs {stroke [] 0 setdash exch hpt sub exch vpt add M
+  hpt2 vpt2 neg V currentpoint stroke M
+  hpt2 neg 0 R hpt2 vpt2 V stroke} def
+/TriU {stroke [] 0 setdash 2 copy vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke
+  Pnt} def
+/Star {2 copy Pls Crs} def
+/BoxF {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath fill} def
+/TriUF {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath fill} def
+/TriD {stroke [] 0 setdash 2 copy vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke
+  Pnt} def
+/TriDF {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath fill} def
+/DiaF {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath fill} def
+/Pent {stroke [] 0 setdash 2 copy gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore Pnt} def
+/PentF {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath fill grestore} def
+/Circle {stroke [] 0 setdash 2 copy
+  hpt 0 360 arc stroke Pnt} def
+/CircleF {stroke [] 0 setdash hpt 0 360 arc fill} def
+/C0 {BL [] 0 setdash 2 copy moveto vpt 90 450 arc} bind def
+/C1 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C2 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C3 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C4 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C5 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc
+	2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc} bind def
+/C6 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C7 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C8 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C9 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 450 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C10 {BL [] 0 setdash 2 copy 2 copy moveto vpt 270 360 arc closepath fill
+	2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C11 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C12 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C13 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C14 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 360 arc closepath fill
+	vpt 0 360 arc} bind def
+/C15 {BL [] 0 setdash 2 copy vpt 0 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/Rec {newpath 4 2 roll moveto 1 index 0 rlineto 0 exch rlineto
+	neg 0 rlineto closepath} bind def
+/Square {dup Rec} bind def
+/Bsquare {vpt sub exch vpt sub exch vpt2 Square} bind def
+/S0 {BL [] 0 setdash 2 copy moveto 0 vpt rlineto BL Bsquare} bind def
+/S1 {BL [] 0 setdash 2 copy vpt Square fill Bsquare} bind def
+/S2 {BL [] 0 setdash 2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S3 {BL [] 0 setdash 2 copy exch vpt sub exch vpt2 vpt Rec fill Bsquare} bind def
+/S4 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S5 {BL [] 0 setdash 2 copy 2 copy vpt Square fill
+	exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S6 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S7 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S8 {BL [] 0 setdash 2 copy vpt sub vpt Square fill Bsquare} bind def
+/S9 {BL [] 0 setdash 2 copy vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S10 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt Square fill
+	Bsquare} bind def
+/S11 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt2 vpt Rec fill
+	Bsquare} bind def
+/S12 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill Bsquare} bind def
+/S13 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S14 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S15 {BL [] 0 setdash 2 copy Bsquare fill Bsquare} bind def
+/D0 {gsave translate 45 rotate 0 0 S0 stroke grestore} bind def
+/D1 {gsave translate 45 rotate 0 0 S1 stroke grestore} bind def
+/D2 {gsave translate 45 rotate 0 0 S2 stroke grestore} bind def
+/D3 {gsave translate 45 rotate 0 0 S3 stroke grestore} bind def
+/D4 {gsave translate 45 rotate 0 0 S4 stroke grestore} bind def
+/D5 {gsave translate 45 rotate 0 0 S5 stroke grestore} bind def
+/D6 {gsave translate 45 rotate 0 0 S6 stroke grestore} bind def
+/D7 {gsave translate 45 rotate 0 0 S7 stroke grestore} bind def
+/D8 {gsave translate 45 rotate 0 0 S8 stroke grestore} bind def
+/D9 {gsave translate 45 rotate 0 0 S9 stroke grestore} bind def
+/D10 {gsave translate 45 rotate 0 0 S10 stroke grestore} bind def
+/D11 {gsave translate 45 rotate 0 0 S11 stroke grestore} bind def
+/D12 {gsave translate 45 rotate 0 0 S12 stroke grestore} bind def
+/D13 {gsave translate 45 rotate 0 0 S13 stroke grestore} bind def
+/D14 {gsave translate 45 rotate 0 0 S14 stroke grestore} bind def
+/D15 {gsave translate 45 rotate 0 0 S15 stroke grestore} bind def
+/DiaE {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke} def
+/BoxE {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke} def
+/TriUE {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke} def
+/TriDE {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke} def
+/PentE {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore} def
+/CircE {stroke [] 0 setdash 
+  hpt 0 360 arc stroke} def
+/Opaque {gsave closepath 1 setgray fill grestore 0 setgray closepath} def
+/DiaW {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V Opaque stroke} def
+/BoxW {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V Opaque stroke} def
+/TriUW {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V Opaque stroke} def
+/TriDW {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V Opaque stroke} def
+/PentW {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  Opaque stroke grestore} def
+/CircW {stroke [] 0 setdash 
+  hpt 0 360 arc Opaque stroke} def
+/BoxFill {gsave Rec 1 setgray fill grestore} def
+/Density {
+  /Fillden exch def
+  currentrgbcolor
+  /ColB exch def /ColG exch def /ColR exch def
+  /ColR ColR Fillden mul Fillden sub 1 add def
+  /ColG ColG Fillden mul Fillden sub 1 add def
+  /ColB ColB Fillden mul Fillden sub 1 add def
+  ColR ColG ColB setrgbcolor} def
+/BoxColFill {gsave Rec PolyFill} def
+/PolyFill {gsave Density fill grestore grestore} def
+/h {rlineto rlineto rlineto closepath gsave fill grestore stroke} bind def
+%
+% PostScript Level 1 Pattern Fill routine for rectangles
+% Usage: x y w h s a XX PatternFill
+%	x,y = lower left corner of box to be filled
+%	w,h = width and height of box
+%	  a = angle in degrees between lines and x-axis
+%	 XX = 0/1 for no/yes cross-hatch
+%
+/PatternFill {gsave /PFa [ 9 2 roll ] def
+  PFa 0 get PFa 2 get 2 div add PFa 1 get PFa 3 get 2 div add translate
+  PFa 2 get -2 div PFa 3 get -2 div PFa 2 get PFa 3 get Rec
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+  clip
+  currentlinewidth 0.5 mul setlinewidth
+  /PFs PFa 2 get dup mul PFa 3 get dup mul add sqrt def
+  0 0 M PFa 5 get rotate PFs -2 div dup translate
+  0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 M 0 PFs V} for
+  0 PFa 6 get ne {
+	0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 2 1 roll M PFs 0 V} for
+ } if
+  stroke grestore} def
+%
+/languagelevel where
+ {pop languagelevel} {1} ifelse
+dup 2 lt
+	{/InterpretLevel1 true def
+	 /InterpretLevel3 false def}
+	{/InterpretLevel1 Level1 def
+	 2 gt
+	    {/InterpretLevel3 Level3 def}
+	    {/InterpretLevel3 false def}
+	 ifelse }
+ ifelse
+%
+% PostScript level 2 pattern fill definitions
+%
+/Level2PatternFill {
+/Tile8x8 {/PaintType 2 /PatternType 1 /TilingType 1 /BBox [0 0 8 8] /XStep 8 /YStep 8}
+	bind def
+/KeepColor {currentrgbcolor [/Pattern /DeviceRGB] setcolorspace} bind def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke} 
+>> matrix makepattern
+/Pat1 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke
+	0 4 M 4 8 L 8 4 L 4 0 L 0 4 L stroke}
+>> matrix makepattern
+/Pat2 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 0 8 L
+	8 8 L 8 0 L 0 0 L fill}
+>> matrix makepattern
+/Pat3 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 8 M 8 -4 L
+	0 12 M 12 0 L stroke}
+>> matrix makepattern
+/Pat4 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 0 M 8 12 L
+	0 -4 M 12 8 L stroke}
+>> matrix makepattern
+/Pat5 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 8 M 4 -4 L
+	0 12 M 8 -4 L 4 12 M 10 0 L stroke}
+>> matrix makepattern
+/Pat6 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 0 M 4 12 L
+	0 -4 M 8 12 L 4 -4 M 10 8 L stroke}
+>> matrix makepattern
+/Pat7 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 8 -2 M -4 4 L
+	12 0 M -4 8 L 12 4 M 0 10 L stroke}
+>> matrix makepattern
+/Pat8 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 -2 M 12 4 L
+	-4 0 M 12 8 L -4 4 M 8 10 L stroke}
+>> matrix makepattern
+/Pat9 exch def
+/Pattern1 {PatternBgnd KeepColor Pat1 setpattern} bind def
+/Pattern2 {PatternBgnd KeepColor Pat2 setpattern} bind def
+/Pattern3 {PatternBgnd KeepColor Pat3 setpattern} bind def
+/Pattern4 {PatternBgnd KeepColor Landscape {Pat5} {Pat4} ifelse setpattern} bind def
+/Pattern5 {PatternBgnd KeepColor Landscape {Pat4} {Pat5} ifelse setpattern} bind def
+/Pattern6 {PatternBgnd KeepColor Landscape {Pat9} {Pat6} ifelse setpattern} bind def
+/Pattern7 {PatternBgnd KeepColor Landscape {Pat8} {Pat7} ifelse setpattern} bind def
+} def
+%
+%
+%End of PostScript Level 2 code
+%
+/PatternBgnd {
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+} def
+%
+% Substitute for Level 2 pattern fill codes with
+% grayscale if Level 2 support is not selected.
+%
+/Level1PatternFill {
+/Pattern1 {0.250 Density} bind def
+/Pattern2 {0.500 Density} bind def
+/Pattern3 {0.750 Density} bind def
+/Pattern4 {0.125 Density} bind def
+/Pattern5 {0.375 Density} bind def
+/Pattern6 {0.625 Density} bind def
+/Pattern7 {0.875 Density} bind def
+} def
+%
+% Now test for support of Level 2 code
+%
+Level1 {Level1PatternFill} {Level2PatternFill} ifelse
+%
+/Symbol-Oblique /Symbol findfont [1 0 .167 1 0 0] makefont
+dup length dict begin {1 index /FID eq {pop pop} {def} ifelse} forall
+currentdict end definefont pop
+%
+/Metrics {ExtendTextBox Gswidth} def
+/Lwidth {currentpoint stroke M 0 vshift R Metrics} def
+/Rwidth {currentpoint stroke M dup stringwidth pop neg vshift R Metrics} def
+/Cwidth {currentpoint stroke M dup stringwidth pop -2 div vshift R Metrics} def
+/GLwidth {currentpoint stroke M 0 vshift R {ExtendTextBox} forall} def
+/GRwidth {currentpoint stroke M dup Gwidth vshift R {ExtendTextBox} forall} def
+/GCwidth {currentpoint stroke M dup Gwidth 2 div vshift R {ExtendTextBox} forall} def
+/GLwidth2 {0 Gwidth AddGlyphWidth} def
+/GRwidth2 {Gwidth -1 mul 0 AddGlyphWidth} def
+/GCwidth2 {Gwidth 2 div dup -1 mul AddGlyphWidth} def
+/AddGlyphWidth { dup TBx2 gt {userdict /TBx2 3 -1 roll put} {pop} ifelse
+                 dup TBx1 lt {userdict /TBx1 3 -1 roll put} {pop} ifelse } def
+/MFshow {
+   { dup 5 get 3 ge
+     { 5 get 3 eq {gsave} {grestore} ifelse }
+     {dup dup 0 get findfont exch 1 get scalefont setfont
+     [ currentpoint ] exch dup 2 get 0 exch R dup 5 get 2 ne {dup dup 6
+     get exch 4 get {textshow} {Metrics pop 0 R} ifelse }if dup 5 get 0 eq
+     {dup 3 get {2 get neg 0 exch R pop} {pop aload pop M} ifelse} {dup 5
+     get 1 eq {dup 2 get exch dup 3 get exch 6 get Gswidth pop -2 div
+     dup 0 R} {dup 6 get Gswidth pop -2 div 0 R 6 get
+     textshow 2 index {aload pop M neg 3 -1 roll neg R pop pop} {pop pop pop
+     pop aload pop M} ifelse }ifelse }ifelse }
+     ifelse }
+   forall} def
+/Gswidth {dup type /stringtype eq {stringwidth} {pop (n) stringwidth} ifelse} def
+/MFwidth {0 exch { dup 5 get 3 ge { 5 get 3 eq { 0 } { pop } ifelse }
+ {dup 3 get{dup dup 0 get findfont exch 1 get scalefont setfont
+     6 get Gswidth pop add} {pop} ifelse} ifelse} forall} def
+/MLshow { currentpoint stroke M
+  0 exch R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/MRshow { currentpoint stroke M
+  exch dup MFwidth neg 3 -1 roll R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/MCshow { currentpoint stroke M
+  exch dup MFwidth -2 div 3 -1 roll R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/XYsave    { [( ) 1 2 true false 3 ()] } bind def
+/XYrestore { [( ) 1 2 true false 4 ()] } bind def
+Level1 SuppressPDFMark or 
+{} {
+/SDict 10 dict def
+systemdict /pdfmark known not {
+  userdict /pdfmark systemdict /cleartomark get put
+} if
+SDict begin [
+  /Title (tmpplot.ps)
+  /Subject (gnuplot plot)
+  /Creator (gnuplot 5.4 patchlevel 4)
+%  /Producer (gnuplot)
+%  /Keywords ()
+  /CreationDate (Thu May 23 13:31:29 2024)
+  /DOCINFO pdfmark
+end
+} ifelse
+%
+% Support for boxed text - Ethan A Merritt Sep 2016
+%
+/InitTextBox { userdict /TBy2 3 -1 roll put userdict /TBx2 3 -1 roll put
+           userdict /TBy1 3 -1 roll put userdict /TBx1 3 -1 roll put
+	   /Boxing true def } def
+/ExtendTextBox { dup type /stringtype eq
+    { Boxing { gsave dup false charpath pathbbox
+      dup TBy2 gt {userdict /TBy2 3 -1 roll put} {pop} ifelse
+      dup TBx2 gt {userdict /TBx2 3 -1 roll put} {pop} ifelse
+      dup TBy1 lt {userdict /TBy1 3 -1 roll put} {pop} ifelse
+      dup TBx1 lt {userdict /TBx1 3 -1 roll put} {pop} ifelse
+      grestore } if }
+    {} ifelse} def
+/PopTextBox { newpath TBx1 TBxmargin sub TBy1 TBymargin sub M
+               TBx1 TBxmargin sub TBy2 TBymargin add L
+	       TBx2 TBxmargin add TBy2 TBymargin add L
+	       TBx2 TBxmargin add TBy1 TBymargin sub L closepath } def
+/DrawTextBox { PL PopTextBox stroke /Boxing false def} def
+/FillTextBox { gsave PopTextBox fill grestore /Boxing false def} def
+0 0 0 0 InitTextBox
+/TBxmargin 20 def
+/TBymargin 20 def
+/Boxing false def
+/textshow { ExtendTextBox Gshow } def
+%
+end
+%%EndProlog
+%%Page: 1 1
+gnudict begin
+gsave
+doclip
+50 50 translate
+0.100 0.100 scale
+90 rotate
+0 -5040 translate
+0 setgray
+newpath
+(Helvetica) findfont 140 scalefont setfont
+BackgroundColor 0 lt 3 1 roll 0 lt exch 0 lt or or not {gsave BackgroundColor C clippath fill grestore} if
+1.000 UL
+LTb
+LCb setrgbcolor
+854 448 M
+63 0 V
+6030 0 R
+-63 0 V
+stroke
+770 448 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-0.015)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+/vshift -46 def
+1.000 UL
+LTb
+LCb setrgbcolor
+854 1143 M
+63 0 V
+6030 0 R
+-63 0 V
+stroke
+770 1143 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-0.01)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+854 1838 M
+63 0 V
+6030 0 R
+-63 0 V
+stroke
+770 1838 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-0.005)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+854 2534 M
+63 0 V
+6030 0 R
+-63 0 V
+stroke
+770 2534 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+854 3229 M
+63 0 V
+6030 0 R
+-63 0 V
+stroke
+770 3229 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.005)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+854 3924 M
+63 0 V
+6030 0 R
+-63 0 V
+stroke
+770 3924 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.01)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+854 4619 M
+63 0 V
+6030 0 R
+-63 0 V
+stroke
+770 4619 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.015)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+854 448 M
+0 63 V
+0 4108 R
+0 -63 V
+stroke
+854 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-0.02)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+1616 448 M
+0 63 V
+0 4108 R
+0 -63 V
+stroke
+1616 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-0.015)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+2377 448 M
+0 63 V
+0 4108 R
+0 -63 V
+stroke
+2377 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-0.01)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+3139 448 M
+0 63 V
+0 4108 R
+0 -63 V
+stroke
+3139 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-0.005)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+3901 448 M
+0 63 V
+0 4108 R
+0 -63 V
+stroke
+3901 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+4662 448 M
+0 63 V
+0 4108 R
+0 -63 V
+stroke
+4662 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.005)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+5424 448 M
+0 63 V
+0 4108 R
+0 -63 V
+stroke
+5424 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.01)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+6185 448 M
+0 63 V
+0 4108 R
+0 -63 V
+stroke
+6185 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.015)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+6947 448 M
+0 63 V
+0 4108 R
+0 -63 V
+stroke
+6947 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.02)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTB
+LCb setrgbcolor
+854 4619 N
+854 448 L
+6093 0 V
+0 4171 V
+-6093 0 V
+Z stroke
+0.480 UP
+1.000 UL
+LTb
+LCb setrgbcolor
+LCb setrgbcolor
+133 2533 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (py)]
+] -46.7 MCshow
+grestore
+/Helvetica findfont 140 scalefont setfont
+LTb
+LCb setrgbcolor
+3900 98 M
+[ [(Helvetica) 140.0 0.0 true true 0 (y)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+LTb
+% Begin plot #1
+0.480 UP
+1.000 UL
+LTb
+0.58 0.00 0.83 C
+LCb setrgbcolor
+6296 4486 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 19)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.58 0.00 0.83 C
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+6579 4486 C3
+% End plot #1
+% Begin plot #2
+0.480 UP
+1.000 UL
+LTb
+0.00 0.62 0.45 C
+LCb setrgbcolor
+6296 4346 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 20)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.00 0.62 0.45 C
+3977 2534 C4
+3847 2491 C4
+3893 2588 C4
+3964 2506 C4
+3827 2514 C4
+3931 2586 C4
+3934 2486 C4
+3826 2542 C4
+3962 2570 C4
+3896 2478 C4
+3844 2567 C4
+3976 2545 C4
+3860 2484 C4
+3877 2585 C4
+3971 2517 C4
+3833 2503 C4
+3916 2589 C4
+3948 2493 C4
+3824 2530 C4
+3951 2578 C4
+3913 2480 C4
+3835 2557 C4
+3972 2557 C4
+3874 2480 C4
+3862 2579 C4
+3976 2529 C4
+3842 2494 C4
+3899 2589 C4
+3960 2503 C4
+3826 2518 C4
+3937 2584 C4
+3929 2484 C4
+3828 2546 C4
+3965 2567 C4
+3890 2478 C4
+3849 2571 C4
+3977 2541 C4
+3854 2487 C4
+3883 2586 C4
+3969 2513 C4
+3830 2507 C4
+3922 2588 C4
+3943 2490 C4
+3824 2534 C4
+3955 2576 C4
+3907 2479 C4
+3838 2561 C4
+3974 2553 C4
+3869 2481 C4
+3868 2581 C4
+3975 2525 C4
+6579 4346 C4
+% End plot #2
+% Begin plot #3
+0.480 UP
+1.000 UL
+LTb
+0.34 0.71 0.91 C
+LCb setrgbcolor
+6296 4206 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 21)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.34 0.71 0.91 C
+4053 2534 C5
+3794 2448 C5
+3883 2642 C5
+4029 2482 C5
+3755 2491 C5
+3957 2640 C5
+3975 2442 C5
+3750 2544 C5
+4017 2612 C5
+3904 2423 C5
+3780 2594 C5
+4050 2567 C5
+3832 2431 C5
+3839 2630 C5
+4048 2513 C5
+3776 2462 C5
+3911 2644 C5
+4012 2465 C5
+3749 2510 C5
+3981 2632 C5
+3949 2432 C5
+3757 2563 C5
+4033 2597 C5
+3876 2423 C5
+3799 2610 C5
+4053 2547 C5
+3808 2440 C5
+3865 2639 C5
+4038 2494 C5
+3762 2479 C5
+3939 2643 C5
+3991 2450 C5
+3748 2530 C5
+4004 2621 C5
+3922 2426 C5
+3770 2582 C5
+4044 2579 C5
+3849 2426 C5
+3822 2623 C5
+4052 2527 C5
+3788 2452 C5
+3893 2643 C5
+4024 2476 C5
+3752 2497 C5
+3965 2638 C5
+3967 2438 C5
+3752 2550 C5
+4022 2608 C5
+3895 2423 C5
+3786 2599 C5
+4051 2560 C5
+6579 4206 C5
+% End plot #3
+% Begin plot #4
+0.480 UP
+1.000 UL
+LTb
+0.90 0.62 0.00 C
+LCb setrgbcolor
+6296 4066 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 22)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.90 0.62 0.00 C
+4129 2534 C6
+3743 2404 C6
+3869 2695 C6
+4098 2462 C6
+3686 2461 C6
+3970 2696 C6
+4028 2404 C6
+3672 2533 C6
+4057 2664 C6
+3933 2372 C6
+3703 2605 C6
+4114 2606 C6
+3832 2371 C6
+3773 2662 C6
+4129 2535 C6
+3744 2403 C6
+3867 2695 C6
+4099 2463 C6
+3687 2460 C6
+3968 2696 C6
+4029 2405 C6
+3672 2532 C6
+4056 2664 C6
+3934 2372 C6
+3702 2604 C6
+4114 2607 C6
+3833 2371 C6
+3771 2662 C6
+4129 2536 C6
+3745 2402 C6
+3866 2695 C6
+4099 2464 C6
+3688 2460 C6
+3967 2696 C6
+4030 2406 C6
+3672 2531 C6
+4055 2665 C6
+3936 2372 C6
+3701 2603 C6
+4113 2608 C6
+3835 2371 C6
+3770 2661 C6
+4129 2537 C6
+3746 2402 C6
+3864 2695 C6
+4100 2465 C6
+3688 2458 C6
+3966 2696 C6
+4032 2406 C6
+3672 2530 C6
+4054 2666 C6
+6579 4066 C6
+% End plot #4
+% Begin plot #5
+0.480 UP
+1.000 UL
+LTb
+0.94 0.89 0.26 C
+LCb setrgbcolor
+6296 3926 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 23)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.94 0.89 0.26 C
+4205 2534 C7
+3695 2358 C7
+3847 2747 C7
+4172 2449 C7
+3624 2423 C7
+3965 2753 C7
+4097 2378 C7
+3595 2504 C7
+4073 2725 C7
+3994 2330 C7
+3613 2589 C7
+4156 2669 C7
+3877 2312 C7
+3674 2666 C7
+4201 2593 C7
+3763 2328 C7
+3769 2724 C7
+4200 2507 C7
+3669 2375 C7
+3884 2753 C7
+4153 2425 C7
+3610 2447 C7
+4001 2748 C7
+4068 2360 C7
+3596 2531 C7
+4102 2711 C7
+3958 2321 C7
+3627 2614 C7
+4175 2647 C7
+3840 2314 C7
+3700 2687 C7
+4206 2566 C7
+3731 2340 C7
+3803 2736 C7
+4190 2481 C7
+3647 2395 C7
+3920 2755 C7
+4130 2403 C7
+3601 2472 C7
+4035 2740 C7
+4036 2345 C7
+3601 2557 C7
+4129 2693 C7
+3921 2315 C7
+3646 2639 C7
+4189 2623 C7
+3805 2318 C7
+3730 2705 C7
+4206 2540 C7
+3702 2354 C7
+3838 2746 C7
+6579 3926 C7
+% End plot #5
+% Begin plot #6
+0.480 UP
+1.000 UL
+LTb
+0.00 0.45 0.70 C
+LCb setrgbcolor
+6296 3786 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 24)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.00 0.45 0.70 C
+4281 2534 C8
+3651 2310 C8
+3816 2797 C8
+4252 2447 C8
+3573 2374 C8
+3936 2810 C8
+4186 2370 C8
+3528 2452 C8
+4052 2795 C8
+4092 2308 C8
+3520 2537 C8
+4154 2754 C8
+3980 2269 C8
+3552 2624 C8
+4231 2691 C8
+3859 2257 C8
+3619 2701 C8
+4274 2611 C8
+3742 2273 C8
+3715 2761 C8
+4280 2524 C8
+3643 2316 C8
+3828 2799 C8
+4246 2440 C8
+3567 2381 C8
+3947 2810 C8
+4178 2363 C8
+3525 2459 C8
+4064 2793 C8
+4082 2303 C8
+3522 2547 C8
+4164 2749 C8
+3967 2267 C8
+3557 2632 C8
+4237 2682 C8
+3847 2257 C8
+3628 2707 C8
+4277 2603 C8
+3733 2276 C8
+3725 2766 C8
+4278 2517 C8
+3633 2321 C8
+3839 2802 C8
+4241 2430 C8
+3561 2388 C8
+3961 2810 C8
+4169 2355 C8
+3523 2469 C8
+4075 2789 C8
+4070 2299 C8
+3524 2556 C8
+6579 3786 C8
+% End plot #6
+% Begin plot #7
+0.480 UP
+1.000 UL
+LTb
+0.90 0.12 0.06 C
+LCb setrgbcolor
+6296 3646 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 25)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.90 0.12 0.06 C
+4357 2534 C9
+3612 2260 C9
+3774 2843 C9
+4336 2457 C9
+3539 2312 C9
+3878 2862 C9
+4290 2388 C9
+3484 2374 C9
+3980 2864 C9
+4225 2323 C9
+3450 2443 C9
+4082 2848 C9
+4142 2269 C9
+3443 2520 C9
+4174 2815 C9
+4045 2230 C9
+3460 2596 C9
+4249 2765 C9
+3943 2207 C9
+3501 2666 C9
+4309 2705 C9
+3840 2202 C9
+3563 2734 C9
+4347 2636 C9
+3736 2215 C9
+3643 2789 C9
+4359 2560 C9
+3644 2246 C9
+3738 2830 C9
+4346 2486 C9
+3565 2292 C9
+3838 2857 C9
+4310 2413 C9
+3501 2349 C9
+3943 2866 C9
+4251 2344 C9
+3460 2418 C9
+4047 2856 C9
+4173 2287 C9
+3443 2493 C9
+4140 2828 C9
+4081 2243 C9
+3450 2567 C9
+4223 2785 C9
+3982 2213 C9
+3483 2642 C9
+4291 2729 C9
+3877 2201 C9
+3537 2711 C9
+4335 2661 C9
+3773 2208 C9
+6579 3646 C9
+% End plot #7
+% Begin plot #8
+0.480 UP
+1.000 UL
+LTb
+0.00 0.00 0.00 C
+LCb setrgbcolor
+6296 3506 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 26)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.00 0.00 0.00 C
+4434 2534 C10
+3579 2207 C10
+3719 2883 C10
+4422 2483 C10
+3529 2240 C10
+3785 2901 C10
+4403 2438 C10
+3482 2274 C10
+3850 2915 C10
+4375 2388 C10
+3441 2312 C10
+3922 2920 C10
+4338 2343 C10
+3411 2358 C10
+3988 2919 C10
+4294 2304 C10
+3386 2401 C10
+4053 2912 C10
+4245 2263 C10
+3371 2449 C10
+4121 2898 C10
+4188 2230 C10
+3367 2500 C10
+4179 2876 C10
+4127 2202 C10
+3370 2546 C10
+4235 2850 C10
+4066 2177 C10
+3382 2597 C10
+4288 2820 C10
+3996 2161 C10
+3405 2647 C10
+4330 2781 C10
+3929 2151 C10
+3436 2690 C10
+4369 2742 C10
+3863 2146 C10
+3474 2736 C10
+4400 2699 C10
+3792 2149 C10
+3520 2777 C10
+4419 2650 C10
+3728 2159 C10
+3573 2812 C10
+4432 2605 C10
+3666 2175 C10
+3628 2847 C10
+4435 2555 C10
+3603 2196 C10
+3691 2873 C10
+4428 2503 C10
+6579 3506 C10
+% End plot #8
+% Begin plot #9
+0.480 UP
+1.000 UL
+LTb
+0.58 0.00 0.83 C
+LCb setrgbcolor
+6296 3366 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 27)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.58 0.00 0.83 C
+4510 2534 C11
+3553 2152 C11
+3651 2916 C11
+4508 2525 C11
+3551 2158 C11
+3658 2919 C11
+4508 2524 C11
+3541 2159 C11
+3664 2924 C11
+4506 2512 C11
+3534 2164 C11
+3676 2924 C11
+4505 2510 C11
+3531 2168 C11
+3680 2929 C11
+4505 2504 C11
+3519 2169 C11
+3691 2931 C11
+4502 2494 C11
+3516 2176 C11
+3699 2933 C11
+4501 2493 C11
+3508 2178 C11
+3704 2938 C11
+4500 2482 C11
+3499 2181 C11
+3717 2938 C11
+4497 2478 C11
+3498 2188 C11
+3721 2942 C11
+4496 2474 C11
+3486 2188 C11
+3730 2945 C11
+4493 2463 C11
+3482 2195 C11
+3741 2946 C11
+4491 2462 C11
+3477 2198 C11
+3745 2950 C11
+4489 2453 C11
+3467 2201 C11
+3758 2951 C11
+4486 2446 C11
+3466 2209 C11
+3764 2953 C11
+4484 2444 C11
+3456 2209 C11
+3771 2956 C11
+4482 2432 C11
+3451 2216 C11
+3784 2956 C11
+6579 3366 C11
+% End plot #9
+% Begin plot #10
+0.480 UP
+1.000 UL
+LTb
+0.00 0.62 0.45 C
+LCb setrgbcolor
+6296 3226 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 28)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.00 0.62 0.45 C
+4586 2534 C12
+3536 2094 C12
+3570 2938 C12
+4585 2587 C12
+3612 2072 C12
+3500 2904 C12
+4580 2647 C12
+3676 2051 C12
+3439 2865 C12
+4559 2693 C12
+3754 2042 C12
+3385 2816 C12
+4537 2753 C12
+3829 2035 C12
+3334 2775 C12
+4499 2796 C12
+3902 2039 C12
+3294 2716 C12
+4457 2846 C12
+3985 2046 C12
+3259 2671 C12
+4410 2888 C12
+4053 2064 C12
+3236 2612 C12
+4348 2924 C12
+4135 2084 C12
+3219 2558 C12
+4294 2960 C12
+4201 2114 C12
+3215 2506 C12
+4220 2984 C12
+4271 2147 C12
+3216 2444 C12
+4157 3008 C12
+4335 2183 C12
+3233 2398 C12
+4081 3021 C12
+4391 2231 C12
+3252 2337 C12
+4005 3030 C12
+4447 2270 C12
+3285 2293 C12
+3934 3030 C12
+4489 2327 C12
+3325 2242 C12
+3850 3026 C12
+4528 2373 C12
+3368 2197 C12
+3782 3011 C12
+4555 2430 C12
+3427 2160 C12
+6579 3226 C12
+% End plot #10
+% Begin plot #11
+0.480 UP
+1.000 UL
+LTb
+0.34 0.71 0.91 C
+LCb setrgbcolor
+6296 3086 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 27)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.34 0.71 0.91 C
+4510 2534 C11
+3553 2152 C11
+3651 2916 C11
+4508 2525 C11
+3551 2158 C11
+3658 2919 C11
+4508 2524 C11
+3541 2159 C11
+3664 2924 C11
+4506 2512 C11
+3534 2164 C11
+3676 2924 C11
+4505 2510 C11
+3531 2168 C11
+3680 2929 C11
+4505 2504 C11
+3519 2169 C11
+3691 2931 C11
+4502 2494 C11
+3516 2176 C11
+3699 2933 C11
+4501 2493 C11
+3508 2178 C11
+3704 2938 C11
+4500 2482 C11
+3499 2181 C11
+3717 2938 C11
+4497 2478 C11
+3498 2188 C11
+3721 2942 C11
+4496 2474 C11
+3486 2188 C11
+3730 2945 C11
+4493 2463 C11
+3482 2195 C11
+3741 2946 C11
+4491 2462 C11
+3477 2198 C11
+3745 2950 C11
+4489 2453 C11
+3467 2201 C11
+3758 2951 C11
+4486 2446 C11
+3466 2209 C11
+3764 2953 C11
+4484 2444 C11
+3456 2209 C11
+3771 2956 C11
+4482 2432 C11
+3451 2216 C11
+3784 2956 C11
+6579 3086 C11
+% End plot #11
+% Begin plot #12
+0.480 UP
+1.000 UL
+LTb
+0.90 0.62 0.00 C
+LCb setrgbcolor
+6296 2946 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 28)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.90 0.62 0.00 C
+4586 2534 C12
+3536 2094 C12
+3570 2938 C12
+4585 2587 C12
+3612 2072 C12
+3500 2904 C12
+4580 2647 C12
+3676 2051 C12
+3439 2865 C12
+4559 2693 C12
+3754 2042 C12
+3385 2816 C12
+4537 2753 C12
+3829 2035 C12
+3334 2775 C12
+4499 2796 C12
+3902 2039 C12
+3294 2716 C12
+4457 2846 C12
+3985 2046 C12
+3259 2671 C12
+4410 2888 C12
+4053 2064 C12
+3236 2612 C12
+4348 2924 C12
+4135 2084 C12
+3219 2558 C12
+4294 2960 C12
+4201 2114 C12
+3215 2506 C12
+4220 2984 C12
+4271 2147 C12
+3216 2444 C12
+4157 3008 C12
+4335 2183 C12
+3233 2398 C12
+4081 3021 C12
+4391 2231 C12
+3252 2337 C12
+4005 3030 C12
+4447 2270 C12
+3285 2293 C12
+3934 3030 C12
+4489 2327 C12
+3325 2242 C12
+3850 3026 C12
+4528 2373 C12
+3368 2197 C12
+3782 3011 C12
+4555 2430 C12
+3427 2160 C12
+6579 2946 C12
+% End plot #12
+% Begin plot #13
+0.480 UP
+1.000 UL
+LTb
+0.94 0.89 0.26 C
+LCb setrgbcolor
+6296 2806 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 29)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.94 0.89 0.26 C
+4662 2534 C13
+3527 2034 C13
+3474 2948 C13
+4647 2668 C13
+3715 1991 C13
+3322 2848 C13
+4590 2800 C13
+3890 1983 C13
+3216 2721 C13
+4474 2909 C13
+4089 2012 C13
+3150 2590 C13
+4341 3005 C13
+4258 2082 C13
+3142 2455 C13
+4160 3061 C13
+4423 2173 C13
+3180 2319 C13
+3989 3086 C13
+4545 2293 C13
+3278 2203 C13
+3789 3072 C13
+4631 2422 C13
+3398 2096 C13
+3614 3016 C13
+4661 2556 C13
+3569 2027 C13
+3440 2936 C13
+4644 2695 C13
+3735 1985 C13
+3304 2824 C13
+4566 2816 C13
+3935 1985 C13
+3198 2700 C13
+4460 2933 C13
+4112 2024 C13
+3147 2567 C13
+4301 3013 C13
+4295 2093 C13
+3142 2427 C13
+4141 3071 C13
+4443 2196 C13
+3199 2302 C13
+3944 3086 C13
+4566 2314 C13
+3289 2177 C13
+3766 3063 C13
+4638 2445 C13
+3436 2086 C13
+3576 3007 C13
+4665 2584 C13
+6579 2806 C13
+% End plot #13
+% Begin plot #14
+0.480 UP
+1.000 UL
+LTb
+0.00 0.45 0.70 C
+LCb setrgbcolor
+6296 2666 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 30)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.00 0.45 0.70 C
+4738 2534 C14
+3529 1972 C14
+3365 2943 C14
+4685 2768 C14
+3862 1925 C14
+3144 2747 C14
+4507 2969 C14
+4175 1991 C14
+3062 2499 C14
+4227 3105 C14
+4474 2135 C14
+3131 2280 C14
+3910 3138 C14
+4671 2361 C14
+3320 2073 C14
+3583 3068 C14
+4736 2581 C14
+3613 1955 C14
+3302 2901 C14
+4661 2825 C14
+3925 1931 C14
+3116 2690 C14
+4440 3004 C14
+4258 2014 C14
+3062 2448 C14
+4166 3123 C14
+4523 2190 C14
+3168 2225 C14
+3824 3133 C14
+4702 2402 C14
+3380 2040 C14
+3518 3030 C14
+4732 2649 C14
+3685 1937 C14
+3245 2864 C14
+4615 2863 C14
+4004 1943 C14
+3089 2625 C14
+4388 3046 C14
+4325 2046 C14
+3078 2404 C14
+4080 3133 C14
+4578 2239 C14
+3200 2170 C14
+3759 3118 C14
+4719 2457 C14
+3456 2012 C14
+3441 3001 C14
+4722 2702 C14
+3747 1928 C14
+3202 2805 C14
+6579 2666 C14
+% End plot #14
+% Begin plot #15
+0.480 UP
+1.000 UL
+LTb
+0.90 0.12 0.06 C
+LCb setrgbcolor
+6296 2526 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 31)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.90 0.12 0.06 C
+4814 2534 C15
+3541 1909 C15
+3245 2920 C15
+4690 2885 C15
+4049 1890 C15
+3000 2600 C15
+4318 3131 C15
+4501 2100 C15
+3065 2226 C15
+3841 3187 C15
+4781 2419 C15
+3423 1965 C15
+3355 3018 C15
+4764 2780 C15
+3879 1875 C15
+3045 2689 C15
+4451 3076 C15
+4378 2009 C15
+3020 2351 C15
+3986 3194 C15
+4727 2323 C15
+3279 2024 C15
+3502 3086 C15
+4798 2669 C15
+3747 1875 C15
+3111 2809 C15
+4574 2996 C15
+4224 1954 C15
+2988 2440 C15
+4138 3184 C15
+4644 2204 C15
+3186 2122 C15
+3641 3143 C15
+4817 2570 C15
+3578 1897 C15
+3214 2900 C15
+4663 2904 C15
+4092 1899 C15
+2992 2566 C15
+4289 3146 C15
+4529 2126 C15
+3088 2202 C15
+3794 3182 C15
+4793 2442 C15
+3456 1950 C15
+3326 2991 C15
+4751 2813 C15
+3919 1877 C15
+3031 2667 C15
+4411 3090 C15
+4416 2028 C15
+6579 2526 C15
+% End plot #15
+% Begin plot #16
+0.480 UP
+1.000 UL
+LTb
+0.00 0.00 0.00 C
+LCb setrgbcolor
+6296 2386 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 32)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.00 0.00 0.00 C
+4891 2534 S0
+3564 1845 S0
+3116 2878 S0
+4655 3014 S0
+4270 1902 S0
+2928 2410 S0
+4029 3247 S0
+4801 2306 S0
+3280 1956 S0
+3369 3068 S0
+4828 2811 S0
+3955 1822 S0
+2937 2641 S0
+4336 3180 S0
+4601 2097 S0
+3057 2133 S0
+3674 3200 S0
+4888 2584 S0
+3638 1832 S0
+3070 2862 S0
+4602 3032 S0
+4326 1931 S0
+2927 2348 S0
+3996 3250 S0
+4820 2354 S0
+3345 1932 S0
+3302 3054 S0
+4796 2831 S0
+4013 1834 S0
+2919 2577 S0
+4306 3206 S0
+4635 2139 S0
+3106 2101 S0
+3594 3192 S0
+4885 2604 S0
+3694 1827 S0
+3039 2803 S0
+4579 3079 S0
+4368 1960 S0
+2953 2313 S0
+3911 3251 S0
+4847 2375 S0
+3394 1913 S0
+3262 3007 S0
+4784 2892 S0
+4058 1846 S0
+2919 2543 S0
+4226 3218 S0
+4688 2158 S0
+3142 2074 S0
+3550 3162 S0
+6579 2386 S0
+% End plot #16
+% Begin plot #17
+0.480 UP
+1.000 UL
+LTb
+0.58 0.00 0.83 C
+LCb setrgbcolor
+6296 2246 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 33)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.58 0.00 0.83 C
+4967 2534 S1
+3599 1781 S1
+2982 2816 S1
+4575 3148 S1
+4515 1971 S1
+2963 2185 S1
+3666 3270 S1
+4965 2583 S1
+3694 1771 S1
+2933 2759 S1
+4512 3187 S1
+4581 2027 S1
+3003 2119 S1
+3587 3247 S1
+4952 2638 S1
+3791 1765 S1
+2893 2709 S1
+4438 3218 S1
+4648 2084 S1
+3046 2058 S1
+3513 3214 S1
+4933 2703 S1
+3883 1763 S1
+2865 2661 S1
+4352 3243 S1
+4714 2139 S1
+3095 2005 S1
+3442 3173 S1
+4911 2774 S1
+3967 1767 S1
+2849 2609 S1
+4260 3264 S1
+4777 2188 S1
+3155 1961 S1
+3368 3126 S1
+4886 2844 S1
+4044 1780 S1
+2843 2548 S1
+4168 3283 S1
+4832 2235 S1
+3227 1924 S1
+3290 3079 S1
+4855 2908 S1
+4117 1802 S1
+2844 2477 S1
+4083 3299 S1
+4875 2283 S1
+3309 1890 S1
+3212 3035 S1
+4814 2961 S1
+4193 1832 S1
+6579 2246 S1
+% End plot #17
+% Begin plot #18
+0.480 UP
+1.000 UL
+LTb
+0.00 0.62 0.45 C
+LCb setrgbcolor
+6296 2106 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 34)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.00 0.62 0.45 C
+5043 2534 S2
+3646 1720 S2
+2847 2735 S2
+4451 3278 S2
+4767 2101 S2
+3116 1945 S2
+3269 3165 S2
+4887 2912 S2
+4237 1777 S2
+2776 2355 S2
+3904 3350 S2
+5032 2511 S2
+3585 1723 S2
+2881 2797 S2
+4478 3245 S2
+4736 2043 S2
+3074 1994 S2
+3326 3187 S2
+4938 2886 S2
+4150 1767 S2
+2763 2377 S2
+3969 3359 S2
+5011 2448 S2
+3555 1739 S2
+2903 2863 S2
+4526 3208 S2
+4689 2016 S2
+3008 2019 S2
+3405 3203 S2
+4971 2864 S2
+4085 1746 S2
+2770 2438 S2
+4001 3362 S2
+5000 2378 S2
+3502 1762 S2
+2936 2891 S2
+4605 3187 S2
+4622 1998 S2
+2959 2040 S2
+3468 3235 S2
+4978 2807 S2
+4050 1725 S2
+2769 2510 S2
+4056 3353 S2
+4987 2348 S2
+3416 1777 S2
+2987 2910 S2
+4665 3168 S2
+4565 1956 S2
+2941 2090 S2
+3505 3273 S2
+6579 2106 S2
+% End plot #18
+% Begin plot #19
+0.480 UP
+1.000 UL
+LTb
+0.34 0.71 0.91 C
+LCb setrgbcolor
+6296 1966 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 35)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.34 0.71 0.91 C
+5119 2534 S3
+3705 1661 S3
+2721 2638 S3
+4283 3388 S3
+4999 2287 S3
+3375 1731 S3
+2896 2934 S3
+4567 3247 S3
+4791 2011 S3
+3073 1921 S3
+3167 3145 S3
+4884 3054 S3
+4448 1838 S3
+2807 2113 S3
+3533 3315 S3
+5052 2816 S3
+4112 1685 S3
+2711 2412 S3
+3852 3410 S3
+5113 2522 S3
+3747 1661 S3
+2711 2644 S3
+4265 3386 S3
+5012 2311 S3
+3366 1722 S3
+2894 2902 S3
+4568 3266 S3
+4795 2023 S3
+3097 1911 S3
+3143 3151 S3
+4855 3048 S3
+4479 1838 S3
+2815 2115 S3
+3519 3303 S3
+5062 2841 S3
+4106 1696 S3
+2710 2376 S3
+3848 3411 S3
+5104 2530 S3
+3782 1657 S3
+2709 2658 S3
+4226 3384 S3
+5028 2312 S3
+3376 1721 S3
+2884 2874 S3
+4577 3281 S3
+4795 2050 S3
+3101 1890 S3
+3134 3145 S3
+4829 3054 S3
+4509 1832 S3
+6579 1966 S3
+% End plot #19
+% Begin plot #20
+0.480 UP
+1.000 UL
+LTb
+0.90 0.62 0.00 C
+LCb setrgbcolor
+6296 1826 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 36)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.90 0.62 0.00 C
+5195 2534 S4
+3775 1607 S4
+2610 2527 S4
+4075 3464 S4
+5174 2517 S4
+3713 1599 S4
+2641 2604 S4
+4085 3466 S4
+5158 2410 S4
+3700 1611 S4
+2639 2679 S4
+4152 3447 S4
+5159 2395 S4
+3582 1622 S4
+2658 2667 S4
+4266 3447 S4
+5121 2377 S4
+3522 1623 S4
+2697 2742 S4
+4276 3433 S4
+5100 2274 S4
+3509 1651 S4
+2704 2814 S4
+4341 3403 S4
+5083 2258 S4
+3397 1667 S4
+2745 2806 S4
+4450 3399 S4
+5028 2238 S4
+3338 1676 S4
+2791 2878 S4
+4461 3372 S4
+5004 2142 S4
+3326 1720 S4
+2806 2946 S4
+4521 3331 S4
+4971 2124 S4
+3221 1740 S4
+2866 2942 S4
+4624 3326 S4
+4902 2103 S4
+3164 1754 S4
+2918 3008 S4
+4635 3287 S4
+4875 2016 S4
+3153 1811 S4
+2939 3072 S4
+4688 3236 S4
+4830 1995 S4
+3058 1836 S4
+3014 3072 S4
+6579 1826 S4
+% End plot #20
+% Begin plot #21
+0.480 UP
+1.000 UL
+LTb
+0.94 0.89 0.26 C
+LCb setrgbcolor
+6296 1686 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 42)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.94 0.89 0.26 C
+5728 2534 S10
+4612 1491 S10
+2983 1480 S10
+2070 2520 S10
+3197 3570 S10
+4836 3580 S10
+5710 2534 S10
+4478 1470 S10
+2787 1625 S10
+2316 2773 S10
+4045 3726 S10
+5556 2956 S10
+4931 1778 S10
+3222 1343 S10
+2098 2273 S10
+2990 3398 S10
+4647 3722 S10
+5715 2787 S10
+4799 1663 S10
+3143 1346 S10
+2095 2286 S10
+3078 3430 S10
+4773 3653 S10
+5626 2612 S10
+4160 1433 S10
+2479 1813 S10
+2624 3052 S10
+4315 3791 S10
+5593 3001 S10
+5025 1827 S10
+3395 1263 S10
+2186 2092 S10
+2776 3254 S10
+4389 3811 S10
+5603 2987 S10
+5057 1828 S10
+3458 1245 S10
+2219 2041 S10
+2648 3184 S10
+4196 3861 S10
+5505 3194 S10
+5545 2151 S10
+4168 1239 S10
+2729 1504 S10
+2021 2489 S10
+3161 3542 S10
+4765 3677 S10
+5740 2708 S10
+4744 1611 S10
+3103 1366 S10
+2074 2320 S10
+6579 1686 S10
+% End plot #21
+% Begin plot #22
+0.480 UP
+1.000 UL
+LTb
+0.00 0.45 0.70 C
+LCb setrgbcolor
+6296 1546 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 43)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.00 0.45 0.70 C
+6033 2534 S11
+5382 1708 S11
+4185 1069 S11
+2957 1383 S11
+1918 2287 S11
+2028 3102 S11
+3032 3841 S11
+4235 4048 S11
+5311 3307 S11
+5945 2379 S11
+5187 1592 S11
+3970 1037 S11
+2763 1258 S11
+1963 2052 S11
+2183 2966 S11
+3336 3807 S11
+4623 3959 S11
+5702 3366 S11
+6039 2582 S11
+5093 1683 S11
+3867 1020 S11
+2715 1449 S11
+1783 2295 S11
+2014 3088 S11
+3192 3836 S11
+4417 3969 S11
+5467 3138 S11
+5932 2217 S11
+5200 1454 S11
+3985 1026 S11
+2804 1416 S11
+1935 2282 S11
+2309 3173 S11
+3407 3941 S11
+4656 3967 S11
+5650 3297 S11
+5965 2481 S11
+4895 1584 S11
+3598 1025 S11
+2469 1447 S11
+1784 2237 S11
+2193 3077 S11
+3422 3872 S11
+4692 3853 S11
+5760 3048 S11
+5948 2223 S11
+5058 1427 S11
+3877 1001 S11
+2722 1602 S11
+1826 2542 S11
+2296 3326 S11
+6579 1546 S11
+% End plot #22
+% Begin plot #23
+0.480 UP
+1.000 UL
+LTb
+0.90 0.12 0.06 C
+LCb setrgbcolor
+6296 1406 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 44)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.90 0.12 0.06 C
+6338 2534 S12
+6147 2049 S12
+5521 1538 S12
+4780 1088 S12
+4096 833 S12
+3387 912 S12
+2752 1424 S12
+2125 1991 S12
+1665 2549 S12
+1863 3026 S12
+2445 3467 S12
+3119 3954 S12
+3910 4212 S12
+4681 4154 S12
+5403 3880 S12
+5956 3456 S12
+6265 2988 S12
+6321 2520 S12
+5797 1989 S12
+5018 1424 S12
+4338 976 S12
+3640 829 S12
+2987 1203 S12
+2372 1753 S12
+1726 2361 S12
+1570 2845 S12
+1939 3282 S12
+2460 3728 S12
+3166 4099 S12
+3941 4232 S12
+4719 4153 S12
+5369 3823 S12
+5870 3350 S12
+6233 2906 S12
+6111 2407 S12
+5422 1843 S12
+4680 1309 S12
+3957 878 S12
+3243 916 S12
+2651 1296 S12
+2020 1834 S12
+1498 2368 S12
+1527 2827 S12
+1822 3283 S12
+2394 3726 S12
+3139 4093 S12
+3852 4248 S12
+4584 4152 S12
+5177 3703 S12
+5759 3197 S12
+6158 2737 S12
+6579 1406 S12
+% End plot #23
+% Begin plot #24
+0.480 UP
+1.000 UL
+LTb
+0.00 0.00 0.00 C
+LCb setrgbcolor
+6296 1266 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 45)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.00 0.00 0.00 C
+6642 2534 S13
+6638 2373 S13
+6618 2249 S13
+6571 2153 S13
+6494 2058 S13
+6400 1947 S13
+6303 1840 S13
+6200 1757 S13
+6090 1698 S13
+5972 1650 S13
+5839 1597 S13
+5702 1536 S13
+5583 1496 S13
+5485 1496 S13
+5382 1512 S13
+5251 1505 S13
+5090 1451 S13
+4938 1369 S13
+4848 1313 S13
+4820 1304 S13
+4791 1298 S13
+4708 1247 S13
+4588 1147 S13
+4496 1040 S13
+4480 977 S13
+4514 955 S13
+4523 926 S13
+4465 861 S13
+4373 777 S13
+4308 708 S13
+4298 674 S13
+4298 668 S13
+4239 663 S13
+4094 644 S13
+3911 623 S13
+3762 608 S13
+3666 610 S13
+3572 633 S13
+3410 670 S13
+3170 715 S13
+2922 765 S13
+2731 807 S13
+2611 844 S13
+2515 892 S13
+2372 969 S13
+2189 1073 S13
+2036 1183 S13
+1948 1274 S13
+1921 1347 S13
+1899 1430 S13
+1818 1558 S13
+6579 1266 S13
+% End plot #24
+% Begin plot #25
+0.480 UP
+1.000 UL
+LTb
+0.58 0.00 0.83 C
+LCb setrgbcolor
+6296 1126 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 46)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.58 0.00 0.83 C
+6947 2534 S14
+6691 2601 S14
+6469 2353 S14
+6325 2181 S14
+4189 1192 S14
+1923 1924 S14
+4668 3630 S14
+4497 1649 S14
+2211 1624 S14
+2545 3671 S14
+5462 2929 S14
+2525 2464 S14
+6579 1126 S14
+% End plot #25
+2.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTB
+LCb setrgbcolor
+854 4619 N
+854 448 L
+6093 0 V
+0 4171 V
+-6093 0 V
+Z stroke
+0.480 UP
+1.000 UL
+LTb
+LCb setrgbcolor
+LCb setrgbcolor
+3900 4829 M
+[ [(Helvetica) 140.0 0.0 true true 0 (no-title                                                                      MAD-X 5.05.02  23/05/24 13.31.29 )]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+LTb
+stroke
+grestore
+end
+showpage
+%%Page: 2 2
+gnudict begin
+gsave
+doclip
+50 50 translate
+0.100 0.100 scale
+90 rotate
+0 -5040 translate
+0 setgray
+newpath
+(Helvetica) findfont 140 scalefont setfont
+BackgroundColor 0 lt 3 1 roll 0 lt exch 0 lt or or not {gsave BackgroundColor C clippath fill grestore} if
+1.000 UL
+LTb
+LCb setrgbcolor
+854 448 M
+63 0 V
+6030 0 R
+-63 0 V
+stroke
+770 448 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-0.015)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+/vshift -46 def
+1.000 UL
+LTb
+LCb setrgbcolor
+854 1143 M
+63 0 V
+6030 0 R
+-63 0 V
+stroke
+770 1143 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-0.01)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+854 1838 M
+63 0 V
+6030 0 R
+-63 0 V
+stroke
+770 1838 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-0.005)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+854 2534 M
+63 0 V
+6030 0 R
+-63 0 V
+stroke
+770 2534 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+854 3229 M
+63 0 V
+6030 0 R
+-63 0 V
+stroke
+770 3229 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.005)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+854 3924 M
+63 0 V
+6030 0 R
+-63 0 V
+stroke
+770 3924 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.01)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+854 4619 M
+63 0 V
+6030 0 R
+-63 0 V
+stroke
+770 4619 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.015)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+854 448 M
+0 63 V
+0 4108 R
+0 -63 V
+stroke
+854 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-0.02)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+1616 448 M
+0 63 V
+0 4108 R
+0 -63 V
+stroke
+1616 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-0.015)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+2377 448 M
+0 63 V
+0 4108 R
+0 -63 V
+stroke
+2377 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-0.01)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+3139 448 M
+0 63 V
+0 4108 R
+0 -63 V
+stroke
+3139 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-0.005)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+3901 448 M
+0 63 V
+0 4108 R
+0 -63 V
+stroke
+3901 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+4662 448 M
+0 63 V
+0 4108 R
+0 -63 V
+stroke
+4662 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.005)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+5424 448 M
+0 63 V
+0 4108 R
+0 -63 V
+stroke
+5424 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.01)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+6185 448 M
+0 63 V
+0 4108 R
+0 -63 V
+stroke
+6185 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.015)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+6947 448 M
+0 63 V
+0 4108 R
+0 -63 V
+stroke
+6947 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.02)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTB
+LCb setrgbcolor
+854 4619 N
+854 448 L
+6093 0 V
+0 4171 V
+-6093 0 V
+Z stroke
+0.480 UP
+1.000 UL
+LTb
+LCb setrgbcolor
+LCb setrgbcolor
+133 2533 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (py)]
+] -46.7 MCshow
+grestore
+/Helvetica findfont 140 scalefont setfont
+LTb
+LCb setrgbcolor
+3900 98 M
+[ [(Helvetica) 140.0 0.0 true true 0 (y)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+LTb
+% Begin plot #1
+0.480 UP
+1.000 UL
+LTb
+0.58 0.00 0.83 C
+LCb setrgbcolor
+6296 4486 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 19)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.58 0.00 0.83 C
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+3901 2534 C3
+6579 4486 C3
+% End plot #1
+% Begin plot #2
+0.480 UP
+1.000 UL
+LTb
+0.00 0.62 0.45 C
+LCb setrgbcolor
+6296 4346 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 20)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.00 0.62 0.45 C
+3977 2534 C4
+3847 2491 C4
+3893 2588 C4
+3964 2506 C4
+3827 2514 C4
+3931 2586 C4
+3934 2486 C4
+3826 2542 C4
+3962 2570 C4
+3896 2478 C4
+3844 2567 C4
+3976 2545 C4
+3860 2484 C4
+3877 2585 C4
+3971 2517 C4
+3833 2503 C4
+3916 2589 C4
+3948 2493 C4
+3824 2530 C4
+3951 2578 C4
+3913 2480 C4
+3835 2557 C4
+3972 2557 C4
+3874 2480 C4
+3862 2579 C4
+3976 2529 C4
+3842 2494 C4
+3899 2589 C4
+3960 2503 C4
+3826 2518 C4
+3937 2584 C4
+3929 2484 C4
+3828 2546 C4
+3965 2567 C4
+3890 2478 C4
+3849 2571 C4
+3977 2541 C4
+3854 2487 C4
+3883 2586 C4
+3969 2513 C4
+3830 2507 C4
+3922 2588 C4
+3943 2490 C4
+3824 2534 C4
+3955 2576 C4
+3907 2479 C4
+3838 2561 C4
+3974 2553 C4
+3869 2481 C4
+3868 2581 C4
+3975 2525 C4
+6579 4346 C4
+% End plot #2
+% Begin plot #3
+0.480 UP
+1.000 UL
+LTb
+0.34 0.71 0.91 C
+LCb setrgbcolor
+6296 4206 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 21)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.34 0.71 0.91 C
+4053 2534 C5
+3794 2448 C5
+3883 2642 C5
+4029 2482 C5
+3755 2491 C5
+3957 2640 C5
+3975 2442 C5
+3750 2544 C5
+4017 2612 C5
+3904 2423 C5
+3780 2594 C5
+4050 2567 C5
+3832 2431 C5
+3839 2630 C5
+4048 2513 C5
+3776 2462 C5
+3911 2644 C5
+4012 2465 C5
+3749 2510 C5
+3981 2632 C5
+3949 2432 C5
+3757 2563 C5
+4033 2597 C5
+3876 2423 C5
+3799 2610 C5
+4053 2547 C5
+3808 2440 C5
+3865 2639 C5
+4038 2494 C5
+3762 2479 C5
+3939 2643 C5
+3991 2450 C5
+3748 2530 C5
+4004 2621 C5
+3922 2426 C5
+3770 2582 C5
+4044 2579 C5
+3849 2426 C5
+3822 2623 C5
+4052 2527 C5
+3788 2452 C5
+3893 2643 C5
+4024 2476 C5
+3752 2497 C5
+3965 2638 C5
+3967 2438 C5
+3752 2550 C5
+4022 2608 C5
+3895 2423 C5
+3786 2599 C5
+4051 2560 C5
+6579 4206 C5
+% End plot #3
+% Begin plot #4
+0.480 UP
+1.000 UL
+LTb
+0.90 0.62 0.00 C
+LCb setrgbcolor
+6296 4066 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 22)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.90 0.62 0.00 C
+4129 2534 C6
+3743 2404 C6
+3869 2695 C6
+4098 2462 C6
+3686 2461 C6
+3970 2696 C6
+4028 2404 C6
+3672 2533 C6
+4057 2664 C6
+3933 2372 C6
+3703 2605 C6
+4114 2606 C6
+3832 2371 C6
+3773 2662 C6
+4129 2535 C6
+3744 2403 C6
+3867 2695 C6
+4099 2463 C6
+3687 2460 C6
+3968 2696 C6
+4029 2405 C6
+3672 2532 C6
+4056 2664 C6
+3934 2372 C6
+3702 2604 C6
+4114 2607 C6
+3833 2371 C6
+3771 2662 C6
+4129 2536 C6
+3745 2402 C6
+3866 2695 C6
+4099 2464 C6
+3688 2460 C6
+3967 2696 C6
+4030 2406 C6
+3672 2531 C6
+4055 2665 C6
+3936 2372 C6
+3701 2603 C6
+4113 2608 C6
+3835 2371 C6
+3770 2661 C6
+4129 2537 C6
+3746 2402 C6
+3864 2695 C6
+4100 2465 C6
+3688 2458 C6
+3966 2696 C6
+4032 2406 C6
+3672 2530 C6
+4054 2666 C6
+6579 4066 C6
+% End plot #4
+% Begin plot #5
+0.480 UP
+1.000 UL
+LTb
+0.94 0.89 0.26 C
+LCb setrgbcolor
+6296 3926 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 23)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.94 0.89 0.26 C
+4205 2534 C7
+3695 2358 C7
+3847 2747 C7
+4172 2449 C7
+3624 2423 C7
+3965 2753 C7
+4097 2378 C7
+3595 2504 C7
+4073 2725 C7
+3994 2330 C7
+3613 2589 C7
+4156 2669 C7
+3877 2312 C7
+3674 2666 C7
+4201 2593 C7
+3763 2328 C7
+3769 2724 C7
+4200 2507 C7
+3669 2375 C7
+3884 2753 C7
+4153 2425 C7
+3610 2447 C7
+4001 2748 C7
+4068 2360 C7
+3596 2531 C7
+4102 2711 C7
+3958 2321 C7
+3627 2614 C7
+4175 2647 C7
+3840 2314 C7
+3700 2687 C7
+4206 2566 C7
+3731 2340 C7
+3803 2736 C7
+4190 2481 C7
+3647 2395 C7
+3920 2755 C7
+4130 2403 C7
+3601 2472 C7
+4035 2740 C7
+4036 2345 C7
+3601 2557 C7
+4129 2693 C7
+3921 2315 C7
+3646 2639 C7
+4189 2623 C7
+3805 2318 C7
+3730 2705 C7
+4206 2540 C7
+3702 2354 C7
+3838 2746 C7
+6579 3926 C7
+% End plot #5
+% Begin plot #6
+0.480 UP
+1.000 UL
+LTb
+0.00 0.45 0.70 C
+LCb setrgbcolor
+6296 3786 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 24)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.00 0.45 0.70 C
+4281 2534 C8
+3651 2310 C8
+3816 2797 C8
+4252 2447 C8
+3573 2374 C8
+3936 2810 C8
+4186 2370 C8
+3528 2452 C8
+4052 2795 C8
+4092 2308 C8
+3520 2537 C8
+4154 2754 C8
+3980 2269 C8
+3552 2624 C8
+4231 2691 C8
+3859 2257 C8
+3619 2701 C8
+4274 2611 C8
+3742 2273 C8
+3715 2761 C8
+4280 2524 C8
+3643 2316 C8
+3828 2799 C8
+4246 2440 C8
+3567 2381 C8
+3947 2810 C8
+4178 2363 C8
+3525 2459 C8
+4064 2793 C8
+4082 2303 C8
+3522 2547 C8
+4164 2749 C8
+3967 2267 C8
+3557 2632 C8
+4237 2682 C8
+3847 2257 C8
+3628 2707 C8
+4277 2603 C8
+3733 2276 C8
+3725 2766 C8
+4278 2517 C8
+3633 2321 C8
+3839 2802 C8
+4241 2430 C8
+3561 2388 C8
+3961 2810 C8
+4169 2355 C8
+3523 2469 C8
+4075 2789 C8
+4070 2299 C8
+3524 2556 C8
+6579 3786 C8
+% End plot #6
+% Begin plot #7
+0.480 UP
+1.000 UL
+LTb
+0.90 0.12 0.06 C
+LCb setrgbcolor
+6296 3646 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 25)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.90 0.12 0.06 C
+4357 2534 C9
+3612 2260 C9
+3774 2843 C9
+4336 2457 C9
+3539 2312 C9
+3878 2862 C9
+4290 2388 C9
+3484 2374 C9
+3980 2864 C9
+4225 2323 C9
+3450 2443 C9
+4082 2848 C9
+4142 2269 C9
+3443 2520 C9
+4174 2815 C9
+4045 2230 C9
+3460 2596 C9
+4249 2765 C9
+3943 2207 C9
+3501 2666 C9
+4309 2705 C9
+3840 2202 C9
+3563 2734 C9
+4347 2636 C9
+3736 2215 C9
+3643 2789 C9
+4359 2560 C9
+3644 2246 C9
+3738 2830 C9
+4346 2486 C9
+3565 2292 C9
+3838 2857 C9
+4310 2413 C9
+3501 2349 C9
+3943 2866 C9
+4251 2344 C9
+3460 2418 C9
+4047 2856 C9
+4173 2287 C9
+3443 2493 C9
+4140 2828 C9
+4081 2243 C9
+3450 2567 C9
+4223 2785 C9
+3982 2213 C9
+3483 2642 C9
+4291 2729 C9
+3877 2201 C9
+3537 2711 C9
+4335 2661 C9
+3773 2208 C9
+6579 3646 C9
+% End plot #7
+% Begin plot #8
+0.480 UP
+1.000 UL
+LTb
+0.00 0.00 0.00 C
+LCb setrgbcolor
+6296 3506 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 26)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.00 0.00 0.00 C
+4434 2534 C10
+3579 2207 C10
+3719 2883 C10
+4422 2483 C10
+3529 2240 C10
+3785 2901 C10
+4403 2438 C10
+3482 2274 C10
+3850 2915 C10
+4375 2388 C10
+3441 2312 C10
+3922 2920 C10
+4338 2343 C10
+3411 2358 C10
+3988 2919 C10
+4294 2304 C10
+3386 2401 C10
+4053 2912 C10
+4245 2263 C10
+3371 2449 C10
+4121 2898 C10
+4188 2230 C10
+3367 2500 C10
+4179 2876 C10
+4127 2202 C10
+3370 2546 C10
+4235 2850 C10
+4066 2177 C10
+3382 2597 C10
+4288 2820 C10
+3996 2161 C10
+3405 2647 C10
+4330 2781 C10
+3929 2151 C10
+3436 2690 C10
+4369 2742 C10
+3863 2146 C10
+3474 2736 C10
+4400 2699 C10
+3792 2149 C10
+3520 2777 C10
+4419 2650 C10
+3728 2159 C10
+3573 2812 C10
+4432 2605 C10
+3666 2175 C10
+3628 2847 C10
+4435 2555 C10
+3603 2196 C10
+3691 2873 C10
+4428 2503 C10
+6579 3506 C10
+% End plot #8
+% Begin plot #9
+0.480 UP
+1.000 UL
+LTb
+0.58 0.00 0.83 C
+LCb setrgbcolor
+6296 3366 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 27)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.58 0.00 0.83 C
+4510 2534 C11
+3553 2152 C11
+3651 2916 C11
+4508 2525 C11
+3551 2158 C11
+3658 2919 C11
+4508 2524 C11
+3541 2159 C11
+3664 2924 C11
+4506 2512 C11
+3534 2164 C11
+3676 2924 C11
+4505 2510 C11
+3531 2168 C11
+3680 2929 C11
+4505 2504 C11
+3519 2169 C11
+3691 2931 C11
+4502 2494 C11
+3516 2176 C11
+3699 2933 C11
+4501 2493 C11
+3508 2178 C11
+3704 2938 C11
+4500 2482 C11
+3499 2181 C11
+3717 2938 C11
+4497 2478 C11
+3498 2188 C11
+3721 2942 C11
+4496 2474 C11
+3486 2188 C11
+3730 2945 C11
+4493 2463 C11
+3482 2195 C11
+3741 2946 C11
+4491 2462 C11
+3477 2198 C11
+3745 2950 C11
+4489 2453 C11
+3467 2201 C11
+3758 2951 C11
+4486 2446 C11
+3466 2209 C11
+3764 2953 C11
+4484 2444 C11
+3456 2209 C11
+3771 2956 C11
+4482 2432 C11
+3451 2216 C11
+3784 2956 C11
+6579 3366 C11
+% End plot #9
+% Begin plot #10
+0.480 UP
+1.000 UL
+LTb
+0.00 0.62 0.45 C
+LCb setrgbcolor
+6296 3226 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 28)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.00 0.62 0.45 C
+4586 2534 C12
+3536 2094 C12
+3570 2938 C12
+4585 2587 C12
+3612 2072 C12
+3500 2904 C12
+4580 2647 C12
+3676 2051 C12
+3439 2865 C12
+4559 2693 C12
+3754 2042 C12
+3385 2816 C12
+4537 2753 C12
+3829 2035 C12
+3334 2775 C12
+4499 2796 C12
+3902 2039 C12
+3294 2716 C12
+4457 2846 C12
+3985 2046 C12
+3259 2671 C12
+4410 2888 C12
+4053 2064 C12
+3236 2612 C12
+4348 2924 C12
+4135 2084 C12
+3219 2558 C12
+4294 2960 C12
+4201 2114 C12
+3215 2506 C12
+4220 2984 C12
+4271 2147 C12
+3216 2444 C12
+4157 3008 C12
+4335 2183 C12
+3233 2398 C12
+4081 3021 C12
+4391 2231 C12
+3252 2337 C12
+4005 3030 C12
+4447 2270 C12
+3285 2293 C12
+3934 3030 C12
+4489 2327 C12
+3325 2242 C12
+3850 3026 C12
+4528 2373 C12
+3368 2197 C12
+3782 3011 C12
+4555 2430 C12
+3427 2160 C12
+6579 3226 C12
+% End plot #10
+% Begin plot #11
+0.480 UP
+1.000 UL
+LTb
+0.34 0.71 0.91 C
+LCb setrgbcolor
+6296 3086 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 27)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.34 0.71 0.91 C
+4510 2534 C11
+3553 2152 C11
+3651 2916 C11
+4508 2525 C11
+3551 2158 C11
+3658 2919 C11
+4508 2524 C11
+3541 2159 C11
+3664 2924 C11
+4506 2512 C11
+3534 2164 C11
+3676 2924 C11
+4505 2510 C11
+3531 2168 C11
+3680 2929 C11
+4505 2504 C11
+3519 2169 C11
+3691 2931 C11
+4502 2494 C11
+3516 2176 C11
+3699 2933 C11
+4501 2493 C11
+3508 2178 C11
+3704 2938 C11
+4500 2482 C11
+3499 2181 C11
+3717 2938 C11
+4497 2478 C11
+3498 2188 C11
+3721 2942 C11
+4496 2474 C11
+3486 2188 C11
+3730 2945 C11
+4493 2463 C11
+3482 2195 C11
+3741 2946 C11
+4491 2462 C11
+3477 2198 C11
+3745 2950 C11
+4489 2453 C11
+3467 2201 C11
+3758 2951 C11
+4486 2446 C11
+3466 2209 C11
+3764 2953 C11
+4484 2444 C11
+3456 2209 C11
+3771 2956 C11
+4482 2432 C11
+3451 2216 C11
+3784 2956 C11
+6579 3086 C11
+% End plot #11
+% Begin plot #12
+0.480 UP
+1.000 UL
+LTb
+0.90 0.62 0.00 C
+LCb setrgbcolor
+6296 2946 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 28)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.90 0.62 0.00 C
+4586 2534 C12
+3536 2094 C12
+3570 2938 C12
+4585 2587 C12
+3612 2072 C12
+3500 2904 C12
+4580 2647 C12
+3676 2051 C12
+3439 2865 C12
+4559 2693 C12
+3754 2042 C12
+3385 2816 C12
+4537 2753 C12
+3829 2035 C12
+3334 2775 C12
+4499 2796 C12
+3902 2039 C12
+3294 2716 C12
+4457 2846 C12
+3985 2046 C12
+3259 2671 C12
+4410 2888 C12
+4053 2064 C12
+3236 2612 C12
+4348 2924 C12
+4135 2084 C12
+3219 2558 C12
+4294 2960 C12
+4201 2114 C12
+3215 2506 C12
+4220 2984 C12
+4271 2147 C12
+3216 2444 C12
+4157 3008 C12
+4335 2183 C12
+3233 2398 C12
+4081 3021 C12
+4391 2231 C12
+3252 2337 C12
+4005 3030 C12
+4447 2270 C12
+3285 2293 C12
+3934 3030 C12
+4489 2327 C12
+3325 2242 C12
+3850 3026 C12
+4528 2373 C12
+3368 2197 C12
+3782 3011 C12
+4555 2430 C12
+3427 2160 C12
+6579 2946 C12
+% End plot #12
+% Begin plot #13
+0.480 UP
+1.000 UL
+LTb
+0.94 0.89 0.26 C
+LCb setrgbcolor
+6296 2806 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 29)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.94 0.89 0.26 C
+4662 2534 C13
+3527 2034 C13
+3474 2948 C13
+4647 2668 C13
+3715 1991 C13
+3322 2848 C13
+4590 2800 C13
+3890 1983 C13
+3216 2721 C13
+4474 2909 C13
+4089 2012 C13
+3150 2590 C13
+4341 3005 C13
+4258 2082 C13
+3142 2455 C13
+4160 3061 C13
+4423 2173 C13
+3180 2319 C13
+3989 3086 C13
+4545 2293 C13
+3278 2203 C13
+3789 3072 C13
+4631 2422 C13
+3398 2096 C13
+3614 3016 C13
+4661 2556 C13
+3569 2027 C13
+3440 2936 C13
+4644 2695 C13
+3735 1985 C13
+3304 2824 C13
+4566 2816 C13
+3935 1985 C13
+3198 2700 C13
+4460 2933 C13
+4112 2024 C13
+3147 2567 C13
+4301 3013 C13
+4295 2093 C13
+3142 2427 C13
+4141 3071 C13
+4443 2196 C13
+3199 2302 C13
+3944 3086 C13
+4566 2314 C13
+3289 2177 C13
+3766 3063 C13
+4638 2445 C13
+3436 2086 C13
+3576 3007 C13
+4665 2584 C13
+6579 2806 C13
+% End plot #13
+% Begin plot #14
+0.480 UP
+1.000 UL
+LTb
+0.00 0.45 0.70 C
+LCb setrgbcolor
+6296 2666 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 30)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.00 0.45 0.70 C
+4738 2534 C14
+3529 1972 C14
+3365 2943 C14
+4685 2768 C14
+3862 1925 C14
+3144 2747 C14
+4507 2969 C14
+4175 1991 C14
+3062 2499 C14
+4227 3105 C14
+4474 2135 C14
+3131 2280 C14
+3910 3138 C14
+4671 2361 C14
+3320 2073 C14
+3583 3068 C14
+4736 2581 C14
+3613 1955 C14
+3302 2901 C14
+4661 2825 C14
+3925 1931 C14
+3116 2690 C14
+4440 3004 C14
+4258 2014 C14
+3062 2448 C14
+4166 3123 C14
+4523 2190 C14
+3168 2225 C14
+3824 3133 C14
+4702 2402 C14
+3380 2040 C14
+3518 3030 C14
+4732 2649 C14
+3685 1937 C14
+3245 2864 C14
+4615 2863 C14
+4004 1943 C14
+3089 2625 C14
+4388 3046 C14
+4325 2046 C14
+3078 2404 C14
+4080 3133 C14
+4578 2239 C14
+3200 2170 C14
+3759 3118 C14
+4719 2457 C14
+3456 2012 C14
+3441 3001 C14
+4722 2702 C14
+3747 1928 C14
+3202 2805 C14
+6579 2666 C14
+% End plot #14
+% Begin plot #15
+0.480 UP
+1.000 UL
+LTb
+0.90 0.12 0.06 C
+LCb setrgbcolor
+6296 2526 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 31)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.90 0.12 0.06 C
+4814 2534 C15
+3541 1909 C15
+3245 2920 C15
+4690 2885 C15
+4049 1890 C15
+3000 2600 C15
+4318 3131 C15
+4501 2100 C15
+3065 2226 C15
+3841 3187 C15
+4781 2419 C15
+3423 1965 C15
+3355 3018 C15
+4764 2780 C15
+3879 1875 C15
+3045 2689 C15
+4451 3076 C15
+4378 2009 C15
+3020 2351 C15
+3986 3194 C15
+4727 2323 C15
+3279 2024 C15
+3502 3086 C15
+4798 2669 C15
+3747 1875 C15
+3111 2809 C15
+4574 2996 C15
+4224 1954 C15
+2988 2440 C15
+4138 3184 C15
+4644 2204 C15
+3186 2122 C15
+3641 3143 C15
+4817 2570 C15
+3578 1897 C15
+3214 2900 C15
+4663 2904 C15
+4092 1899 C15
+2992 2566 C15
+4289 3146 C15
+4529 2126 C15
+3088 2202 C15
+3794 3182 C15
+4793 2442 C15
+3456 1950 C15
+3326 2991 C15
+4751 2813 C15
+3919 1877 C15
+3031 2667 C15
+4411 3090 C15
+4416 2028 C15
+6579 2526 C15
+% End plot #15
+% Begin plot #16
+0.480 UP
+1.000 UL
+LTb
+0.00 0.00 0.00 C
+LCb setrgbcolor
+6296 2386 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 32)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.00 0.00 0.00 C
+4891 2534 S0
+3564 1845 S0
+3116 2878 S0
+4655 3014 S0
+4270 1902 S0
+2928 2410 S0
+4029 3247 S0
+4801 2306 S0
+3280 1956 S0
+3369 3068 S0
+4828 2811 S0
+3955 1822 S0
+2937 2641 S0
+4336 3180 S0
+4601 2097 S0
+3057 2133 S0
+3674 3200 S0
+4888 2584 S0
+3638 1832 S0
+3070 2862 S0
+4602 3032 S0
+4326 1931 S0
+2927 2348 S0
+3996 3250 S0
+4820 2354 S0
+3345 1932 S0
+3302 3054 S0
+4796 2831 S0
+4013 1834 S0
+2919 2577 S0
+4306 3206 S0
+4635 2139 S0
+3106 2101 S0
+3594 3192 S0
+4885 2604 S0
+3694 1827 S0
+3039 2803 S0
+4579 3079 S0
+4368 1960 S0
+2953 2313 S0
+3911 3251 S0
+4847 2375 S0
+3394 1913 S0
+3262 3007 S0
+4784 2892 S0
+4058 1846 S0
+2919 2543 S0
+4226 3218 S0
+4688 2158 S0
+3142 2074 S0
+3550 3162 S0
+6579 2386 S0
+% End plot #16
+% Begin plot #17
+0.480 UP
+1.000 UL
+LTb
+0.58 0.00 0.83 C
+LCb setrgbcolor
+6296 2246 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 33)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.58 0.00 0.83 C
+4967 2534 S1
+3599 1781 S1
+2982 2816 S1
+4575 3148 S1
+4515 1971 S1
+2963 2185 S1
+3666 3270 S1
+4965 2583 S1
+3694 1771 S1
+2933 2759 S1
+4512 3187 S1
+4581 2027 S1
+3003 2119 S1
+3587 3247 S1
+4952 2638 S1
+3791 1765 S1
+2893 2709 S1
+4438 3218 S1
+4648 2084 S1
+3046 2058 S1
+3513 3214 S1
+4933 2703 S1
+3883 1763 S1
+2865 2661 S1
+4352 3243 S1
+4714 2139 S1
+3095 2005 S1
+3442 3173 S1
+4911 2774 S1
+3967 1767 S1
+2849 2609 S1
+4260 3264 S1
+4777 2188 S1
+3155 1961 S1
+3368 3126 S1
+4886 2844 S1
+4044 1780 S1
+2843 2548 S1
+4168 3283 S1
+4832 2235 S1
+3227 1924 S1
+3290 3079 S1
+4855 2908 S1
+4117 1802 S1
+2844 2477 S1
+4083 3299 S1
+4875 2283 S1
+3309 1890 S1
+3212 3035 S1
+4814 2961 S1
+4193 1832 S1
+6579 2246 S1
+% End plot #17
+% Begin plot #18
+0.480 UP
+1.000 UL
+LTb
+0.00 0.62 0.45 C
+LCb setrgbcolor
+6296 2106 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 34)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.00 0.62 0.45 C
+5043 2534 S2
+3646 1720 S2
+2847 2735 S2
+4451 3278 S2
+4767 2101 S2
+3116 1945 S2
+3269 3165 S2
+4887 2912 S2
+4237 1777 S2
+2776 2355 S2
+3904 3350 S2
+5032 2511 S2
+3585 1723 S2
+2881 2797 S2
+4478 3245 S2
+4736 2043 S2
+3074 1994 S2
+3326 3187 S2
+4938 2886 S2
+4150 1767 S2
+2763 2377 S2
+3969 3359 S2
+5011 2448 S2
+3555 1739 S2
+2903 2863 S2
+4526 3208 S2
+4689 2016 S2
+3008 2019 S2
+3405 3203 S2
+4971 2864 S2
+4085 1746 S2
+2770 2438 S2
+4001 3362 S2
+5000 2378 S2
+3502 1762 S2
+2936 2891 S2
+4605 3187 S2
+4622 1998 S2
+2959 2040 S2
+3468 3235 S2
+4978 2807 S2
+4050 1725 S2
+2769 2510 S2
+4056 3353 S2
+4987 2348 S2
+3416 1777 S2
+2987 2910 S2
+4665 3168 S2
+4565 1956 S2
+2941 2090 S2
+3505 3273 S2
+6579 2106 S2
+% End plot #18
+% Begin plot #19
+0.480 UP
+1.000 UL
+LTb
+0.34 0.71 0.91 C
+LCb setrgbcolor
+6296 1966 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 35)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.34 0.71 0.91 C
+5119 2534 S3
+3705 1661 S3
+2721 2638 S3
+4283 3388 S3
+4999 2287 S3
+3375 1731 S3
+2896 2934 S3
+4567 3247 S3
+4791 2011 S3
+3073 1921 S3
+3167 3145 S3
+4884 3054 S3
+4448 1838 S3
+2807 2113 S3
+3533 3315 S3
+5052 2816 S3
+4112 1685 S3
+2711 2412 S3
+3852 3410 S3
+5113 2522 S3
+3747 1661 S3
+2711 2644 S3
+4265 3386 S3
+5012 2311 S3
+3366 1722 S3
+2894 2902 S3
+4568 3266 S3
+4795 2023 S3
+3097 1911 S3
+3143 3151 S3
+4855 3048 S3
+4479 1838 S3
+2815 2115 S3
+3519 3303 S3
+5062 2841 S3
+4106 1696 S3
+2710 2376 S3
+3848 3411 S3
+5104 2530 S3
+3782 1657 S3
+2709 2658 S3
+4226 3384 S3
+5028 2312 S3
+3376 1721 S3
+2884 2874 S3
+4577 3281 S3
+4795 2050 S3
+3101 1890 S3
+3134 3145 S3
+4829 3054 S3
+4509 1832 S3
+6579 1966 S3
+% End plot #19
+% Begin plot #20
+0.480 UP
+1.000 UL
+LTb
+0.90 0.62 0.00 C
+LCb setrgbcolor
+6296 1826 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 36)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.90 0.62 0.00 C
+5195 2534 S4
+3775 1607 S4
+2610 2527 S4
+4075 3464 S4
+5174 2517 S4
+3713 1599 S4
+2641 2604 S4
+4085 3466 S4
+5158 2410 S4
+3700 1611 S4
+2639 2679 S4
+4152 3447 S4
+5159 2395 S4
+3582 1622 S4
+2658 2667 S4
+4266 3447 S4
+5121 2377 S4
+3522 1623 S4
+2697 2742 S4
+4276 3433 S4
+5100 2274 S4
+3509 1651 S4
+2704 2814 S4
+4341 3403 S4
+5083 2258 S4
+3397 1667 S4
+2745 2806 S4
+4450 3399 S4
+5028 2238 S4
+3338 1676 S4
+2791 2878 S4
+4461 3372 S4
+5004 2142 S4
+3326 1720 S4
+2806 2946 S4
+4521 3331 S4
+4971 2124 S4
+3221 1740 S4
+2866 2942 S4
+4624 3326 S4
+4902 2103 S4
+3164 1754 S4
+2918 3008 S4
+4635 3287 S4
+4875 2016 S4
+3153 1811 S4
+2939 3072 S4
+4688 3236 S4
+4830 1995 S4
+3058 1836 S4
+3014 3072 S4
+6579 1826 S4
+% End plot #20
+% Begin plot #21
+0.480 UP
+1.000 UL
+LTb
+0.94 0.89 0.26 C
+LCb setrgbcolor
+6296 1686 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 42)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.94 0.89 0.26 C
+5728 2534 S10
+4612 1491 S10
+2983 1480 S10
+2070 2520 S10
+3197 3570 S10
+4836 3580 S10
+5710 2534 S10
+4478 1470 S10
+2787 1625 S10
+2316 2773 S10
+4045 3726 S10
+5556 2956 S10
+4931 1778 S10
+3222 1343 S10
+2098 2273 S10
+2990 3398 S10
+4647 3722 S10
+5715 2787 S10
+4799 1663 S10
+3143 1346 S10
+2095 2286 S10
+3078 3430 S10
+4773 3653 S10
+5626 2612 S10
+4160 1433 S10
+2479 1813 S10
+2624 3052 S10
+4315 3791 S10
+5593 3001 S10
+5025 1827 S10
+3395 1263 S10
+2186 2092 S10
+2776 3254 S10
+4389 3811 S10
+5603 2987 S10
+5057 1828 S10
+3458 1245 S10
+2219 2041 S10
+2648 3184 S10
+4196 3861 S10
+5505 3194 S10
+5545 2151 S10
+4168 1239 S10
+2729 1504 S10
+2021 2489 S10
+3161 3542 S10
+4765 3677 S10
+5740 2708 S10
+4744 1611 S10
+3103 1366 S10
+2074 2320 S10
+6579 1686 S10
+% End plot #21
+% Begin plot #22
+0.480 UP
+1.000 UL
+LTb
+0.00 0.45 0.70 C
+LCb setrgbcolor
+6296 1546 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 43)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.00 0.45 0.70 C
+6033 2534 S11
+5382 1708 S11
+4185 1069 S11
+2957 1383 S11
+1918 2287 S11
+2028 3102 S11
+3032 3841 S11
+4235 4048 S11
+5311 3307 S11
+5945 2379 S11
+5187 1592 S11
+3970 1037 S11
+2763 1258 S11
+1963 2052 S11
+2183 2966 S11
+3336 3807 S11
+4623 3959 S11
+5702 3366 S11
+6039 2582 S11
+5093 1683 S11
+3867 1020 S11
+2715 1449 S11
+1783 2295 S11
+2014 3088 S11
+3192 3836 S11
+4417 3969 S11
+5467 3138 S11
+5932 2217 S11
+5200 1454 S11
+3985 1026 S11
+2804 1416 S11
+1935 2282 S11
+2309 3173 S11
+3407 3941 S11
+4656 3967 S11
+5650 3297 S11
+5965 2481 S11
+4895 1584 S11
+3598 1025 S11
+2469 1447 S11
+1784 2237 S11
+2193 3077 S11
+3422 3872 S11
+4692 3853 S11
+5760 3048 S11
+5948 2223 S11
+5058 1427 S11
+3877 1001 S11
+2722 1602 S11
+1826 2542 S11
+2296 3326 S11
+6579 1546 S11
+% End plot #22
+% Begin plot #23
+0.480 UP
+1.000 UL
+LTb
+0.90 0.12 0.06 C
+LCb setrgbcolor
+6296 1406 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 44)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.90 0.12 0.06 C
+6338 2534 S12
+6147 2049 S12
+5521 1538 S12
+4780 1088 S12
+4096 833 S12
+3387 912 S12
+2752 1424 S12
+2125 1991 S12
+1665 2549 S12
+1863 3026 S12
+2445 3467 S12
+3119 3954 S12
+3910 4212 S12
+4681 4154 S12
+5403 3880 S12
+5956 3456 S12
+6265 2988 S12
+6321 2520 S12
+5797 1989 S12
+5018 1424 S12
+4338 976 S12
+3640 829 S12
+2987 1203 S12
+2372 1753 S12
+1726 2361 S12
+1570 2845 S12
+1939 3282 S12
+2460 3728 S12
+3166 4099 S12
+3941 4232 S12
+4719 4153 S12
+5369 3823 S12
+5870 3350 S12
+6233 2906 S12
+6111 2407 S12
+5422 1843 S12
+4680 1309 S12
+3957 878 S12
+3243 916 S12
+2651 1296 S12
+2020 1834 S12
+1498 2368 S12
+1527 2827 S12
+1822 3283 S12
+2394 3726 S12
+3139 4093 S12
+3852 4248 S12
+4584 4152 S12
+5177 3703 S12
+5759 3197 S12
+6158 2737 S12
+6579 1406 S12
+% End plot #23
+% Begin plot #24
+0.480 UP
+1.000 UL
+LTb
+0.00 0.00 0.00 C
+LCb setrgbcolor
+6296 1266 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 45)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.00 0.00 0.00 C
+6642 2534 S13
+6638 2373 S13
+6618 2249 S13
+6571 2153 S13
+6494 2058 S13
+6400 1947 S13
+6303 1840 S13
+6200 1757 S13
+6090 1698 S13
+5972 1650 S13
+5839 1597 S13
+5702 1536 S13
+5583 1496 S13
+5485 1496 S13
+5382 1512 S13
+5251 1505 S13
+5090 1451 S13
+4938 1369 S13
+4848 1313 S13
+4820 1304 S13
+4791 1298 S13
+4708 1247 S13
+4588 1147 S13
+4496 1040 S13
+4480 977 S13
+4514 955 S13
+4523 926 S13
+4465 861 S13
+4373 777 S13
+4308 708 S13
+4298 674 S13
+4298 668 S13
+4239 663 S13
+4094 644 S13
+3911 623 S13
+3762 608 S13
+3666 610 S13
+3572 633 S13
+3410 670 S13
+3170 715 S13
+2922 765 S13
+2731 807 S13
+2611 844 S13
+2515 892 S13
+2372 969 S13
+2189 1073 S13
+2036 1183 S13
+1948 1274 S13
+1921 1347 S13
+1899 1430 S13
+1818 1558 S13
+6579 1266 S13
+% End plot #24
+% Begin plot #25
+0.480 UP
+1.000 UL
+LTb
+0.58 0.00 0.83 C
+LCb setrgbcolor
+6296 1126 M
+[ [(Helvetica) 140.0 0.0 true true 0 (particle 46)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+0.480 UP
+1.000 UL
+LTb
+0.58 0.00 0.83 C
+6947 2534 S14
+6691 2601 S14
+6469 2353 S14
+6325 2181 S14
+4189 1192 S14
+1923 1924 S14
+4668 3630 S14
+4497 1649 S14
+2211 1624 S14
+2545 3671 S14
+5462 2929 S14
+2525 2464 S14
+6579 1126 S14
+% End plot #25
+2.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTB
+LCb setrgbcolor
+854 4619 N
+854 448 L
+6093 0 V
+0 4171 V
+-6093 0 V
+Z stroke
+0.480 UP
+1.000 UL
+LTb
+LCb setrgbcolor
+LCb setrgbcolor
+3900 4829 M
+[ [(Helvetica) 140.0 0.0 true true 0 (no-title                                                                      MAD-X 5.05.02  23/05/24 13.32.11 )]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+LTb
+stroke
+grestore
+end
+showpage
+%%Trailer
+%%DocumentFonts: Times-Roman
+%%Pages: 2
+%%EOF

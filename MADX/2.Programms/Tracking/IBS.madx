@@ -1,0 +1,21 @@
+!CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX/1.Sequences/Full Sequence";
+CHDIR, DIR = "/Users/Bell/GIT_REPOS/NICA/MADX/1.Sequences/Resonant";
+!CALL FILE = "My NICA.seq";
+!CALL FILE = "FODO cell.opt";
+!CALL FILE = "FDO cell.opt";
+!ALL FILE = "ODFDO cell.opt";
+!CALL FILE = "FODO regular arc (4 superperiods and 3 tunes).opt";
+!CALL FILE = "FDO regular arc (4 superperiods and 3 tunes).opt";
+CALL FILE = "ODFDO regular arc (4 superperiods and 3 tunes).opt";
+!CALL FILE = "FODO resonant arc (4 superperiods and 3 tunes).opt";
+!CALL FILE = "FDO resonant arc (4 superperiods and 3 tunes).opt";
+!CALL FILE = "ODFDO resonant arc (4 superperiods and 3 tunes).opt";
+
+beam, MASS=2.32283962,CHARGE=1, ENERGY=13.54435861,
+      EX=3.96e-05, EY=3.1e-05, SIGE=0.00156;
+      !EX= 2e-006, EY=  2e-006, SIGE=  2e-3,
+      BUNCHED = true, KBUNCH=22, NPART=1e12;
+USE, PERIOD = MACHINE;
+twiss, chrom;
+IBS;
+!Touschek;

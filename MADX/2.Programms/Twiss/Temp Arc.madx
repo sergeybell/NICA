@@ -1,0 +1,19 @@
+CHDIR, DIR = "/Users/Bell/GIT_REPOS/NICA/MADX/1.Sequences/Full Sequence";
+!CALL FILE = "NICA 2 families of quadrupoles g=15 9,44 7.seq";
+!CALL FILE = "NICA w Miss Edge Arc g=15 w QFE2 3 on arc(actual).seq";
+!CALL FILE = "coupling1.seq";
+CALL FILE = "My NICA (renew).seq";
+
+!beam, MASS=2.32283962,CHARGE=1, ENERGY=13.54435861,
+!      EX= 3.96e-005, EY=  3.1e-005, SIGE=   0.00156;
+
+beam, MASS=1,CHARGE=1, ENERGY=7,
+      EX= 3.96e-005, EY=  3.1e-005, SIGE=   0.00156;
+
+USE, PERIOD = MACHINE;
+CHDIR, DIR = "/Users/Bell/GIT_REPOS/NICA/MADX";
+
+twiss, DELTAP = 0.00, file=tbl/twiss_temp_Arc.tbl;
+plot, TITLE = "dp/p = 0.0", haxis=s, hmax = 510, vmin = 0, vmax = 150, vaxis=betx,bety,colour=100, style=100,file=img/twiss_plot_temp_Arc;
+plot, TITLE = "dp/p = 0.0", haxis=s, hmax = 510, vmin = -1, vmax = 3, vaxis=dx,dy,colour=100, style=100,file=img/twiss_plot_temp_Arc;
+stop;

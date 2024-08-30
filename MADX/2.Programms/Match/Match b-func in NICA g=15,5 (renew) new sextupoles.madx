@@ -1,0 +1,45 @@
+CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX/1.Sequences/Full Sequence";
+CALL FILE = "NICA w Miss Edge Arc g=15,5 (renew) 9,44 new sextupoles.seq";
+
+beam, MASS=2.32283962,CHARGE=1, ENERGY=13.54435861,
+      EX= 3.96e-005, EY=  3.1e-005, SIGE=   0.00156;
+
+BEGIN: BETA0,
+      BETX = 0.6, ALFX = 0.0,
+      BETY = 0.6, ALFY = 0.0,
+      DX = 0.0, DPX = 0.0,
+      DY = 0.0, DPY = 0.0;
+
+CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX/Match";
+
+USE, SEQUENCE = MACHINE;
+MATCH, SEQUENCE = MACHINE, BETA0=BEGIN;
+
+!CONSTRAINT, SEQUENCE=MACHINE, range=HB2,
+!      BETX < 40.0, BETY < 40.0;
+CONSTRAINT, SEQUENCE=MACHINE, range=HB1,
+     BETX < 150.0, BETY < 150.0;
+CONSTRAINT, SEQUENCE=MACHINE, range=IP,
+      BETX = 0.6, BETY = 0.6;
+
+CONSTRAINT, SEQUENCE=MACHINE, range=WP1/WP2,
+          BETX < 50.0, BETY < 50.0;
+!CONSTRAINT, SEQUENCE5MACHINE, range=EP1/EP2,
+!          BETX < 40.0, BETY < 40.0;
+GWEIGHT Q1 = 100.0, Q2=100.0;
+
+GLOBAL, SEQUENCE=MACHINE, Q1 = 4.72, Q2 = 4.72;
+
+vary,name=Q1W2->K1, step=1.0e-5;
+vary,name=Q2W2->K1, step=1.0e-5, UPPER = 6.5e-01;
+vary,name=Q3W2->K1, step=1.0e-5;
+vary,name=Q4W2->K1, step=1.0e-5;
+vary,name=Q5W2->K1, step=1.0e-5;
+vary,name=Q6W2->K1, step=1.0e-5;
+
+!JACOBIAN,calls=3000,tolerance=1.e-24;
+!SIMPLEX,calls=3000,tolerance=1.e-21;
+MIGRAD,calls=3000,tolerance=1.e-24;
+!LMDIF,calls=1000,tolerance=1.e-24;
+endmatch,knobfile='knobs.tfs';
+stop;

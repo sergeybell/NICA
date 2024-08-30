@@ -1,0 +1,86 @@
+beam, MASS=2.32283962,CHARGE=1, ENERGY=13.54435861,
+      EX=3.96e-005, EY=3.1e-005, SIGE=0.00156;
+
+CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX/1.Sequences/Full Sequence/";
+call file = "NICA w Miss Edge Arc g=15,5 (renew).seq";
+use, sequence=MACHINE;
+
+CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX/2.Programms/Plot";
+twiss;
+TRACK, FILE = tracking_nica_g_15_5, onetable = true, dump;!, aperture = true;
+!!!!! x plane !!!!!
+
+start, x=0.000, px=0.0, y=0.0, py=0.0;
+start, x=0.0001, px=0.0, y=0.0, py=0.0;
+start, x=0.0005, px=0.0, y=0.0, py=0.0;
+start, x=0.0008, px=0.0, y=0.0, py=0.0;
+start, x=0.001, px=0.0, y=0.0, py=0.0;
+start, x=0.0015, px=0.0, y=0.0, py=0.0;
+start, x=0.0017, px=0.0, y=0.0, py=0.0;
+start, x=0.002, px=0.0, y=0.0, py=0.0;
+start, x=0.0021, px=0.0, y=0.0, py=0.0;
+start, x=0.0025, px=0.0, y=0.0, py=0.0;
+start, x=0.003, px=0.0, y=0.0, py=0.0;
+start, x=0.0035, px=0.0, y=0.0, py=0.0;
+start, x=0.004, px=0.0, y=0.0, py=0.0;
+start, x=0.005, px=0.0, y=0.0, py=0.0;
+start, x=0.006, px=0.0, y=0.0, py=0.0;
+start, x=0.007, px=0.0, y=0.0, py=0.0;
+start, x=0.008, px=0.0, y=0.0, py=0.0;
+start, x=0.009, px=0.0, y=0.0, py=0.0;
+start, x=0.010, px=0.0, y=0.0, py=0.0;
+
+start, x=0.011, px=0.0, y=0.0, py=0.0;
+start, x=0.012, px=0.0, y=0.0, py=0.0;
+start, x=0.014, px=0.0, y=0.0, py=0.0;
+start, x=0.016, px=0.0, y=0.0, py=0.0;
+start, x=0.018, px=0.0, y=0.0, py=0.0;
+start, x=0.020, px=0.0, y=0.0, py=0.0;
+start, x=0.025, px=0.0, y=0.0, py=0.0;
+start, x=0.030, px=0.0, y=0.0, py=0.0;
+start, x=0.035, px=0.0, y=0.0, py=0.0;
+start, x=0.040, px=0.0, y=0.0, py=0.0;
+start, x=0.045, px=0.0, y=0.0, py=0.0;
+start, x=0.050, px=0.0, y=0.0, py=0.0;
+start, x=0.060, px=0.0, y=0.0, py=0.0;
+
+start, y=0.000, px=0.0, x=0.0, py=0.0;
+start, y=0.0001, px=0.0, x=0.0, py=0.0;
+start, y=0.0005, px=0.0, x=0.0, py=0.0;
+start, y=0.0008, px=0.0, x=0.0, py=0.0;
+start, y=0.001, px=0.0, x=0.0, py=0.0;
+start, y=0.0015, px=0.0, x=0.0, py=0.0;
+start, y=0.0017, px=0.0, x=0.0, py=0.0;
+start, y=0.002, px=0.0, x=0.0, py=0.0;
+start, y=0.0021, px=0.0, x=0.0, py=0.0;
+start, y=0.0025, px=0.0, x=0.0, py=0.0;
+start, y=0.003, px=0.0, x=0.0, py=0.0;
+start, y=0.0035, px=0.0, x=0.0, py=0.0;
+start, y=0.004, px=0.0, x=0.0, py=0.0;
+start, y=0.005, px=0.0, x=0.0, py=0.0;
+start, y=0.006, px=0.0, x=0.0, py=0.0;
+start, y=0.007, px=0.0, x=0.0, py=0.0;
+start, y=0.008, px=0.0, x=0.0, py=0.0;
+start, y=0.009, px=0.0, x=0.0, py=0.0;
+start, y=0.010, px=0.0, x=0.0, py=0.0;
+
+start, y=0.011, px=0.0, x=0.0, py=0.0;
+start, y=0.012, px=0.0, x=0.0, py=0.0;
+start, y=0.014, px=0.0, x=0.0, py=0.0;
+start, y=0.016, px=0.0, x=0.0, py=0.0;
+start, y=0.018, px=0.0, x=0.0, py=0.0;
+start, y=0.020, px=0.0, x=0.0, py=0.0;
+start, y=0.025, px=0.0, x=0.0, py=0.0;
+start, y=0.030, px=0.0, x=0.0, py=0.0;
+start, y=0.035, px=0.0, x=0.0, py=0.0;
+start, y=0.040, px=0.0, x=0.0, py=0.0;
+start, y=0.045, px=0.0, x=0.0, py=0.0;
+start, y=0.050, px=0.0, x=0.0, py=0.0;
+
+!DYNAP, TURNS=1000, FASTUNE=TRUE;
+RUN, TURNS = 1000, ffile=1;
+ENDTRACK;
+
+twiss;
+
+stop;

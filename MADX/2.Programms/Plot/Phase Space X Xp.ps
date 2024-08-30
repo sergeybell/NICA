@@ -1,0 +1,9291 @@
+%!PS-Adobe-2.0
+%%Title: Phase Space X Xp.ps
+%%Creator: gnuplot 5.4 patchlevel 4
+%%CreationDate: Thu Nov 16 14:37:04 2023
+%%DocumentFonts: (atend)
+%%BoundingBox: 50 50 554 770
+%%Orientation: Landscape
+%%Pages: (atend)
+%%EndComments
+%%BeginProlog
+/gnudict 256 dict def
+gnudict begin
+%
+% The following true/false flags may be edited by hand if desired.
+% The unit line width and grayscale image gamma correction may also be changed.
+%
+/Color true def
+/Blacktext false def
+/Solid false def
+/Dashlength 1 def
+/Landscape true def
+/Level1 false def
+/Level3 false def
+/Rounded false def
+/ClipToBoundingBox false def
+/SuppressPDFMark false def
+/TransparentPatterns false def
+/gnulinewidth 5.000 def
+/userlinewidth gnulinewidth def
+/Gamma 1.0 def
+/BackgroundColor {-1.000 -1.000 -1.000} def
+%
+/vshift -46 def
+/dl1 {
+  10.0 Dashlength userlinewidth gnulinewidth div mul mul mul
+  Rounded { currentlinewidth 0.75 mul sub dup 0 le { pop 0.01 } if } if
+} def
+/dl2 {
+  10.0 Dashlength userlinewidth gnulinewidth div mul mul mul
+  Rounded { currentlinewidth 0.75 mul add } if
+} def
+/hpt_ 31.5 def
+/vpt_ 31.5 def
+/hpt hpt_ def
+/vpt vpt_ def
+/doclip {
+  ClipToBoundingBox {
+    newpath 50 50 moveto 554 50 lineto 554 770 lineto 50 770 lineto closepath
+    clip
+  } if
+} def
+%
+% Gnuplot Prolog Version 5.2 (Dec 2017)
+%
+%/SuppressPDFMark true def
+%
+/M {moveto} bind def
+/L {lineto} bind def
+/R {rmoveto} bind def
+/V {rlineto} bind def
+/N {newpath moveto} bind def
+/Z {closepath} bind def
+/C {setrgbcolor} bind def
+/f {rlineto fill} bind def
+/g {setgray} bind def
+/Gshow {show} def   % May be redefined later in the file to support UTF-8
+/vpt2 vpt 2 mul def
+/hpt2 hpt 2 mul def
+/Lshow {currentpoint stroke M 0 vshift R 
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
+/Rshow {currentpoint stroke M dup stringwidth pop neg vshift R
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
+/Cshow {currentpoint stroke M dup stringwidth pop -2 div vshift R 
+	Blacktext {gsave 0 setgray textshow grestore} {textshow} ifelse} def
+/UP {dup vpt_ mul /vpt exch def hpt_ mul /hpt exch def
+  /hpt2 hpt 2 mul def /vpt2 vpt 2 mul def} def
+/DL {Color {setrgbcolor Solid {pop []} if 0 setdash}
+ {pop pop pop 0 setgray Solid {pop []} if 0 setdash} ifelse} def
+/BL {stroke userlinewidth 2 mul setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/AL {stroke userlinewidth 2 div setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+/UL {dup gnulinewidth mul /userlinewidth exch def
+	dup 1 lt {pop 1} if 10 mul /udl exch def} def
+/PL {stroke userlinewidth setlinewidth
+	Rounded {1 setlinejoin 1 setlinecap} if} def
+3.8 setmiterlimit
+% Classic Line colors (version 5.0)
+/LCw {1 1 1} def
+/LCb {0 0 0} def
+/LCa {0 0 0} def
+/LC0 {1 0 0} def
+/LC1 {0 1 0} def
+/LC2 {0 0 1} def
+/LC3 {1 0 1} def
+/LC4 {0 1 1} def
+/LC5 {1 1 0} def
+/LC6 {0 0 0} def
+/LC7 {1 0.3 0} def
+/LC8 {0.5 0.5 0.5} def
+% Default dash patterns (version 5.0)
+/LTB {BL [] LCb DL} def
+/LTw {PL [] 1 setgray} def
+/LTb {PL [] LCb DL} def
+/LTa {AL [1 udl mul 2 udl mul] 0 setdash LCa setrgbcolor} def
+/LT0 {PL [] LC0 DL} def
+/LT1 {PL [2 dl1 3 dl2] LC1 DL} def
+/LT2 {PL [1 dl1 1.5 dl2] LC2 DL} def
+/LT3 {PL [6 dl1 2 dl2 1 dl1 2 dl2] LC3 DL} def
+/LT4 {PL [1 dl1 2 dl2 6 dl1 2 dl2 1 dl1 2 dl2] LC4 DL} def
+/LT5 {PL [4 dl1 2 dl2] LC5 DL} def
+/LT6 {PL [1.5 dl1 1.5 dl2 1.5 dl1 1.5 dl2 1.5 dl1 6 dl2] LC6 DL} def
+/LT7 {PL [3 dl1 3 dl2 1 dl1 3 dl2] LC7 DL} def
+/LT8 {PL [2 dl1 2 dl2 2 dl1 6 dl2] LC8 DL} def
+/SL {[] 0 setdash} def
+/Pnt {stroke [] 0 setdash gsave 1 setlinecap M 0 0 V stroke grestore} def
+/Dia {stroke [] 0 setdash 2 copy vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke
+  Pnt} def
+/Pls {stroke [] 0 setdash vpt sub M 0 vpt2 V
+  currentpoint stroke M
+  hpt neg vpt neg R hpt2 0 V stroke
+ } def
+/Box {stroke [] 0 setdash 2 copy exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke
+  Pnt} def
+/Crs {stroke [] 0 setdash exch hpt sub exch vpt add M
+  hpt2 vpt2 neg V currentpoint stroke M
+  hpt2 neg 0 R hpt2 vpt2 V stroke} def
+/TriU {stroke [] 0 setdash 2 copy vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke
+  Pnt} def
+/Star {2 copy Pls Crs} def
+/BoxF {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath fill} def
+/TriUF {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath fill} def
+/TriD {stroke [] 0 setdash 2 copy vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke
+  Pnt} def
+/TriDF {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath fill} def
+/DiaF {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath fill} def
+/Pent {stroke [] 0 setdash 2 copy gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore Pnt} def
+/PentF {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath fill grestore} def
+/Circle {stroke [] 0 setdash 2 copy
+  hpt 0 360 arc stroke Pnt} def
+/CircleF {stroke [] 0 setdash hpt 0 360 arc fill} def
+/C0 {BL [] 0 setdash 2 copy moveto vpt 90 450 arc} bind def
+/C1 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C2 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C3 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C4 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C5 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc
+	2 copy moveto
+	2 copy vpt 180 270 arc closepath fill
+	vpt 0 360 arc} bind def
+/C6 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C7 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 270 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C8 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C9 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 270 450 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C10 {BL [] 0 setdash 2 copy 2 copy moveto vpt 270 360 arc closepath fill
+	2 copy moveto
+	2 copy vpt 90 180 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C11 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 180 arc closepath fill
+	2 copy moveto
+	2 copy vpt 270 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C12 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C13 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 0 90 arc closepath fill
+	2 copy moveto
+	2 copy vpt 180 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/C14 {BL [] 0 setdash 2 copy moveto
+	2 copy vpt 90 360 arc closepath fill
+	vpt 0 360 arc} bind def
+/C15 {BL [] 0 setdash 2 copy vpt 0 360 arc closepath fill
+	vpt 0 360 arc closepath} bind def
+/Rec {newpath 4 2 roll moveto 1 index 0 rlineto 0 exch rlineto
+	neg 0 rlineto closepath} bind def
+/Square {dup Rec} bind def
+/Bsquare {vpt sub exch vpt sub exch vpt2 Square} bind def
+/S0 {BL [] 0 setdash 2 copy moveto 0 vpt rlineto BL Bsquare} bind def
+/S1 {BL [] 0 setdash 2 copy vpt Square fill Bsquare} bind def
+/S2 {BL [] 0 setdash 2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S3 {BL [] 0 setdash 2 copy exch vpt sub exch vpt2 vpt Rec fill Bsquare} bind def
+/S4 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S5 {BL [] 0 setdash 2 copy 2 copy vpt Square fill
+	exch vpt sub exch vpt sub vpt Square fill Bsquare} bind def
+/S6 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S7 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt vpt2 Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S8 {BL [] 0 setdash 2 copy vpt sub vpt Square fill Bsquare} bind def
+/S9 {BL [] 0 setdash 2 copy vpt sub vpt vpt2 Rec fill Bsquare} bind def
+/S10 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt Square fill
+	Bsquare} bind def
+/S11 {BL [] 0 setdash 2 copy vpt sub vpt Square fill 2 copy exch vpt sub exch vpt2 vpt Rec fill
+	Bsquare} bind def
+/S12 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill Bsquare} bind def
+/S13 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy vpt Square fill Bsquare} bind def
+/S14 {BL [] 0 setdash 2 copy exch vpt sub exch vpt sub vpt2 vpt Rec fill
+	2 copy exch vpt sub exch vpt Square fill Bsquare} bind def
+/S15 {BL [] 0 setdash 2 copy Bsquare fill Bsquare} bind def
+/D0 {gsave translate 45 rotate 0 0 S0 stroke grestore} bind def
+/D1 {gsave translate 45 rotate 0 0 S1 stroke grestore} bind def
+/D2 {gsave translate 45 rotate 0 0 S2 stroke grestore} bind def
+/D3 {gsave translate 45 rotate 0 0 S3 stroke grestore} bind def
+/D4 {gsave translate 45 rotate 0 0 S4 stroke grestore} bind def
+/D5 {gsave translate 45 rotate 0 0 S5 stroke grestore} bind def
+/D6 {gsave translate 45 rotate 0 0 S6 stroke grestore} bind def
+/D7 {gsave translate 45 rotate 0 0 S7 stroke grestore} bind def
+/D8 {gsave translate 45 rotate 0 0 S8 stroke grestore} bind def
+/D9 {gsave translate 45 rotate 0 0 S9 stroke grestore} bind def
+/D10 {gsave translate 45 rotate 0 0 S10 stroke grestore} bind def
+/D11 {gsave translate 45 rotate 0 0 S11 stroke grestore} bind def
+/D12 {gsave translate 45 rotate 0 0 S12 stroke grestore} bind def
+/D13 {gsave translate 45 rotate 0 0 S13 stroke grestore} bind def
+/D14 {gsave translate 45 rotate 0 0 S14 stroke grestore} bind def
+/D15 {gsave translate 45 rotate 0 0 S15 stroke grestore} bind def
+/DiaE {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V closepath stroke} def
+/BoxE {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V closepath stroke} def
+/TriUE {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V closepath stroke} def
+/TriDE {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V closepath stroke} def
+/PentE {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  closepath stroke grestore} def
+/CircE {stroke [] 0 setdash 
+  hpt 0 360 arc stroke} def
+/Opaque {gsave closepath 1 setgray fill grestore 0 setgray closepath} def
+/DiaW {stroke [] 0 setdash vpt add M
+  hpt neg vpt neg V hpt vpt neg V
+  hpt vpt V hpt neg vpt V Opaque stroke} def
+/BoxW {stroke [] 0 setdash exch hpt sub exch vpt add M
+  0 vpt2 neg V hpt2 0 V 0 vpt2 V
+  hpt2 neg 0 V Opaque stroke} def
+/TriUW {stroke [] 0 setdash vpt 1.12 mul add M
+  hpt neg vpt -1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt 1.62 mul V Opaque stroke} def
+/TriDW {stroke [] 0 setdash vpt 1.12 mul sub M
+  hpt neg vpt 1.62 mul V
+  hpt 2 mul 0 V
+  hpt neg vpt -1.62 mul V Opaque stroke} def
+/PentW {stroke [] 0 setdash gsave
+  translate 0 hpt M 4 {72 rotate 0 hpt L} repeat
+  Opaque stroke grestore} def
+/CircW {stroke [] 0 setdash 
+  hpt 0 360 arc Opaque stroke} def
+/BoxFill {gsave Rec 1 setgray fill grestore} def
+/Density {
+  /Fillden exch def
+  currentrgbcolor
+  /ColB exch def /ColG exch def /ColR exch def
+  /ColR ColR Fillden mul Fillden sub 1 add def
+  /ColG ColG Fillden mul Fillden sub 1 add def
+  /ColB ColB Fillden mul Fillden sub 1 add def
+  ColR ColG ColB setrgbcolor} def
+/BoxColFill {gsave Rec PolyFill} def
+/PolyFill {gsave Density fill grestore grestore} def
+/h {rlineto rlineto rlineto closepath gsave fill grestore stroke} bind def
+%
+% PostScript Level 1 Pattern Fill routine for rectangles
+% Usage: x y w h s a XX PatternFill
+%	x,y = lower left corner of box to be filled
+%	w,h = width and height of box
+%	  a = angle in degrees between lines and x-axis
+%	 XX = 0/1 for no/yes cross-hatch
+%
+/PatternFill {gsave /PFa [ 9 2 roll ] def
+  PFa 0 get PFa 2 get 2 div add PFa 1 get PFa 3 get 2 div add translate
+  PFa 2 get -2 div PFa 3 get -2 div PFa 2 get PFa 3 get Rec
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+  clip
+  currentlinewidth 0.5 mul setlinewidth
+  /PFs PFa 2 get dup mul PFa 3 get dup mul add sqrt def
+  0 0 M PFa 5 get rotate PFs -2 div dup translate
+  0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 M 0 PFs V} for
+  0 PFa 6 get ne {
+	0 1 PFs PFa 4 get div 1 add floor cvi
+	{PFa 4 get mul 0 2 1 roll M PFs 0 V} for
+ } if
+  stroke grestore} def
+%
+/languagelevel where
+ {pop languagelevel} {1} ifelse
+dup 2 lt
+	{/InterpretLevel1 true def
+	 /InterpretLevel3 false def}
+	{/InterpretLevel1 Level1 def
+	 2 gt
+	    {/InterpretLevel3 Level3 def}
+	    {/InterpretLevel3 false def}
+	 ifelse }
+ ifelse
+%
+% PostScript level 2 pattern fill definitions
+%
+/Level2PatternFill {
+/Tile8x8 {/PaintType 2 /PatternType 1 /TilingType 1 /BBox [0 0 8 8] /XStep 8 /YStep 8}
+	bind def
+/KeepColor {currentrgbcolor [/Pattern /DeviceRGB] setcolorspace} bind def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke} 
+>> matrix makepattern
+/Pat1 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 8 8 L 0 8 M 8 0 L stroke
+	0 4 M 4 8 L 8 4 L 4 0 L 0 4 L stroke}
+>> matrix makepattern
+/Pat2 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 0 M 0 8 L
+	8 8 L 8 0 L 0 0 L fill}
+>> matrix makepattern
+/Pat3 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 8 M 8 -4 L
+	0 12 M 12 0 L stroke}
+>> matrix makepattern
+/Pat4 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -4 0 M 8 12 L
+	0 -4 M 12 8 L stroke}
+>> matrix makepattern
+/Pat5 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 8 M 4 -4 L
+	0 12 M 8 -4 L 4 12 M 10 0 L stroke}
+>> matrix makepattern
+/Pat6 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop -2 0 M 4 12 L
+	0 -4 M 8 12 L 4 -4 M 10 8 L stroke}
+>> matrix makepattern
+/Pat7 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 8 -2 M -4 4 L
+	12 0 M -4 8 L 12 4 M 0 10 L stroke}
+>> matrix makepattern
+/Pat8 exch def
+<< Tile8x8
+ /PaintProc {0.5 setlinewidth pop 0 -2 M 12 4 L
+	-4 0 M 12 8 L -4 4 M 8 10 L stroke}
+>> matrix makepattern
+/Pat9 exch def
+/Pattern1 {PatternBgnd KeepColor Pat1 setpattern} bind def
+/Pattern2 {PatternBgnd KeepColor Pat2 setpattern} bind def
+/Pattern3 {PatternBgnd KeepColor Pat3 setpattern} bind def
+/Pattern4 {PatternBgnd KeepColor Landscape {Pat5} {Pat4} ifelse setpattern} bind def
+/Pattern5 {PatternBgnd KeepColor Landscape {Pat4} {Pat5} ifelse setpattern} bind def
+/Pattern6 {PatternBgnd KeepColor Landscape {Pat9} {Pat6} ifelse setpattern} bind def
+/Pattern7 {PatternBgnd KeepColor Landscape {Pat8} {Pat7} ifelse setpattern} bind def
+} def
+%
+%
+%End of PostScript Level 2 code
+%
+/PatternBgnd {
+  TransparentPatterns {} {gsave 1 setgray fill grestore} ifelse
+} def
+%
+% Substitute for Level 2 pattern fill codes with
+% grayscale if Level 2 support is not selected.
+%
+/Level1PatternFill {
+/Pattern1 {0.250 Density} bind def
+/Pattern2 {0.500 Density} bind def
+/Pattern3 {0.750 Density} bind def
+/Pattern4 {0.125 Density} bind def
+/Pattern5 {0.375 Density} bind def
+/Pattern6 {0.625 Density} bind def
+/Pattern7 {0.875 Density} bind def
+} def
+%
+% Now test for support of Level 2 code
+%
+Level1 {Level1PatternFill} {Level2PatternFill} ifelse
+%
+/Symbol-Oblique /Symbol findfont [1 0 .167 1 0 0] makefont
+dup length dict begin {1 index /FID eq {pop pop} {def} ifelse} forall
+currentdict end definefont pop
+%
+/Metrics {ExtendTextBox Gswidth} def
+/Lwidth {currentpoint stroke M 0 vshift R Metrics} def
+/Rwidth {currentpoint stroke M dup stringwidth pop neg vshift R Metrics} def
+/Cwidth {currentpoint stroke M dup stringwidth pop -2 div vshift R Metrics} def
+/GLwidth {currentpoint stroke M 0 vshift R {ExtendTextBox} forall} def
+/GRwidth {currentpoint stroke M dup Gwidth vshift R {ExtendTextBox} forall} def
+/GCwidth {currentpoint stroke M dup Gwidth 2 div vshift R {ExtendTextBox} forall} def
+/GLwidth2 {0 Gwidth AddGlyphWidth} def
+/GRwidth2 {Gwidth -1 mul 0 AddGlyphWidth} def
+/GCwidth2 {Gwidth 2 div dup -1 mul AddGlyphWidth} def
+/AddGlyphWidth { dup TBx2 gt {userdict /TBx2 3 -1 roll put} {pop} ifelse
+                 dup TBx1 lt {userdict /TBx1 3 -1 roll put} {pop} ifelse } def
+/MFshow {
+   { dup 5 get 3 ge
+     { 5 get 3 eq {gsave} {grestore} ifelse }
+     {dup dup 0 get findfont exch 1 get scalefont setfont
+     [ currentpoint ] exch dup 2 get 0 exch R dup 5 get 2 ne {dup dup 6
+     get exch 4 get {textshow} {Metrics pop 0 R} ifelse }if dup 5 get 0 eq
+     {dup 3 get {2 get neg 0 exch R pop} {pop aload pop M} ifelse} {dup 5
+     get 1 eq {dup 2 get exch dup 3 get exch 6 get Gswidth pop -2 div
+     dup 0 R} {dup 6 get Gswidth pop -2 div 0 R 6 get
+     textshow 2 index {aload pop M neg 3 -1 roll neg R pop pop} {pop pop pop
+     pop aload pop M} ifelse }ifelse }ifelse }
+     ifelse }
+   forall} def
+/Gswidth {dup type /stringtype eq {stringwidth} {pop (n) stringwidth} ifelse} def
+/MFwidth {0 exch { dup 5 get 3 ge { 5 get 3 eq { 0 } { pop } ifelse }
+ {dup 3 get{dup dup 0 get findfont exch 1 get scalefont setfont
+     6 get Gswidth pop add} {pop} ifelse} ifelse} forall} def
+/MLshow { currentpoint stroke M
+  0 exch R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/MRshow { currentpoint stroke M
+  exch dup MFwidth neg 3 -1 roll R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/MCshow { currentpoint stroke M
+  exch dup MFwidth -2 div 3 -1 roll R
+  Blacktext {gsave 0 setgray MFshow grestore} {MFshow} ifelse } bind def
+/XYsave    { [( ) 1 2 true false 3 ()] } bind def
+/XYrestore { [( ) 1 2 true false 4 ()] } bind def
+Level1 SuppressPDFMark or 
+{} {
+/SDict 10 dict def
+systemdict /pdfmark known not {
+  userdict /pdfmark systemdict /cleartomark get put
+} if
+SDict begin [
+  /Title (Phase Space X Xp.ps)
+  /Subject (gnuplot plot)
+  /Creator (gnuplot 5.4 patchlevel 4)
+%  /Producer (gnuplot)
+%  /Keywords ()
+  /CreationDate (Thu Nov 16 14:37:04 2023)
+  /DOCINFO pdfmark
+end
+} ifelse
+%
+% Support for boxed text - Ethan A Merritt Sep 2016
+%
+/InitTextBox { userdict /TBy2 3 -1 roll put userdict /TBx2 3 -1 roll put
+           userdict /TBy1 3 -1 roll put userdict /TBx1 3 -1 roll put
+	   /Boxing true def } def
+/ExtendTextBox { dup type /stringtype eq
+    { Boxing { gsave dup false charpath pathbbox
+      dup TBy2 gt {userdict /TBy2 3 -1 roll put} {pop} ifelse
+      dup TBx2 gt {userdict /TBx2 3 -1 roll put} {pop} ifelse
+      dup TBy1 lt {userdict /TBy1 3 -1 roll put} {pop} ifelse
+      dup TBx1 lt {userdict /TBx1 3 -1 roll put} {pop} ifelse
+      grestore } if }
+    {} ifelse} def
+/PopTextBox { newpath TBx1 TBxmargin sub TBy1 TBymargin sub M
+               TBx1 TBxmargin sub TBy2 TBymargin add L
+	       TBx2 TBxmargin add TBy2 TBymargin add L
+	       TBx2 TBxmargin add TBy1 TBymargin sub L closepath } def
+/DrawTextBox { PL PopTextBox stroke /Boxing false def} def
+/FillTextBox { gsave PopTextBox fill grestore /Boxing false def} def
+0 0 0 0 InitTextBox
+/TBxmargin 20 def
+/TBymargin 20 def
+/Boxing false def
+/textshow { ExtendTextBox Gshow } def
+%
+end
+%%EndProlog
+%%Page: 1 1
+gnudict begin
+gsave
+doclip
+50 50 translate
+0.100 0.100 scale
+90 rotate
+0 -5040 translate
+0 setgray
+newpath
+(Helvetica) findfont 140 scalefont setfont
+BackgroundColor 0 lt 3 1 roll 0 lt exch 0 lt or or not {gsave BackgroundColor C clippath fill grestore} if
+1.000 UL
+LTb
+LCb setrgbcolor
+0.500 UL
+LTa
+LCa setrgbcolor
+854 448 M
+6093 0 V
+stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+854 448 M
+63 0 V
+6030 0 R
+-63 0 V
+stroke
+770 448 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-0.02)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+/vshift -46 def
+1.000 UL
+LTb
+LCb setrgbcolor
+0.500 UL
+LTa
+LCa setrgbcolor
+854 1004 M
+6093 0 V
+stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+854 1004 M
+63 0 V
+6030 0 R
+-63 0 V
+stroke
+770 1004 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-0.015)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+0.500 UL
+LTa
+LCa setrgbcolor
+854 1561 M
+6093 0 V
+stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+854 1561 M
+63 0 V
+6030 0 R
+-63 0 V
+stroke
+770 1561 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-0.01)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+0.500 UL
+LTa
+LCa setrgbcolor
+854 2117 M
+6093 0 V
+stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+854 2117 M
+63 0 V
+6030 0 R
+-63 0 V
+stroke
+770 2117 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-0.005)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+0.500 UL
+LTa
+LCa setrgbcolor
+854 2674 M
+6093 0 V
+stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+854 2674 M
+63 0 V
+6030 0 R
+-63 0 V
+stroke
+770 2674 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+0.500 UL
+LTa
+LCa setrgbcolor
+854 3230 M
+6093 0 V
+stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+854 3230 M
+63 0 V
+6030 0 R
+-63 0 V
+stroke
+770 3230 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.005)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+0.500 UL
+LTa
+LCa setrgbcolor
+854 3786 M
+6093 0 V
+stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+854 3786 M
+63 0 V
+6030 0 R
+-63 0 V
+stroke
+770 3786 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.01)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+0.500 UL
+LTa
+LCa setrgbcolor
+854 4343 M
+6093 0 V
+stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+854 4343 M
+63 0 V
+6030 0 R
+-63 0 V
+stroke
+770 4343 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.015)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+0.500 UL
+LTa
+LCa setrgbcolor
+854 4899 M
+6093 0 V
+stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+854 4899 M
+63 0 V
+6030 0 R
+-63 0 V
+stroke
+770 4899 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.02)]
+] -46.7 MRshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+0.500 UL
+LTa
+LCa setrgbcolor
+854 448 M
+0 4451 V
+stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+854 448 M
+0 63 V
+0 4388 R
+0 -63 V
+stroke
+854 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-0.02)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+0.500 UL
+LTa
+LCa setrgbcolor
+1616 448 M
+0 4451 V
+stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+1616 448 M
+0 63 V
+0 4388 R
+0 -63 V
+stroke
+1616 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-0.015)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+0.500 UL
+LTa
+LCa setrgbcolor
+2377 448 M
+0 4451 V
+stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+2377 448 M
+0 63 V
+0 4388 R
+0 -63 V
+stroke
+2377 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-0.01)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+0.500 UL
+LTa
+LCa setrgbcolor
+3139 448 M
+0 4451 V
+stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+3139 448 M
+0 63 V
+0 4388 R
+0 -63 V
+stroke
+3139 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 (-0.005)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+0.500 UL
+LTa
+LCa setrgbcolor
+3901 448 M
+0 4451 V
+stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+3901 448 M
+0 63 V
+0 4388 R
+0 -63 V
+stroke
+3901 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+0.500 UL
+LTa
+LCa setrgbcolor
+4662 448 M
+0 4451 V
+stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+4662 448 M
+0 63 V
+0 4388 R
+0 -63 V
+stroke
+4662 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.005)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+0.500 UL
+LTa
+LCa setrgbcolor
+5424 448 M
+0 4451 V
+stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+5424 448 M
+0 63 V
+0 4388 R
+0 -63 V
+stroke
+5424 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.01)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+0.500 UL
+LTa
+LCa setrgbcolor
+6185 448 M
+0 4451 V
+stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+6185 448 M
+0 63 V
+0 4388 R
+0 -63 V
+stroke
+6185 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.015)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+0.500 UL
+LTa
+LCa setrgbcolor
+6947 448 M
+0 4451 V
+stroke
+1.000 UL
+LTb
+LCb setrgbcolor
+6947 448 M
+0 63 V
+0 4388 R
+0 -63 V
+stroke
+6947 308 M
+[ [(Helvetica) 140.0 0.0 true true 0 ( 0.02)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+1.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTB
+LCb setrgbcolor
+854 4899 N
+854 448 L
+6093 0 V
+0 4451 V
+-6093 0 V
+Z stroke
+0.700 UP
+1.000 UL
+LTb
+LCb setrgbcolor
+LCb setrgbcolor
+133 2673 M
+currentpoint gsave translate -270 rotate 0 0 moveto
+[ [(Helvetica) 140.0 0.0 true true 0 (px, rad)]
+] -46.7 MCshow
+grestore
+/Helvetica findfont 140 scalefont setfont
+LTb
+LCb setrgbcolor
+3900 98 M
+[ [(Helvetica) 140.0 0.0 true true 0 (x, m)]
+] -46.7 MCshow
+/Helvetica findfont 140 scalefont setfont
+LTb
+% Begin plot #1
+0.700 UP
+1.000 UL
+LTb
+0.58 0.00 0.83 C
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+3901 2674 Pls
+% End plot #1
+% Begin plot #2
+0.700 UP
+1.000 UL
+LTb
+0.00 0.62 0.45 C
+3977 2674 Crs
+3893 2753 Crs
+3825 2661 Crs
+3922 2596 Crs
+3972 2698 Crs
+3869 2747 Crs
+3834 2638 Crs
+3943 2605 Crs
+3961 2721 Crs
+3849 2734 Crs
+3849 2617 Crs
+3961 2621 Crs
+3944 2738 Crs
+3834 2715 Crs
+3869 2603 Crs
+3972 2643 Crs
+3922 2750 Crs
+3825 2692 Crs
+3892 2595 Crs
+3977 2667 Crs
+3899 2753 Crs
+3824 2667 Crs
+3916 2594 Crs
+3974 2692 Crs
+3875 2749 Crs
+3831 2643 Crs
+3938 2602 Crs
+3964 2716 Crs
+3854 2738 Crs
+3844 2622 Crs
+3957 2617 Crs
+3948 2735 Crs
+3837 2720 Crs
+3863 2606 Crs
+3970 2637 Crs
+3928 2748 Crs
+3827 2698 Crs
+3886 2596 Crs
+3976 2661 Crs
+3904 2753 Crs
+3824 2673 Crs
+3910 2594 Crs
+3975 2686 Crs
+3881 2751 Crs
+3828 2649 Crs
+3933 2600 Crs
+3967 2710 Crs
+3859 2741 Crs
+3840 2627 Crs
+3953 2613 Crs
+3953 2730 Crs
+3841 2725 Crs
+3858 2609 Crs
+3967 2632 Crs
+3933 2745 Crs
+3829 2704 Crs
+3880 2598 Crs
+3975 2655 Crs
+3910 2752 Crs
+3824 2680 Crs
+3904 2594 Crs
+3976 2680 Crs
+3886 2752 Crs
+3827 2655 Crs
+3927 2597 Crs
+3970 2704 Crs
+3864 2744 Crs
+3837 2632 Crs
+3948 2609 Crs
+3957 2726 Crs
+3845 2730 Crs
+3853 2613 Crs
+3964 2626 Crs
+3938 2742 Crs
+3831 2709 Crs
+3874 2600 Crs
+3974 2649 Crs
+3916 2751 Crs
+3824 2686 Crs
+3898 2594 Crs
+3977 2674 Crs
+3892 2753 Crs
+3825 2661 Crs
+3922 2596 Crs
+3972 2699 Crs
+3869 2747 Crs
+3834 2637 Crs
+3943 2605 Crs
+3961 2721 Crs
+3849 2734 Crs
+3849 2617 Crs
+3961 2622 Crs
+3943 2739 Crs
+3834 2715 Crs
+3869 2602 Crs
+3972 2643 Crs
+3922 2750 Crs
+3825 2692 Crs
+3892 2595 Crs
+3977 2668 Crs
+3898 2753 Crs
+3824 2667 Crs
+3916 2595 Crs
+3974 2693 Crs
+3875 2749 Crs
+3831 2643 Crs
+3938 2602 Crs
+3964 2716 Crs
+3854 2738 Crs
+3844 2622 Crs
+3957 2617 Crs
+3948 2735 Crs
+3837 2720 Crs
+3864 2605 Crs
+3970 2637 Crs
+3928 2748 Crs
+3827 2698 Crs
+3886 2596 Crs
+3976 2661 Crs
+3904 2753 Crs
+3824 2673 Crs
+3910 2594 Crs
+3975 2686 Crs
+3880 2751 Crs
+3829 2649 Crs
+3933 2600 Crs
+3967 2710 Crs
+3858 2741 Crs
+3841 2627 Crs
+3953 2613 Crs
+3953 2731 Crs
+3841 2725 Crs
+3858 2609 Crs
+3967 2632 Crs
+3933 2745 Crs
+3829 2704 Crs
+3880 2598 Crs
+3975 2655 Crs
+3910 2753 Crs
+3824 2679 Crs
+3904 2594 Crs
+3976 2680 Crs
+3886 2752 Crs
+3827 2655 Crs
+3928 2597 Crs
+3970 2705 Crs
+3864 2744 Crs
+3837 2632 Crs
+3948 2609 Crs
+3957 2726 Crs
+3844 2729 Crs
+3854 2613 Crs
+3964 2627 Crs
+3938 2742 Crs
+3831 2709 Crs
+3875 2600 Crs
+3974 2649 Crs
+3916 2751 Crs
+3824 2685 Crs
+3898 2594 Crs
+3977 2674 Crs
+3892 2753 Crs
+3825 2661 Crs
+3922 2596 Crs
+3972 2699 Crs
+3869 2747 Crs
+3834 2637 Crs
+3944 2605 Crs
+3961 2721 Crs
+3849 2734 Crs
+3849 2617 Crs
+3961 2622 Crs
+3943 2739 Crs
+3834 2715 Crs
+3869 2602 Crs
+3972 2643 Crs
+3922 2750 Crs
+3825 2692 Crs
+3892 2595 Crs
+3977 2668 Crs
+3898 2753 Crs
+3824 2667 Crs
+3916 2595 Crs
+3974 2693 Crs
+3874 2749 Crs
+3831 2643 Crs
+3939 2602 Crs
+3964 2716 Crs
+3853 2737 Crs
+3845 2621 Crs
+3957 2617 Crs
+3948 2735 Crs
+3837 2720 Crs
+3864 2605 Crs
+3970 2638 Crs
+3927 2748 Crs
+3827 2697 Crs
+3887 2596 Crs
+3976 2662 Crs
+3904 2753 Crs
+3824 2673 Crs
+3910 2594 Crs
+3975 2687 Crs
+3880 2751 Crs
+3829 2648 Crs
+3933 2600 Crs
+3967 2711 Crs
+3858 2741 Crs
+3841 2626 Crs
+3953 2613 Crs
+3952 2731 Crs
+3840 2725 Crs
+3859 2609 Crs
+3967 2632 Crs
+3933 2745 Crs
+3828 2703 Crs
+3881 2597 Crs
+3975 2655 Crs
+3910 2753 Crs
+3824 2679 Crs
+3905 2594 Crs
+3976 2681 Crs
+3886 2752 Crs
+3827 2654 Crs
+3928 2598 Crs
+3970 2705 Crs
+3863 2744 Crs
+3837 2631 Crs
+3948 2609 Crs
+3957 2726 Crs
+3844 2729 Crs
+3854 2613 Crs
+3964 2627 Crs
+3938 2742 Crs
+3831 2709 Crs
+3875 2600 Crs
+3974 2649 Crs
+3916 2751 Crs
+3824 2685 Crs
+3899 2594 Crs
+3977 2674 Crs
+3892 2753 Crs
+3825 2660 Crs
+3922 2596 Crs
+3972 2699 Crs
+3869 2747 Crs
+3834 2637 Crs
+3944 2606 Crs
+3960 2721 Crs
+3849 2733 Crs
+3849 2617 Crs
+3961 2622 Crs
+3943 2739 Crs
+3834 2714 Crs
+3869 2602 Crs
+3972 2643 Crs
+3922 2750 Crs
+3825 2691 Crs
+3893 2595 Crs
+3977 2668 Crs
+3898 2753 Crs
+3824 2667 Crs
+3917 2595 Crs
+3974 2693 Crs
+3874 2749 Crs
+3831 2642 Crs
+3939 2602 Crs
+3964 2716 Crs
+3853 2737 Crs
+3845 2621 Crs
+3957 2617 Crs
+3948 2735 Crs
+3837 2720 Crs
+3864 2605 Crs
+3970 2638 Crs
+3927 2748 Crs
+3827 2697 Crs
+3887 2596 Crs
+3976 2662 Crs
+3904 2753 Crs
+3824 2673 Crs
+3911 2594 Crs
+3975 2687 Crs
+3880 2751 Crs
+3829 2648 Crs
+3934 2600 Crs
+3967 2711 Crs
+3858 2741 Crs
+3841 2626 Crs
+3953 2613 Crs
+3952 2731 Crs
+3840 2724 Crs
+3859 2609 Crs
+3967 2632 Crs
+3933 2745 Crs
+3828 2703 Crs
+3881 2597 Crs
+3975 2656 Crs
+3910 2753 Crs
+3824 2679 Crs
+3905 2594 Crs
+3976 2681 Crs
+3886 2752 Crs
+3827 2654 Crs
+3928 2598 Crs
+3970 2705 Crs
+3863 2744 Crs
+3837 2631 Crs
+3949 2609 Crs
+3956 2726 Crs
+3844 2729 Crs
+3854 2612 Crs
+3964 2627 Crs
+3938 2742 Crs
+3831 2709 Crs
+3875 2600 Crs
+3974 2650 Crs
+3916 2751 Crs
+3824 2685 Crs
+3899 2594 Crs
+3977 2675 Crs
+3892 2753 Crs
+3825 2660 Crs
+3923 2596 Crs
+3972 2699 Crs
+3868 2747 Crs
+3834 2637 Crs
+3944 2606 Crs
+3960 2722 Crs
+3848 2733 Crs
+3849 2617 Crs
+3961 2622 Crs
+3943 2739 Crs
+3833 2714 Crs
+3870 2602 Crs
+3972 2644 Crs
+3921 2750 Crs
+3825 2691 Crs
+3893 2594 Crs
+3977 2668 Crs
+3898 2753 Crs
+3824 2666 Crs
+3917 2595 Crs
+3974 2693 Crs
+3874 2749 Crs
+3831 2642 Crs
+3939 2603 Crs
+3964 2716 Crs
+3853 2737 Crs
+3845 2621 Crs
+3957 2617 Crs
+3948 2735 Crs
+3837 2719 Crs
+3864 2605 Crs
+3970 2638 Crs
+3927 2748 Crs
+3826 2697 Crs
+3887 2596 Crs
+3976 2662 Crs
+3904 2753 Crs
+3824 2672 Crs
+3911 2594 Crs
+3975 2687 Crs
+3880 2751 Crs
+3829 2648 Crs
+3934 2600 Crs
+3967 2711 Crs
+3858 2741 Crs
+3841 2626 Crs
+3953 2613 Crs
+3952 2731 Crs
+3840 2724 Crs
+3859 2608 Crs
+3968 2633 Crs
+3932 2745 Crs
+3828 2703 Crs
+3881 2597 Crs
+3975 2656 Crs
+3909 2753 Crs
+3824 2679 Crs
+3905 2594 Crs
+3976 2681 Crs
+3885 2752 Crs
+3827 2654 Crs
+3928 2598 Crs
+3970 2705 Crs
+3863 2744 Crs
+3837 2631 Crs
+3949 2609 Crs
+3956 2727 Crs
+3844 2729 Crs
+3854 2612 Crs
+3965 2627 Crs
+3938 2742 Crs
+3831 2708 Crs
+3875 2599 Crs
+3974 2650 Crs
+3915 2752 Crs
+3824 2685 Crs
+3899 2594 Crs
+3977 2675 Crs
+3891 2753 Crs
+3825 2660 Crs
+3923 2596 Crs
+3972 2700 Crs
+3868 2747 Crs
+3834 2636 Crs
+3944 2606 Crs
+3960 2722 Crs
+3848 2733 Crs
+3849 2616 Crs
+3961 2622 Crs
+3943 2739 Crs
+3833 2714 Crs
+3870 2602 Crs
+3972 2644 Crs
+3921 2750 Crs
+3825 2691 Crs
+3893 2594 Crs
+3977 2669 Crs
+3897 2753 Crs
+3824 2666 Crs
+3917 2595 Crs
+3974 2694 Crs
+3874 2749 Crs
+3831 2642 Crs
+3939 2603 Crs
+3964 2717 Crs
+3853 2737 Crs
+3845 2621 Crs
+3958 2618 Crs
+3947 2735 Crs
+3836 2719 Crs
+3864 2605 Crs
+3970 2638 Crs
+3927 2748 Crs
+3826 2697 Crs
+3887 2596 Crs
+3976 2662 Crs
+3903 2753 Crs
+3824 2672 Crs
+3911 2594 Crs
+3975 2687 Crs
+3879 2751 Crs
+3829 2648 Crs
+3934 2600 Crs
+3967 2711 Crs
+3858 2741 Crs
+3841 2626 Crs
+3953 2613 Crs
+3952 2731 Crs
+3840 2724 Crs
+3859 2608 Crs
+3968 2633 Crs
+3932 2746 Crs
+3828 2703 Crs
+3881 2597 Crs
+3975 2656 Crs
+3909 2753 Crs
+3824 2678 Crs
+3905 2594 Crs
+3976 2681 Crs
+3885 2752 Crs
+3827 2654 Crs
+3929 2598 Crs
+3969 2706 Crs
+3863 2744 Crs
+3838 2631 Crs
+3949 2609 Crs
+3956 2727 Crs
+3844 2729 Crs
+3854 2612 Crs
+3965 2627 Crs
+3937 2743 Crs
+3830 2708 Crs
+3876 2599 Crs
+3974 2650 Crs
+3915 2752 Crs
+3824 2684 Crs
+3899 2594 Crs
+3977 2675 Crs
+3891 2753 Crs
+3825 2660 Crs
+3923 2596 Crs
+3972 2700 Crs
+3868 2746 Crs
+3834 2636 Crs
+3944 2606 Crs
+3960 2722 Crs
+3848 2733 Crs
+3850 2616 Crs
+3961 2623 Crs
+3942 2739 Crs
+3833 2714 Crs
+3870 2602 Crs
+3972 2644 Crs
+3921 2750 Crs
+3825 2691 Crs
+3893 2594 Crs
+3977 2669 Crs
+3897 2753 Crs
+3824 2666 Crs
+3917 2595 Crs
+3974 2694 Crs
+3874 2749 Crs
+3831 2642 Crs
+3939 2603 Crs
+3963 2717 Crs
+3853 2737 Crs
+3845 2621 Crs
+3958 2618 Crs
+3947 2736 Crs
+3836 2719 Crs
+3865 2605 Crs
+3970 2638 Crs
+3926 2748 Crs
+3826 2697 Crs
+3887 2596 Crs
+3976 2663 Crs
+3903 2753 Crs
+3824 2672 Crs
+3911 2594 Crs
+3975 2688 Crs
+3879 2751 Crs
+3829 2647 Crs
+3934 2600 Crs
+3967 2711 Crs
+3857 2740 Crs
+3841 2626 Crs
+3954 2614 Crs
+3952 2731 Crs
+3840 2724 Crs
+3859 2608 Crs
+3968 2633 Crs
+3932 2746 Crs
+3828 2702 Crs
+3882 2597 Crs
+3976 2656 Crs
+3909 2753 Crs
+3824 2678 Crs
+3906 2594 Crs
+3976 2682 Crs
+3885 2752 Crs
+3827 2653 Crs
+3929 2598 Crs
+3969 2706 Crs
+3862 2744 Crs
+3838 2631 Crs
+3949 2610 Crs
+3956 2727 Crs
+3844 2728 Crs
+3855 2612 Crs
+3965 2628 Crs
+3937 2743 Crs
+3830 2708 Crs
+3876 2599 Crs
+3974 2650 Crs
+3915 2752 Crs
+3824 2684 Crs
+3900 2594 Crs
+3977 2675 Crs
+3891 2753 Crs
+3826 2659 Crs
+3923 2596 Crs
+3972 2700 Crs
+3868 2746 Crs
+3834 2636 Crs
+3945 2606 Crs
+3960 2722 Crs
+3848 2733 Crs
+3850 2616 Crs
+3962 2623 Crs
+3942 2739 Crs
+3833 2713 Crs
+3870 2602 Crs
+3973 2644 Crs
+3921 2750 Crs
+3825 2690 Crs
+3894 2594 Crs
+3977 2669 Crs
+3897 2753 Crs
+3824 2666 Crs
+3918 2595 Crs
+3974 2694 Crs
+3873 2749 Crs
+3832 2641 Crs
+3940 2603 Crs
+3963 2717 Crs
+3852 2737 Crs
+3845 2621 Crs
+3958 2618 Crs
+3947 2736 Crs
+3836 2719 Crs
+3865 2605 Crs
+3970 2639 Crs
+3926 2748 Crs
+3826 2696 Crs
+3888 2596 Crs
+3976 2663 Crs
+3903 2753 Crs
+3824 2672 Crs
+3912 2594 Crs
+3975 2688 Crs
+3879 2751 Crs
+3829 2647 Crs
+3934 2600 Crs
+3966 2712 Crs
+3857 2740 Crs
+3841 2625 Crs
+3954 2614 Crs
+3952 2732 Crs
+3840 2724 Crs
+3860 2608 Crs
+3968 2633 Crs
+3932 2746 Crs
+3828 2702 Crs
+3882 2597 Crs
+3976 2657 Crs
+3909 2753 Crs
+3824 2678 Crs
+3906 2594 Crs
+3976 2682 Crs
+3885 2752 Crs
+3827 2653 Crs
+3929 2598 Crs
+3969 2706 Crs
+3862 2743 Crs
+3838 2630 Crs
+3949 2610 Crs
+3956 2727 Crs
+3843 2728 Crs
+3855 2612 Crs
+3965 2628 Crs
+3937 2743 Crs
+3830 2708 Crs
+3876 2599 Crs
+3974 2651 Crs
+3915 2752 Crs
+3824 2684 Crs
+3900 2594 Crs
+3977 2676 Crs
+3891 2753 Crs
+3826 2659 Crs
+3923 2596 Crs
+3972 2700 Crs
+3868 2746 Crs
+3835 2636 Crs
+3945 2606 Crs
+3960 2722 Crs
+3848 2733 Crs
+3850 2616 Crs
+3962 2623 Crs
+3942 2740 Crs
+3833 2713 Crs
+3871 2602 Crs
+3973 2645 Crs
+3920 2750 Crs
+3825 2690 Crs
+3894 2594 Crs
+3977 2669 Crs
+3897 2753 Crs
+3824 2665 Crs
+3918 2595 Crs
+3973 2694 Crs
+3873 2749 Crs
+3832 2641 Crs
+3940 2603 Crs
+3963 2717 Crs
+3852 2737 Crs
+3846 2620 Crs
+3958 2618 Crs
+3947 2736 Crs
+3836 2718 Crs
+3865 2605 Crs
+3971 2639 Crs
+3926 2748 Crs
+3826 2696 Crs
+3888 2595 Crs
+3976 2663 Crs
+3903 2753 Crs
+3824 2671 Crs
+3912 2594 Crs
+3975 2688 Crs
+3879 2750 Crs
+3829 2647 Crs
+3935 2600 Crs
+3966 2712 Crs
+3857 2740 Crs
+3842 2625 Crs
+3954 2614 Crs
+3951 2732 Crs
+3839 2723 Crs
+3860 2608 Crs
+3968 2633 Crs
+3931 2746 Crs
+3828 2702 Crs
+3882 2597 Crs
+3976 2657 Crs
+3908 2753 Crs
+3824 2678 Crs
+3906 2594 Crs
+3976 2682 Crs
+3885 2752 Crs
+3827 2653 Crs
+3929 2598 Crs
+3969 2706 Crs
+3862 2743 Crs
+3838 2630 Crs
+3950 2610 Crs
+3956 2727 Crs
+3843 2728 Crs
+3855 2612 Crs
+3965 2628 Crs
+3937 2743 Crs
+3830 2708 Crs
+3876 2599 Crs
+3974 2651 Crs
+3914 2752 Crs
+3824 2684 Crs
+3900 2594 Crs
+3977 2676 Crs
+3890 2753 Crs
+3826 2659 Crs
+3924 2596 Crs
+3971 2701 Crs
+3867 2746 Crs
+3835 2635 Crs
+3945 2606 Crs
+3960 2723 Crs
+3847 2732 Crs
+3850 2616 Crs
+3962 2623 Crs
+3942 2740 Crs
+3833 2713 Crs
+3871 2602 Crs
+3973 2645 Crs
+3920 2750 Crs
+3825 2690 Crs
+3894 2594 Crs
+3977 2670 Crs
+3896 2753 Crs
+3825 2665 Crs
+3918 2595 Crs
+3973 2695 Crs
+3873 2749 Crs
+3832 2641 Crs
+3940 2603 Crs
+3963 2718 Crs
+3852 2736 Crs
+3846 2620 Crs
+3958 2618 Crs
+3947 2736 Crs
+3836 2718 Crs
+3865 2604 Crs
+3971 2639 Crs
+3926 2748 Crs
+3826 2696 Crs
+3888 2595 Crs
+3976 2663 Crs
+3902 2753 Crs
+3824 2671 Crs
+3912 2594 Crs
+3975 2688 Crs
+3878 2750 Crs
+3829 2647 Crs
+3935 2600 Crs
+3966 2712 Crs
+3857 2740 Crs
+3842 2625 Crs
+3954 2614 Crs
+3951 2732 Crs
+3839 2723 Crs
+3860 2608 Crs
+3968 2634 Crs
+3931 2746 Crs
+3828 2702 Crs
+3882 2597 Crs
+3976 2657 Crs
+3908 2753 Crs
+3824 2677 Crs
+3906 2594 Crs
+3976 2682 Crs
+3884 2752 Crs
+3827 2653 Crs
+3929 2598 Crs
+3969 2707 Crs
+3862 2743 Crs
+3838 2630 Crs
+3950 2610 Crs
+3955 2728 Crs
+3843 2728 Crs
+3855 2611 Crs
+3965 2628 Crs
+3937 2743 Crs
+3830 2707 Crs
+3877 2599 Crs
+3974 2651 Crs
+3914 2752 Crs
+3824 2683 Crs
+3900 2594 Crs
+3977 2676 Crs
+3890 2753 Crs
+3826 2659 Crs
+3924 2596 Crs
+3971 2701 Crs
+3867 2746 Crs
+3835 2635 Crs
+3945 2606 Crs
+3959 2723 Crs
+3847 2732 Crs
+3850 2616 Crs
+3962 2623 Crs
+3942 2740 Crs
+3833 2713 Crs
+3871 2601 Crs
+3973 2645 Crs
+3920 2750 Crs
+3825 2690 Crs
+3894 2594 Crs
+3977 2670 Crs
+3896 2753 Crs
+3825 2665 Crs
+3918 2595 Crs
+3973 2695 Crs
+3873 2748 Crs
+3832 2641 Crs
+3940 2603 Crs
+3963 2718 Crs
+3852 2736 Crs
+3846 2620 Crs
+3958 2619 Crs
+3947 2736 Crs
+3836 2718 Crs
+3866 2604 Crs
+3971 2639 Crs
+3926 2748 Crs
+3826 2696 Crs
+3888 2595 Crs
+3976 2664 Crs
+3902 2753 Crs
+3824 2671 Crs
+3912 2594 Crs
+3975 2689 Crs
+3878 2750 Crs
+3829 2647 Crs
+3935 2601 Crs
+3966 2712 Crs
+3857 2740 Crs
+3842 2625 Crs
+3954 2614 Crs
+3951 2732 Crs
+3839 2723 Crs
+3860 2608 Crs
+3968 2634 Crs
+3931 2746 Crs
+3828 2701 Crs
+3883 2597 Crs
+3976 2657 Crs
+3908 2753 Crs
+3824 2677 Crs
+3907 2594 Crs
+3976 2683 Crs
+3884 2752 Crs
+3827 2652 Crs
+3930 2598 Crs
+3969 2707 Crs
+3862 2743 Crs
+3838 2630 Crs
+3950 2610 Crs
+3955 2728 Crs
+3843 2728 Crs
+3855 2611 Crs
+3965 2629 Crs
+3936 2743 Crs
+3830 2707 Crs
+3877 2599 Crs
+3975 2651 Crs
+3914 2752 Crs
+3824 2683 Crs
+3901 2594 Crs
+3977 2676 Crs
+3890 2753 Crs
+3826 2658 Crs
+3924 2596 Crs
+3971 2701 Crs
+3867 2746 Crs
+3835 2635 Crs
+3945 2607 Crs
+3959 2723 Crs
+3847 2732 Crs
+3851 2615 Crs
+3962 2624 Crs
+3941 2740 Crs
+3833 2713 Crs
+3871 2601 Crs
+3973 2645 Crs
+3920 2750 Crs
+3825 2689 Crs
+3895 2594 Crs
+3977 2670 Crs
+3896 2753 Crs
+3825 2665 Crs
+3918 2595 Crs
+3973 2695 Crs
+3872 2748 Crs
+3832 2641 Crs
+3940 2603 Crs
+3963 2718 Crs
+3852 2736 Crs
+3846 2620 Crs
+3958 2619 Crs
+3946 2736 Crs
+3836 2718 Crs
+3866 2604 Crs
+3971 2640 Crs
+3925 2749 Crs
+3826 2695 Crs
+3889 2595 Crs
+3976 2664 Crs
+3902 2753 Crs
+3824 2671 Crs
+3913 2594 Crs
+3975 2689 Crs
+3878 2750 Crs
+3829 2646 Crs
+3935 2601 Crs
+3966 2713 Crs
+3856 2740 Crs
+3842 2625 Crs
+3954 2614 Crs
+3951 2732 Crs
+3839 2723 Crs
+3861 2607 Crs
+3968 2634 Crs
+3931 2746 Crs
+3828 2701 Crs
+3883 2597 Crs
+3976 2658 Crs
+3908 2753 Crs
+3824 2677 Crs
+3907 2594 Crs
+3976 2683 Crs
+3884 2752 Crs
+3827 2652 Crs
+3930 2598 Crs
+3969 2707 Crs
+3861 2743 Crs
+3838 2630 Crs
+3950 2610 Crs
+3955 2728 Crs
+3843 2728 Crs
+3856 2611 Crs
+3966 2629 Crs
+3936 2743 Crs
+3830 2707 Crs
+3877 2599 Crs
+3975 2652 Crs
+3914 2752 Crs
+3824 2683 Crs
+3901 2594 Crs
+3977 2677 Crs
+3890 2753 Crs
+3826 2658 Crs
+3924 2596 Crs
+3971 2701 Crs
+3867 2746 Crs
+3835 2635 Crs
+3946 2607 Crs
+3959 2723 Crs
+3847 2732 Crs
+3851 2615 Crs
+3962 2624 Crs
+3941 2740 Crs
+3832 2712 Crs
+3871 2601 Crs
+3973 2646 Crs
+3919 2750 Crs
+3825 2689 Crs
+3895 2594 Crs
+3977 2670 Crs
+3896 2753 Crs
+3825 2664 Crs
+3919 2595 Crs
+3973 2695 Crs
+3872 2748 Crs
+3832 2640 Crs
+3941 2604 Crs
+3963 2718 Crs
+3851 2736 Crs
+3846 2620 Crs
+3959 2619 Crs
+3946 2737 Crs
+3835 2718 Crs
+3866 2604 Crs
+3971 2640 Crs
+3925 2749 Crs
+3826 2695 Crs
+3889 2595 Crs
+3976 2664 Crs
+3902 2753 Crs
+3824 2670 Crs
+% End plot #2
+% Begin plot #3
+0.700 UP
+1.000 UL
+LTb
+0.34 0.71 0.91 C
+4053 2674 Star
+3886 2833 Star
+3749 2648 Star
+3945 2517 Star
+4044 2725 Star
+3837 2820 Star
+3767 2600 Star
+3989 2537 Star
+4020 2771 Star
+3795 2792 Star
+3799 2559 Star
+4024 2571 Star
+3985 2807 Star
+3764 2752 Star
+3842 2529 Star
+4045 2617 Star
+3940 2828 Star
+3748 2704 Star
+3891 2514 Star
+4053 2668 Star
+3891 2833 Star
+3748 2653 Star
+3941 2516 Star
+4045 2720 Star
+3842 2822 Star
+3764 2605 Star
+3985 2534 Star
+4023 2767 Star
+3799 2795 Star
+3796 2563 Star
+4021 2567 Star
+3989 2804 Star
+3767 2757 Star
+3838 2532 Star
+4044 2612 Star
+3945 2827 Star
+3749 2709 Star
+3886 2515 Star
+4053 2663 Star
+3896 2834 Star
+3747 2659 Star
+3936 2515 Star
+4047 2715 Star
+3847 2824 Star
+3762 2609 Star
+3981 2532 Star
+4026 2763 Star
+3803 2799 Star
+3792 2566 Star
+4018 2563 Star
+3993 2801 Star
+3769 2761 Star
+3833 2534 Star
+4042 2607 Star
+3950 2825 Star
+3750 2714 Star
+3881 2516 Star
+4053 2658 Star
+3901 2834 Star
+3747 2664 Star
+3931 2514 Star
+4048 2710 Star
+3852 2826 Star
+3760 2614 Star
+3977 2529 Star
+4029 2758 Star
+3807 2802 Star
+3788 2570 Star
+4014 2560 Star
+3997 2797 Star
+3772 2765 Star
+3829 2537 Star
+4040 2602 Star
+3954 2823 Star
+3751 2719 Star
+3876 2517 Star
+4052 2652 Star
+3906 2834 Star
+3746 2669 Star
+3926 2514 Star
+4049 2705 Star
+3857 2827 Star
+3758 2619 Star
+3972 2527 Star
+4031 2754 Star
+3811 2805 Star
+3785 2574 Star
+4011 2556 Star
+4000 2794 Star
+3775 2769 Star
+3824 2540 Star
+4038 2597 Star
+3959 2821 Star
+3753 2724 Star
+3871 2519 Star
+4052 2647 Star
+3911 2833 Star
+3746 2674 Star
+3921 2513 Star
+4050 2699 Star
+3861 2828 Star
+3756 2624 Star
+3968 2525 Star
+4034 2749 Star
+3816 2808 Star
+3781 2578 Star
+4008 2552 Star
+4004 2790 Star
+3778 2774 Star
+3820 2543 Star
+4036 2593 Star
+3963 2819 Star
+3754 2729 Star
+3866 2520 Star
+4051 2642 Star
+3916 2833 Star
+3746 2679 Star
+3916 2513 Star
+4051 2694 Star
+3866 2830 Star
+3754 2629 Star
+3963 2523 Star
+4036 2744 Star
+3820 2811 Star
+3778 2583 Star
+4004 2549 Star
+4008 2787 Star
+3782 2778 Star
+3815 2546 Star
+4034 2588 Star
+3968 2817 Star
+3756 2734 Star
+3861 2522 Star
+4050 2636 Star
+3921 2832 Star
+3746 2684 Star
+3911 2513 Star
+4052 2689 Star
+3871 2831 Star
+3752 2634 Star
+3959 2521 Star
+4038 2739 Star
+3824 2813 Star
+3775 2587 Star
+4000 2546 Star
+4011 2783 Star
+3785 2781 Star
+3811 2549 Star
+4031 2584 Star
+3972 2815 Star
+3758 2739 Star
+3856 2523 Star
+4049 2631 Star
+3926 2831 Star
+3746 2690 Star
+3906 2513 Star
+4052 2683 Star
+3876 2832 Star
+3751 2639 Star
+3954 2520 Star
+4040 2734 Star
+3829 2816 Star
+3772 2591 Star
+3997 2543 Star
+4014 2779 Star
+3788 2785 Star
+3807 2552 Star
+4029 2579 Star
+3977 2812 Star
+3760 2743 Star
+3851 2525 Star
+4048 2626 Star
+3931 2830 Star
+3747 2695 Star
+3901 2513 Star
+4053 2678 Star
+3881 2832 Star
+3750 2644 Star
+3949 2518 Star
+4042 2730 Star
+3833 2818 Star
+3769 2596 Star
+3993 2540 Star
+4018 2775 Star
+3792 2789 Star
+3803 2556 Star
+4026 2575 Star
+3981 2809 Star
+3762 2748 Star
+3847 2527 Star
+4047 2621 Star
+3936 2829 Star
+3747 2700 Star
+3896 2514 Star
+4053 2673 Star
+3886 2833 Star
+3749 2649 Star
+3945 2517 Star
+4044 2724 Star
+3838 2820 Star
+3767 2601 Star
+3989 2537 Star
+4021 2771 Star
+3796 2792 Star
+3799 2559 Star
+4023 2571 Star
+3985 2806 Star
+3765 2753 Star
+3842 2530 Star
+4045 2616 Star
+3941 2828 Star
+3748 2705 Star
+3891 2515 Star
+4053 2667 Star
+3891 2833 Star
+3748 2654 Star
+3940 2516 Star
+4045 2719 Star
+3843 2822 Star
+3764 2605 Star
+3985 2534 Star
+4024 2766 Star
+3800 2796 Star
+3795 2563 Star
+4020 2567 Star
+3989 2803 Star
+3767 2757 Star
+3837 2532 Star
+4044 2611 Star
+3945 2827 Star
+3749 2710 Star
+3886 2515 Star
+4053 2662 Star
+3897 2834 Star
+3747 2659 Star
+3935 2515 Star
+4047 2714 Star
+3847 2824 Star
+3762 2610 Star
+3980 2531 Star
+4026 2762 Star
+3804 2799 Star
+3791 2567 Star
+4017 2563 Star
+3993 2800 Star
+3770 2761 Star
+3832 2534 Star
+4042 2606 Star
+3950 2825 Star
+3750 2715 Star
+3880 2516 Star
+4053 2657 Star
+3902 2834 Star
+3746 2664 Star
+3930 2514 Star
+4048 2709 Star
+3852 2826 Star
+3760 2615 Star
+3976 2529 Star
+4029 2758 Star
+3808 2802 Star
+3788 2571 Star
+4014 2559 Star
+3997 2797 Star
+3773 2766 Star
+3828 2537 Star
+4040 2601 Star
+3955 2823 Star
+3751 2720 Star
+3875 2517 Star
+4052 2651 Star
+3907 2834 Star
+3746 2670 Star
+3925 2514 Star
+4049 2704 Star
+3857 2827 Star
+3757 2620 Star
+3972 2527 Star
+4032 2753 Star
+3812 2805 Star
+3784 2575 Star
+4011 2555 Star
+4001 2793 Star
+3776 2770 Star
+3823 2540 Star
+4038 2597 Star
+3960 2821 Star
+3753 2725 Star
+3870 2519 Star
+4052 2646 Star
+3912 2833 Star
+3746 2675 Star
+3920 2513 Star
+4050 2699 Star
+3862 2829 Star
+3756 2625 Star
+3967 2525 Star
+4034 2748 Star
+3816 2808 Star
+3781 2579 Star
+4007 2552 Star
+4005 2790 Star
+3779 2774 Star
+3819 2543 Star
+4036 2592 Star
+3964 2819 Star
+3754 2730 Star
+3865 2520 Star
+4051 2641 Star
+3917 2833 Star
+3746 2680 Star
+3915 2513 Star
+4051 2693 Star
+3867 2830 Star
+3754 2629 Star
+3963 2523 Star
+4036 2744 Star
+3820 2811 Star
+3778 2583 Star
+4004 2549 Star
+4008 2786 Star
+3782 2778 Star
+3815 2546 Star
+4033 2588 Star
+3969 2817 Star
+3756 2735 Star
+3860 2522 Star
+4050 2636 Star
+3922 2832 Star
+3746 2685 Star
+3910 2513 Star
+4052 2688 Star
+3872 2831 Star
+3752 2635 Star
+3958 2521 Star
+4039 2739 Star
+3825 2814 Star
+3775 2588 Star
+4000 2545 Star
+4012 2782 Star
+3785 2782 Star
+3810 2549 Star
+4031 2583 Star
+3973 2814 Star
+3758 2739 Star
+3856 2524 Star
+4049 2631 Star
+3927 2831 Star
+3746 2690 Star
+3905 2513 Star
+4052 2683 Star
+3877 2832 Star
+3751 2640 Star
+3954 2520 Star
+4041 2734 Star
+3829 2816 Star
+3772 2592 Star
+3996 2542 Star
+4015 2778 Star
+3789 2786 Star
+3806 2553 Star
+4028 2579 Star
+3977 2812 Star
+3760 2744 Star
+3851 2526 Star
+4048 2625 Star
+3932 2830 Star
+3747 2695 Star
+3900 2514 Star
+4053 2677 Star
+3882 2833 Star
+3750 2645 Star
+3949 2518 Star
+4042 2729 Star
+3834 2818 Star
+3769 2597 Star
+3992 2539 Star
+4018 2774 Star
+3793 2789 Star
+3802 2556 Star
+4026 2574 Star
+3982 2809 Star
+3763 2749 Star
+3846 2528 Star
+4047 2620 Star
+3936 2829 Star
+3747 2701 Star
+3895 2514 Star
+4053 2672 Star
+3887 2833 Star
+3749 2650 Star
+3944 2517 Star
+4044 2724 Star
+3839 2820 Star
+3766 2601 Star
+3988 2536 Star
+4021 2770 Star
+3796 2793 Star
+3798 2560 Star
+4023 2570 Star
+3986 2806 Star
+3765 2753 Star
+3841 2530 Star
+4045 2615 Star
+3941 2828 Star
+3748 2706 Star
+3890 2515 Star
+4053 2667 Star
+3892 2833 Star
+3748 2655 Star
+3939 2516 Star
+4046 2719 Star
+3843 2822 Star
+3764 2606 Star
+3984 2534 Star
+4024 2766 Star
+3800 2796 Star
+3795 2564 Star
+4020 2566 Star
+3990 2803 Star
+3768 2758 Star
+3836 2532 Star
+4043 2610 Star
+3946 2826 Star
+3749 2711 Star
+3885 2515 Star
+4053 2661 Star
+3897 2834 Star
+3747 2660 Star
+3934 2515 Star
+4047 2714 Star
+3848 2824 Star
+3761 2611 Star
+3980 2531 Star
+4027 2761 Star
+3804 2800 Star
+3791 2567 Star
+4017 2562 Star
+3994 2800 Star
+3770 2762 Star
+3832 2535 Star
+4042 2606 Star
+3951 2825 Star
+3750 2716 Star
+3880 2516 Star
+4053 2656 Star
+3902 2834 Star
+3746 2665 Star
+3929 2514 Star
+4048 2708 Star
+3853 2826 Star
+3759 2615 Star
+3975 2529 Star
+4030 2757 Star
+3808 2803 Star
+3787 2571 Star
+4013 2559 Star
+3998 2796 Star
+3773 2766 Star
+3827 2538 Star
+4040 2601 Star
+3956 2823 Star
+3752 2721 Star
+3875 2518 Star
+4052 2651 Star
+3907 2833 Star
+3746 2670 Star
+3924 2514 Star
+4049 2703 Star
+3858 2827 Star
+3757 2620 Star
+3971 2527 Star
+4032 2752 Star
+3812 2806 Star
+3784 2575 Star
+4010 2555 Star
+4001 2793 Star
+3776 2771 Star
+3823 2540 Star
+4038 2596 Star
+3960 2821 Star
+3753 2726 Star
+3870 2519 Star
+4052 2645 Star
+3912 2833 Star
+3746 2676 Star
+3919 2513 Star
+4050 2698 Star
+3863 2829 Star
+3755 2625 Star
+3967 2525 Star
+4034 2748 Star
+3817 2809 Star
+3780 2580 Star
+4007 2551 Star
+4005 2789 Star
+3779 2775 Star
+3818 2543 Star
+4036 2591 Star
+3965 2819 Star
+3755 2731 Star
+3865 2520 Star
+4051 2640 Star
+3917 2833 Star
+3746 2681 Star
+3914 2513 Star
+4051 2693 Star
+3868 2830 Star
+3754 2630 Star
+3962 2523 Star
+4037 2743 Star
+3821 2811 Star
+3777 2584 Star
+4003 2548 Star
+4009 2786 Star
+3783 2779 Star
+3814 2547 Star
+4033 2587 Star
+3969 2816 Star
+3756 2735 Star
+3860 2522 Star
+4050 2635 Star
+3922 2832 Star
+3746 2686 Star
+3909 2513 Star
+4052 2687 Star
+3873 2831 Star
+3752 2635 Star
+3958 2521 Star
+4039 2738 Star
+3826 2814 Star
+3774 2588 Star
+3999 2545 Star
+4012 2782 Star
+3786 2782 Star
+3810 2550 Star
+4031 2582 Star
+3974 2814 Star
+3758 2740 Star
+3855 2524 Star
+4049 2630 Star
+3927 2831 Star
+3746 2691 Star
+3904 2513 Star
+4052 2682 Star
+3878 2832 Star
+3751 2640 Star
+3953 2519 Star
+4041 2733 Star
+3830 2816 Star
+3771 2593 Star
+3995 2542 Star
+4015 2778 Star
+3789 2786 Star
+3806 2553 Star
+4028 2578 Star
+3978 2811 Star
+3761 2745 Star
+3850 2526 Star
+4048 2625 Star
+3932 2830 Star
+3747 2696 Star
+3899 2514 Star
+4053 2677 Star
+3883 2833 Star
+3749 2645 Star
+3948 2518 Star
+4043 2728 Star
+3835 2819 Star
+3769 2597 Star
+3992 2539 Star
+4018 2774 Star
+3793 2790 Star
+3802 2557 Star
+4025 2574 Star
+3982 2809 Star
+3763 2749 Star
+3845 2528 Star
+4046 2620 Star
+3937 2829 Star
+3747 2701 Star
+3894 2514 Star
+4053 2671 Star
+3888 2833 Star
+3748 2650 Star
+3943 2517 Star
+4044 2723 Star
+3839 2821 Star
+3766 2602 Star
+3988 2536 Star
+4021 2770 Star
+3797 2793 Star
+3798 2560 Star
+4022 2570 Star
+3986 2806 Star
+3765 2754 Star
+3841 2530 Star
+4045 2615 Star
+3942 2828 Star
+3748 2706 Star
+3889 2515 Star
+4053 2666 Star
+3893 2833 Star
+3748 2656 Star
+3939 2516 Star
+4046 2718 Star
+3844 2823 Star
+3763 2607 Star
+3983 2533 Star
+4024 2765 Star
+3801 2797 Star
+3794 2564 Star
+4019 2566 Star
+3990 2803 Star
+3768 2758 Star
+3836 2533 Star
+4043 2610 Star
+3947 2826 Star
+3749 2711 Star
+3884 2516 Star
+4053 2661 Star
+3898 2834 Star
+3747 2661 Star
+3934 2515 Star
+4047 2713 Star
+3849 2825 Star
+3761 2611 Star
+3979 2531 Star
+4027 2761 Star
+3805 2800 Star
+3790 2568 Star
+4016 2562 Star
+3994 2799 Star
+3771 2763 Star
+3831 2535 Star
+4041 2605 Star
+3952 2824 Star
+3750 2716 Star
+3879 2517 Star
+4052 2655 Star
+3903 2834 Star
+3746 2666 Star
+3929 2514 Star
+4049 2708 Star
+3854 2826 Star
+3759 2616 Star
+3975 2528 Star
+4030 2756 Star
+3809 2803 Star
+3787 2572 Star
+4013 2558 Star
+3998 2796 Star
+3774 2767 Star
+3827 2538 Star
+4039 2600 Star
+3956 2823 Star
+3752 2721 Star
+3874 2518 Star
+4052 2650 Star
+3908 2833 Star
+3746 2671 Star
+3924 2514 Star
+4050 2702 Star
+3859 2828 Star
+3757 2621 Star
+3971 2526 Star
+4032 2752 Star
+3813 2806 Star
+3783 2576 Star
+4010 2554 Star
+4002 2792 Star
+3777 2771 Star
+3822 2541 Star
+4037 2595 Star
+3961 2821 Star
+3753 2726 Star
+3869 2519 Star
+4051 2645 Star
+3913 2833 Star
+3746 2676 Star
+3919 2513 Star
+4051 2697 Star
+3863 2829 Star
+3755 2626 Star
+3966 2524 Star
+4035 2747 Star
+3817 2809 Star
+3780 2580 Star
+4006 2551 Star
+4006 2789 Star
+3780 2775 Star
+3818 2544 Star
+4035 2591 Star
+3965 2818 Star
+3755 2731 Star
+3864 2521 Star
+4051 2640 Star
+3918 2833 Star
+3746 2681 Star
+3914 2513 Star
+4051 2692 Star
+3868 2830 Star
+3753 2631 Star
+3962 2522 Star
+4037 2742 Star
+3822 2812 Star
+3777 2584 Star
+4003 2548 Star
+4009 2785 Star
+3783 2779 Star
+3814 2547 Star
+4033 2586 Star
+3970 2816 Star
+3757 2736 Star
+3859 2522 Star
+4050 2634 Star
+3923 2832 Star
+3746 2687 Star
+3909 2513 Star
+4052 2687 Star
+3873 2831 Star
+3752 2636 Star
+3957 2521 Star
+4039 2737 Star
+3826 2814 Star
+3774 2589 Star
+3999 2544 Star
+4012 2781 Star
+3786 2783 Star
+3809 2550 Star
+4030 2582 Star
+3974 2814 Star
+3759 2741 Star
+3854 2524 Star
+4049 2629 Star
+3928 2831 Star
+3746 2692 Star
+3904 2513 Star
+4052 2681 Star
+3878 2832 Star
+3750 2641 Star
+3952 2519 Star
+4041 2732 Star
+3831 2817 Star
+3771 2593 Star
+3995 2541 Star
+4016 2777 Star
+3790 2787 Star
+3805 2554 Star
+4028 2578 Star
+3979 2811 Star
+3761 2745 Star
+3849 2526 Star
+4048 2624 Star
+3933 2830 Star
+3747 2697 Star
+3899 2514 Star
+4053 2676 Star
+3883 2833 Star
+3749 2646 Star
+3948 2518 Star
+4043 2727 Star
+3835 2819 Star
+3768 2598 Star
+3991 2538 Star
+4019 2773 Star
+3794 2790 Star
+3801 2557 Star
+4025 2573 Star
+3983 2808 Star
+3763 2750 Star
+3845 2528 Star
+4046 2619 Star
+3938 2829 Star
+3747 2702 Star
+3894 2514 Star
+4053 2671 Star
+3888 2833 Star
+3748 2651 Star
+3943 2517 Star
+4045 2722 Star
+3840 2821 Star
+3766 2602 Star
+3987 2536 Star
+4022 2769 Star
+3797 2794 Star
+3797 2561 Star
+4022 2569 Star
+3987 2805 Star
+3766 2754 Star
+3840 2531 Star
+4045 2614 Star
+3943 2827 Star
+3748 2707 Star
+3889 2515 Star
+4053 2665 Star
+3894 2833 Star
+3747 2656 Star
+3938 2516 Star
+4046 2717 Star
+3845 2823 Star
+3763 2607 Star
+3983 2533 Star
+4025 2765 Star
+3801 2797 Star
+3794 2565 Star
+4019 2565 Star
+3991 2802 Star
+3768 2759 Star
+3835 2533 Star
+4043 2609 Star
+3947 2826 Star
+3749 2712 Star
+3883 2516 Star
+4053 2660 Star
+3899 2834 Star
+3747 2661 Star
+3933 2515 Star
+4047 2712 Star
+3849 2825 Star
+3761 2612 Star
+3979 2530 Star
+4028 2760 Star
+3805 2800 Star
+3790 2568 Star
+4016 2561 Star
+3995 2799 Star
+3771 2763 Star
+3831 2536 Star
+4041 2604 Star
+3952 2824 Star
+3751 2717 Star
+3878 2517 Star
+4052 2655 Star
+3904 2834 Star
+3746 2667 Star
+3928 2514 Star
+4049 2707 Star
+3854 2826 Star
+3759 2617 Star
+3974 2528 Star
+4030 2756 Star
+3809 2804 Star
+3786 2572 Star
+4013 2558 Star
+3999 2795 Star
+3774 2768 Star
+3826 2538 Star
+4039 2599 Star
+3957 2822 Star
+3752 2722 Star
+3873 2518 Star
+4052 2649 Star
+3909 2833 Star
+3746 2672 Star
+3923 2514 Star
+4050 2702 Star
+3859 2828 Star
+3757 2622 Star
+3970 2526 Star
+4033 2751 Star
+3814 2806 Star
+3783 2577 Star
+4009 2554 Star
+4002 2792 Star
+3777 2772 Star
+3822 2541 Star
+4037 2595 Star
+3961 2820 Star
+3753 2727 Star
+3868 2519 Star
+4051 2644 Star
+3914 2833 Star
+3746 2677 Star
+3918 2513 Star
+4051 2696 Star
+3864 2829 Star
+3755 2627 Star
+3965 2524 Star
+4035 2746 Star
+3818 2809 Star
+3780 2581 Star
+4006 2551 Star
+4006 2788 Star
+3780 2776 Star
+3817 2544 Star
+4035 2590 Star
+3966 2818 Star
+3755 2732 Star
+3863 2521 Star
+4051 2639 Star
+3919 2832 Star
+3746 2682 Star
+3913 2513 Star
+4051 2691 Star
+3869 2830 Star
+3753 2632 Star
+3961 2522 Star
+4037 2742 Star
+3822 2812 Star
+3776 2585 Star
+4002 2547 Star
+4010 2785 Star
+3783 2780 Star
+3813 2547 Star
+4033 2586 Star
+3970 2816 Star
+3757 2737 Star
+3858 2523 Star
+4050 2634 Star
+3924 2832 Star
+3746 2687 Star
+3908 2513 Star
+4052 2686 Star
+3874 2831 Star
+3752 2637 Star
+3956 2520 Star
+4039 2737 Star
+3827 2815 Star
+3773 2589 Star
+3998 2544 Star
+4013 2781 Star
+3787 2783 Star
+3809 2551 Star
+4030 2581 Star
+3975 2813 Star
+3759 2741 Star
+3854 2524 Star
+4049 2628 Star
+3929 2831 Star
+3746 2692 Star
+3903 2513 Star
+4052 2681 Star
+3879 2832 Star
+3750 2642 Star
+3952 2519 Star
+4041 2732 Star
+3831 2817 Star
+3771 2594 Star
+3994 2541 Star
+4016 2777 Star
+3790 2787 Star
+3805 2554 Star
+4027 2577 Star
+3979 2811 Star
+3761 2746 Star
+3849 2526 Star
+4047 2623 Star
+3934 2830 Star
+3747 2698 Star
+3898 2514 Star
+4053 2675 Star
+3884 2833 Star
+3749 2647 Star
+3947 2518 Star
+4043 2727 Star
+3836 2819 Star
+3768 2598 Star
+3990 2538 Star
+4019 2773 Star
+3794 2791 Star
+3801 2558 Star
+4025 2573 Star
+3983 2808 Star
+3764 2751 Star
+3844 2529 Star
+4046 2618 Star
+3938 2829 Star
+3748 2703 Star
+3893 2514 Star
+4053 2670 Star
+3889 2833 Star
+3748 2652 Star
+3942 2516 Star
+4045 2722 Star
+3841 2821 Star
+3765 2603 Star
+3986 2535 Star
+4022 2768 Star
+3798 2794 Star
+3797 2561 Star
+4022 2569 Star
+3987 2805 Star
+3766 2755 Star
+3839 2531 Star
+4044 2613 Star
+3943 2827 Star
+3748 2708 Star
+3888 2515 Star
+4053 2665 Star
+3894 2834 Star
+3747 2657 Star
+3937 2515 Star
+4046 2717 Star
+3845 2823 Star
+3763 2608 Star
+3982 2533 Star
+4025 2764 Star
+3802 2798 Star
+3793 2565 Star
+4019 2565 Star
+% End plot #3
+% Begin plot #4
+0.700 UP
+1.000 UL
+LTb
+0.90 0.62 0.00 C
+4205 2674 Box
+3874 2993 Box
+3593 2619 Box
+4006 2360 Box
+4184 2791 Box
+3763 2959 Box
+3640 2512 Box
+4100 2409 Box
+4129 2892 Box
+3670 2889 Box
+3723 2425 Box
+4167 2494 Box
+4045 2962 Box
+3607 2794 Box
+3829 2368 Box
+4201 2604 Box
+3940 2994 Box
+3586 2684 Box
+3943 2351 Box
+4201 2724 Box
+3827 2983 Box
+3608 2573 Box
+4048 2376 Box
+4165 2836 Box
+3721 2934 Box
+3671 2473 Box
+4131 2441 Box
+4097 2926 Box
+3639 2852 Box
+3766 2397 Box
+4185 2538 Box
+4003 2980 Box
+3593 2749 Box
+3877 2356 Box
+4205 2654 Box
+3893 2995 Box
+3590 2637 Box
+3989 2356 Box
+4190 2773 Box
+3781 2967 Box
+3630 2529 Box
+4086 2398 Box
+4140 2877 Box
+3683 2903 Box
+3708 2438 Box
+4158 2478 Box
+4060 2953 Box
+3615 2811 Box
+3811 2375 Box
+4198 2585 Box
+3958 2992 Box
+3586 2702 Box
+3924 2351 Box
+4203 2704 Box
+3845 2988 Box
+3602 2590 Box
+4032 2369 Box
+4173 2819 Box
+3737 2944 Box
+3658 2488 Box
+4120 2428 Box
+4110 2913 Box
+3650 2867 Box
+3749 2407 Box
+4179 2520 Box
+4020 2974 Box
+3598 2766 Box
+3858 2360 Box
+4204 2634 Box
+3911 2995 Box
+3587 2655 Box
+3971 2353 Box
+4195 2754 Box
+3798 2974 Box
+3621 2546 Box
+4072 2389 Box
+4151 2862 Box
+3697 2915 Box
+3693 2451 Box
+4148 2463 Box
+4075 2943 Box
+3624 2827 Box
+3793 2383 Box
+4194 2566 Box
+3976 2988 Box
+3588 2720 Box
+3906 2352 Box
+4205 2685 Box
+3863 2991 Box
+3596 2608 Box
+4015 2363 Box
+4180 2801 Box
+3754 2954 Box
+3647 2503 Box
+4107 2415 Box
+4123 2900 Box
+3662 2881 Box
+3732 2418 Box
+4171 2503 Box
+4036 2967 Box
+3604 2784 Box
+3840 2365 Box
+4203 2615 Box
+3929 2995 Box
+3586 2673 Box
+3953 2351 Box
+4199 2735 Box
+3816 2980 Box
+3612 2563 Box
+4057 2380 Box
+4160 2846 Box
+3712 2927 Box
+3679 2465 Box
+4138 2448 Box
+4089 2932 Box
+3633 2843 Box
+3775 2392 Box
+4189 2548 Box
+3993 2984 Box
+3591 2739 Box
+3887 2354 Box
+4205 2665 Box
+3882 2994 Box
+3592 2626 Box
+3998 2358 Box
+4187 2783 Box
+3771 2963 Box
+3636 2519 Box
+4094 2404 Box
+4134 2886 Box
+3675 2895 Box
+3716 2430 Box
+4163 2487 Box
+4052 2958 Box
+3611 2801 Box
+3821 2371 Box
+4200 2596 Box
+3948 2993 Box
+3586 2692 Box
+3935 2351 Box
+4202 2715 Box
+3834 2986 Box
+3605 2580 Box
+4041 2373 Box
+4169 2829 Box
+3728 2938 Box
+3666 2479 Box
+4126 2435 Box
+4103 2920 Box
+3644 2858 Box
+3758 2401 Box
+4183 2530 Box
+4010 2978 Box
+3595 2756 Box
+3869 2358 Box
+4205 2646 Box
+3900 2995 Box
+3589 2645 Box
+3981 2355 Box
+4192 2765 Box
+3788 2970 Box
+3626 2536 Box
+4080 2394 Box
+4145 2871 Box
+3689 2908 Box
+3701 2443 Box
+4154 2471 Box
+4067 2949 Box
+3619 2818 Box
+3803 2378 Box
+4196 2577 Box
+3966 2990 Box
+3587 2710 Box
+3917 2351 Box
+4204 2696 Box
+3853 2990 Box
+3599 2598 Box
+4025 2366 Box
+4176 2811 Box
+3744 2948 Box
+3653 2494 Box
+4114 2422 Box
+4116 2907 Box
+3655 2873 Box
+3742 2412 Box
+4176 2513 Box
+4027 2971 Box
+3600 2774 Box
+3850 2362 Box
+4204 2626 Box
+3919 2995 Box
+3587 2663 Box
+3963 2352 Box
+4197 2746 Box
+3806 2977 Box
+3617 2553 Box
+4065 2385 Box
+4155 2855 Box
+3704 2921 Box
+3687 2457 Box
+4144 2457 Box
+4081 2939 Box
+3628 2834 Box
+3785 2387 Box
+4192 2558 Box
+3983 2986 Box
+3589 2728 Box
+3898 2353 Box
+4205 2676 Box
+3871 2993 Box
+3594 2616 Box
+4008 2361 Box
+4183 2794 Box
+3761 2958 Box
+3642 2510 Box
+4101 2411 Box
+4128 2894 Box
+3668 2887 Box
+3725 2423 Box
+4168 2496 Box
+4043 2963 Box
+3606 2791 Box
+3832 2368 Box
+4202 2607 Box
+3937 2994 Box
+3586 2681 Box
+3945 2351 Box
+4200 2726 Box
+3824 2983 Box
+3609 2570 Box
+4050 2377 Box
+4164 2838 Box
+3719 2932 Box
+3673 2471 Box
+4133 2443 Box
+4095 2927 Box
+3638 2850 Box
+3768 2396 Box
+4186 2540 Box
+4000 2981 Box
+3592 2746 Box
+3879 2356 Box
+4205 2657 Box
+3890 2994 Box
+3590 2634 Box
+3991 2357 Box
+4189 2775 Box
+3778 2966 Box
+3631 2526 Box
+4088 2400 Box
+4139 2879 Box
+3681 2901 Box
+3710 2436 Box
+4159 2480 Box
+4058 2955 Box
+3614 2808 Box
+3814 2374 Box
+4198 2588 Box
+3955 2992 Box
+3586 2700 Box
+3927 2351 Box
+4203 2707 Box
+3842 2987 Box
+3602 2588 Box
+4034 2370 Box
+4172 2821 Box
+3735 2943 Box
+3660 2486 Box
+4121 2429 Box
+4108 2915 Box
+3649 2865 Box
+3751 2406 Box
+4180 2523 Box
+4017 2975 Box
+3597 2764 Box
+3861 2359 Box
+4205 2637 Box
+3908 2995 Box
+3588 2652 Box
+3973 2353 Box
+4194 2757 Box
+3796 2973 Box
+3622 2543 Box
+4074 2390 Box
+4149 2864 Box
+3695 2914 Box
+3695 2449 Box
+4150 2465 Box
+4073 2945 Box
+3622 2825 Box
+3796 2382 Box
+4194 2569 Box
+3973 2989 Box
+3588 2718 Box
+3909 2352 Box
+4205 2688 Box
+3861 2991 Box
+3597 2606 Box
+4018 2364 Box
+4179 2804 Box
+3751 2953 Box
+3648 2501 Box
+4109 2417 Box
+4121 2902 Box
+3661 2879 Box
+3735 2417 Box
+4172 2506 Box
+4034 2968 Box
+3603 2781 Box
+3842 2364 Box
+4203 2618 Box
+3927 2995 Box
+3586 2671 Box
+3956 2352 Box
+4198 2737 Box
+3814 2980 Box
+3614 2560 Box
+4059 2381 Box
+4159 2848 Box
+3710 2926 Box
+3681 2463 Box
+4139 2450 Box
+4087 2934 Box
+3632 2841 Box
+3778 2390 Box
+4189 2551 Box
+3991 2984 Box
+3590 2736 Box
+3890 2354 Box
+4205 2668 Box
+3879 2993 Box
+3592 2624 Box
+4001 2359 Box
+4186 2786 Box
+3768 2961 Box
+3637 2517 Box
+4096 2406 Box
+4132 2888 Box
+3673 2893 Box
+3719 2429 Box
+4164 2489 Box
+4049 2960 Box
+3609 2799 Box
+3824 2370 Box
+4200 2599 Box
+3945 2993 Box
+3586 2689 Box
+3938 2351 Box
+4201 2718 Box
+3832 2985 Box
+3606 2578 Box
+4043 2374 Box
+4167 2831 Box
+3726 2937 Box
+3667 2477 Box
+4128 2437 Box
+4101 2922 Box
+3642 2856 Box
+3761 2400 Box
+4184 2533 Box
+4008 2979 Box
+3594 2754 Box
+3871 2357 Box
+4205 2648 Box
+3898 2995 Box
+3589 2642 Box
+3984 2355 Box
+4191 2767 Box
+3786 2969 Box
+3627 2534 Box
+4082 2395 Box
+4143 2873 Box
+3687 2906 Box
+3703 2441 Box
+4155 2474 Box
+4065 2950 Box
+3617 2815 Box
+3806 2377 Box
+4197 2580 Box
+3963 2991 Box
+3587 2707 Box
+3919 2351 Box
+4204 2699 Box
+3850 2989 Box
+3600 2595 Box
+4027 2367 Box
+4175 2814 Box
+3742 2947 Box
+3655 2492 Box
+4116 2424 Box
+4114 2909 Box
+3654 2871 Box
+3744 2410 Box
+4177 2515 Box
+4024 2972 Box
+3599 2771 Box
+3853 2361 Box
+4204 2629 Box
+3916 2995 Box
+3587 2660 Box
+3966 2353 Box
+4196 2748 Box
+3803 2976 Box
+3618 2550 Box
+4067 2386 Box
+4153 2857 Box
+3702 2919 Box
+3689 2455 Box
+4145 2459 Box
+4079 2940 Box
+3626 2832 Box
+3788 2385 Box
+4192 2561 Box
+3981 2987 Box
+3589 2726 Box
+3901 2352 Box
+4205 2679 Box
+3869 2992 Box
+3595 2613 Box
+4011 2361 Box
+4182 2796 Box
+3758 2956 Box
+3643 2508 Box
+4103 2412 Box
+4126 2896 Box
+3666 2885 Box
+3728 2422 Box
+4169 2499 Box
+4040 2965 Box
+3605 2789 Box
+3834 2367 Box
+4202 2609 Box
+3935 2994 Box
+3586 2679 Box
+3948 2351 Box
+4200 2729 Box
+3821 2982 Box
+3610 2568 Box
+4052 2378 Box
+4163 2841 Box
+3717 2930 Box
+3675 2469 Box
+4135 2445 Box
+4093 2929 Box
+3636 2847 Box
+3770 2394 Box
+4187 2543 Box
+3998 2982 Box
+3592 2744 Box
+3882 2355 Box
+4205 2660 Box
+3887 2994 Box
+3591 2632 Box
+3993 2357 Box
+4188 2778 Box
+3776 2965 Box
+3633 2524 Box
+4090 2401 Box
+4137 2881 Box
+3679 2899 Box
+3712 2434 Box
+4160 2483 Box
+4056 2956 Box
+3613 2806 Box
+3816 2373 Box
+4199 2590 Box
+3953 2992 Box
+3586 2697 Box
+3930 2351 Box
+4202 2710 Box
+3840 2987 Box
+3603 2585 Box
+4036 2371 Box
+4171 2824 Box
+3732 2941 Box
+3662 2483 Box
+4123 2431 Box
+4107 2917 Box
+3647 2863 Box
+3753 2404 Box
+4181 2525 Box
+4015 2976 Box
+3596 2761 Box
+3863 2359 Box
+4205 2640 Box
+3906 2995 Box
+3588 2650 Box
+3976 2354 Box
+4193 2759 Box
+3793 2972 Box
+3623 2541 Box
+4076 2391 Box
+4148 2866 Box
+3693 2912 Box
+3697 2447 Box
+4151 2467 Box
+4071 2946 Box
+3621 2822 Box
+3798 2381 Box
+4195 2572 Box
+3971 2989 Box
+3587 2715 Box
+3911 2352 Box
+4204 2690 Box
+3858 2991 Box
+3598 2603 Box
+4020 2364 Box
+4178 2806 Box
+3749 2951 Box
+3650 2499 Box
+4111 2419 Box
+4119 2904 Box
+3659 2877 Box
+3737 2415 Box
+4174 2508 Box
+4031 2969 Box
+3602 2779 Box
+3845 2364 Box
+4203 2620 Box
+3924 2995 Box
+3586 2668 Box
+3958 2352 Box
+4198 2740 Box
+3811 2979 Box
+3615 2558 Box
+4061 2382 Box
+4157 2850 Box
+3708 2924 Box
+3683 2461 Box
+4141 2453 Box
+4085 2935 Box
+3630 2838 Box
+3780 2389 Box
+4190 2553 Box
+3988 2985 Box
+3590 2733 Box
+3893 2353 Box
+4205 2671 Box
+3877 2993 Box
+3593 2621 Box
+4003 2359 Box
+4185 2788 Box
+3766 2960 Box
+3639 2515 Box
+4098 2407 Box
+4131 2890 Box
+3672 2891 Box
+3721 2427 Box
+4165 2492 Box
+4047 2961 Box
+3608 2796 Box
+3827 2369 Box
+4201 2601 Box
+3942 2994 Box
+3586 2687 Box
+3940 2351 Box
+4201 2721 Box
+3829 2984 Box
+3607 2575 Box
+4045 2375 Box
+4166 2834 Box
+3723 2935 Box
+3669 2475 Box
+4130 2439 Box
+4099 2924 Box
+3641 2854 Box
+3763 2398 Box
+4184 2535 Box
+4005 2980 Box
+3594 2751 Box
+3874 2356 Box
+4205 2651 Box
+3895 2995 Box
+3589 2639 Box
+3986 2356 Box
+4191 2770 Box
+3783 2968 Box
+3629 2531 Box
+4084 2397 Box
+4142 2875 Box
+3685 2905 Box
+3705 2439 Box
+4157 2476 Box
+4063 2952 Box
+3616 2813 Box
+3808 2376 Box
+4197 2582 Box
+3960 2991 Box
+3586 2705 Box
+3922 2351 Box
+4203 2702 Box
+3848 2989 Box
+3601 2593 Box
+4029 2368 Box
+4174 2817 Box
+3739 2946 Box
+3657 2490 Box
+4118 2426 Box
+4112 2911 Box
+3652 2869 Box
+3746 2409 Box
+4178 2518 Box
+4022 2973 Box
+3599 2769 Box
+3856 2361 Box
+4204 2632 Box
+3914 2995 Box
+3587 2658 Box
+3968 2353 Box
+4195 2751 Box
+3801 2975 Box
+3619 2548 Box
+4069 2387 Box
+4152 2859 Box
+3699 2917 Box
+3691 2453 Box
+4147 2461 Box
+4077 2942 Box
+3625 2829 Box
+3790 2384 Box
+4193 2564 Box
+3978 2988 Box
+3588 2723 Box
+3903 2352 Box
+4205 2682 Box
+3866 2992 Box
+3595 2611 Box
+4013 2362 Box
+4181 2799 Box
+3756 2955 Box
+3645 2506 Box
+4105 2414 Box
+4124 2898 Box
+3664 2883 Box
+3730 2420 Box
+4170 2501 Box
+4038 2966 Box
+3604 2786 Box
+3837 2366 Box
+4202 2612 Box
+3932 2994 Box
+3586 2676 Box
+3950 2351 Box
+4199 2732 Box
+3819 2981 Box
+3611 2565 Box
+4054 2379 Box
+4161 2843 Box
+3714 2929 Box
+3677 2467 Box
+4136 2447 Box
+4091 2931 Box
+3635 2845 Box
+3773 2393 Box
+4188 2545 Box
+3996 2983 Box
+3591 2741 Box
+3885 2355 Box
+4205 2662 Box
+3885 2994 Box
+3591 2629 Box
+3996 2358 Box
+4188 2781 Box
+3773 2964 Box
+3634 2522 Box
+4092 2403 Box
+4136 2883 Box
+3677 2897 Box
+3714 2432 Box
+4162 2485 Box
+4054 2957 Box
+3612 2803 Box
+3819 2372 Box
+4199 2593 Box
+3950 2993 Box
+3586 2694 Box
+3932 2351 Box
+4202 2713 Box
+3837 2986 Box
+3604 2583 Box
+4039 2372 Box
+4170 2826 Box
+3730 2940 Box
+3664 2481 Box
+4125 2433 Box
+4105 2919 Box
+3645 2860 Box
+3756 2403 Box
+4182 2528 Box
+4012 2977 Box
+3596 2759 Box
+3866 2358 Box
+4205 2643 Box
+3903 2995 Box
+3588 2647 Box
+3979 2354 Box
+4193 2762 Box
+3791 2971 Box
+3625 2538 Box
+4078 2393 Box
+4146 2868 Box
+3691 2910 Box
+3699 2445 Box
+4152 2469 Box
+4069 2948 Box
+3620 2820 Box
+3801 2379 Box
+4196 2574 Box
+3968 2990 Box
+3587 2713 Box
+3914 2351 Box
+4204 2693 Box
+3855 2990 Box
+3598 2601 Box
+4022 2365 Box
+4177 2809 Box
+3746 2950 Box
+3652 2497 Box
+4113 2421 Box
+4117 2906 Box
+3657 2875 Box
+3739 2414 Box
+4175 2511 Box
+4029 2970 Box
+3601 2776 Box
+3848 2363 Box
+4203 2623 Box
+3922 2995 Box
+3586 2666 Box
+3961 2352 Box
+4197 2743 Box
+3808 2978 Box
+3616 2555 Box
+4063 2384 Box
+4156 2853 Box
+3706 2922 Box
+3685 2459 Box
+4142 2455 Box
+4083 2937 Box
+3629 2836 Box
+3783 2388 Box
+4191 2556 Box
+3986 2986 Box
+3590 2731 Box
+3895 2353 Box
+4205 2674 Box
+3874 2993 Box
+3593 2619 Box
+4006 2360 Box
+4184 2791 Box
+3763 2959 Box
+3640 2512 Box
+4100 2409 Box
+4129 2892 Box
+3670 2889 Box
+3723 2425 Box
+4167 2494 Box
+4045 2962 Box
+3607 2794 Box
+3829 2368 Box
+4201 2604 Box
+3940 2994 Box
+3586 2684 Box
+3943 2351 Box
+4201 2724 Box
+3827 2983 Box
+3608 2573 Box
+4048 2376 Box
+4165 2836 Box
+3721 2934 Box
+3671 2473 Box
+4131 2441 Box
+4097 2926 Box
+3639 2852 Box
+3766 2397 Box
+4185 2538 Box
+4003 2980 Box
+3593 2749 Box
+3877 2356 Box
+4205 2654 Box
+3893 2995 Box
+3590 2637 Box
+3989 2356 Box
+4190 2773 Box
+3781 2967 Box
+3630 2529 Box
+4086 2398 Box
+4140 2877 Box
+3683 2903 Box
+3708 2438 Box
+4158 2478 Box
+4060 2953 Box
+3615 2811 Box
+3811 2375 Box
+4198 2585 Box
+3958 2992 Box
+3586 2702 Box
+3924 2351 Box
+4203 2704 Box
+3845 2988 Box
+3602 2590 Box
+4032 2369 Box
+4173 2819 Box
+3737 2944 Box
+3659 2488 Box
+4120 2428 Box
+4110 2913 Box
+3650 2867 Box
+3749 2407 Box
+4179 2520 Box
+4020 2974 Box
+3598 2766 Box
+3858 2360 Box
+4204 2634 Box
+3911 2995 Box
+3587 2655 Box
+3971 2353 Box
+4195 2754 Box
+3798 2974 Box
+3621 2546 Box
+4072 2389 Box
+4151 2862 Box
+3697 2915 Box
+3693 2451 Box
+4148 2463 Box
+4075 2943 Box
+3624 2827 Box
+3793 2383 Box
+4194 2566 Box
+3976 2988 Box
+3588 2720 Box
+3906 2352 Box
+4205 2685 Box
+3863 2991 Box
+3596 2608 Box
+4015 2363 Box
+4180 2801 Box
+3754 2954 Box
+3647 2503 Box
+4107 2415 Box
+4122 2900 Box
+3662 2881 Box
+3732 2418 Box
+4171 2503 Box
+4036 2967 Box
+3604 2784 Box
+3840 2365 Box
+4203 2615 Box
+3929 2995 Box
+3586 2673 Box
+3953 2351 Box
+4199 2735 Box
+3816 2980 Box
+3612 2563 Box
+4057 2380 Box
+4160 2846 Box
+3712 2927 Box
+3679 2465 Box
+4138 2449 Box
+4089 2932 Box
+3633 2843 Box
+3775 2392 Box
+4189 2548 Box
+3993 2984 Box
+3591 2738 Box
+3887 2354 Box
+4205 2665 Box
+3882 2994 Box
+3592 2626 Box
+3998 2358 Box
+4187 2783 Box
+3771 2963 Box
+3636 2519 Box
+4094 2404 Box
+4134 2886 Box
+3675 2895 Box
+3716 2430 Box
+4163 2487 Box
+4052 2958 Box
+3610 2801 Box
+3821 2371 Box
+4200 2596 Box
+3948 2993 Box
+3586 2692 Box
+3935 2351 Box
+4202 2715 Box
+3834 2986 Box
+3605 2580 Box
+4041 2373 Box
+4169 2829 Box
+3728 2938 Box
+3666 2479 Box
+4126 2435 Box
+4103 2920 Box
+3644 2858 Box
+3758 2401 Box
+4183 2530 Box
+4010 2978 Box
+3595 2756 Box
+3869 2358 Box
+4205 2646 Box
+3900 2995 Box
+3589 2645 Box
+3981 2355 Box
+4192 2765 Box
+3788 2970 Box
+3626 2536 Box
+4080 2394 Box
+4145 2871 Box
+3689 2908 Box
+3701 2443 Box
+4154 2471 Box
+4067 2949 Box
+3618 2818 Box
+3803 2378 Box
+4196 2577 Box
+3965 2990 Box
+3587 2710 Box
+3917 2351 Box
+4204 2696 Box
+3853 2990 Box
+3599 2598 Box
+4025 2366 Box
+4176 2812 Box
+3744 2948 Box
+3653 2494 Box
+4114 2422 Box
+4116 2907 Box
+3655 2873 Box
+3742 2412 Box
+4176 2513 Box
+4027 2971 Box
+3600 2774 Box
+3850 2362 Box
+4204 2626 Box
+3919 2995 Box
+3587 2663 Box
+3963 2352 Box
+4197 2746 Box
+3806 2977 Box
+3617 2553 Box
+4065 2385 Box
+4155 2855 Box
+3704 2921 Box
+3687 2457 Box
+4144 2457 Box
+4081 2939 Box
+3628 2834 Box
+3785 2387 Box
+4192 2558 Box
+3983 2986 Box
+3589 2728 Box
+3898 2353 Box
+4205 2676 Box
+3871 2993 Box
+3594 2616 Box
+4008 2361 Box
+4183 2794 Box
+3761 2958 Box
+3642 2510 Box
+4101 2411 Box
+4128 2894 Box
+3668 2887 Box
+3725 2423 Box
+4168 2496 Box
+4043 2963 Box
+3606 2791 Box
+3832 2368 Box
+4202 2607 Box
+3937 2994 Box
+3586 2681 Box
+3945 2351 Box
+4200 2727 Box
+3824 2983 Box
+3609 2570 Box
+4050 2377 Box
+4164 2839 Box
+3719 2932 Box
+3673 2471 Box
+4133 2443 Box
+4095 2927 Box
+3638 2850 Box
+3768 2396 Box
+4186 2540 Box
+4000 2981 Box
+3592 2746 Box
+3879 2356 Box
+4205 2657 Box
+3890 2994 Box
+3590 2634 Box
+3991 2357 Box
+4189 2775 Box
+3778 2966 Box
+3631 2526 Box
+4088 2400 Box
+4139 2879 Box
+3681 2901 Box
+3710 2436 Box
+4159 2480 Box
+4058 2955 Box
+3614 2808 Box
+% End plot #4
+% Begin plot #5
+0.700 UP
+1.000 UL
+LTb
+0.94 0.89 0.26 C
+4357 2674 BoxF
+3863 3152 BoxF
+3435 2579 BoxF
+4093 2205 BoxF
+4318 2885 BoxF
+3661 3079 BoxF
+3536 2396 BoxF
+4245 2307 BoxF
+4211 3052 BoxF
+3503 2937 BoxF
+3710 2256 BoxF
+4335 2481 BoxF
+4045 3144 BoxF
+3424 2754 BoxF
+3917 2189 BoxF
+4357 2696 BoxF
+3842 3149 BoxF
+3441 2559 BoxF
+4111 2212 BoxF
+4310 2905 BoxF
+3642 3067 BoxF
+3551 2380 BoxF
+4258 2321 BoxF
+4196 3065 BoxF
+3491 2920 BoxF
+3730 2246 BoxF
+4340 2502 BoxF
+4025 3149 BoxF
+3421 2735 BoxF
+3938 2188 BoxF
+4355 2718 BoxF
+3820 3144 BoxF
+3448 2540 BoxF
+4128 2219 BoxF
+4301 2924 BoxF
+3624 3055 BoxF
+3566 2363 BoxF
+4269 2337 BoxF
+4181 3077 BoxF
+3480 2902 BoxF
+3750 2236 BoxF
+4345 2523 BoxF
+4005 3152 BoxF
+3420 2715 BoxF
+3959 2187 BoxF
+4353 2740 BoxF
+3799 3139 BoxF
+3456 2521 BoxF
+4145 2227 BoxF
+4292 2942 BoxF
+3606 3042 BoxF
+3583 2348 BoxF
+4280 2353 BoxF
+4166 3089 BoxF
+3469 2884 BoxF
+3771 2227 BoxF
+4349 2544 BoxF
+3985 3155 BoxF
+3419 2695 BoxF
+3979 2187 BoxF
+4350 2762 BoxF
+3778 3132 BoxF
+3465 2502 BoxF
+4162 2236 BoxF
+4282 2960 BoxF
+3589 3028 BoxF
+3600 2332 BoxF
+4290 2370 BoxF
+4150 3099 BoxF
+3460 2866 BoxF
+3792 2219 BoxF
+4352 2566 BoxF
+3965 3157 BoxF
+3419 2675 BoxF
+3999 2187 BoxF
+4346 2784 BoxF
+3758 3125 BoxF
+3475 2483 BoxF
+4177 2246 BoxF
+4272 2978 BoxF
+3573 3014 BoxF
+3617 2318 BoxF
+4299 2388 BoxF
+4133 3109 BoxF
+3451 2848 BoxF
+3813 2212 BoxF
+4354 2588 BoxF
+3944 3158 BoxF
+3421 2655 BoxF
+4019 2189 BoxF
+4341 2805 BoxF
+3737 3117 BoxF
+3486 2464 BoxF
+4193 2257 BoxF
+4260 2994 BoxF
+3557 2999 BoxF
+3635 2304 BoxF
+4308 2406 BoxF
+4116 3118 BoxF
+3444 2829 BoxF
+3835 2206 BoxF
+4356 2610 BoxF
+3923 3158 BoxF
+3423 2636 BoxF
+4039 2192 BoxF
+4336 2827 BoxF
+3717 3109 BoxF
+3498 2446 BoxF
+4207 2269 BoxF
+4248 3010 BoxF
+3542 2984 BoxF
+3654 2291 BoxF
+4316 2425 BoxF
+4098 3126 BoxF
+3437 2810 BoxF
+3856 2200 BoxF
+4357 2632 BoxF
+3902 3157 BoxF
+3426 2616 BoxF
+4058 2196 BoxF
+4330 2848 BoxF
+3697 3099 BoxF
+3510 2428 BoxF
+4221 2281 BoxF
+4236 3025 BoxF
+3527 2968 BoxF
+3673 2278 BoxF
+4323 2444 BoxF
+4080 3133 BoxF
+3432 2791 BoxF
+3877 2196 BoxF
+4358 2654 BoxF
+3881 3155 BoxF
+3431 2596 BoxF
+4077 2200 BoxF
+4324 2868 BoxF
+3677 3089 BoxF
+3524 2411 BoxF
+4235 2295 BoxF
+4223 3040 BoxF
+3514 2951 BoxF
+3693 2266 BoxF
+4330 2464 BoxF
+4061 3140 BoxF
+3427 2771 BoxF
+3899 2192 BoxF
+4357 2677 BoxF
+3860 3152 BoxF
+3436 2576 BoxF
+4096 2206 BoxF
+4317 2888 BoxF
+3658 3078 BoxF
+3538 2394 BoxF
+4247 2309 BoxF
+4209 3054 BoxF
+3501 2935 BoxF
+3713 2255 BoxF
+4336 2484 BoxF
+4042 3145 BoxF
+3424 2752 BoxF
+3920 2189 BoxF
+4356 2699 BoxF
+3839 3148 BoxF
+3442 2557 BoxF
+4113 2213 BoxF
+4309 2907 BoxF
+3639 3066 BoxF
+3553 2377 BoxF
+4259 2324 BoxF
+4194 3067 BoxF
+3489 2917 BoxF
+3733 2244 BoxF
+4341 2505 BoxF
+4022 3149 BoxF
+3421 2732 BoxF
+3941 2187 BoxF
+4355 2721 BoxF
+3817 3143 BoxF
+3449 2537 BoxF
+4131 2220 BoxF
+4300 2926 BoxF
+3621 3053 BoxF
+3569 2361 BoxF
+4271 2339 BoxF
+4179 3079 BoxF
+3478 2900 BoxF
+3754 2235 BoxF
+4345 2526 BoxF
+4002 3153 BoxF
+3420 2712 BoxF
+3962 2186 BoxF
+4352 2743 BoxF
+3796 3138 BoxF
+3458 2518 BoxF
+4148 2228 BoxF
+4291 2945 BoxF
+3604 3040 BoxF
+3585 2345 BoxF
+4281 2356 BoxF
+4163 3090 BoxF
+3468 2882 BoxF
+3774 2226 BoxF
+4349 2547 BoxF
+3982 3155 BoxF
+3419 2692 BoxF
+3982 2187 BoxF
+4349 2765 BoxF
+3775 3131 BoxF
+3467 2499 BoxF
+4164 2238 BoxF
+4281 2963 BoxF
+3587 3026 BoxF
+3602 2330 BoxF
+4291 2373 BoxF
+4147 3101 BoxF
+3459 2864 BoxF
+3795 2218 BoxF
+4352 2569 BoxF
+3962 3157 BoxF
+3419 2672 BoxF
+4002 2188 BoxF
+4345 2787 BoxF
+3755 3124 BoxF
+3477 2480 BoxF
+4180 2248 BoxF
+4270 2980 BoxF
+3570 3012 BoxF
+3620 2316 BoxF
+4301 2390 BoxF
+4130 3111 BoxF
+3450 2845 BoxF
+3817 2211 BoxF
+4355 2591 BoxF
+3941 3158 BoxF
+3421 2653 BoxF
+4022 2190 BoxF
+4341 2809 BoxF
+3734 3116 BoxF
+3488 2462 BoxF
+4195 2259 BoxF
+4259 2997 BoxF
+3554 2997 BoxF
+3638 2302 BoxF
+4309 2409 BoxF
+4113 3119 BoxF
+3443 2826 BoxF
+3838 2205 BoxF
+4356 2613 BoxF
+3920 3158 BoxF
+3423 2633 BoxF
+4042 2193 BoxF
+4335 2830 BoxF
+3714 3107 BoxF
+3500 2444 BoxF
+4209 2271 BoxF
+4247 3012 BoxF
+3540 2981 BoxF
+3657 2289 BoxF
+4317 2428 BoxF
+4095 3127 BoxF
+3437 2807 BoxF
+3859 2199 BoxF
+4357 2635 BoxF
+3899 3156 BoxF
+3427 2613 BoxF
+4061 2196 BoxF
+4329 2851 BoxF
+3694 3097 BoxF
+3512 2426 BoxF
+4223 2283 BoxF
+4234 3028 BoxF
+3525 2965 BoxF
+3676 2276 BoxF
+4324 2447 BoxF
+4077 3134 BoxF
+3431 2788 BoxF
+3880 2195 BoxF
+4358 2658 BoxF
+3878 3154 BoxF
+3431 2593 BoxF
+4080 2201 BoxF
+4323 2871 BoxF
+3674 3087 BoxF
+3526 2408 BoxF
+4236 2297 BoxF
+4221 3042 BoxF
+3512 2949 BoxF
+3695 2264 BoxF
+4331 2467 BoxF
+4058 3140 BoxF
+3427 2768 BoxF
+3902 2191 BoxF
+4357 2680 BoxF
+3857 3151 BoxF
+3437 2573 BoxF
+4098 2207 BoxF
+4315 2891 BoxF
+3655 3076 BoxF
+3540 2391 BoxF
+4249 2311 BoxF
+4207 3056 BoxF
+3499 2932 BoxF
+3716 2253 BoxF
+4337 2487 BoxF
+4039 3146 BoxF
+3423 2749 BoxF
+3923 2189 BoxF
+4356 2702 BoxF
+3835 3147 BoxF
+3443 2554 BoxF
+4116 2214 BoxF
+4307 2910 BoxF
+3637 3064 BoxF
+3555 2375 BoxF
+4261 2326 BoxF
+4192 3069 BoxF
+3487 2915 BoxF
+3736 2243 BoxF
+4342 2508 BoxF
+4019 3150 BoxF
+3421 2729 BoxF
+3944 2187 BoxF
+4354 2725 BoxF
+3814 3143 BoxF
+3451 2534 BoxF
+4133 2221 BoxF
+4299 2929 BoxF
+3619 3051 BoxF
+3571 2359 BoxF
+4272 2342 BoxF
+4177 3081 BoxF
+3477 2897 BoxF
+3757 2234 BoxF
+4346 2529 BoxF
+3999 3153 BoxF
+3419 2709 BoxF
+3965 2186 BoxF
+4352 2747 BoxF
+3793 3137 BoxF
+3459 2515 BoxF
+4150 2230 BoxF
+4289 2948 BoxF
+3601 3038 BoxF
+3587 2343 BoxF
+4283 2358 BoxF
+4161 3092 BoxF
+3467 2879 BoxF
+3777 2225 BoxF
+4350 2551 BoxF
+3979 3156 BoxF
+3419 2689 BoxF
+3985 2187 BoxF
+4349 2769 BoxF
+3772 3130 BoxF
+3468 2496 BoxF
+4166 2239 BoxF
+4279 2965 BoxF
+3584 3024 BoxF
+3605 2328 BoxF
+4293 2375 BoxF
+4145 3102 BoxF
+3457 2861 BoxF
+3798 2217 BoxF
+4353 2572 BoxF
+3959 3157 BoxF
+3420 2670 BoxF
+4005 2188 BoxF
+4345 2790 BoxF
+3752 3123 BoxF
+3478 2478 BoxF
+4182 2249 BoxF
+4268 2982 BoxF
+3568 3010 BoxF
+3622 2314 BoxF
+4302 2393 BoxF
+4128 3112 BoxF
+3449 2842 BoxF
+3820 2210 BoxF
+4355 2594 BoxF
+3938 3158 BoxF
+3421 2650 BoxF
+4025 2190 BoxF
+4340 2812 BoxF
+3731 3115 BoxF
+3490 2459 BoxF
+4197 2260 BoxF
+4257 2999 BoxF
+3552 2995 BoxF
+3641 2300 BoxF
+4310 2411 BoxF
+4110 3121 BoxF
+3442 2823 BoxF
+3841 2204 BoxF
+4357 2616 BoxF
+3917 3157 BoxF
+3424 2630 BoxF
+4045 2193 BoxF
+4335 2833 BoxF
+3711 3106 BoxF
+3501 2441 BoxF
+4211 2272 BoxF
+4245 3015 BoxF
+3537 2979 BoxF
+3659 2287 BoxF
+4318 2430 BoxF
+4093 3128 BoxF
+3436 2804 BoxF
+3862 2199 BoxF
+4358 2639 BoxF
+3896 3156 BoxF
+3427 2610 BoxF
+4064 2197 BoxF
+4329 2854 BoxF
+3691 3096 BoxF
+3514 2423 BoxF
+4225 2285 BoxF
+4232 3030 BoxF
+3523 2963 BoxF
+3679 2274 BoxF
+4325 2450 BoxF
+4074 3135 BoxF
+3430 2785 BoxF
+3884 2194 BoxF
+4358 2661 BoxF
+3875 3154 BoxF
+3432 2590 BoxF
+4083 2202 BoxF
+4322 2874 BoxF
+3672 3085 BoxF
+3528 2406 BoxF
+4238 2299 BoxF
+4219 3044 BoxF
+3510 2947 BoxF
+3698 2263 BoxF
+4332 2470 BoxF
+4055 3141 BoxF
+3426 2765 BoxF
+3905 2191 BoxF
+4357 2683 BoxF
+3854 3151 BoxF
+3438 2570 BoxF
+4101 2208 BoxF
+4314 2894 BoxF
+3653 3074 BoxF
+3542 2389 BoxF
+4251 2313 BoxF
+4205 3058 BoxF
+3497 2930 BoxF
+3718 2252 BoxF
+4337 2490 BoxF
+4036 3146 BoxF
+3423 2746 BoxF
+3926 2189 BoxF
+4356 2706 BoxF
+3832 3147 BoxF
+3444 2551 BoxF
+4119 2215 BoxF
+4306 2913 BoxF
+3634 3062 BoxF
+3557 2372 BoxF
+4263 2328 BoxF
+4190 3070 BoxF
+3486 2912 BoxF
+3739 2242 BoxF
+4342 2511 BoxF
+4016 3150 BoxF
+3421 2726 BoxF
+3947 2187 BoxF
+4354 2728 BoxF
+3811 3142 BoxF
+3452 2532 BoxF
+4136 2222 BoxF
+4297 2932 BoxF
+3616 3049 BoxF
+3573 2356 BoxF
+4274 2344 BoxF
+4175 3082 BoxF
+3475 2895 BoxF
+3760 2232 BoxF
+4347 2532 BoxF
+3996 3154 BoxF
+3419 2706 BoxF
+3968 2186 BoxF
+4351 2750 BoxF
+3790 3136 BoxF
+3460 2512 BoxF
+4152 2231 BoxF
+4288 2950 BoxF
+3599 3036 BoxF
+3590 2341 BoxF
+4284 2361 BoxF
+4159 3093 BoxF
+3465 2877 BoxF
+3780 2224 BoxF
+4350 2554 BoxF
+3976 3156 BoxF
+3419 2687 BoxF
+3988 2187 BoxF
+4348 2772 BoxF
+3769 3129 BoxF
+3470 2494 BoxF
+4169 2240 BoxF
+4278 2968 BoxF
+3582 3022 BoxF
+3607 2326 BoxF
+4294 2378 BoxF
+4142 3104 BoxF
+3456 2858 BoxF
+3802 2216 BoxF
+4353 2575 BoxF
+3956 3157 BoxF
+3420 2667 BoxF
+4008 2188 BoxF
+4344 2793 BoxF
+3749 3122 BoxF
+3480 2475 BoxF
+4184 2251 BoxF
+4267 2985 BoxF
+3566 3008 BoxF
+3625 2312 BoxF
+4303 2396 BoxF
+4125 3113 BoxF
+3448 2839 BoxF
+3823 2209 BoxF
+4355 2597 BoxF
+3935 3158 BoxF
+3421 2647 BoxF
+4028 2190 BoxF
+4339 2815 BoxF
+3728 3114 BoxF
+3491 2456 BoxF
+4199 2262 BoxF
+4255 3001 BoxF
+3550 2992 BoxF
+3643 2298 BoxF
+4312 2414 BoxF
+4108 3122 BoxF
+3441 2821 BoxF
+3844 2203 BoxF
+4357 2620 BoxF
+3914 3157 BoxF
+3424 2627 BoxF
+4048 2194 BoxF
+4334 2836 BoxF
+3708 3104 BoxF
+3503 2438 BoxF
+4213 2274 BoxF
+4243 3017 BoxF
+3535 2977 BoxF
+3662 2285 BoxF
+4319 2433 BoxF
+4090 3129 BoxF
+3435 2801 BoxF
+3865 2198 BoxF
+4358 2642 BoxF
+3893 3156 BoxF
+3428 2607 BoxF
+4067 2198 BoxF
+4328 2856 BoxF
+3688 3095 BoxF
+3516 2421 BoxF
+4227 2287 BoxF
+4230 3032 BoxF
+3521 2961 BoxF
+3682 2273 BoxF
+4326 2453 BoxF
+4071 3136 BoxF
+3430 2782 BoxF
+3887 2194 BoxF
+4358 2664 BoxF
+3872 3154 BoxF
+3433 2587 BoxF
+4085 2203 BoxF
+4321 2877 BoxF
+3669 3084 BoxF
+3530 2403 BoxF
+4240 2301 BoxF
+4217 3046 BoxF
+3508 2944 BoxF
+3701 2261 BoxF
+4333 2473 BoxF
+4053 3142 BoxF
+3426 2763 BoxF
+3908 2191 BoxF
+4357 2687 BoxF
+3850 3150 BoxF
+3438 2568 BoxF
+4103 2209 BoxF
+4313 2897 BoxF
+3650 3072 BoxF
+3544 2386 BoxF
+4253 2315 BoxF
+4202 3060 BoxF
+3496 2927 BoxF
+3721 2250 BoxF
+4338 2493 BoxF
+4033 3147 BoxF
+3422 2743 BoxF
+3929 2188 BoxF
+4356 2709 BoxF
+3829 3146 BoxF
+3445 2548 BoxF
+4121 2216 BoxF
+4305 2916 BoxF
+3631 3060 BoxF
+3560 2370 BoxF
+4264 2330 BoxF
+4188 3072 BoxF
+3484 2910 BoxF
+3742 2240 BoxF
+4343 2514 BoxF
+4014 3151 BoxF
+3420 2723 BoxF
+3950 2187 BoxF
+4354 2731 BoxF
+3808 3141 BoxF
+3453 2529 BoxF
+4138 2224 BoxF
+4296 2935 BoxF
+3613 3048 BoxF
+3576 2354 BoxF
+4275 2346 BoxF
+4172 3084 BoxF
+3474 2892 BoxF
+3763 2231 BoxF
+4347 2535 BoxF
+3994 3154 BoxF
+3419 2703 BoxF
+3971 2186 BoxF
+4351 2753 BoxF
+3787 3135 BoxF
+3462 2510 BoxF
+4155 2232 BoxF
+4286 2953 BoxF
+3596 3034 BoxF
+3592 2339 BoxF
+4286 2363 BoxF
+4156 3095 BoxF
+3464 2874 BoxF
+3784 2222 BoxF
+4351 2557 BoxF
+3973 3156 BoxF
+3419 2684 BoxF
+3991 2187 BoxF
+4347 2775 BoxF
+3766 3128 BoxF
+3471 2491 BoxF
+4171 2242 BoxF
+4276 2970 BoxF
+3579 3020 BoxF
+3610 2324 BoxF
+4295 2380 BoxF
+4140 3105 BoxF
+3455 2855 BoxF
+3805 2215 BoxF
+4354 2579 BoxF
+3953 3157 BoxF
+3420 2664 BoxF
+4011 2188 BoxF
+4343 2797 BoxF
+3746 3121 BoxF
+3482 2472 BoxF
+4186 2252 BoxF
+4265 2987 BoxF
+3563 3005 BoxF
+3628 2310 BoxF
+4304 2398 BoxF
+4123 3114 BoxF
+3447 2837 BoxF
+3826 2208 BoxF
+4356 2601 BoxF
+3932 3158 BoxF
+3422 2644 BoxF
+4031 2191 BoxF
+4338 2818 BoxF
+3725 3112 BoxF
+3493 2454 BoxF
+4201 2264 BoxF
+4253 3004 BoxF
+3548 2990 BoxF
+3646 2296 BoxF
+4313 2417 BoxF
+4105 3123 BoxF
+3440 2818 BoxF
+3847 2202 BoxF
+4357 2623 BoxF
+3911 3157 BoxF
+3425 2624 BoxF
+4050 2194 BoxF
+4333 2839 BoxF
+3705 3103 BoxF
+3505 2436 BoxF
+4215 2276 BoxF
+4241 3019 BoxF
+3533 2975 BoxF
+3665 2283 BoxF
+4320 2436 BoxF
+4087 3130 BoxF
+3434 2799 BoxF
+3868 2197 BoxF
+4358 2645 BoxF
+3890 3156 BoxF
+3429 2604 BoxF
+4069 2198 BoxF
+4327 2859 BoxF
+3685 3093 BoxF
+3518 2418 BoxF
+4229 2289 BoxF
+4228 3034 BoxF
+3519 2958 BoxF
+3684 2271 BoxF
+4327 2456 BoxF
+4069 3137 BoxF
+3429 2779 BoxF
+3890 2193 BoxF
+4358 2667 BoxF
+3869 3153 BoxF
+3434 2584 BoxF
+4088 2204 BoxF
+4320 2880 BoxF
+3666 3082 BoxF
+3532 2401 BoxF
+4242 2303 BoxF
+4215 3048 BoxF
+3506 2942 BoxF
+3704 2259 BoxF
+4333 2476 BoxF
+4050 3143 BoxF
+3425 2760 BoxF
+3911 2190 BoxF
+4357 2690 BoxF
+3847 3150 BoxF
+3439 2565 BoxF
+4106 2210 BoxF
+4312 2899 BoxF
+3647 3071 BoxF
+3547 2384 BoxF
+4254 2317 BoxF
+4200 3061 BoxF
+3494 2925 BoxF
+3724 2249 BoxF
+4339 2496 BoxF
+4030 3148 BoxF
+3422 2740 BoxF
+3932 2188 BoxF
+4355 2712 BoxF
+3826 3145 BoxF
+3446 2545 BoxF
+4124 2217 BoxF
+4304 2919 BoxF
+3629 3059 BoxF
+3562 2368 BoxF
+4266 2333 BoxF
+4186 3074 BoxF
+3483 2907 BoxF
+3745 2239 BoxF
+4344 2517 BoxF
+4011 3151 BoxF
+3420 2720 BoxF
+3953 2187 BoxF
+4353 2734 BoxF
+3805 3140 BoxF
+3454 2526 BoxF
+4141 2225 BoxF
+4295 2937 BoxF
+3611 3046 BoxF
+3578 2352 BoxF
+4277 2349 BoxF
+4170 3086 BoxF
+3472 2889 BoxF
+3766 2230 BoxF
+4348 2538 BoxF
+3991 3154 BoxF
+3419 2701 BoxF
+3974 2186 BoxF
+4350 2756 BoxF
+3784 3134 BoxF
+3463 2507 BoxF
+4157 2234 BoxF
+4285 2955 BoxF
+3594 3032 BoxF
+3595 2337 BoxF
+4287 2365 BoxF
+4154 3097 BoxF
+3462 2871 BoxF
+3787 2221 BoxF
+4351 2560 BoxF
+3970 3156 BoxF
+3419 2681 BoxF
+3994 2187 BoxF
+4347 2778 BoxF
+3763 3127 BoxF
+3473 2488 BoxF
+4173 2243 BoxF
+4275 2973 BoxF
+3577 3018 BoxF
+3612 2322 BoxF
+4297 2383 BoxF
+4137 3107 BoxF
+3454 2853 BoxF
+3808 2214 BoxF
+4354 2582 BoxF
+3950 3158 BoxF
+3420 2661 BoxF
+4014 2189 BoxF
+4343 2800 BoxF
+3743 3120 BoxF
+3483 2469 BoxF
+4189 2254 BoxF
+4263 2990 BoxF
+3561 3003 BoxF
+3630 2308 BoxF
+4306 2401 BoxF
+4120 3116 BoxF
+3446 2834 BoxF
+3829 2207 BoxF
+4356 2604 BoxF
+3929 3158 BoxF
+3422 2641 BoxF
+4034 2191 BoxF
+4338 2821 BoxF
+3722 3111 BoxF
+3495 2451 BoxF
+4203 2265 BoxF
+4252 3006 BoxF
+3546 2988 BoxF
+3649 2294 BoxF
+4314 2420 BoxF
+4103 3124 BoxF
+3439 2815 BoxF
+3850 2202 BoxF
+4357 2626 BoxF
+3908 3157 BoxF
+3425 2621 BoxF
+4053 2195 BoxF
+4332 2842 BoxF
+3702 3102 BoxF
+3507 2433 BoxF
+4217 2278 BoxF
+4239 3021 BoxF
+3531 2972 BoxF
+3668 2281 BoxF
+4321 2439 BoxF
+4085 3131 BoxF
+3433 2796 BoxF
+3872 2197 BoxF
+4358 2648 BoxF
+3887 3155 BoxF
+3429 2601 BoxF
+4072 2199 BoxF
+4326 2862 BoxF
+3682 3091 BoxF
+3520 2416 BoxF
+4231 2291 BoxF
+4226 3036 BoxF
+3517 2956 BoxF
+3687 2269 BoxF
+4328 2458 BoxF
+4066 3138 BoxF
+3428 2776 BoxF
+3893 2193 BoxF
+4358 2671 BoxF
+3865 3153 BoxF
+3434 2582 BoxF
+4091 2204 BoxF
+4319 2883 BoxF
+3663 3081 BoxF
+3534 2398 BoxF
+4244 2305 BoxF
+4213 3050 BoxF
+3504 2939 BoxF
+3707 2258 BoxF
+4334 2479 BoxF
+4047 3144 BoxF
+3425 2757 BoxF
+3914 2190 BoxF
+4357 2693 BoxF
+3844 3149 BoxF
+3440 2562 BoxF
+4109 2211 BoxF
+4311 2902 BoxF
+3644 3069 BoxF
+3549 2382 BoxF
+4256 2320 BoxF
+4198 3063 BoxF
+3492 2922 BoxF
+3727 2247 BoxF
+4340 2499 BoxF
+4028 3148 BoxF
+3422 2737 BoxF
+3935 2188 BoxF
+4355 2715 BoxF
+3823 3145 BoxF
+3447 2542 BoxF
+4126 2218 BoxF
+4302 2921 BoxF
+3626 3057 BoxF
+3564 2365 BoxF
+4268 2335 BoxF
+4183 3076 BoxF
+3481 2905 BoxF
+3748 2237 BoxF
+4344 2520 BoxF
+4008 3152 BoxF
+3420 2718 BoxF
+3956 2187 BoxF
+4353 2737 BoxF
+3802 3139 BoxF
+3455 2523 BoxF
+4143 2226 BoxF
+4293 2940 BoxF
+3608 3044 BoxF
+3581 2350 BoxF
+4278 2351 BoxF
+4168 3087 BoxF
+3471 2887 BoxF
+3769 2228 BoxF
+4348 2542 BoxF
+3988 3155 BoxF
+3419 2698 BoxF
+3977 2186 BoxF
+4350 2759 BoxF
+3781 3133 BoxF
+3464 2504 BoxF
+4160 2235 BoxF
+4283 2958 BoxF
+3591 3030 BoxF
+3597 2334 BoxF
+4289 2368 BoxF
+4152 3098 BoxF
+3461 2869 BoxF
+3790 2220 BoxF
+4352 2563 BoxF
+3967 3157 BoxF
+3419 2678 BoxF
+3997 2187 BoxF
+4346 2781 BoxF
+3760 3126 BoxF
+3474 2485 BoxF
+4175 2245 BoxF
+4273 2975 BoxF
+3575 3016 BoxF
+3615 2320 BoxF
+4298 2385 BoxF
+4135 3108 BoxF
+3453 2850 BoxF
+3811 2213 BoxF
+4354 2585 BoxF
+3947 3158 BoxF
+3420 2658 BoxF
+4017 2189 BoxF
+4342 2803 BoxF
+3740 3118 BoxF
+3485 2467 BoxF
+4191 2256 BoxF
+4262 2992 BoxF
+3559 3001 BoxF
+3633 2306 BoxF
+4307 2404 BoxF
+4118 3117 BoxF
+3445 2831 BoxF
+3832 2206 BoxF
+4356 2607 BoxF
+3926 3158 BoxF
+3423 2638 BoxF
+4037 2192 BoxF
+4337 2824 BoxF
+3719 3110 BoxF
+3496 2449 BoxF
+4205 2267 BoxF
+4250 3008 BoxF
+3543 2986 BoxF
+3651 2292 BoxF
+4315 2422 BoxF
+4100 3125 BoxF
+3438 2812 BoxF
+3853 2201 BoxF
+4357 2629 BoxF
+3905 3157 BoxF
+3426 2618 BoxF
+4056 2195 BoxF
+4331 2845 BoxF
+3699 3100 BoxF
+3509 2431 BoxF
+4220 2280 BoxF
+4237 3024 BoxF
+3529 2970 BoxF
+3671 2280 BoxF
+4322 2442 BoxF
+4082 3132 BoxF
+3433 2793 BoxF
+3875 2196 BoxF
+4358 2652 BoxF
+3884 3155 BoxF
+3430 2598 BoxF
+4075 2200 BoxF
+4325 2865 BoxF
+3680 3090 BoxF
+3522 2413 BoxF
+4233 2293 BoxF
+4224 3038 BoxF
+% End plot #5
+% Begin plot #6
+0.700 UP
+1.000 UL
+LTb
+0.00 0.45 0.70 C
+4510 2674 Circle
+3850 3310 Circle
+3274 2525 Circle
+4220 2057 Circle
+4439 3024 Circle
+3507 3160 Circle
+3483 2236 Circle
+4430 2260 Circle
+4239 3257 Circle
+3284 2894 Circle
+3823 2050 Circle
+4509 2599 Circle
+3921 3319 Circle
+3255 2586 Circle
+4164 2037 Circle
+4463 2962 Circle
+3569 3202 Circle
+3428 2288 Circle
+4399 2207 Circle
+4289 3224 Circle
+3314 2952 Circle
+3752 2075 Circle
+4503 2526 Circle
+3990 3321 Circle
+3244 2648 Circle
+4103 2025 Circle
+4482 2895 Circle
+3635 3238 Circle
+3379 2344 Circle
+4363 2160 Circle
+4334 3184 Circle
+3352 3008 Circle
+3681 2106 Circle
+4493 2455 Circle
+4057 3316 Circle
+3242 2709 Circle
+4038 2020 Circle
+4496 2825 Circle
+3704 3268 Circle
+3337 2401 Circle
+4322 2119 Circle
+4374 3138 Circle
+3396 3061 Circle
+3612 2143 Circle
+4478 2387 Circle
+4121 3304 Circle
+3247 2771 Circle
+3970 2022 Circle
+4505 2752 Circle
+3774 3292 Circle
+3303 2461 Circle
+4275 2085 Circle
+4408 3086 Circle
+3447 3111 Circle
+3547 2186 Circle
+4457 2323 Circle
+4180 3285 Circle
+3261 2831 Circle
+3899 2032 Circle
+4510 2678 Circle
+3846 3309 Circle
+3275 2521 Circle
+4224 2058 Circle
+4438 3028 Circle
+3504 3158 Circle
+3487 2233 Circle
+4432 2264 Circle
+4236 3259 Circle
+3283 2890 Circle
+3828 2049 Circle
+4509 2604 Circle
+3917 3319 Circle
+3256 2583 Circle
+4167 2038 Circle
+4462 2966 Circle
+3565 3200 Circle
+3431 2285 Circle
+4401 2210 Circle
+4286 3226 Circle
+3312 2948 Circle
+3756 2073 Circle
+4504 2530 Circle
+3986 3322 Circle
+3245 2644 Circle
+4106 2025 Circle
+4481 2899 Circle
+3631 3236 Circle
+3382 2340 Circle
+4366 2162 Circle
+4331 3186 Circle
+3349 3004 Circle
+3685 2104 Circle
+4494 2459 Circle
+4053 3317 Circle
+3242 2706 Circle
+4042 2020 Circle
+4496 2829 Circle
+3700 3267 Circle
+3340 2398 Circle
+4325 2121 Circle
+4372 3140 Circle
+3393 3058 Circle
+3616 2141 Circle
+4479 2391 Circle
+4117 3305 Circle
+3247 2767 Circle
+3974 2022 Circle
+4505 2756 Circle
+3770 3291 Circle
+3304 2457 Circle
+4278 2087 Circle
+4406 3089 Circle
+3444 3109 Circle
+3551 2183 Circle
+4459 2326 Circle
+4177 3286 Circle
+3260 2827 Circle
+3903 2031 Circle
+4510 2682 Circle
+3842 3308 Circle
+3277 2518 Circle
+4227 2059 Circle
+4436 3032 Circle
+3500 3155 Circle
+3490 2231 Circle
+4434 2267 Circle
+4233 3260 Circle
+3281 2887 Circle
+3832 2048 Circle
+4509 2608 Circle
+3913 3319 Circle
+3257 2579 Circle
+4171 2039 Circle
+4461 2969 Circle
+3561 3197 Circle
+3434 2282 Circle
+4403 2213 Circle
+4283 3228 Circle
+3310 2945 Circle
+3760 2071 Circle
+4504 2534 Circle
+3982 3322 Circle
+3245 2641 Circle
+4110 2026 Circle
+4480 2903 Circle
+3627 3234 Circle
+3385 2337 Circle
+4368 2165 Circle
+4329 3189 Circle
+3347 3001 Circle
+3689 2102 Circle
+4494 2463 Circle
+4049 3317 Circle
+3242 2702 Circle
+4045 2020 Circle
+4495 2833 Circle
+3695 3265 Circle
+3342 2394 Circle
+4327 2124 Circle
+4369 3143 Circle
+3391 3055 Circle
+3620 2138 Circle
+4480 2394 Circle
+4113 3306 Circle
+3246 2763 Circle
+3978 2021 Circle
+4505 2761 Circle
+3766 3290 Circle
+3306 2454 Circle
+4281 2089 Circle
+4405 3092 Circle
+3441 3106 Circle
+3555 2180 Circle
+4460 2330 Circle
+4174 3288 Circle
+3259 2824 Circle
+3908 2030 Circle
+4509 2687 Circle
+3837 3307 Circle
+3278 2514 Circle
+4230 2061 Circle
+4435 3035 Circle
+3497 3153 Circle
+3494 2228 Circle
+4435 2270 Circle
+4229 3262 Circle
+3280 2883 Circle
+3836 2047 Circle
+4509 2612 Circle
+3908 3318 Circle
+3258 2575 Circle
+4174 2040 Circle
+4459 2973 Circle
+3558 3195 Circle
+3438 2279 Circle
+4405 2216 Circle
+4280 3230 Circle
+3309 2942 Circle
+3764 2070 Circle
+4505 2539 Circle
+3978 3322 Circle
+3246 2637 Circle
+4114 2026 Circle
+4479 2907 Circle
+3623 3232 Circle
+3388 2334 Circle
+4370 2168 Circle
+4326 3191 Circle
+3345 2998 Circle
+3693 2100 Circle
+4495 2467 Circle
+4046 3318 Circle
+3242 2699 Circle
+4049 2020 Circle
+4494 2837 Circle
+3691 3263 Circle
+3344 2391 Circle
+4330 2126 Circle
+4367 3146 Circle
+3388 3052 Circle
+3624 2136 Circle
+4481 2398 Circle
+4110 3307 Circle
+3246 2760 Circle
+3982 2021 Circle
+4504 2765 Circle
+3762 3288 Circle
+3308 2450 Circle
+4284 2091 Circle
+4403 3095 Circle
+3438 3103 Circle
+3559 2178 Circle
+4461 2334 Circle
+4170 3289 Circle
+3258 2820 Circle
+3912 2030 Circle
+4509 2691 Circle
+3833 3307 Circle
+3280 2510 Circle
+4233 2062 Circle
+4433 3039 Circle
+3493 3150 Circle
+3497 2225 Circle
+4437 2274 Circle
+4226 3264 Circle
+3278 2880 Circle
+3840 2045 Circle
+4510 2617 Circle
+3904 3318 Circle
+3259 2572 Circle
+4178 2041 Circle
+4458 2977 Circle
+3554 3193 Circle
+3441 2276 Circle
+4407 2219 Circle
+4277 3232 Circle
+3307 2938 Circle
+3768 2068 Circle
+4505 2543 Circle
+3974 3322 Circle
+3246 2633 Circle
+4117 2027 Circle
+4478 2911 Circle
+3619 3230 Circle
+3390 2330 Circle
+4372 2170 Circle
+4324 3194 Circle
+3342 2995 Circle
+3697 2098 Circle
+4496 2471 Circle
+4042 3318 Circle
+3242 2695 Circle
+4053 2020 Circle
+4493 2842 Circle
+3687 3262 Circle
+3347 2387 Circle
+4332 2128 Circle
+4365 3149 Circle
+3385 3049 Circle
+3628 2134 Circle
+4482 2402 Circle
+4106 3308 Circle
+3245 2756 Circle
+3986 2021 Circle
+4504 2769 Circle
+3758 3287 Circle
+3310 2446 Circle
+4287 2093 Circle
+4401 3098 Circle
+3434 3100 Circle
+3562 2175 Circle
+4463 2337 Circle
+4167 3290 Circle
+3257 2817 Circle
+3916 2029 Circle
+4509 2695 Circle
+3829 3306 Circle
+3281 2507 Circle
+4236 2064 Circle
+4431 3042 Circle
+3490 3147 Circle
+3501 2222 Circle
+4438 2277 Circle
+4223 3265 Circle
+3277 2876 Circle
+3845 2044 Circle
+4510 2621 Circle
+3900 3317 Circle
+3260 2568 Circle
+4181 2042 Circle
+4457 2981 Circle
+3550 3190 Circle
+3444 2273 Circle
+4409 2222 Circle
+4275 3234 Circle
+3305 2935 Circle
+3773 2067 Circle
+4506 2547 Circle
+3970 3322 Circle
+3247 2630 Circle
+4121 2028 Circle
+4477 2915 Circle
+3615 3228 Circle
+3393 2327 Circle
+4375 2173 Circle
+4321 3196 Circle
+3340 2991 Circle
+3702 2096 Circle
+4497 2475 Circle
+4038 3319 Circle
+3242 2691 Circle
+4057 2020 Circle
+4493 2846 Circle
+3683 3260 Circle
+3349 2384 Circle
+4335 2130 Circle
+4362 3152 Circle
+3382 3046 Circle
+3632 2131 Circle
+4483 2406 Circle
+4102 3309 Circle
+3245 2753 Circle
+3990 2021 Circle
+4503 2774 Circle
+3753 3286 Circle
+3312 2443 Circle
+4290 2094 Circle
+4399 3101 Circle
+3431 3097 Circle
+3566 2173 Circle
+4464 2341 Circle
+4163 3291 Circle
+3256 2813 Circle
+3920 2028 Circle
+4509 2700 Circle
+3825 3305 Circle
+3283 2503 Circle
+4239 2065 Circle
+4430 3046 Circle
+3486 3145 Circle
+3504 2219 Circle
+4440 2280 Circle
+4220 3267 Circle
+3276 2873 Circle
+3849 2043 Circle
+4510 2625 Circle
+3896 3317 Circle
+3261 2564 Circle
+4184 2043 Circle
+4455 2985 Circle
+3547 3188 Circle
+3447 2270 Circle
+4411 2225 Circle
+4272 3236 Circle
+3303 2931 Circle
+3777 2065 Circle
+4506 2552 Circle
+3966 3322 Circle
+3247 2626 Circle
+4125 2028 Circle
+4476 2919 Circle
+3611 3226 Circle
+3396 2324 Circle
+4377 2176 Circle
+4319 3199 Circle
+3338 2988 Circle
+3706 2094 Circle
+4497 2480 Circle
+4034 3319 Circle
+3242 2688 Circle
+4061 2021 Circle
+4492 2850 Circle
+3679 3258 Circle
+3351 2381 Circle
+4337 2133 Circle
+4360 3155 Circle
+3380 3043 Circle
+3636 2129 Circle
+4484 2410 Circle
+4099 3309 Circle
+3245 2749 Circle
+3994 2020 Circle
+4503 2778 Circle
+3749 3284 Circle
+3314 2439 Circle
+4292 2096 Circle
+4397 3105 Circle
+3428 3094 Circle
+3570 2170 Circle
+4465 2345 Circle
+4160 3293 Circle
+3255 2810 Circle
+3924 2028 Circle
+4509 2704 Circle
+3820 3304 Circle
+3284 2500 Circle
+4243 2067 Circle
+4428 3049 Circle
+3483 3142 Circle
+3508 2216 Circle
+4442 2284 Circle
+4217 3269 Circle
+3274 2869 Circle
+3853 2042 Circle
+4510 2630 Circle
+3892 3316 Circle
+3262 2561 Circle
+4188 2044 Circle
+4454 2988 Circle
+3543 3185 Circle
+3450 2266 Circle
+4413 2228 Circle
+4269 3238 Circle
+3301 2928 Circle
+3781 2064 Circle
+4506 2556 Circle
+3962 3321 Circle
+3248 2622 Circle
+4128 2029 Circle
+4475 2923 Circle
+3607 3224 Circle
+3399 2320 Circle
+4379 2179 Circle
+4316 3201 Circle
+3335 2985 Circle
+3710 2092 Circle
+4498 2484 Circle
+4030 3319 Circle
+3242 2684 Circle
+4065 2021 Circle
+4491 2854 Circle
+3675 3257 Circle
+3354 2377 Circle
+4340 2135 Circle
+4358 3157 Circle
+3377 3039 Circle
+3640 2127 Circle
+4485 2414 Circle
+4095 3310 Circle
+3244 2745 Circle
+3998 2020 Circle
+4502 2782 Circle
+3745 3283 Circle
+3316 2436 Circle
+4295 2098 Circle
+4395 3108 Circle
+3425 3091 Circle
+3574 2167 Circle
+4466 2349 Circle
+4156 3294 Circle
+3255 2806 Circle
+3928 2027 Circle
+4509 2709 Circle
+3816 3303 Circle
+3286 2496 Circle
+4246 2068 Circle
+4426 3052 Circle
+3480 3139 Circle
+3511 2213 Circle
+4443 2287 Circle
+4213 3270 Circle
+3273 2866 Circle
+3857 2041 Circle
+4510 2634 Circle
+3888 3316 Circle
+3263 2557 Circle
+4191 2045 Circle
+4453 2992 Circle
+3539 3183 Circle
+3453 2263 Circle
+4415 2231 Circle
+4266 3240 Circle
+3299 2925 Circle
+3785 2062 Circle
+4507 2560 Circle
+3958 3321 Circle
+3249 2619 Circle
+4132 2030 Circle
+4474 2927 Circle
+3603 3222 Circle
+3402 2317 Circle
+4381 2181 Circle
+4313 3203 Circle
+3333 2982 Circle
+3714 2090 Circle
+4499 2488 Circle
+4026 3320 Circle
+3242 2680 Circle
+4069 2021 Circle
+4490 2858 Circle
+3671 3255 Circle
+3356 2374 Circle
+4342 2138 Circle
+4356 3160 Circle
+3374 3036 Circle
+3644 2125 Circle
+4486 2418 Circle
+4091 3311 Circle
+3244 2742 Circle
+4002 2020 Circle
+4502 2787 Circle
+3741 3282 Circle
+3318 2432 Circle
+4298 2100 Circle
+4393 3111 Circle
+3422 3088 Circle
+3578 2165 Circle
+4468 2352 Circle
+4153 3295 Circle
+3254 2803 Circle
+3933 2026 Circle
+4508 2713 Circle
+3812 3302 Circle
+3287 2493 Circle
+4249 2070 Circle
+4425 3056 Circle
+3476 3136 Circle
+3515 2210 Circle
+4445 2291 Circle
+4210 3272 Circle
+3272 2862 Circle
+3861 2040 Circle
+4510 2639 Circle
+3883 3315 Circle
+3264 2554 Circle
+4194 2047 Circle
+4451 2996 Circle
+3536 3180 Circle
+3457 2260 Circle
+4417 2235 Circle
+4263 3242 Circle
+3298 2921 Circle
+3790 2061 Circle
+4507 2565 Circle
+3954 3321 Circle
+3249 2615 Circle
+4136 2030 Circle
+4473 2931 Circle
+3599 3220 Circle
+3405 2314 Circle
+4383 2184 Circle
+4311 3206 Circle
+3331 2978 Circle
+3718 2088 Circle
+4499 2492 Circle
+4022 3320 Circle
+3242 2677 Circle
+4073 2021 Circle
+4489 2862 Circle
+3667 3253 Circle
+3359 2370 Circle
+4345 2140 Circle
+4353 3163 Circle
+3372 3033 Circle
+3648 2122 Circle
+4486 2422 Circle
+4087 3312 Circle
+3244 2738 Circle
+4006 2020 Circle
+4501 2791 Circle
+3737 3280 Circle
+3320 2429 Circle
+4301 2102 Circle
+4391 3114 Circle
+3419 3085 Circle
+3581 2162 Circle
+4469 2356 Circle
+4149 3296 Circle
+3253 2799 Circle
+3937 2026 Circle
+4508 2717 Circle
+3808 3301 Circle
+3289 2489 Circle
+4252 2072 Circle
+4423 3059 Circle
+3473 3134 Circle
+3518 2208 Circle
+4446 2294 Circle
+4207 3273 Circle
+3270 2859 Circle
+3866 2039 Circle
+4510 2643 Circle
+3879 3315 Circle
+3265 2550 Circle
+4198 2048 Circle
+4450 2999 Circle
+3532 3178 Circle
+3460 2257 Circle
+4418 2238 Circle
+4260 3244 Circle
+3296 2918 Circle
+3794 2059 Circle
+4507 2569 Circle
+3950 3321 Circle
+3250 2611 Circle
+4139 2031 Circle
+4472 2935 Circle
+3596 3217 Circle
+3407 2311 Circle
+4385 2187 Circle
+4308 3208 Circle
+3329 2975 Circle
+3722 2087 Circle
+4500 2496 Circle
+4018 3320 Circle
+3242 2673 Circle
+4076 2022 Circle
+4489 2867 Circle
+3663 3251 Circle
+3361 2367 Circle
+4347 2142 Circle
+4351 3166 Circle
+3369 3030 Circle
+3652 2120 Circle
+4487 2426 Circle
+4084 3312 Circle
+3243 2735 Circle
+4010 2020 Circle
+4501 2795 Circle
+3732 3279 Circle
+3322 2425 Circle
+4303 2104 Circle
+4389 3117 Circle
+3416 3082 Circle
+3585 2160 Circle
+4470 2360 Circle
+4146 3297 Circle
+3252 2795 Circle
+3941 2025 Circle
+4508 2722 Circle
+3804 3300 Circle
+3290 2485 Circle
+4255 2073 Circle
+4421 3063 Circle
+3470 3131 Circle
+3522 2205 Circle
+4448 2298 Circle
+4204 3275 Circle
+3269 2855 Circle
+3870 2038 Circle
+4510 2647 Circle
+3875 3314 Circle
+3267 2546 Circle
+4201 2049 Circle
+4448 3003 Circle
+3528 3175 Circle
+3463 2254 Circle
+4420 2241 Circle
+4257 3246 Circle
+3294 2914 Circle
+3798 2058 Circle
+4508 2573 Circle
+3945 3321 Circle
+3251 2608 Circle
+4143 2032 Circle
+4471 2939 Circle
+3592 3215 Circle
+3410 2307 Circle
+4387 2190 Circle
+4305 3210 Circle
+3327 2972 Circle
+3727 2085 Circle
+4500 2501 Circle
+4014 3321 Circle
+3243 2669 Circle
+4080 2022 Circle
+4488 2871 Circle
+3659 3249 Circle
+3364 2364 Circle
+4349 2145 Circle
+4348 3168 Circle
+3367 3027 Circle
+3657 2118 Circle
+4488 2430 Circle
+4080 3313 Circle
+3243 2731 Circle
+4014 2020 Circle
+4500 2799 Circle
+3728 3277 Circle
+3324 2422 Circle
+4306 2106 Circle
+4386 3120 Circle
+3413 3079 Circle
+3589 2157 Circle
+4471 2364 Circle
+4142 3298 Circle
+3251 2792 Circle
+3945 2025 Circle
+4507 2726 Circle
+3799 3299 Circle
+3292 2482 Circle
+4258 2075 Circle
+4419 3066 Circle
+3466 3128 Circle
+3525 2202 Circle
+4449 2301 Circle
+4200 3276 Circle
+3268 2852 Circle
+3874 2037 Circle
+4510 2652 Circle
+3871 3313 Circle
+3268 2543 Circle
+4204 2050 Circle
+4447 3007 Circle
+3525 3173 Circle
+3467 2251 Circle
+4422 2244 Circle
+4254 3248 Circle
+3292 2911 Circle
+3802 2057 Circle
+4508 2578 Circle
+3941 3321 Circle
+3251 2604 Circle
+4146 2033 Circle
+4469 2943 Circle
+3588 3213 Circle
+3413 2304 Circle
+4389 2193 Circle
+4303 3213 Circle
+3325 2968 Circle
+3731 2083 Circle
+4501 2505 Circle
+4010 3321 Circle
+3243 2666 Circle
+4084 2023 Circle
+4487 2875 Circle
+3655 3248 Circle
+3366 2360 Circle
+4352 2147 Circle
+4346 3171 Circle
+3364 3024 Circle
+3661 2116 Circle
+4489 2434 Circle
+4076 3314 Circle
+3243 2727 Circle
+4018 2020 Circle
+4499 2804 Circle
+3724 3276 Circle
+3326 2418 Circle
+4309 2109 Circle
+4384 3123 Circle
+3410 3076 Circle
+3593 2155 Circle
+4472 2368 Circle
+4139 3299 Circle
+3251 2788 Circle
+3949 2024 Circle
+4507 2730 Circle
+3795 3298 Circle
+3294 2478 Circle
+4261 2077 Circle
+4417 3069 Circle
+3463 3125 Circle
+3529 2199 Circle
+4451 2305 Circle
+4197 3278 Circle
+3267 2848 Circle
+3878 2036 Circle
+4510 2656 Circle
+3867 3313 Circle
+3269 2539 Circle
+4208 2051 Circle
+4445 3010 Circle
+3521 3170 Circle
+3470 2248 Circle
+4424 2247 Circle
+4251 3250 Circle
+3291 2907 Circle
+3807 2055 Circle
+4508 2582 Circle
+3937 3320 Circle
+3252 2601 Circle
+4150 2034 Circle
+4468 2947 Circle
+3584 3211 Circle
+3416 2301 Circle
+4392 2196 Circle
+4300 3215 Circle
+3322 2965 Circle
+3735 2081 Circle
+4501 2509 Circle
+4006 3321 Circle
+3243 2662 Circle
+4088 2023 Circle
+4486 2879 Circle
+3651 3246 Circle
+3369 2357 Circle
+4354 2150 Circle
+4344 3173 Circle
+3361 3020 Circle
+3665 2114 Circle
+4490 2439 Circle
+4072 3314 Circle
+3242 2724 Circle
+4022 2020 Circle
+4499 2808 Circle
+3720 3274 Circle
+3329 2415 Circle
+4312 2111 Circle
+4382 3126 Circle
+3407 3073 Circle
+3597 2152 Circle
+4473 2371 Circle
+4135 3300 Circle
+3250 2785 Circle
+3953 2024 Circle
+4507 2735 Circle
+3791 3297 Circle
+3296 2475 Circle
+4264 2078 Circle
+4416 3073 Circle
+3460 3123 Circle
+3533 2196 Circle
+4452 2308 Circle
+4194 3279 Circle
+3266 2845 Circle
+3883 2035 Circle
+4510 2661 Circle
+3862 3312 Circle
+3270 2536 Circle
+4211 2053 Circle
+4444 3014 Circle
+3518 3168 Circle
+3473 2245 Circle
+4425 2251 Circle
+4248 3252 Circle
+3289 2904 Circle
+3811 2054 Circle
+4508 2586 Circle
+3933 3320 Circle
+3253 2597 Circle
+4153 2034 Circle
+4467 2950 Circle
+3580 3209 Circle
+3419 2298 Circle
+4394 2198 Circle
+4297 3217 Circle
+3320 2962 Circle
+3739 2079 Circle
+4502 2513 Circle
+4002 3321 Circle
+3243 2659 Circle
+4092 2023 Circle
+4485 2883 Circle
+3647 3244 Circle
+3372 2353 Circle
+4357 2152 Circle
+4341 3176 Circle
+3359 3017 Circle
+3669 2112 Circle
+4491 2443 Circle
+4068 3315 Circle
+3242 2720 Circle
+4026 2020 Circle
+4498 2812 Circle
+3716 3273 Circle
+3331 2411 Circle
+4314 2113 Circle
+4380 3129 Circle
+3405 3070 Circle
+3601 2150 Circle
+4475 2375 Circle
+4131 3301 Circle
+3249 2781 Circle
+3957 2023 Circle
+4506 2739 Circle
+3787 3296 Circle
+3297 2471 Circle
+4267 2080 Circle
+4414 3076 Circle
+3456 3120 Circle
+3536 2194 Circle
+4453 2312 Circle
+4190 3281 Circle
+3264 2841 Circle
+3887 2034 Circle
+4510 2665 Circle
+3858 3311 Circle
+3271 2532 Circle
+4214 2054 Circle
+4442 3018 Circle
+3514 3165 Circle
+3477 2242 Circle
+4427 2254 Circle
+4245 3253 Circle
+3287 2901 Circle
+3815 2053 Circle
+4509 2591 Circle
+3929 3320 Circle
+3254 2593 Circle
+4157 2035 Circle
+4466 2954 Circle
+3576 3206 Circle
+3422 2295 Circle
+4396 2201 Circle
+4294 3219 Circle
+3318 2958 Circle
+3743 2078 Circle
+4502 2518 Circle
+3998 3321 Circle
+3244 2655 Circle
+4095 2024 Circle
+4484 2887 Circle
+3643 3242 Circle
+3374 2350 Circle
+4359 2155 Circle
+4339 3179 Circle
+3356 3014 Circle
+3673 2110 Circle
+4492 2447 Circle
+4065 3315 Circle
+3242 2716 Circle
+4030 2020 Circle
+4498 2816 Circle
+3712 3271 Circle
+3333 2408 Circle
+4317 2115 Circle
+4378 3132 Circle
+3402 3067 Circle
+3605 2148 Circle
+4476 2379 Circle
+4128 3302 Circle
+3249 2777 Circle
+3962 2023 Circle
+4506 2744 Circle
+3783 3294 Circle
+3299 2468 Circle
+4270 2082 Circle
+4412 3079 Circle
+3453 3117 Circle
+3540 2191 Circle
+4455 2316 Circle
+4187 3282 Circle
+3263 2838 Circle
+3891 2033 Circle
+4510 2669 Circle
+3854 3311 Circle
+3273 2528 Circle
+4217 2055 Circle
+4441 3021 Circle
+3510 3163 Circle
+3480 2239 Circle
+4429 2257 Circle
+4242 3255 Circle
+3286 2897 Circle
+3819 2051 Circle
+4509 2595 Circle
+3925 3320 Circle
+3254 2590 Circle
+4160 2036 Circle
+4465 2958 Circle
+3573 3204 Circle
+3425 2291 Circle
+4398 2204 Circle
+4291 3222 Circle
+3316 2955 Circle
+3748 2076 Circle
+4503 2522 Circle
+3994 3321 Circle
+3244 2651 Circle
+4099 2024 Circle
+4483 2891 Circle
+3639 3240 Circle
+3377 2347 Circle
+4361 2157 Circle
+4336 3181 Circle
+3354 3011 Circle
+3677 2108 Circle
+4492 2451 Circle
+4061 3316 Circle
+3242 2713 Circle
+4034 2020 Circle
+4497 2821 Circle
+3708 3270 Circle
+3335 2404 Circle
+4319 2117 Circle
+4376 3135 Circle
+3399 3064 Circle
+3609 2145 Circle
+4477 2383 Circle
+4124 3303 Circle
+% End plot #6
+% Begin plot #7
+0.700 UP
+1.000 UL
+LTb
+0.90 0.12 0.06 C
+4662 2674 CircleF
+3834 3464 CircleF
+3111 2452 CircleF
+4405 1922 CircleF
+4542 3231 CircleF
+3270 3162 CircleF
+3550 2014 CircleF
+4636 2333 CircleF
+4156 3481 CircleF
+3046 2711 CircleF
+4154 1849 CircleF
+4636 2952 CircleF
+3557 3365 CircleF
+3263 2240 CircleF
+4542 2063 CircleF
+4405 3386 CircleF
+3116 2963 CircleF
+3829 1892 CircleF
+4662 2609 CircleF
+3896 3476 CircleF
+3089 2500 CircleF
+4366 1900 CircleF
+4565 3187 CircleF
+3315 3204 CircleF
+3491 2050 CircleF
+4624 2277 CircleF
+4208 3471 CircleF
+3049 2757 CircleF
+4099 1848 CircleF
+4646 2892 CircleF
+3617 3394 CircleF
+3222 2287 CircleF
+4516 2025 CircleF
+4441 3357 CircleF
+3143 3009 CircleF
+3766 1913 CircleF
+4660 2545 CircleF
+3957 3484 CircleF
+3072 2547 CircleF
+4324 1882 CircleF
+4585 3139 CircleF
+3364 3244 CircleF
+3434 2089 CircleF
+4610 2223 CircleF
+4257 3458 CircleF
+3056 2804 CircleF
+4042 1851 CircleF
+4653 2831 CircleF
+3679 3419 CircleF
+3185 2334 CircleF
+4488 1991 CircleF
+4473 3325 CircleF
+3174 3054 CircleF
+3703 1937 CircleF
+4656 2482 CircleF
+4017 3488 CircleF
+3059 2595 CircleF
+4279 1868 CircleF
+4603 3089 CircleF
+3416 3282 CircleF
+3381 2130 CircleF
+4594 2173 CircleF
+4304 3442 CircleF
+3068 2850 CircleF
+3983 1858 CircleF
+4658 2768 CircleF
+3741 3440 CircleF
+3152 2382 CircleF
+4457 1960 CircleF
+4503 3289 CircleF
+3210 3098 CircleF
+3640 1966 CircleF
+4649 2420 CircleF
+4075 3488 CircleF
+3050 2642 CircleF
+4231 1857 CircleF
+4618 3036 CircleF
+3471 3318 CircleF
+3330 2174 CircleF
+4575 2126 CircleF
+4347 3422 CircleF
+3084 2896 CircleF
+3922 1869 CircleF
+4661 2704 CircleF
+3804 3457 CircleF
+3123 2429 CircleF
+4422 1933 CircleF
+4530 3250 CircleF
+3249 3142 CircleF
+3578 1997 CircleF
+4641 2361 CircleF
+4131 3484 CircleF
+3046 2689 CircleF
+4180 1851 CircleF
+4631 2979 CircleF
+3528 3351 CircleF
+3284 2218 CircleF
+4553 2083 CircleF
+4387 3398 CircleF
+3104 2942 CircleF
+3859 1883 CircleF
+4662 2640 CircleF
+3866 3471 CircleF
+3099 2477 CircleF
+4385 1910 CircleF
+4554 3208 CircleF
+3293 3184 CircleF
+3519 2032 CircleF
+4630 2303 CircleF
+4184 3476 CircleF
+3047 2735 CircleF
+4126 1848 CircleF
+4642 2921 CircleF
+3588 3381 CircleF
+3241 2265 CircleF
+4529 2043 CircleF
+4424 3371 CircleF
+3129 2987 CircleF
+3796 1902 CircleF
+4661 2576 CircleF
+3928 3481 CircleF
+3080 2525 CircleF
+4344 1890 CircleF
+4576 3162 CircleF
+3340 3225 CircleF
+3461 2070 CircleF
+4617 2248 CircleF
+4234 3465 CircleF
+3052 2782 CircleF
+4070 1849 CircleF
+4650 2860 CircleF
+3649 3407 CircleF
+3202 2311 CircleF
+4502 2007 CircleF
+4458 3341 CircleF
+3159 3032 CircleF
+3733 1925 CircleF
+4658 2512 CircleF
+3988 3486 CircleF
+3065 2572 CircleF
+4300 1874 CircleF
+4595 3113 CircleF
+3391 3264 CircleF
+3406 2110 CircleF
+4602 2197 CircleF
+4282 3450 CircleF
+3061 2828 CircleF
+4011 1854 CircleF
+4656 2798 CircleF
+3711 3430 CircleF
+3167 2359 CircleF
+4472 1974 CircleF
+4489 3307 CircleF
+3192 3077 CircleF
+3670 1952 CircleF
+4653 2450 CircleF
+4047 3488 CircleF
+3054 2619 CircleF
+4254 1862 CircleF
+4611 3061 CircleF
+3444 3301 CircleF
+3354 2153 CircleF
+4584 2148 CircleF
+4327 3432 CircleF
+3075 2874 CircleF
+3951 1863 CircleF
+4660 2735 CircleF
+3774 3450 CircleF
+3136 2406 CircleF
+4439 1946 CircleF
+4517 3270 CircleF
+3230 3121 CircleF
+3608 1982 CircleF
+4645 2389 CircleF
+4104 3486 CircleF
+3048 2666 CircleF
+4204 1853 CircleF
+4625 3007 CircleF
+3501 3335 CircleF
+3306 2197 CircleF
+4564 2103 CircleF
+4368 3410 CircleF
+3094 2920 CircleF
+3889 1876 CircleF
+4662 2671 CircleF
+3836 3465 CircleF
+3110 2454 CircleF
+4403 1920 CircleF
+4543 3229 CircleF
+3272 3164 CircleF
+3547 2015 CircleF
+4636 2330 CircleF
+4159 3480 CircleF
+3046 2713 CircleF
+4152 1849 CircleF
+4637 2949 CircleF
+3559 3367 CircleF
+3261 2242 CircleF
+4541 2062 CircleF
+4407 3385 CircleF
+3117 2966 CircleF
+3826 1893 CircleF
+4662 2606 CircleF
+3899 3477 CircleF
+3089 2502 CircleF
+4364 1899 CircleF
+4566 3185 CircleF
+3317 3206 CircleF
+3488 2052 CircleF
+4624 2274 CircleF
+4211 3471 CircleF
+3049 2760 CircleF
+4097 1848 CircleF
+4646 2890 CircleF
+3620 3395 CircleF
+3220 2289 CircleF
+4515 2024 CircleF
+4442 3356 CircleF
+3144 3011 CircleF
+3763 1914 CircleF
+4660 2542 CircleF
+3960 3484 CircleF
+3071 2550 CircleF
+4322 1881 CircleF
+4586 3137 CircleF
+3366 3246 CircleF
+3432 2091 CircleF
+4610 2221 CircleF
+4260 3458 CircleF
+3056 2806 CircleF
+4039 1851 CircleF
+4654 2828 CircleF
+3681 3420 CircleF
+3183 2336 CircleF
+4487 1989 CircleF
+4475 3324 CircleF
+3176 3056 CircleF
+3700 1938 CircleF
+4656 2479 CircleF
+4020 3488 CircleF
+3058 2597 CircleF
+4276 1867 CircleF
+4604 3087 CircleF
+3419 3284 CircleF
+3378 2132 CircleF
+4593 2171 CircleF
+4306 3441 CircleF
+3068 2852 CircleF
+3980 1858 CircleF
+4659 2765 CircleF
+3744 3441 CircleF
+3150 2384 CircleF
+4455 1959 CircleF
+4504 3288 CircleF
+3212 3100 CircleF
+3637 1967 CircleF
+4649 2418 CircleF
+4077 3488 CircleF
+3050 2644 CircleF
+4228 1857 CircleF
+4619 3033 CircleF
+3474 3319 CircleF
+3328 2176 CircleF
+4574 2124 CircleF
+4349 3421 CircleF
+3085 2898 CircleF
+3919 1869 CircleF
+4662 2701 CircleF
+3807 3458 CircleF
+3122 2431 CircleF
+4420 1932 CircleF
+4531 3249 CircleF
+3251 3144 CircleF
+3576 1999 CircleF
+4641 2358 CircleF
+4133 3484 CircleF
+3046 2691 CircleF
+4177 1850 CircleF
+4632 2977 CircleF
+3531 3352 CircleF
+3282 2221 CircleF
+4552 2081 CircleF
+4389 3397 CircleF
+3105 2944 CircleF
+3856 1884 CircleF
+4662 2637 CircleF
+3869 3472 CircleF
+3098 2479 CircleF
+4383 1909 CircleF
+4555 3206 CircleF
+3295 3186 CircleF
+3516 2034 CircleF
+4630 2301 CircleF
+4186 3476 CircleF
+3047 2737 CircleF
+4123 1848 CircleF
+4642 2918 CircleF
+3591 3382 CircleF
+3239 2267 CircleF
+4528 2041 CircleF
+4426 3370 CircleF
+3131 2989 CircleF
+3793 1903 CircleF
+4661 2573 CircleF
+3931 3481 CircleF
+3079 2527 CircleF
+4342 1889 CircleF
+4577 3160 CircleF
+3342 3227 CircleF
+3458 2072 CircleF
+4617 2246 CircleF
+4237 3464 CircleF
+3052 2784 CircleF
+4067 1849 CircleF
+4650 2858 CircleF
+3652 3408 CircleF
+3200 2314 CircleF
+4501 2005 CircleF
+4460 3339 CircleF
+3160 3035 CircleF
+3730 1926 CircleF
+4658 2509 CircleF
+3991 3487 CircleF
+3064 2574 CircleF
+4298 1874 CircleF
+4595 3111 CircleF
+3393 3266 CircleF
+3404 2112 CircleF
+4601 2194 CircleF
+4284 3450 CircleF
+3062 2830 CircleF
+4009 1854 CircleF
+4656 2795 CircleF
+3714 3431 CircleF
+3165 2361 CircleF
+4470 1973 CircleF
+4491 3305 CircleF
+3194 3079 CircleF
+3667 1953 CircleF
+4652 2447 CircleF
+4050 3488 CircleF
+3054 2622 CircleF
+4252 1861 CircleF
+4612 3059 CircleF
+3447 3303 CircleF
+3352 2155 CircleF
+4583 2146 CircleF
+4329 3431 CircleF
+3076 2876 CircleF
+3948 1863 CircleF
+4660 2732 CircleF
+3777 3450 CircleF
+3135 2409 CircleF
+4437 1944 CircleF
+4519 3268 CircleF
+3232 3123 CircleF
+3605 1983 CircleF
+4645 2386 CircleF
+4107 3486 CircleF
+3048 2668 CircleF
+4202 1853 CircleF
+4626 3004 CircleF
+3503 3337 CircleF
+3303 2199 CircleF
+4563 2101 CircleF
+4370 3409 CircleF
+3095 2922 CircleF
+3886 1877 CircleF
+4662 2668 CircleF
+3839 3466 CircleF
+3109 2456 CircleF
+4401 1919 CircleF
+4544 3227 CircleF
+3274 3166 CircleF
+3544 2017 CircleF
+4635 2328 CircleF
+4161 3480 CircleF
+3046 2715 CircleF
+4149 1849 CircleF
+4637 2946 CircleF
+3562 3368 CircleF
+3259 2245 CircleF
+4540 2060 CircleF
+4408 3383 CircleF
+3118 2968 CircleF
+3823 1894 CircleF
+4662 2603 CircleF
+3901 3477 CircleF
+3088 2504 CircleF
+4362 1898 CircleF
+4567 3182 CircleF
+3319 3208 CircleF
+3486 2053 CircleF
+4623 2272 CircleF
+4213 3470 CircleF
+3049 2762 CircleF
+4094 1848 CircleF
+4647 2887 CircleF
+3622 3396 CircleF
+3218 2291 CircleF
+4514 2022 CircleF
+4444 3354 CircleF
+3145 3013 CircleF
+3760 1915 CircleF
+4660 2539 CircleF
+3963 3484 CircleF
+3071 2552 CircleF
+4320 1881 CircleF
+4587 3135 CircleF
+3369 3247 CircleF
+3429 2093 CircleF
+4609 2219 CircleF
+4262 3457 CircleF
+3057 2808 CircleF
+4037 1851 CircleF
+4654 2825 CircleF
+3684 3421 CircleF
+3181 2338 CircleF
+4485 1988 CircleF
+4476 3322 CircleF
+3177 3058 CircleF
+3697 1940 CircleF
+4655 2476 CircleF
+4022 3488 CircleF
+3058 2599 CircleF
+4274 1867 CircleF
+4604 3084 CircleF
+3421 3285 CircleF
+3376 2134 CircleF
+4592 2169 CircleF
+4308 3440 CircleF
+3069 2854 CircleF
+3977 1859 CircleF
+4659 2762 CircleF
+3747 3442 CircleF
+3149 2386 CircleF
+4453 1958 CircleF
+4506 3286 CircleF
+3213 3102 CircleF
+3634 1968 CircleF
+4649 2415 CircleF
+4080 3487 CircleF
+3050 2646 CircleF
+4226 1857 CircleF
+4619 3031 CircleF
+3476 3321 CircleF
+3326 2178 CircleF
+4573 2122 CircleF
+4351 3420 CircleF
+3085 2900 CircleF
+3916 1870 CircleF
+4662 2698 CircleF
+3809 3459 CircleF
+3121 2434 CircleF
+4419 1931 CircleF
+4532 3247 CircleF
+3253 3146 CircleF
+3573 2000 CircleF
+4640 2355 CircleF
+4135 3483 CircleF
+3046 2693 CircleF
+4175 1850 CircleF
+4632 2974 CircleF
+3534 3354 CircleF
+3280 2223 CircleF
+4551 2079 CircleF
+4390 3396 CircleF
+3106 2946 CircleF
+3854 1885 CircleF
+4662 2634 CircleF
+3872 3472 CircleF
+3097 2481 CircleF
+4381 1908 CircleF
+4556 3204 CircleF
+3297 3188 CircleF
+3513 2036 CircleF
+4629 2298 CircleF
+4188 3475 CircleF
+3047 2739 CircleF
+4121 1848 CircleF
+4642 2916 CircleF
+3593 3383 CircleF
+3237 2269 CircleF
+4527 2040 CircleF
+4427 3369 CircleF
+3132 2991 CircleF
+3790 1904 CircleF
+4661 2570 CircleF
+3934 3481 CircleF
+3078 2529 CircleF
+4340 1889 CircleF
+4577 3158 CircleF
+3345 3229 CircleF
+3456 2074 CircleF
+4616 2244 CircleF
+4239 3464 CircleF
+3053 2786 CircleF
+4064 1849 CircleF
+4651 2855 CircleF
+3655 3409 CircleF
+3198 2316 CircleF
+4499 2004 CircleF
+4461 3338 CircleF
+3162 3037 CircleF
+3727 1927 CircleF
+4658 2506 CircleF
+3994 3487 CircleF
+3063 2576 CircleF
+4296 1873 CircleF
+4596 3109 CircleF
+3396 3268 CircleF
+3401 2114 CircleF
+4601 2192 CircleF
+4286 3449 CircleF
+3063 2832 CircleF
+4006 1855 CircleF
+4657 2792 CircleF
+3717 3432 CircleF
+3164 2363 CircleF
+4469 1972 CircleF
+4492 3304 CircleF
+3196 3081 CircleF
+3664 1954 CircleF
+4652 2444 CircleF
+4053 3488 CircleF
+3053 2624 CircleF
+4249 1861 CircleF
+4612 3056 CircleF
+3450 3304 CircleF
+3349 2157 CircleF
+4582 2144 CircleF
+4330 3430 CircleF
+3077 2878 CircleF
+3945 1864 CircleF
+4660 2729 CircleF
+3779 3451 CircleF
+3134 2411 CircleF
+4436 1943 CircleF
+4520 3266 CircleF
+3234 3125 CircleF
+3602 1985 CircleF
+4645 2383 CircleF
+4109 3486 CircleF
+3047 2671 CircleF
+4200 1853 CircleF
+4626 3001 CircleF
+3506 3338 CircleF
+3301 2201 CircleF
+4562 2099 CircleF
+4372 3408 CircleF
+3096 2924 CircleF
+3883 1877 CircleF
+4662 2665 CircleF
+3842 3466 CircleF
+3108 2459 CircleF
+4399 1918 CircleF
+4545 3225 CircleF
+3276 3168 CircleF
+3541 2018 CircleF
+4635 2325 CircleF
+4164 3480 CircleF
+3046 2717 CircleF
+4147 1849 CircleF
+4638 2944 CircleF
+3565 3369 CircleF
+3257 2247 CircleF
+4539 2058 CircleF
+4410 3382 CircleF
+3119 2970 CircleF
+3821 1895 CircleF
+4662 2600 CircleF
+3904 3477 CircleF
+3087 2506 CircleF
+4360 1897 CircleF
+4568 3180 CircleF
+3322 3209 CircleF
+3483 2055 CircleF
+4623 2269 CircleF
+4215 3470 CircleF
+3050 2764 CircleF
+4092 1848 CircleF
+4647 2884 CircleF
+3625 3397 CircleF
+3216 2293 CircleF
+4513 2020 CircleF
+4445 3353 CircleF
+3147 3015 CircleF
+3757 1916 CircleF
+4660 2536 CircleF
+3965 3485 CircleF
+3070 2554 CircleF
+4318 1880 CircleF
+4588 3133 CircleF
+3371 3249 CircleF
+3427 2094 CircleF
+4608 2216 CircleF
+4264 3456 CircleF
+3057 2810 CircleF
+4034 1852 CircleF
+4654 2822 CircleF
+3687 3422 CircleF
+3180 2340 CircleF
+4484 1986 CircleF
+4478 3320 CircleF
+3179 3060 CircleF
+3694 1941 CircleF
+4655 2474 CircleF
+4025 3488 CircleF
+3058 2601 CircleF
+4272 1866 CircleF
+4605 3082 CircleF
+3423 3287 CircleF
+3374 2136 CircleF
+4591 2166 CircleF
+4310 3439 CircleF
+3070 2856 CircleF
+3974 1859 CircleF
+4659 2759 CircleF
+3750 3443 CircleF
+3148 2388 CircleF
+4452 1956 CircleF
+4507 3284 CircleF
+3215 3104 CircleF
+3631 1970 CircleF
+4648 2412 CircleF
+4083 3487 CircleF
+3050 2648 CircleF
+4224 1856 CircleF
+4620 3028 CircleF
+3479 3322 CircleF
+3324 2180 CircleF
+4572 2120 CircleF
+4352 3419 CircleF
+3086 2902 CircleF
+3913 1870 CircleF
+4662 2695 CircleF
+3812 3459 CircleF
+3120 2436 CircleF
+4417 1930 CircleF
+4533 3245 CircleF
+3255 3148 CircleF
+3570 2002 CircleF
+4640 2353 CircleF
+4138 3483 CircleF
+3046 2695 CircleF
+4172 1850 CircleF
+4633 2972 CircleF
+3536 3355 CircleF
+3278 2225 CircleF
+4550 2077 CircleF
+4392 3395 CircleF
+3107 2948 CircleF
+3851 1886 CircleF
+4662 2631 CircleF
+3875 3473 CircleF
+3096 2484 CircleF
+4379 1907 CircleF
+4557 3202 CircleF
+3299 3190 CircleF
+3511 2037 CircleF
+4629 2295 CircleF
+4191 3475 CircleF
+3047 2742 CircleF
+4118 1848 CircleF
+4643 2913 CircleF
+3596 3384 CircleF
+3235 2271 CircleF
+4525 2038 CircleF
+4429 3367 CircleF
+3133 2993 CircleF
+3787 1905 CircleF
+4661 2567 CircleF
+3936 3482 CircleF
+3077 2531 CircleF
+4338 1888 CircleF
+4578 3156 CircleF
+3347 3230 CircleF
+3453 2075 CircleF
+4615 2241 CircleF
+4241 3463 CircleF
+3053 2788 CircleF
+4062 1849 CircleF
+4651 2852 CircleF
+3657 3411 CircleF
+3197 2318 CircleF
+4498 2002 CircleF
+4462 3336 CircleF
+3163 3039 CircleF
+3724 1928 CircleF
+4657 2503 CircleF
+3997 3487 CircleF
+3063 2579 CircleF
+4294 1872 CircleF
+4597 3106 CircleF
+3398 3269 CircleF
+3399 2116 CircleF
+4600 2190 CircleF
+4288 3448 CircleF
+3063 2834 CircleF
+4003 1855 CircleF
+4657 2790 CircleF
+3720 3433 CircleF
+3162 2365 CircleF
+4468 1970 CircleF
+4493 3302 CircleF
+3197 3083 CircleF
+3661 1955 CircleF
+4652 2441 CircleF
+4055 3488 CircleF
+3053 2626 CircleF
+4247 1861 CircleF
+4613 3054 CircleF
+3452 3306 CircleF
+3347 2159 CircleF
+4582 2142 CircleF
+4332 3429 CircleF
+3078 2880 CircleF
+3943 1864 CircleF
+4661 2726 CircleF
+3782 3452 CircleF
+3133 2413 CircleF
+4434 1942 CircleF
+4521 3264 CircleF
+3236 3127 CircleF
+3599 1986 CircleF
+4644 2381 CircleF
+4112 3486 CircleF
+3047 2673 CircleF
+4197 1853 CircleF
+4627 2999 CircleF
+3509 3340 CircleF
+3299 2203 CircleF
+4561 2097 CircleF
+4374 3407 CircleF
+3097 2926 CircleF
+3881 1878 CircleF
+4662 2662 CircleF
+3845 3467 CircleF
+3107 2461 CircleF
+4398 1917 CircleF
+4546 3223 CircleF
+3278 3170 CircleF
+3539 2020 CircleF
+4634 2322 CircleF
+4166 3479 CircleF
+3046 2719 CircleF
+4144 1848 CircleF
+4638 2941 CircleF
+3567 3371 CircleF
+3255 2249 CircleF
+4538 2056 CircleF
+4412 3381 CircleF
+3120 2972 CircleF
+3818 1895 CircleF
+4662 2597 CircleF
+3907 3478 CircleF
+3086 2509 CircleF
+4358 1896 CircleF
+4569 3178 CircleF
+3324 3211 CircleF
+3480 2057 CircleF
+4622 2267 CircleF
+4217 3469 CircleF
+3050 2766 CircleF
+4089 1848 CircleF
+4647 2881 CircleF
+3628 3399 CircleF
+3215 2295 CircleF
+4511 2019 CircleF
+4447 3352 CircleF
+3148 3017 CircleF
+3754 1917 CircleF
+4659 2534 CircleF
+3968 3485 CircleF
+3069 2556 CircleF
+4316 1879 CircleF
+4588 3130 CircleF
+3373 3251 CircleF
+3424 2096 CircleF
+4608 2214 CircleF
+4266 3456 CircleF
+3058 2812 CircleF
+4031 1852 CircleF
+4654 2820 CircleF
+3690 3423 CircleF
+3178 2343 CircleF
+4482 1985 CircleF
+4479 3319 CircleF
+3180 3062 CircleF
+3691 1942 CircleF
+4655 2471 CircleF
+4028 3488 CircleF
+3057 2603 CircleF
+4270 1866 CircleF
+4606 3079 CircleF
+3426 3289 CircleF
+3371 2138 CircleF
+4591 2164 CircleF
+4312 3439 CircleF
+3070 2858 CircleF
+3972 1859 CircleF
+4659 2756 CircleF
+3752 3443 CircleF
+3146 2390 CircleF
+4450 1955 CircleF
+4508 3283 CircleF
+3217 3106 CircleF
+3629 1971 CircleF
+4648 2409 CircleF
+4085 3487 CircleF
+3049 2650 CircleF
+4221 1856 CircleF
+4621 3026 CircleF
+3481 3324 CircleF
+3322 2182 CircleF
+4571 2118 CircleF
+4354 3418 CircleF
+3087 2904 CircleF
+3910 1871 CircleF
+4662 2692 CircleF
+3815 3460 CircleF
+3119 2438 CircleF
+4416 1929 CircleF
+4535 3243 CircleF
+3257 3150 CircleF
+3567 2003 CircleF
+4639 2350 CircleF
+4140 3483 CircleF
+3046 2697 CircleF
+4170 1850 CircleF
+4633 2969 CircleF
+3539 3356 CircleF
+3276 2227 CircleF
+4549 2075 CircleF
+4394 3394 CircleF
+3109 2950 CircleF
+3848 1887 CircleF
+4662 2628 CircleF
+3878 3473 CircleF
+3095 2486 CircleF
+4377 1906 CircleF
+4558 3200 CircleF
+3301 3192 CircleF
+3508 2039 CircleF
+4628 2293 CircleF
+4193 3475 CircleF
+3048 2744 CircleF
+4116 1848 CircleF
+4643 2910 CircleF
+3599 3386 CircleF
+3233 2273 CircleF
+4524 2036 CircleF
+4430 3366 CircleF
+3134 2996 CircleF
+3785 1906 CircleF
+4661 2564 CircleF
+3939 3482 CircleF
+3077 2533 CircleF
+4336 1887 CircleF
+4579 3154 CircleF
+3349 3232 CircleF
+3451 2077 CircleF
+4615 2239 CircleF
+4243 3463 CircleF
+3053 2790 CircleF
+4059 1850 CircleF
+4651 2849 CircleF
+3660 3412 CircleF
+3195 2320 CircleF
+4497 2001 CircleF
+4464 3335 CircleF
+3164 3041 CircleF
+3721 1930 CircleF
+4657 2501 CircleF
+3999 3487 CircleF
+3062 2581 CircleF
+4292 1872 CircleF
+4598 3104 CircleF
+3400 3271 CircleF
+3396 2118 CircleF
+4599 2188 CircleF
+4290 3447 CircleF
+3064 2836 CircleF
+4000 1855 CircleF
+4657 2787 CircleF
+3723 3434 CircleF
+3161 2367 CircleF
+4466 1969 CircleF
+4495 3300 CircleF
+3199 3085 CircleF
+3658 1957 CircleF
+4652 2438 CircleF
+4058 3488 CircleF
+3053 2628 CircleF
+4245 1860 CircleF
+4614 3052 CircleF
+3455 3307 CircleF
+3345 2161 CircleF
+4581 2140 CircleF
+4334 3428 CircleF
+3079 2882 CircleF
+3940 1865 CircleF
+4661 2723 CircleF
+3785 3453 CircleF
+3131 2415 CircleF
+4433 1941 CircleF
+4522 3262 CircleF
+3237 3129 CircleF
+3596 1988 CircleF
+4644 2378 CircleF
+4114 3485 CircleF
+3047 2675 CircleF
+4195 1852 CircleF
+4627 2996 CircleF
+3511 3341 CircleF
+3297 2205 CircleF
+4560 2095 CircleF
+4375 3406 CircleF
+3098 2928 CircleF
+3878 1879 CircleF
+4662 2659 CircleF
+3848 3467 CircleF
+3106 2463 CircleF
+4396 1916 CircleF
+4547 3221 CircleF
+3280 3172 CircleF
+3536 2022 CircleF
+4634 2320 CircleF
+4168 3479 CircleF
+3046 2722 CircleF
+4142 1848 CircleF
+4639 2938 CircleF
+3570 3372 CircleF
+3253 2251 CircleF
+4536 2054 CircleF
+4413 3380 CircleF
+3122 2974 CircleF
+3815 1896 CircleF
+4662 2595 CircleF
+3910 3478 CircleF
+3085 2511 CircleF
+4356 1896 CircleF
+4570 3176 CircleF
+3326 3213 CircleF
+3478 2059 CircleF
+4621 2264 CircleF
+4220 3469 CircleF
+3050 2768 CircleF
+4086 1848 CircleF
+4648 2878 CircleF
+3631 3400 CircleF
+3213 2297 CircleF
+4510 2017 CircleF
+4448 3350 CircleF
+3150 3019 CircleF
+3751 1918 CircleF
+4659 2531 CircleF
+3971 3485 CircleF
+3069 2558 CircleF
+4314 1878 CircleF
+4589 3128 CircleF
+3376 3253 CircleF
+3422 2098 CircleF
+4607 2212 CircleF
+4268 3455 CircleF
+3058 2814 CircleF
+4029 1852 CircleF
+4655 2817 CircleF
+3693 3424 CircleF
+3177 2345 CircleF
+4481 1984 CircleF
+4480 3317 CircleF
+3182 3064 CircleF
+3688 1943 CircleF
+4655 2468 CircleF
+4030 3488 CircleF
+3057 2605 CircleF
+4268 1865 CircleF
+4606 3077 CircleF
+3428 3290 CircleF
+3369 2140 CircleF
+4590 2162 CircleF
+4314 3438 CircleF
+3071 2860 CircleF
+3969 1860 CircleF
+4659 2754 CircleF
+3755 3444 CircleF
+3145 2392 CircleF
+4449 1954 CircleF
+4509 3281 CircleF
+3219 3108 CircleF
+3626 1972 CircleF
+4648 2407 CircleF
+4088 3487 CircleF
+3049 2653 CircleF
+4219 1856 CircleF
+4621 3023 CircleF
+3484 3325 CircleF
+3319 2184 CircleF
+4570 2116 CircleF
+4356 3417 CircleF
+% End plot #7
+% Begin plot #8
+0.700 UP
+1.000 UL
+LTb
+0.00 0.00 0.00 C
+4814 2674 TriU
+3812 3615 TriU
+2949 2358 TriU
+4664 1811 TriU
+4613 3530 TriU
+2896 2991 TriU
+3948 1704 TriU
+4813 2738 TriU
+3747 3596 TriU
+2981 2316 TriU
+4683 1839 TriU
+4587 3551 TriU
+2875 2954 TriU
+4009 1691 TriU
+4811 2801 TriU
+3684 3575 TriU
+3015 2274 TriU
+4700 1869 TriU
+4559 3570 TriU
+2858 2919 TriU
+4066 1681 TriU
+4808 2861 TriU
+3622 3552 TriU
+3052 2233 TriU
+4716 1901 TriU
+4530 3588 TriU
+2843 2885 TriU
+4121 1673 TriU
+4804 2920 TriU
+3562 3527 TriU
+3092 2192 TriU
+4730 1935 TriU
+4499 3603 TriU
+2830 2851 TriU
+4174 1667 TriU
+4800 2977 TriU
+3501 3499 TriU
+3134 2150 TriU
+4743 1972 TriU
+4466 3617 TriU
+2820 2818 TriU
+4225 1664 TriU
+4794 3033 TriU
+3442 3469 TriU
+3180 2108 TriU
+4755 2012 TriU
+4430 3630 TriU
+2812 2784 TriU
+4275 1662 TriU
+4788 3088 TriU
+3383 3436 TriU
+3231 2065 TriU
+4766 2056 TriU
+4390 3641 TriU
+2808 2749 TriU
+4324 1663 TriU
+4780 3142 TriU
+3324 3400 TriU
+3285 2021 TriU
+4777 2104 TriU
+4347 3650 TriU
+2805 2714 TriU
+4371 1666 TriU
+4771 3195 TriU
+3265 3361 TriU
+3345 1978 TriU
+4786 2157 TriU
+4299 3658 TriU
+2807 2677 TriU
+4416 1672 TriU
+4761 3246 TriU
+3208 3320 TriU
+3409 1935 TriU
+4794 2215 TriU
+4246 3663 TriU
+2812 2638 TriU
+4459 1680 TriU
+4748 3294 TriU
+3154 3277 TriU
+3477 1893 TriU
+4801 2278 TriU
+4188 3665 TriU
+2821 2599 TriU
+4499 1692 TriU
+4733 3340 TriU
+3102 3232 TriU
+3548 1854 TriU
+4806 2344 TriU
+4127 3664 TriU
+2834 2558 TriU
+4536 1706 TriU
+4717 3382 TriU
+3055 3187 TriU
+3621 1818 TriU
+4811 2413 TriU
+4062 3660 TriU
+2852 2516 TriU
+4569 1724 TriU
+4698 3420 TriU
+3013 3143 TriU
+3694 1786 TriU
+4813 2484 TriU
+3996 3652 TriU
+2873 2474 TriU
+4599 1744 TriU
+4677 3454 TriU
+2975 3100 TriU
+3765 1759 TriU
+4815 2554 TriU
+3929 3641 TriU
+2898 2432 TriU
+4625 1767 TriU
+4655 3485 TriU
+2943 3059 TriU
+3834 1736 TriU
+4815 2622 TriU
+3862 3627 TriU
+2926 2390 TriU
+4648 1791 TriU
+4631 3511 TriU
+2915 3019 TriU
+3900 1717 TriU
+4814 2689 TriU
+3796 3610 TriU
+2956 2348 TriU
+4669 1818 TriU
+4606 3535 TriU
+2891 2982 TriU
+3963 1701 TriU
+4813 2754 TriU
+3732 3591 TriU
+2989 2306 TriU
+4687 1846 TriU
+4580 3556 TriU
+2871 2946 TriU
+4022 1689 TriU
+4810 2816 TriU
+3669 3570 TriU
+3024 2265 TriU
+4704 1877 TriU
+4552 3575 TriU
+2854 2911 TriU
+4079 1679 TriU
+4807 2876 TriU
+3608 3546 TriU
+3062 2223 TriU
+4719 1909 TriU
+4523 3592 TriU
+2839 2877 TriU
+4134 1671 TriU
+4803 2934 TriU
+3547 3520 TriU
+3102 2182 TriU
+4733 1944 TriU
+4492 3607 TriU
+2828 2843 TriU
+4186 1666 TriU
+4799 2990 TriU
+3487 3492 TriU
+3145 2140 TriU
+4746 1981 TriU
+4458 3620 TriU
+2818 2810 TriU
+4237 1663 TriU
+4793 3046 TriU
+3428 3461 TriU
+3192 2097 TriU
+4758 2022 TriU
+4421 3633 TriU
+2811 2776 TriU
+4287 1662 TriU
+4786 3101 TriU
+3368 3427 TriU
+3243 2054 TriU
+4769 2067 TriU
+4380 3643 TriU
+2807 2741 TriU
+4335 1663 TriU
+4778 3155 TriU
+3310 3391 TriU
+3299 2011 TriU
+4779 2116 TriU
+4336 3652 TriU
+2805 2705 TriU
+4382 1667 TriU
+4769 3207 TriU
+3252 3352 TriU
+3359 1967 TriU
+4788 2170 TriU
+4286 3659 TriU
+2808 2668 TriU
+4427 1673 TriU
+4758 3258 TriU
+3195 3310 TriU
+3425 1925 TriU
+4796 2230 TriU
+4232 3664 TriU
+2814 2629 TriU
+4469 1683 TriU
+4745 3306 TriU
+3141 3266 TriU
+3494 1883 TriU
+4802 2293 TriU
+4174 3665 TriU
+2824 2589 TriU
+4508 1695 TriU
+4729 3351 TriU
+3091 3221 TriU
+3565 1845 TriU
+4808 2360 TriU
+4112 3663 TriU
+2838 2548 TriU
+4544 1710 TriU
+4712 3392 TriU
+3044 3177 TriU
+3639 1810 TriU
+4811 2430 TriU
+4047 3658 TriU
+2856 2506 TriU
+4577 1728 TriU
+4693 3429 TriU
+3003 3133 TriU
+3711 1779 TriU
+4814 2500 TriU
+3980 3650 TriU
+2879 2464 TriU
+4605 1749 TriU
+4672 3462 TriU
+2967 3090 TriU
+3782 1753 TriU
+4815 2570 TriU
+3913 3638 TriU
+2904 2422 TriU
+4631 1772 TriU
+4650 3491 TriU
+2936 3049 TriU
+3850 1731 TriU
+4815 2639 TriU
+3846 3623 TriU
+2933 2380 TriU
+4654 1798 TriU
+4626 3517 TriU
+2909 3010 TriU
+3916 1713 TriU
+4814 2705 TriU
+3781 3606 TriU
+2964 2338 TriU
+4674 1825 TriU
+4600 3540 TriU
+2886 2973 TriU
+3977 1698 TriU
+4812 2769 TriU
+3717 3586 TriU
+2997 2296 TriU
+4692 1853 TriU
+4574 3561 TriU
+2867 2937 TriU
+4036 1686 TriU
+4810 2830 TriU
+3654 3564 TriU
+3033 2255 TriU
+4708 1884 TriU
+4546 3579 TriU
+2850 2903 TriU
+4092 1677 TriU
+4806 2890 TriU
+3593 3540 TriU
+3071 2213 TriU
+4723 1917 TriU
+4516 3595 TriU
+2836 2869 TriU
+4146 1670 TriU
+4802 2947 TriU
+3533 3514 TriU
+3112 2172 TriU
+4736 1952 TriU
+4484 3610 TriU
+2825 2835 TriU
+4198 1665 TriU
+4797 3004 TriU
+3473 3485 TriU
+3156 2130 TriU
+4749 1991 TriU
+4449 3624 TriU
+2816 2802 TriU
+4249 1663 TriU
+4792 3059 TriU
+3413 3453 TriU
+3204 2087 TriU
+4761 2032 TriU
+4411 3635 TriU
+2810 2767 TriU
+4298 1662 TriU
+4785 3114 TriU
+3354 3419 TriU
+3256 2044 TriU
+4771 2078 TriU
+4370 3646 TriU
+2806 2732 TriU
+4346 1664 TriU
+4776 3167 TriU
+3296 3382 TriU
+3313 2000 TriU
+4781 2129 TriU
+4324 3654 TriU
+2806 2696 TriU
+4393 1668 TriU
+4766 3219 TriU
+3238 3342 TriU
+3375 1957 TriU
+4790 2184 TriU
+4274 3661 TriU
+2809 2659 TriU
+4437 1675 TriU
+4755 3269 TriU
+3182 3299 TriU
+3441 1914 TriU
+4798 2244 TriU
+4219 3664 TriU
+2816 2620 TriU
+4479 1685 TriU
+4741 3317 TriU
+3129 3255 TriU
+3511 1874 TriU
+4804 2309 TriU
+4160 3665 TriU
+2827 2580 TriU
+4517 1698 TriU
+4726 3361 TriU
+3079 3211 TriU
+3583 1836 TriU
+4809 2377 TriU
+4096 3662 TriU
+2842 2538 TriU
+4552 1714 TriU
+4708 3401 TriU
+3034 3166 TriU
+3656 1802 TriU
+4812 2447 TriU
+4031 3656 TriU
+2861 2496 TriU
+4584 1733 TriU
+4688 3437 TriU
+2994 3122 TriU
+3728 1773 TriU
+4814 2517 TriU
+3964 3647 TriU
+2884 2454 TriU
+4612 1755 TriU
+4667 3469 TriU
+2959 3080 TriU
+3799 1747 TriU
+4815 2587 TriU
+3897 3635 TriU
+2911 2412 TriU
+4637 1778 TriU
+4644 3498 TriU
+2929 3040 TriU
+3866 1726 TriU
+4815 2655 TriU
+3831 3619 TriU
+2940 2370 TriU
+4659 1804 TriU
+4620 3523 TriU
+2903 3001 TriU
+3931 1709 TriU
+4814 2720 TriU
+3765 3602 TriU
+2972 2328 TriU
+4678 1831 TriU
+4594 3545 TriU
+2881 2964 TriU
+3992 1695 TriU
+4812 2784 TriU
+3702 3581 TriU
+3005 2286 TriU
+4696 1861 TriU
+4567 3565 TriU
+2862 2929 TriU
+4050 1684 TriU
+4809 2845 TriU
+3640 3559 TriU
+3042 2245 TriU
+4711 1892 TriU
+4539 3583 TriU
+2847 2895 TriU
+4105 1675 TriU
+4805 2904 TriU
+3579 3534 TriU
+3080 2203 TriU
+4726 1925 TriU
+4508 3599 TriU
+2833 2861 TriU
+4159 1669 TriU
+4801 2961 TriU
+3518 3507 TriU
+3122 2162 TriU
+4739 1961 TriU
+4476 3614 TriU
+2823 2827 TriU
+4211 1664 TriU
+4796 3017 TriU
+3459 3478 TriU
+3167 2120 TriU
+4752 2000 TriU
+4440 3627 TriU
+2814 2794 TriU
+4261 1662 TriU
+4790 3072 TriU
+3399 3445 TriU
+3216 2077 TriU
+4763 2043 TriU
+4402 3638 TriU
+2809 2759 TriU
+4310 1662 TriU
+4783 3127 TriU
+3340 3410 TriU
+3269 2034 TriU
+4774 2090 TriU
+4359 3648 TriU
+2806 2724 TriU
+4358 1665 TriU
+4774 3180 TriU
+3282 3372 TriU
+3327 1990 TriU
+4783 2141 TriU
+4313 3656 TriU
+2806 2687 TriU
+4404 1670 TriU
+4764 3231 TriU
+3224 3332 TriU
+3390 1947 TriU
+4792 2198 TriU
+4261 3662 TriU
+2810 2649 TriU
+4447 1678 TriU
+4752 3281 TriU
+3169 3289 TriU
+3457 1905 TriU
+4799 2259 TriU
+4205 3665 TriU
+2818 2610 TriU
+4488 1688 TriU
+4738 3328 TriU
+3116 3245 TriU
+3528 1865 TriU
+4805 2325 TriU
+4145 3665 TriU
+2830 2570 TriU
+4526 1702 TriU
+4721 3371 TriU
+3068 3200 TriU
+3600 1828 TriU
+4809 2393 TriU
+4081 3661 TriU
+2846 2528 TriU
+4560 1719 TriU
+4703 3410 TriU
+3024 3155 TriU
+3673 1795 TriU
+4813 2464 TriU
+4015 3655 TriU
+2867 2486 TriU
+4591 1738 TriU
+4683 3445 TriU
+2985 3112 TriU
+3745 1766 TriU
+4814 2534 TriU
+3948 3644 TriU
+2890 2444 TriU
+4618 1760 TriU
+4662 3477 TriU
+2951 3070 TriU
+3815 1742 TriU
+4815 2603 TriU
+3881 3631 TriU
+2918 2402 TriU
+4642 1784 TriU
+4638 3504 TriU
+2922 3030 TriU
+3882 1722 TriU
+4814 2671 TriU
+3815 3615 TriU
+2947 2360 TriU
+4663 1810 TriU
+4614 3529 TriU
+2897 2992 TriU
+3946 1705 TriU
+4813 2736 TriU
+3750 3597 TriU
+2979 2318 TriU
+4682 1838 TriU
+4588 3550 TriU
+2876 2956 TriU
+4006 1692 TriU
+4811 2798 TriU
+3687 3576 TriU
+3014 2276 TriU
+4700 1868 TriU
+4560 3570 TriU
+2858 2921 TriU
+4063 1681 TriU
+4808 2859 TriU
+3625 3553 TriU
+3051 2235 TriU
+4715 1900 TriU
+4531 3587 TriU
+2843 2886 TriU
+4118 1673 TriU
+4804 2917 TriU
+3564 3528 TriU
+3090 2194 TriU
+4729 1934 TriU
+4501 3603 TriU
+2831 2853 TriU
+4171 1668 TriU
+4800 2975 TriU
+3504 3500 TriU
+3132 2152 TriU
+4742 1970 TriU
+4468 3617 TriU
+2820 2819 TriU
+4223 1664 TriU
+4795 3030 TriU
+3445 3470 TriU
+3178 2109 TriU
+4755 2010 TriU
+4432 3629 TriU
+2813 2785 TriU
+4273 1662 TriU
+4788 3085 TriU
+3385 3437 TriU
+3228 2067 TriU
+4766 2054 TriU
+4392 3641 TriU
+2808 2751 TriU
+4322 1663 TriU
+4781 3139 TriU
+3326 3402 TriU
+3283 2023 TriU
+4776 2102 TriU
+4349 3650 TriU
+2805 2715 TriU
+4369 1666 TriU
+4772 3192 TriU
+3268 3363 TriU
+3342 1980 TriU
+4786 2155 TriU
+4301 3658 TriU
+2807 2678 TriU
+4414 1671 TriU
+4761 3243 TriU
+3211 3322 TriU
+3406 1937 TriU
+4794 2212 TriU
+4248 3663 TriU
+2811 2640 TriU
+4457 1680 TriU
+4749 3292 TriU
+3156 3279 TriU
+3474 1895 TriU
+4801 2275 TriU
+4191 3665 TriU
+2820 2601 TriU
+4498 1691 TriU
+4734 3338 TriU
+3104 3234 TriU
+3545 1856 TriU
+4806 2341 TriU
+4130 3664 TriU
+2833 2560 TriU
+4534 1706 TriU
+4717 3380 TriU
+3057 3189 TriU
+3618 1820 TriU
+4810 2410 TriU
+4065 3660 TriU
+2851 2518 TriU
+4568 1723 TriU
+4699 3419 TriU
+3014 3145 TriU
+3691 1788 TriU
+4813 2480 TriU
+3999 3652 TriU
+2872 2476 TriU
+4598 1743 TriU
+4678 3453 TriU
+2977 3102 TriU
+3762 1760 TriU
+4815 2551 TriU
+3932 3642 TriU
+2897 2434 TriU
+4624 1766 TriU
+4656 3483 TriU
+2944 3060 TriU
+3831 1737 TriU
+4815 2619 TriU
+3865 3628 TriU
+2924 2392 TriU
+4647 1790 TriU
+4633 3510 TriU
+2916 3021 TriU
+3897 1717 TriU
+4814 2686 TriU
+3799 3611 TriU
+2955 2350 TriU
+4668 1817 TriU
+4608 3534 TriU
+2892 2983 TriU
+3960 1702 TriU
+4813 2751 TriU
+3735 3592 TriU
+2987 2308 TriU
+4687 1845 TriU
+4581 3555 TriU
+2872 2947 TriU
+4020 1689 TriU
+4810 2813 TriU
+3672 3571 TriU
+3022 2266 TriU
+4703 1875 TriU
+4554 3574 TriU
+2854 2912 TriU
+4077 1679 TriU
+4807 2873 TriU
+3610 3547 TriU
+3060 2225 TriU
+4719 1907 TriU
+4524 3591 TriU
+2840 2878 TriU
+4131 1672 TriU
+4804 2931 TriU
+3550 3522 TriU
+3100 2184 TriU
+4732 1942 TriU
+4493 3606 TriU
+2828 2845 TriU
+4184 1666 TriU
+4799 2988 TriU
+3490 3493 TriU
+3143 2142 TriU
+4745 1979 TriU
+4459 3620 TriU
+2818 2811 TriU
+4235 1663 TriU
+4793 3044 TriU
+3430 3463 TriU
+3190 2099 TriU
+4757 2020 TriU
+4422 3632 TriU
+2811 2777 TriU
+4285 1662 TriU
+4787 3098 TriU
+3371 3429 TriU
+3241 2056 TriU
+4768 2065 TriU
+4382 3643 TriU
+2807 2742 TriU
+4333 1663 TriU
+4779 3152 TriU
+3312 3393 TriU
+3296 2013 TriU
+4779 2114 TriU
+4338 3652 TriU
+2805 2706 TriU
+4380 1667 TriU
+4769 3205 TriU
+3254 3353 TriU
+3357 1969 TriU
+4788 2168 TriU
+4289 3659 TriU
+2807 2669 TriU
+4425 1673 TriU
+4758 3255 TriU
+3197 3312 TriU
+3422 1926 TriU
+4796 2227 TriU
+4235 3663 TriU
+2813 2631 TriU
+4467 1682 TriU
+4745 3304 TriU
+3143 3268 TriU
+3491 1885 TriU
+4802 2290 TriU
+4177 3665 TriU
+2823 2591 TriU
+4507 1694 TriU
+4730 3349 TriU
+3093 3223 TriU
+3562 1847 TriU
+4807 2357 TriU
+4115 3663 TriU
+2837 2550 TriU
+4543 1710 TriU
+4713 3390 TriU
+3046 3179 TriU
+3635 1812 TriU
+4811 2427 TriU
+4050 3658 TriU
+2856 2508 TriU
+4575 1728 TriU
+4694 3427 TriU
+3005 3134 TriU
+3708 1781 TriU
+4814 2497 TriU
+3983 3650 TriU
+2878 2466 TriU
+4604 1748 TriU
+4673 3461 TriU
+2968 3092 TriU
+3779 1754 TriU
+4815 2567 TriU
+3916 3639 TriU
+2903 2424 TriU
+4630 1771 TriU
+4651 3490 TriU
+2937 3051 TriU
+3848 1732 TriU
+4815 2636 TriU
+3849 3624 TriU
+2931 2381 TriU
+4653 1796 TriU
+4627 3516 TriU
+2910 3012 TriU
+3913 1713 TriU
+4814 2702 TriU
+3784 3607 TriU
+2962 2340 TriU
+4673 1823 TriU
+4601 3539 TriU
+2887 2975 TriU
+3975 1698 TriU
+4812 2766 TriU
+3720 3587 TriU
+2996 2298 TriU
+4691 1852 TriU
+4575 3560 TriU
+2867 2939 TriU
+4034 1687 TriU
+4810 2828 TriU
+3657 3565 TriU
+3031 2257 TriU
+4707 1883 TriU
+4547 3578 TriU
+2851 2904 TriU
+4090 1677 TriU
+4806 2887 TriU
+3596 3541 TriU
+3069 2215 TriU
+4722 1915 TriU
+4517 3595 TriU
+2837 2870 TriU
+4144 1670 TriU
+4802 2945 TriU
+3535 3515 TriU
+3110 2174 TriU
+4736 1951 TriU
+4485 3610 TriU
+2825 2837 TriU
+4196 1665 TriU
+4798 3001 TriU
+3476 3486 TriU
+3154 2132 TriU
+4748 1989 TriU
+4451 3623 TriU
+2816 2803 TriU
+4247 1663 TriU
+4792 3057 TriU
+3416 3455 TriU
+3202 2089 TriU
+4760 2030 TriU
+4413 3635 TriU
+2810 2769 TriU
+4296 1662 TriU
+4785 3111 TriU
+3357 3421 TriU
+3254 2046 TriU
+4771 2076 TriU
+4372 3645 TriU
+2806 2734 TriU
+4344 1664 TriU
+4777 3165 TriU
+3298 3383 TriU
+3310 2002 TriU
+4781 2126 TriU
+4326 3654 TriU
+2806 2698 TriU
+4391 1668 TriU
+4767 3217 TriU
+3240 3344 TriU
+3372 1959 TriU
+4790 2182 TriU
+4276 3660 TriU
+2808 2660 TriU
+4435 1675 TriU
+4755 3267 TriU
+3184 3301 TriU
+3438 1916 TriU
+4797 2242 TriU
+4221 3664 TriU
+2815 2621 TriU
+4477 1685 TriU
+4742 3315 TriU
+3131 3257 TriU
+3507 1876 TriU
+4804 2306 TriU
+4162 3665 TriU
+2826 2581 TriU
+4516 1698 TriU
+4726 3359 TriU
+3081 3213 TriU
+3580 1838 TriU
+4808 2374 TriU
+4099 3663 TriU
+2841 2540 TriU
+4551 1714 TriU
+4709 3399 TriU
+3036 3168 TriU
+3653 1804 TriU
+4812 2444 TriU
+4034 3657 TriU
+2860 2498 TriU
+4583 1732 TriU
+4689 3436 TriU
+2996 3124 TriU
+3725 1774 TriU
+4814 2514 TriU
+3967 3648 TriU
+2883 2456 TriU
+4611 1754 TriU
+4668 3468 TriU
+2961 3082 TriU
+3796 1748 TriU
+4815 2584 TriU
+3900 3635 TriU
+2910 2414 TriU
+4636 1777 TriU
+4645 3497 TriU
+2930 3041 TriU
+3863 1727 TriU
+4815 2652 TriU
+3833 3620 TriU
+2939 2371 TriU
+4658 1803 TriU
+4621 3522 TriU
+2904 3003 TriU
+3928 1709 TriU
+4814 2717 TriU
+3768 3602 TriU
+2970 2330 TriU
+4677 1830 TriU
+4595 3544 TriU
+2882 2966 TriU
+3989 1695 TriU
+4812 2781 TriU
+3705 3582 TriU
+3004 2288 TriU
+4695 1859 TriU
+4568 3564 TriU
+2863 2930 TriU
+4047 1684 TriU
+4809 2842 TriU
+3642 3560 TriU
+3040 2247 TriU
+4711 1890 TriU
+4540 3582 TriU
+2847 2896 TriU
+4103 1675 TriU
+4806 2901 TriU
+3581 3535 TriU
+3079 2205 TriU
+4725 1924 TriU
+4510 3598 TriU
+2834 2862 TriU
+4157 1669 TriU
+4801 2958 TriU
+3521 3508 TriU
+3120 2164 TriU
+4739 1959 TriU
+4477 3613 TriU
+2823 2829 TriU
+4208 1665 TriU
+4796 3015 TriU
+3461 3479 TriU
+3165 2122 TriU
+4751 1998 TriU
+4442 3626 TriU
+2815 2795 TriU
+4259 1662 TriU
+4790 3070 TriU
+3402 3447 TriU
+3214 2079 TriU
+4763 2041 TriU
+4404 3638 TriU
+2809 2761 TriU
+4308 1662 TriU
+4783 3124 TriU
+3343 3412 TriU
+3267 2035 TriU
+4773 2088 TriU
+4361 3648 TriU
+2806 2725 TriU
+4356 1665 TriU
+4774 3177 TriU
+3284 3374 TriU
+3325 1992 TriU
+4783 2139 TriU
+4315 3656 TriU
+2806 2689 TriU
+4402 1670 TriU
+4764 3229 TriU
+3227 3334 TriU
+3387 1949 TriU
+4792 2195 TriU
+4264 3661 TriU
+2810 2651 TriU
+4445 1677 TriU
+4752 3279 TriU
+3171 3291 TriU
+3454 1906 TriU
+4799 2257 TriU
+4208 3665 TriU
+2817 2612 TriU
+4486 1688 TriU
+4738 3325 TriU
+3119 3247 TriU
+3525 1866 TriU
+4805 2322 TriU
+4147 3665 TriU
+2829 2572 TriU
+4524 1701 TriU
+4722 3369 TriU
+3070 3202 TriU
+3597 1829 TriU
+4809 2390 TriU
+4084 3662 TriU
+2845 2530 TriU
+4559 1718 TriU
+4704 3408 TriU
+3026 3157 TriU
+3670 1796 TriU
+4812 2460 TriU
+4018 3655 TriU
+2866 2488 TriU
+4590 1737 TriU
+4684 3444 TriU
+2987 3114 TriU
+3742 1767 TriU
+4814 2531 TriU
+3951 3645 TriU
+2889 2446 TriU
+4617 1759 TriU
+4663 3475 TriU
+2953 3072 TriU
+3812 1743 TriU
+4815 2600 TriU
+3884 3632 TriU
+2916 2403 TriU
+4641 1783 TriU
+4639 3503 TriU
+2924 3032 TriU
+3879 1723 TriU
+4815 2668 TriU
+3818 3616 TriU
+2946 2361 TriU
+4663 1809 TriU
+4615 3528 TriU
+2898 2994 TriU
+3943 1706 TriU
+4813 2733 TriU
+3753 3598 TriU
+2978 2320 TriU
+4682 1837 TriU
+4589 3549 TriU
+2877 2957 TriU
+4003 1692 TriU
+4811 2796 TriU
+3690 3577 TriU
+3012 2278 TriU
+4699 1867 TriU
+4562 3569 TriU
+2859 2922 TriU
+4061 1682 TriU
+4808 2856 TriU
+3628 3554 TriU
+3049 2237 TriU
+4714 1898 TriU
+4533 3586 TriU
+2844 2888 TriU
+4116 1674 TriU
+4805 2915 TriU
+3567 3529 TriU
+3088 2195 TriU
+4729 1932 TriU
+4502 3602 TriU
+2831 2854 TriU
+4169 1668 TriU
+4800 2972 TriU
+3507 3502 TriU
+3130 2154 TriU
+4742 1968 TriU
+% End plot #8
+% Begin plot #9
+0.700 UP
+1.000 UL
+LTb
+0.58 0.00 0.83 C
+4967 2674 TriUF
+3784 3759 TriUF
+2788 2240 TriUF
+5019 1745 TriUF
+4624 3947 TriUF
+2297 2397 TriUF
+5832 1648 TriUF
+4437 4865 TriUF
+% End plot #9
+% Begin plot #10
+0.700 UP
+1.000 UL
+LTb
+0.00 0.62 0.45 C
+5119 2674 TriD
+3747 3897 TriD
+2635 2100 TriD
+5483 1746 TriD
+4508 4477 TriD
+1790 951 TriD
+% End plot #10
+% Begin plot #11
+0.700 UP
+1.000 UL
+LTb
+0.34 0.71 0.91 C
+5271 2674 TriDF
+3702 4026 TriDF
+2493 1942 TriDF
+6050 1842 TriDF
+% End plot #11
+% Begin plot #12
+0.700 UP
+1.000 UL
+LTb
+0.90 0.62 0.00 C
+5424 2674 Dia
+3647 4144 Dia
+2372 1771 Dia
+6673 2036 Dia
+% End plot #12
+% Begin plot #13
+0.700 UP
+1.000 UL
+LTb
+0.94 0.89 0.26 C
+% End plot #13
+% Begin plot #14
+0.700 UP
+1.000 UL
+LTb
+0.00 0.45 0.70 C
+% End plot #14
+% Begin plot #15
+0.700 UP
+1.000 UL
+LTb
+0.90 0.12 0.06 C
+% End plot #15
+% Begin plot #16
+0.700 UP
+1.000 UL
+LTb
+0.00 0.00 0.00 C
+% End plot #16
+% Begin plot #17
+0.700 UP
+1.000 UL
+LTb
+0.58 0.00 0.83 C
+% End plot #17
+% Begin plot #18
+0.700 UP
+1.000 UL
+LTb
+0.00 0.62 0.45 C
+% End plot #18
+% Begin plot #19
+0.700 UP
+1.000 UL
+LTb
+0.34 0.71 0.91 C
+% End plot #19
+% Begin plot #20
+0.700 UP
+1.000 UL
+LTb
+0.90 0.62 0.00 C
+% End plot #20
+% Begin plot #21
+0.700 UP
+1.000 UL
+LTb
+0.94 0.89 0.26 C
+% End plot #21
+% Begin plot #22
+0.700 UP
+1.000 UL
+LTb
+0.00 0.45 0.70 C
+% End plot #22
+% Begin plot #23
+0.700 UP
+1.000 UL
+LTb
+0.90 0.12 0.06 C
+% End plot #23
+% Begin plot #24
+0.700 UP
+1.000 UL
+LTb
+0.00 0.00 0.00 C
+% End plot #24
+% Begin plot #25
+0.700 UP
+1.000 UL
+LTb
+0.58 0.00 0.83 C
+% End plot #25
+% Begin plot #26
+0.700 UP
+1.000 UL
+LTb
+0.00 0.62 0.45 C
+% End plot #26
+% Begin plot #27
+0.700 UP
+1.000 UL
+LTb
+0.34 0.71 0.91 C
+% End plot #27
+% Begin plot #28
+0.700 UP
+1.000 UL
+LTb
+0.90 0.62 0.00 C
+% End plot #28
+% Begin plot #29
+0.700 UP
+1.000 UL
+LTb
+0.94 0.89 0.26 C
+% End plot #29
+% Begin plot #30
+0.700 UP
+1.000 UL
+LTb
+0.00 0.45 0.70 C
+% End plot #30
+% Begin plot #31
+0.700 UP
+1.000 UL
+LTb
+0.90 0.12 0.06 C
+% End plot #31
+% Begin plot #32
+0.700 UP
+1.000 UL
+LTb
+0.00 0.00 0.00 C
+% End plot #32
+% Begin plot #33
+0.700 UP
+1.000 UL
+LTb
+0.58 0.00 0.83 C
+% End plot #33
+% Begin plot #34
+0.700 UP
+1.000 UL
+LTb
+0.00 0.62 0.45 C
+% End plot #34
+% Begin plot #35
+0.700 UP
+1.000 UL
+LTb
+0.34 0.71 0.91 C
+% End plot #35
+% Begin plot #36
+0.700 UP
+1.000 UL
+LTb
+0.90 0.62 0.00 C
+% End plot #36
+% Begin plot #37
+0.700 UP
+1.000 UL
+LTb
+0.94 0.89 0.26 C
+% End plot #37
+% Begin plot #38
+0.700 UP
+1.000 UL
+LTb
+0.00 0.45 0.70 C
+% End plot #38
+% Begin plot #39
+0.700 UP
+1.000 UL
+LTb
+0.90 0.12 0.06 C
+% End plot #39
+% Begin plot #40
+0.700 UP
+1.000 UL
+LTb
+0.00 0.00 0.00 C
+% End plot #40
+% Begin plot #41
+0.700 UP
+1.000 UL
+LTb
+0.58 0.00 0.83 C
+% End plot #41
+% Begin plot #42
+0.700 UP
+1.000 UL
+LTb
+0.00 0.62 0.45 C
+% End plot #42
+% Begin plot #43
+0.700 UP
+1.000 UL
+LTb
+0.34 0.71 0.91 C
+% End plot #43
+% Begin plot #44
+0.700 UP
+1.000 UL
+LTb
+0.90 0.62 0.00 C
+% End plot #44
+% Begin plot #45
+0.700 UP
+1.000 UL
+LTb
+0.94 0.89 0.26 C
+% End plot #45
+% Begin plot #46
+0.700 UP
+1.000 UL
+LTb
+0.00 0.45 0.70 C
+% End plot #46
+% Begin plot #47
+0.700 UP
+1.000 UL
+LTb
+0.90 0.12 0.06 C
+% End plot #47
+% Begin plot #48
+0.700 UP
+1.000 UL
+LTb
+0.00 0.00 0.00 C
+% End plot #48
+% Begin plot #49
+0.700 UP
+1.000 UL
+LTb
+0.58 0.00 0.83 C
+% End plot #49
+% Begin plot #50
+0.700 UP
+1.000 UL
+LTb
+0.00 0.62 0.45 C
+% End plot #50
+2.000 UL
+LTb
+LCb setrgbcolor
+1.000 UL
+LTB
+LCb setrgbcolor
+854 4899 N
+854 448 L
+6093 0 V
+0 4451 V
+-6093 0 V
+Z stroke
+0.700 UP
+1.000 UL
+LTb
+LCb setrgbcolor
+stroke
+grestore
+end
+showpage
+%%Trailer
+%%DocumentFonts: Helvetica
+%%Pages: 1

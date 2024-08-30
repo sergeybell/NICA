@@ -1,0 +1,187 @@
+INCLUDE 'elements';
+
+FUNCTION fACCLEN DUMMY; fACCLEN := 503; ENDFUNCTION;
+
+FUNCTION fEKIN MOM {MeV/c} RESTMASS {MeV}; fEKIN := SQRT(SQR(MOM) + SQR(RESTMASS)) - RESTMASS; ENDFUNCTION; {kinetic energy from momentum}
+FUNCTION fMOM EKIN {MeV} RESTMASS {MeV};   fMOM := SQRT(SQR(EKIN)+2*EKIN*RESTMASS); ENDFUNCTION; {momentum from kinetic energy}
+
+PROCEDURE SET_FOR_PROTONS y;
+  VARIABLE RESTMASSAMU 1; VARIABLE RESTMASSMEV 1;
+  VARIABLE EKIN 1; VARIABLE GAMMA 1; VARIABLE BETA 1;
+  GAMMA := y;
+  RESTMASSAMU := 1.00728; RESTMASSMEV := RESTMASSAMU*AMUMEV;
+  BETA := SQRT(GAMMA*GAMMA - 1)/GAMMA;
+  EKIN := (GAMMA-1)*RESTMASSMEV;
+  RP EKIN*PARA(1) RESTMASSAMU 1;
+  RPS 1 1.792847;
+  WRITE 6 '++++++++++ SETTING UP FOR PROTONS:';
+  WRITE 6 'EKIN [MeV]          GAMMA          BETA';
+  WRITE 6 SF(EKIN, '(F15.7)')&SF(GAMMA, '(F15.7)')&SF(BETA, '(F15.7)');
+  WRITE 6 '+++++++++++++++++++++++++++++++++++';
+ENDPROCEDURE;
+
+PROCEDURE SET_FOR_DEUTERONS y;
+  VARIABLE RESTMASSAMU 1; VARIABLE RESTMASSMEV 1;
+  VARIABLE EKIN 1; VARIABLE GAMMA 1; VARIABLE BETA 1;
+  GAMMA := y;
+  RESTMASSAMU := 2.01410; RESTMASSMEV := RESTMASSAMU*AMUMEV;
+  BETA := SQRT(GAMMA*GAMMA - 1)/GAMMA;
+  EKIN := (GAMMA-1)*RESTMASSMEV;
+  RP EKIN*PARA(1) RESTMASSAMU 1;
+  RPS 1 -.142987;
+  WRITE 6 '++++++++++ SETTING UP FOR DEUTERONS:';
+  WRITE 6 'EKIN [MeV]          GAMMA          BETA';
+  WRITE 6 SF(EKIN, '(F15.7)')&SF(GAMMA, '(F15.7)')&SF(BETA, '(F15.7)');
+  WRITE 6 '+++++++++++++++++++++++++++++++++++';
+ENDPROCEDURE;
+
+FUNCTION FOURIER_COEF Sign_eta n_fourier H_reflection;
+    {"""
+    Fourirer coefficients for rectangular signal.
+    Needed for Barrier Bucket realization.
+
+    Parameters
+    ----------
+    eta : float [1]
+        Slippage factor. It is different for different particles
+        and depent of 1) Energy [gamma]; 2) shift from reference [dp/p]
+        eta = eta_0 + eta_1 * dp/p + ...
+        The most interesting is 0, 1, 2 orders (tbh 0, 1)
+    n : int [1]
+        number of Fourirer coefficients
+    h_reflection : float [1]
+        Harmonic number of Barrier Bucket reflector.
+        Usually defines as harmonic number of BB.
+        defines as pi/phi_reflection,
+        where phi_reflection = 2 * T_reflector / T_drift,
+        T_reflector is duration of reflector signal [ns],
+        T_drift is duration of drift space in BB [ns].
+
+    For BB in NICA:
+        eta change at transition at gamma_tr = 7.087,
+        n = 1..25,
+        T_reflector = 50 ns,
+        T_drift = 400.25 ns. (Depend on f_revolution)
+    """}
+
+    VARIABLE sign 1;
+    VARIABLE n_f 1;
+    VARIABLE H_r 1;
+
+    H_r := H_reflection;
+    n_f := n_fourier;
+    sign := Sign_eta;
+
+    FOURIER_COEF := sign*2/(3.14159*n_f) * (1-COS((3.14159*n_f)/(H_r)));
+
+ENDFUNCTION;
+
+FUNCTION SIGMA_MOD number M N_MAX;
+
+    {Sigma_modulation procedure.
+    [Unnormalized by PI! Used sinc(x / np.pi)
+    to obtain the unnormalized sinc function]
+    To make signal more common to the real.
+    Using [sin(x)/x]^m.
+
+    Parameters
+    ----------
+    n : int [1]
+        number of Fourirer coefficient
+    m : int [1]
+        power of Sigma modulation
+    N : int [1]
+        total amount of Fourirer coefficient
+    For BB in NICA:
+        n = 1..25,
+        m = 2 or 3
+        N = 25}
+
+    VARIABLE NUM 1;
+    VARIABLE N 1;
+    VARIABLE ANS 1;
+    VARIABLE I 1;
+    VARIABLE POWER 1;
+
+    NUM := number;
+    N := N_MAX; {Max number of used fourier coefficients = 25 used}
+
+    ANS := ((3.1415926535 * NUM)/(2 * (N+1)));
+    SIGMA_MOD := (SIN(ANS)/ANS);
+    POWER := SIGMA_MOD;
+    LOOP I 1 M-1;
+      POWER := POWER * SIGMA_MOD;
+    ENDLOOP;
+    SIGMA_MOD := POWER;
+
+ENDFUNCTION; {SIGMA_MOD}
+
+PROCEDURE BARRIER_BUCKET V_peak T_reflection Harmonic_number N_fourier Eta_reference PHI_RF;
+                        {kV     ns           1               1 [=25]   1             degrees       }
+  VARIABLE V_p 1;
+  VARIABLE T_ref 1; VARIABLE T_rev 1; VARIABLE T_drift 1;
+  VARIABLE N_f 1;
+  VARIABLE Eta_r 1;
+  VARIABLE FREQ 1;
+  VARIABLE H_R 1;
+  VARIABLE HNUM 1;
+  VARIABLE PHI_R 1;
+  VARIABLE M 1;
+  VARIABLE I 1;
+  VARIABLE VRF 1 1 1;
+  VARIABLE PHI_0 1;
+  VARIABLE sign_eta 1;
+  VARIABLE c 1; VARIABLE beta 1;
+
+  beta := 0.99;
+  c := 2.988*1e8;
+
+  V_p := V_peak;                            {Maximum Voltage, kV}
+  HNUM := Harmonic_number;                  {Classical Harmonic number, 1}
+  T_rev := (504.03/c*beta)*1E9;             {revolutioт frequancy in time, ns}
+  T_ref := T_reflection;                    {duration of BB peak Voltage, ns}
+  T_drift := (T_rev - 2*T_ref)/(2 * HNUM);  {empty space, without RF Voltage, ns}
+  PHI_R := (2*T_ref)/T_drift;               {duration of BB Peak, 1}
+  H_R := (3.14159)/PHI_R;                   {specific harmonic number for BB RF, 1}
+  N_f := N_fourier;                         {number of coefficients in Fouirier expansion, 1}
+  Eta_r := Eta_reference;                   {needed only for sign, 1}
+  M := 3;                                   {For sigma modulation, 1}
+  PHI_0 := PHI_RF;                          {zero phase in degrees}
+
+  {WRITE 6 V_p HNUM T_rev T_ref T_drift PHI_R H_R N_f Eta_r M PHI_0;}
+
+  IF (Eta_r < 0);
+    sign_eta := -1;
+  ELSEIF (Eta_r > 0);
+    sign_eta := +1;
+  ENDIF;
+  WRITE 6 'END SIGN';
+
+  FREQ := HNUM / T_rev *1E9; {frequancy of RF, normalized to harmonic number, Hz}
+
+  WRITE 6 '********************************************';
+  WRITE 6 '*    RF BARRIER BUCKET 31 AUG 2022         *';
+  WRITE 6 '********************************************';
+  {inserted by @SK}
+
+  WRITE 6 'Peak Voltage: '&ST(V_p)&' kV';
+  WRITE 6 'Total Number of Fourier: '&ST(N_f);
+  WRITE 6 'Duration of Barrier Bucket'&ST(T_ref)&' ns';
+  WRITE 6 'Harmonic_number: '&ST(HNUM);
+  WRITE 6 'Initial Phase: '&ST(PHI_0)&' deg';
+
+  WRITE 6 '********************************************';
+  LOOP I 1 INT(N_f);
+    VRF(1, 1) := (-1) * V_p * FOURIER_COEF(sign_eta, I, H_R) * SIGMA_MOD(I, M, N_f);
+    WRITE 6 'Number of RF: '&ST(I);
+    WRITE 6 'Frequancy of RF: '&ST(I*FREQ/1E6)&' MHZ';
+    WRITE 6 'Fourier coefficient: '&ST(FOURIER_COEF(sign_eta, I, H_R));
+    WRITE 6 'Sigma modulation: '&ST(SIGMA_MOD(I, M, N_f));
+    WRITE 6 'Voltage of RF: '&ST(VRF(1,1))&' kV';
+    RF VRF 0 I*FREQ PHI_0 0.05;
+    WRITE 6 '********************************************';
+  ENDLOOP;
+
+ENDPROCEDURE; {BARRIER_BUCKET}
+
+SAVE 'header';

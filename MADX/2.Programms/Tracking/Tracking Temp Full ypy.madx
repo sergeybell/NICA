@@ -1,0 +1,62 @@
+beam, MASS=2.32283962,CHARGE=1, ENERGY=13.54435861,
+      EX=3.96e-005, EY=3.1e-005, SIGE=0.00156;
+
+CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX/1.Sequences/Full Sequence/";
+!call file = "NICA w Miss Edge Arc g=15 w QFE2 3 on arc(actual).seq";
+!call file = "NICA 2 families of quadrupoles g=15 9,44 7.seq";
+CALL FILE = "Gold NICA.seq";
+!CALL FILE = "coupling.seq";
+!CALL FILE = "coupling1.seq";
+!CALL FILE = "My NICA (renew).seq";
+use, sequence=MACHINE;
+
+CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX/2.Programms/Plot";
+twiss;
+TRACK, DELTAP=0.000, FILE = tracking_temp_full, onetable = true;
+
+start, y=0.000, px=0.0, x=0.0, py=0.0;
+start, y=0.00025, px=0.0, x=0.0, py=0.0;
+start, y=0.0005, px=0.0, x=0.0, py=0.0;
+start, y=0.00075, px=0.0, x=0.0, py=0.0;
+start, y=0.001, px=0.0, x=0.0, py=0.0;
+start, y=0.0015, px=0.0, x=0.0, py=0.0;
+start, y=0.00175, px=0.0, x=0.0, py=0.0;
+start, y=0.002, px=0.0, x=0.0, py=0.0;
+start, y=0.00225, px=0.0, x=0.0, py=0.0;
+start, y=0.0025, px=0.0, x=0.0, py=0.0;
+start, y=0.00275, px=0.0, x=0.0, py=0.0;
+start, y=0.003, px=0.0, x=0.0, py=0.0;
+start, y=0.00325, px=0.0, x=0.0, py=0.0;
+start, y=0.0035, px=0.0, x=0.0, py=0.0;
+start, y=0.00375, px=0.0, x=0.0, py=0.0;
+start, y=0.004, px=0.0, x=0.0, py=0.0;
+start, y=0.0042, px=0.0, x=0.0, py=0.0;
+start, y=0.0045, px=0.0, x=0.0, py=0.0;
+start, y=0.005, px=0.0, x=0.0, py=0.0;
+start, y=0.0055, px=0.0, x=0.0, py=0.0;
+start, y=0.0060, px=0.0, x=0.0, py=0.0;
+start, y=0.00625, px=0.0, x=0.0, py=0.0;
+start, y=0.0065, px=0.0, x=0.0, py=0.0;
+start, y=0.00675, px=0.0, x=0.0, py=0.0;
+start, y=0.007, px=0.0, x=0.0, py=0.0;
+start, y=0.0075, px=0.0, x=0.0, py=0.0;
+start, y=0.008, px=0.0, x=0.0, py=0.0;
+start, y=0.0085, px=0.0, x=0.0, py=0.0;
+start, y=0.009, px=0.0, x=0.0, py=0.0;
+start, y=0.010, px=0.0, x=0.0, py=0.0;
+start, y=0.012, px=0.0, x=0.0, py=0.0;
+start, y=0.013, px=0.0, x=0.0, py=0.0;
+start, y=0.015, px=0.0, x=0.0, py=0.0;
+start, y=0.0175, px=0.0, x=0.0, py=0.0;
+start, y=0.018, px=0.0, x=0.0, py=0.0;
+start, y=0.020, px=0.0, x=0.0, py=0.0;
+start, y=0.022, px=0.0, x=0.0, py=0.0;
+start, y=0.024, px=0.0, x=0.0, py=0.0;
+
+
+RUN, TURNS = 2000, ffile=1;
+ENDTRACK;
+
+twiss;
+
+stop;

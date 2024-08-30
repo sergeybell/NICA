@@ -1,0 +1,31 @@
+CHDIR, DIR = "/Users/Bell/GIT_REPOS/NICA/MADX/1.Sequences/Full Sequence";
+!CHDIR, DIR = "/Users/Bell/GIT_REPOS/NICA/MADX/1.Sequences/Resonant";
+CALL FILE = "My NICA.seq";
+!CALL FILE = "FODO cell.opt"
+!CALL FILE = "FDO cell.opt"
+!CALL FILE = "ODFDO cell.opt"
+!CALL FILE = "FODO regular arc (4 superperiods and 3 tunes).opt";
+!CALL FILE = "FDO regular arc (4 superperiods and 3 tunes).opt";
+!CALL FILE = "ODFDO regular arc (4 superperiods and 3 tunes).opt";
+!CALL FILE = "FODO resonant arc (4 superperiods and 3 tunes).opt";
+!CALL FILE = "FDO resonant arc (4 superperiods and 3 tunes).opt";
+!CALL FILE = "ODFDO resonant arc (4 superperiods and 3 tunes).opt";
+OPTION, -ECHO;
+!TITLE, "ODFDO resonant arc, 4 superperiods and 3 tunes";
+TITLE, "NICA Ion 4.5 GeV";
+
+beam, MASS=2.32283962,CHARGE=1, ENERGY=13.54435861,
+      EX=3.96e-05, EY=3.1e-05, SIGE=0.00156;
+
+!USE, PERIOD = MACHINE;
+!SAVEBETA, LABEL=end, PLACE=#e, SEQUENCE=MACHINE;
+!twiss;
+!show, end;
+USE, PERIOD = MACHINE;
+CHDIR, DIR = "/Users/Bell/GIT_REPOS/NICA/MADX";
+!TWISS, BETA0=END, DX = 0.0, DPX = 0.0, file=tbl/twiss_full_NICA.tbl;
+TWISS, file=tbl/twiss_full_NICA.tbl;
+plot, haxis=s, vaxis1=betx,bety, vaxis2=dx, colour=100, style=1, noversion, file=img/twiss_NICA;
+stop;
+!twiss,deltap=-0.0001:0.0001:0.00005;
+!plot,table=summ,haxis=q1,vaxis=q2;

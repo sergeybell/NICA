@@ -1,0 +1,509 @@
+# OptiMX: Collider, working point 9.44/9.44
+# Date 11/03/2020 13:59:49
+#
+# Beam direction 1 (clockwise or for beam in blue ring)/-1 (counter-clockwise or for beam in red ring)
+$BV_FLAG=1;
+
+# Kinetic energy, MeV/u
+$W=4500.;
+$K1E=0;
+$K3E=0;
+$K45E=1;
+
+# Flags switch on(1)/off(0). In case of $BV_FLAG=-1 all the switches should be equal zero.
+$ON_RF=0;
+$ON_COUPLING=1;
+$ON_CHROMATICITY=1;
+$ON_DA=1;
+
+# Vacuum permeability
+$MU0=$pi*4.e-7;
+
+# Charge and mass
+$Z=79.;
+$A=197.;
+
+# Unified atomic mass unit, MeM/u
+$NMASS=931.494061;
+
+# Lorentz factors
+$GAMMA=($NMASS+$W)/$NMASS;
+$BETA=sqrt(1.-1./$GAMMA^2);
+
+# Beam particle momentum, MeV/u
+$P0=$NMASS*$BETA*$GAMMA;
+
+# Magnetic rigidity, kGs*cm
+$BRHO=$A/$Z*$P0/$c*1.e+11;
+
+# Additional currents, A
+$dIPS2=0.;
+$dIPS3=0.;
+$dAIPS=0.;
+
+# Additional gradients in lenses in MAD-X units
+$dK12=$MU0*$dIPS2*4./0.0475^2/(1.e-3*$BRHO);
+$dK13=$MU0*$dIPS3*4./0.0475^2/(1.e-3*$BRHO);
+$dK1A=$MU0*$dAIPS*12./0.09^2/(1.e-3*$BRHO);
+
+# Flags switch on(0)/off(1) of the straight sections lenses additional power supplies
+$ON_dK1A=0;
+
+# MAD-X definitions
+$K1QFF1=0.4320256018+$dK1A-($MU0*($K1E*(1)+$K3E*(3)+$K45E*(5))*12./0.09^2/(1.e-3*$BRHO))*$ON_dK1A;  => 0.432025602
+$K1QFF2=0.432038535+$dK1A-($MU0*($K1E*(2)+$K3E*(3)+$K45E*(5))*12./0.09^2/(1.e-3*$BRHO))*$ON_dK1A;  => 0.432038535
+$K1QFF3=0.4309241608+$dK1A-($MU0*($K1E*(-7)+$K3E*(-16)+$K45E*(-22))*12./0.09^2/(1.e-3*$BRHO))*$ON_dK1A;  => 0.430924161
+$K1QFF1_SSA2=$K1QFF1*(1-$ON_COUPLING+$dK12+$dK1A)+($K1E*0.4266803744+$K3E*0.4289448884+$K45E*0.4355908741+$dK1A)*$ON_COUPLING;  => 0.435590874
+$K1QFF2_SSA2=$K1QFF2*(1-$ON_COUPLING+$dK12+$dK1A)+($K1E*0.4245730986+$K3E*0.4260095723+$K45E*0.4327211620+$dK1A)*$ON_COUPLING;  => 0.432721162
+$K1QFF3_SSA2=$K1QFF3*(1-$ON_COUPLING+$dK12+$dK1A)+($K1E*0.4111234333+$K3E*0.4178042997+$K45E*0.4296562785+$dK1A)*$ON_COUPLING;  => 0.429656278
+
+$K1QFF1_SSA1=$K1QFF1*(1-$ON_COUPLING+$dK12+$dK1A)+($K1E*0.4547871203+$K3E*0.4359735118+$K45E*0.4280619135+$dK1A)*$ON_COUPLING;  => 0.428061914
+$K1QFF2_SSA1=$K1QFF2*(1-$ON_COUPLING+$dK12+$dK1A)+($K1E*0.4337611006+$K3E*0.4338258082+$K45E*0.4323426767+$dK1A)*$ON_COUPLING;  => 0.432342677
+$K1QFF3_SSA1=$K1QFF3*(1-$ON_COUPLING+$dK12+$dK1A)+($K1E*0.4136716900+$K3E*0.4336780256+$K45E*0.4372470050+$dK1A)*$ON_COUPLING;  => 0.437247005
+
+$K1QSS1=0.5144561001+$dK12+$dK1A-($MU0*($K1E*(-2)+$K3E*(-5)+$K45E*(-8))*12./0.09^2/(1.e-3*$BRHO))*$ON_dK1A;  =>   0.5144561
+$K1QSS2=0.5206704002+$dK12+$dK1A-($MU0*($K1E*(37)+$K3E*(83)+$K45E*(117))*12./0.09^2/(1.e-3*$BRHO))*$ON_dK1A;  =>   0.5206704
+$K1QSS3=0.5101517326+$dK12+$dK1A-($MU0*($K1E*(-30)+$K3E*(-67)+$K45E*(-94))*12./0.09^2/(1.e-3*$BRHO))*$ON_dK1A;  => 0.510151733
+$K1QSS4=0.5166681483+$dK12+$dK1A-($MU0*($K1E*(12)+$K3E*(26)+$K45E*(37))*12./0.09^2/(1.e-3*$BRHO))*$ON_dK1A;  => 0.516668148
+$K1QSS5=0.5185577457+$dK12+$dK1A-($MU0*($K1E*(24)+$K3E*(53)+$K45E*(74))*12./0.09^2/(1.e-3*$BRHO))*$ON_dK1A;  => 0.518557746
+$K1QSS6=0.5184853392+$dK12+$dK1A-($MU0*($K1E*(23)+$K3E*(52)+$K45E*(73))*12./0.09^2/(1.e-3*$BRHO))*$ON_dK1A;  => 0.518485339
+
+$K1DSU1=0.5100182514+$dK12+$dK1A-($MU0*($K1E*(-30)+$K3E*(-69)+$K45E*(-96))*12./0.09^2/(1.e-3*$BRHO))*$ON_dK1A;  => 0.510018251
+$K1ARC1=0.5148373645+$dK12;  => 0.514837364
+$K1DSU2=0.5165649809+$dK12+$dK1A-($MU0*($K1E*(11)+$K3E*(25)+$K45E*(35))*12./0.09^2/(1.e-3*$BRHO))*$ON_dK1A;  => 0.516564981
+$K1ARC2=0.5037116682+$dK12+$dK13;  => 0.503711668
+
+$K1QSS1_SSA2=$K1QSS1*(1-$ON_COUPLING+$dK12+$dK1A)+($K1E*0.6254895362+$K3E*0.4438081904+$K45E*0.5101898621+$dK12+$dK1A)*$ON_COUPLING;  => 0.510189862
+$K1QSS2_SSA2=$K1QSS2*(1-$ON_COUPLING+$dK12+$dK1A)+($K1E*0.6018823843+$K3E*0.2918436658+$K45E*0.5604186753+$dK12+$dK1A)*$ON_COUPLING;  => 0.560418675
+$K1QSS3_SSA2=$K1QSS3*(1-$ON_COUPLING+$dK12+$dK1A)+($K1E*0.4222289010+$K3E*0.7318183600+$K45E*0.4484084440+$dK12+$dK1A)*$ON_COUPLING;  => 0.448408444
+$K1QSS4_SSA2=$K1QSS4*(1-$ON_COUPLING+$dK12+$dK1A)+($K1E*0.4485413252+$K3E*0.5723294456+$K45E*0.5151201433+$dK12+$dK1A)*$ON_COUPLING;  => 0.515120143
+$K1QSS5_SSA2=$K1QSS5*(1-$ON_COUPLING+$dK12+$dK1A)+($K1E*0.5553044424+$K3E*0.5290461416+$K45E*0.5533724081+$dK12+$dK1A)*$ON_COUPLING;  => 0.553372408
+$K1QSS6_SSA2=$K1QSS6*(1-$ON_COUPLING+$dK12+$dK1A)+($K1E*0.5646953396+$K3E*0.5407970505+$K45E*0.5598904054+$dK12+$dK1A)*$ON_COUPLING;  => 0.559890405
+
+$K1QSS1_SSA1=$K1QSS1*(1-$ON_COUPLING+$dK12+$dK1A)+($K1E*0.3810445918+$K3E*0.5360039641+$K45E*0.4717971327+$dK12+$dK1A)*$ON_COUPLING;  => 0.471797133
+$K1QSS2_SSA1=$K1QSS2*(1-$ON_COUPLING+$dK12+$dK1A)+($K1E*0.4170605298+$K3E*0.5730881787+$K45E*0.4683706813+$dK12+$dK1A)*$ON_COUPLING;  => 0.468370681
+$K1QSS3_SSA1=$K1QSS3*(1-$ON_COUPLING+$dK12+$dK1A)+($K1E*0.5355813391+$K3E*0.4367294108+$K45E*0.5257938211+$dK12+$dK1A)*$ON_COUPLING;  => 0.525793821
+$K1QSS4_SSA1=$K1QSS4*(1-$ON_COUPLING+$dK12+$dK1A)+($K1E*0.5158804055+$K3E*0.4711902119+$K45E*0.5050912402+$dK12+$dK1A)*$ON_COUPLING;  =>  0.50509124
+$K1QSS5_SSA1=$K1QSS5*(1-$ON_COUPLING+$dK12+$dK1A)+($K1E*0.4386438017+$K3E*0.5023765735+$K45E*0.4700434233+$dK12+$dK1A)*$ON_COUPLING;  => 0.470043423
+$K1QSS6_SSA1=$K1QSS6*(1-$ON_COUPLING+$dK12+$dK1A)+($K1E*0.4175206613+$K3E*0.4811092803+$K45E*0.4614426437+$dK12+$dK1A)*$ON_COUPLING;  => 0.461442644
+
+$LQFF1=0.945;
+$LQFF2=1.415;
+$LQFF3=0.68;
+$LQSS1=0.545;
+$LQSS2=0.59;
+$LQSS3=0.56;
+$LQSS4=0.67;
+$LQSS5=0.69;
+$LQSS6=0.785;
+$LDSU1=0.375;
+$LARC1=0.47;
+$LDSU2=0.45;
+$LARC2=0.47;
+
+$MCQ0=0.;
+
+$MCS0=0.;
+$MCS1=(-0.6993539224)*$K1E+(-0.7352453273)*$K3E+(-1.05624831)*$K45E;  => -1.05624831
+$MCS2=(0.4966068893)*$K1E+(0.4611258989)*$K3E+(0.2436156071)*$K45E;  => 0.243615607
+
+$MCS1=0.0;
+$MCS2=0.0;
+
+$MCO1=-3;
+$MCO2=-6;
+$MCO3=4;
+
+$MCO0=0.;
+
+# Beam emittances, cm
+$EmitX=39.6*10^(-4);
+$EmitY=31.0*10^(-4);
+$SigmaS=60.;
+$dp_p=0.00156;
+
+# Length of the corrector, cm
+$CORR_L=30.;
+
+# Some shifts in arcs, cm
+$DELTA1=45.;
+$DELTA2=50.;
+$DELTA3=4.75;
+$DELTA4=1.;
+
+# Convert coefficients from MAD-X to OptiMX
+$K1=$BRHO*1.e-2;
+$K2=$BRHO*1.e-4;
+$K3=$BRHO*1.e-6;
+$TO_CM=1.e+2;
+
+# Main dipole effective length, cm
+$BM_L=194.;
+
+# Number of dipoles in the ring, pcs
+$BM_N=80;
+
+# Number of turns in main dipole coil
+$BM_NT=10;
+
+# Half gap of the main dipole, cm
+$BM_HGAP=3.6;
+
+# Magnetic field in the main dipoles, kGs
+$BM_B=2.*$pi*$BRHO/$BM_N/$BM_L;
+
+# Main dipole current, A
+$BM_I=($BM_B/10.)*(2.*$BM_HGAP/100.)/($MU0*$BM_NT);
+
+# Check dipole current value
+$BM_C=($BM_I *$BM_NT)*$MU0/(2.0*$BM_HGAP/100.)*10.;
+
+# Half bending angle in main dipole, deg
+$PHI=0.5*$BM_B*$BM_L/$BRHO*180./$pi;
+
+# Main dipole sextupole non-linearity, au
+$B2=((-2.21e-4)*$K1E+(-0.98e-4)*$K3E+(6.59e-4)*$K45E)*$ON_CHROMATICITY;
+
+# Reference radius of b2 determination, cm
+$R_REF=3.;
+
+# Main dipole sextupole non-linearity, kGs/cm
+$B2L=0.025*$pi*$BRHO*$B2/$R_REF^2;
+
+# Effective length of BV1 magnet, cm
+$BV1_L=138.;
+
+# Effective length of BV2 magnet, cm
+$BV2_L=138.;
+
+# Orbit elevation above median plane after BV2, cm
+$BV2_H=16.;
+
+# Vertical bending angle, rad
+$ALPHA=0.04100340928;
+
+# Long distance between CENTERS of BV1 and BV2, cm
+$BV12_CL=$BV2_H/tan($ALPHA);
+
+# Long distance between edges of BV1 and BV2, cm
+$OBV12_L=($BV2_H-(($BV1_L+$BV2_L)*(1.-cos($ALPHA)))/$ALPHA)/sin($ALPHA);
+
+# Magnetic field in BV1, BV2, kGs
+$BV1_B=$BRHO*$ALPHA/$BV1_L;
+$BV2_B=$BRHO*$ALPHA/$BV2_L;
+$DELTA0=($BV1_L-136.8801324)+($BV2_L-136.8801324)+($OBV12_L-($BV2_H-((136.8801324+136.8801324)*(1.-cos($ALPHA)))/$ALPHA)/sin($ALPHA));
+
+# Collider circumference, cm
+$C_RING=503.04*$TO_CM;
+
+# Solenoid length of the electron cooling system, cm
+$EC_L=600.;
+
+# Solenoid length of the MPD, cm
+$MPD_L=525.;
+
+# Solenoid length of the SPD, cm
+$SPD_L=525.;
+
+# RF-3 voltage harmonic number
+$RF3W2_HARMON=66;
+
+# RF-3
+$RF3W2_LAMBDA=$C_RING/$BETA/$RF3W2_HARMON;
+
+# RF-3 cavities lengths, cm
+$RF3W21_L=208.5/1.;
+$RF3W22_L=386.5/2.;
+$RF3W25_L=920.5/5.;
+
+# Quadrupole gradients, kGs/cm
+$K1QFF1=$K1QFF1*$K2*$BV_FLAG;
+$K1QFF2=$K1QFF2*$K2*$BV_FLAG;
+$K1QFF3=$K1QFF3*$K2*$BV_FLAG;
+$K1QSS1=$K1QSS1*$K2;
+$K1QSS2=$K1QSS2*$K2;
+$K1QSS3=$K1QSS3*$K2;
+$K1QSS4=$K1QSS4*$K2;
+$K1QSS5=$K1QSS5*$K2;
+$K1QSS6=$K1QSS6*$K2;
+$K1DSU1=$K1DSU1*$K2;
+$K1ARC1=$K1ARC1*$K2;
+$K1DSU2=$K1DSU2*$K2;
+$K1ARC2=$K1ARC2*$K2;
+$K1QFF1_SSA2=$K1QFF1_SSA2*$K2*$BV_FLAG;
+$K1QFF2_SSA2=$K1QFF2_SSA2*$K2*$BV_FLAG;
+$K1QFF3_SSA2=$K1QFF3_SSA2*$K2*$BV_FLAG;
+$K1QSS1_SSA2=$K1QSS1_SSA2*$K2;
+$K1QSS2_SSA2=$K1QSS2_SSA2*$K2;
+$K1QSS3_SSA2=$K1QSS3_SSA2*$K2;
+$K1QSS4_SSA2=$K1QSS4_SSA2*$K2;
+$K1QSS5_SSA2=$K1QSS5_SSA2*$K2;
+$K1QSS6_SSA2=$K1QSS6_SSA2*$K2;
+$K1QFF1_SSA1=$K1QFF1_SSA1*$K2*$BV_FLAG;
+$K1QFF2_SSA1=$K1QFF2_SSA1*$K2*$BV_FLAG;
+$K1QFF3_SSA1=$K1QFF3_SSA1*$K2*$BV_FLAG;
+$K1QSS1_SSA1=$K1QSS1_SSA1*$K2;
+$K1QSS2_SSA1=$K1QSS2_SSA1*$K2;
+$K1QSS3_SSA1=$K1QSS3_SSA1*$K2;
+$K1QSS4_SSA1=$K1QSS4_SSA1*$K2;
+$K1QSS5_SSA1=$K1QSS5_SSA1*$K2;
+$K1QSS6_SSA1=$K1QSS6_SSA1*$K2;
+
+# Quadrupole lengths, cm
+$LQFF1=$LQFF1*$TO_CM;
+$LQFF2=$LQFF2*$TO_CM;
+$LQFF3=$LQFF3*$TO_CM;
+$LQSS1=$LQSS1*$TO_CM;
+$LQSS2=$LQSS2*$TO_CM;
+$LQSS3=$LQSS3*$TO_CM;
+$LQSS4=$LQSS4*$TO_CM;
+$LQSS5=$LQSS5*$TO_CM;
+$LQSS6=$LQSS6*$TO_CM;
+$LDSU1=$LDSU1*$TO_CM;
+$LARC1=$LARC1*$TO_CM;
+$LDSU2=$LDSU2*$TO_CM;
+$LARC2=$LARC2*$TO_CM;
+
+# Multipole corrector gradients: A1 in kGs, B2 in kGs/cm, B3 in kGs/cm^2
+
+$MCQ0=$MCQ0*$K1*$ON_COUPLING;
+
+$MCS0=$MCS0*$K2*$ON_CHROMATICITY;
+$MCS1=$MCS1*$K2*$ON_CHROMATICITY;
+$MCS2=$MCS2*$K2*$ON_CHROMATICITY;
+$MCS3=$MCS3*$K2*$ON_CHROMATICITY;
+$MCS4=$MCS4*$K2*$ON_CHROMATICITY;
+
+$MCO1=$MCO1*$K3*$ON_DA;
+$MCO2=$MCO2*$K3*$ON_DA;
+$MCO3=$MCO3*$K3*$ON_DA;
+
+$QFF6W="HQFF QFF6W HQFF";
+$QFF5W="HQFF QFF5W HQFF";
+$QFF4W="HQFF QFF4W HQFF";
+
+$Q1W2="HQFF Q1W2 HQFF";
+$Q2W2="HQFF Q2W2 HQFF";
+$Q3W2="HQFF Q3W2 HQFF";
+$Q4W2="HQFF Q4W2 HQFF";
+$Q5W2="HQFF Q5W2 HQFF";
+$Q6W2="HQFF Q6W2 HQFF";
+
+$QD = "HQ QD HQ"
+$QF1 = "HQ QF1 HQ"
+$QF2 = "HQ QF2 HQ"
+
+$Q7W2="HQ Q7W2 HQ";
+$Q9W2="HQ Q9W2 HQ";
+
+$QFF1W="HQFF QFF1W HQFF";
+$QFF2W="HQFF QFF2W HQFF";
+$QFF3W="HQFF QFF3W HQFF";
+# MPD(IP1)
+$QFF6E="HQFF QFF6E HQFF";
+$QFF5E="HQFF QFF5E HQFF";
+$QFF4E="HQFF QFF4E HQFF";
+
+$Q7E2="HQ Q7E2 HQ";
+$Q9E2="HQ Q9E2 HQ";
+
+$QFF3E="HQFF QFF3E HQFF";
+$QFF2E="HQFF QFF2E HQFF";
+$QFF1E="HQFF QFF1E HQFF";
+
+$MCS_0="KMC KHV MCQ0 MCS0 MCO0 KMC";
+
+$MCS_1="KMC KHV MCQ0 MCS1 MCO0 KMC";
+$MCS_2="KMC KHV MCQ0 MCS2 MCO0 KMC";
+
+$MCO_1="KMC KHV MCQ0 MCS0 MCO1 KMC";
+$MCO_2="KMC KHV MCQ0 MCS0 MCO2 KMC";
+$MCO_3="KMC KHV MCQ0 MCS0 MCO3 KMC";
+
+$BM="MB2L HD G BH G HD MB2L";
+
+$BV1W="H_BV1 BV1W H_BV1";
+$BV2W2="H_BV2 BV2W2 H_BV2";
+$BV3W2="H_BV2 BV3W2 H_BV2";
+$BV4W="H_BV1 BV4W H_BV1";
+$BV1E="H_BV1 BV1E H_BV1";
+$BV2E2="H_BV2 BV2E2 H_BV2";
+$BV3E2="H_BV2 BV3E2 H_BV2";
+$BV4E="H_BV1 BV4E H_BV1";
+
+OptiM
+Energy[MeV]=$W*$A/$Z  Mass[MeV]=$NMASS*$A/$Z
+Emittances:         ex[cm]=$EmitX            ey[cm]=$EmitY            DP/P=$dp_p
+Initial:            BetaX[cm]    =      357.086 BetaY[cm]    =       1979.6
+AlfaX        =  3.81138e-06 AlfaY        =  1.46633e-05
+DispX[cm]    =      122.854 DispX[cm]    =     -26.2706
+DispPrX      = -8.60881e-12 DispPrY      =  -0.00839467
+
+X[cm]=0             Y[cm]=0             Z[cm]=0             S[cm]=0
+tetaX[deg]=0        tetaY[deg]=0
+
+begin lattice. Number of periods=1
+
+$QD $QD
+
+OBMMC $BM $BM OBMMC $QF1 OBMMC $BM $BM
+
+end lattice
+
+begin list
+
+HD	Ax[cm]=6.04	Ay[cm]=3.535	Shape=1	OffsetX[cm]=0.	OffsetY[cm]=0.	Tilt[deg]=0.
+MB2L 	Order:m=2   	Bm*L[kG/cm^(m-1)]=0.0   	Tilt[deg]=0
+G	B[kG]=$BM_B*$BV_FLAG	Angle[deg]=$PHI	EffLen[cm]=$BM_HGAP	Tilt[deg]=0.
+BH	L[cm]=$BM_L	B[kG]=$BM_B*$BV_FLAG	G[kG/cm]=0.	Tilt[deg]=0.
+
+OMC	L[cm]=30.;
+OQLBM	L[cm]=66.5;
+OQLBM1	L[cm]=66.5+$DELTA4;
+OQLBM2	L[cm]=66.5+$DELTA3;
+OBMBM	L[cm]=30.;
+OBMMC	L[cm]=28.9;
+OBMMC1	L[cm]=28.9+$DELTA3;
+OBMMC2	L[cm]=28.9+$DELTA4;
+OMCQL	L[cm]=7.6;
+OKM1	L[cm]=450.-$DELTA3;
+OSM1	L[cm]=250.-$DELTA4;
+OKM1MC	L[cm]=12.9;
+OSM1MC	L[cm]=213.4;
+OSM2	L[cm]=250.-$DELTA4;
+OKM2	L[cm]=450.-$DELTA3;
+OSM2MC	L[cm]=12.4;
+OKM2MC	L[cm]=12.9;
+OBV12	L[cm]=$OBV12_L
+OSW3	L[cm]=(1300.-2*$RF3W22_L)/2.
+OSW2	L[cm]=860.-$DELTA2
+OSW1	L[cm]=(1005.45-$RF3W21_L)/2.
+OSE3	L[cm]=1300.
+OSE2	L[cm]=860.-$DELTA2
+OSE1	L[cm]=1005.45
+ONE3	L[cm]=(1300.-5*$RF3W25_L)/2.
+ONE2	L[cm]=860.-$DELTA2
+ONE1	L[cm]=1005.45
+ONW3	L[cm]=(1300.-$EC_L)/2.
+ONW2	L[cm]=860.-$DELTA2
+ONW1	L[cm]=1005.45
+
+OO1	L[cm]=30.-($LQFF1-85.)-($LQFF2-165.)/2.
+OO2	L[cm]=30.-($LQFF2-165.)/2.-($LQFF3-100.)
+OQ0	L[cm]=20.
+OQ1	L[cm]=10.
+OQ2	L[cm]=10.
+OQ3	L[cm]=19.58123-$DELTA0
+OQ4	L[cm]=154.
+OQ5	L[cm]=40.+(-$LQSS1+47.-$LQSS2+47.-$LQSS3+47.-$LQSS4+47.)+$DELTA2
+OQ6	L[cm]=20.287+(-$LQSS5+47.-$LQSS6+47.)+$DELTA1
+O85	L[cm]=8.5;
+OQLBMD	L[cm]=66.5-$DELTA1
+OBMMCOMCOMCQL	L[cm]=28.9+30.+7.6-$DELTA1
+OMISS1	L[cm]=513.4+(-$LDSU1+47.)-$DELTA3
+OMISS2	L[cm]=513.4+(-$LDSU2+47.)-$DELTA4
+OMISS3	L[cm]=513.4+(-$LDSU2+47.)-$DELTA4
+OMISS4	L[cm]=513.4+(-$LDSU1+47.)-$DELTA3
+OQLKM1	L[cm]=50.5+(-$LDSU1+47.)
+OQLSM1	L[cm]=50.+(-$LDSU2+47.)
+OQLSM2	L[cm]=251.+(-$LDSU2+47.)
+OQLKM2	L[cm]=50.5+(-$LDSU1+47.)
+
+OSW3O85	L[cm]=(1300.-2*$RF3W22_L)/2.-8.5
+OSE3O85	L[cm]=1300.-8.5
+ONE3O85	L[cm]=(1300.-5*$RF3W25_L)/2.-8.5
+ONW3O85	L[cm]=(1300.-$EC_L)/2.-8.5
+
+H_BV1	Ax[cm]=8.	Ay[cm]=8.	Shape=1	OffsetX[cm]=0.	OffsetY[cm]=0.	Tilt[deg]=0.
+H_BV2	Ax[cm]=5.	Ay[cm]=5.5	Shape=1	OffsetX[cm]=0.	OffsetY[cm]=0.	Tilt[deg]=0.
+
+BV1E	L[cm]=$BV1_L	B[kG]=-$BV1_B*$BV_FLAG	G[kG/cm]=0.	Tilt[deg]=90.
+BV1W	L[cm]=$BV1_L	B[kG]=-$BV1_B*$BV_FLAG	G[kG/cm]=0.	Tilt[deg]=90.
+BV2E2	L[cm]=$BV2_L	B[kG]=$BV2_B*$BV_FLAG	G[kG/cm]=0.	Tilt[deg]=90.
+BV2W2	L[cm]=$BV2_L	B[kG]=$BV2_B*$BV_FLAG	G[kG/cm]=0.	Tilt[deg]=90.
+BV3E2	L[cm]=$BV2_L	B[kG]=$BV2_B*$BV_FLAG	G[kG/cm]=0.	Tilt[deg]=90.
+BV3W2	L[cm]=$BV2_L	B[kG]=$BV2_B*$BV_FLAG	G[kG/cm]=0.	Tilt[deg]=90.
+BV4E	L[cm]=$BV1_L	B[kG]=-$BV1_B*$BV_FLAG	G[kG/cm]=0.	Tilt[deg]=90.
+BV4W	L[cm]=$BV1_L	B[kG]=-$BV1_B*$BV_FLAG	G[kG/cm]=0.	Tilt[deg]=90.
+
+HQ	Ax[cm]=6.04	Ay[cm]=3.535	Shape=1	OffsetX[cm]=0.	OffsetY[cm]=0.	Tilt[deg]=0.
+HQFF	Ax[cm]=9.05	Ay[cm]=9.05	Shape=1	OffsetX[cm]=0.	OffsetY[cm]=0.	Tilt[deg]=0.
+
+QFF6W 	L[cm]=94.5       	G[kG/cm]=-1.922936 	Tilt[deg]=0
+QFF5W 	L[cm]=141.5      	G[kG/cm]=1.922993 	Tilt[deg]=0
+QFF4W 	L[cm]=68         	G[kG/cm]=-1.918033 	Tilt[deg]=0
+QFF3W 	L[cm]=68         	G[kG/cm]=1.91239 	Tilt[deg]=0
+QFF2W 	L[cm]=141.5      	G[kG/cm]=-1.926031 	Tilt[deg]=0
+QFF1W 	L[cm]=94.5       	G[kG/cm]=1.938804 	Tilt[deg]=0
+#-----------------------------------------------------------------------------------
+Q7W2	L[cm]=$LDSU1	G[kG/cm]=$K1DSU1		Tilt[deg]=0.
+Q9W2	L[cm]=$LDSU2	G[kG/cm]=$K1DSU2		Tilt[deg]=0.
+
+QD 	L[cm]=23.5       	G[kG/cm]=-2.836  	Tilt[deg]=0
+QF1 	L[cm]=47         	G[kG/cm]=2.889   	Tilt[deg]=0
+QF2	L[cm]=$LARC1	G[kG/cm]=$K1ARC1		Tilt[deg]=0.
+#-----------------------------------------------------------------------------------
+
+Q1W2	L[cm]=$LQSS1	G[kG/cm]=-$K1QSS1		Tilt[deg]=0.
+Q2W2	L[cm]=$LQSS2	G[kG/cm]=$K1QSS2		Tilt[deg]=0.
+Q3W2	L[cm]=$LQSS3	G[kG/cm]=$K1QSS3		Tilt[deg]=0.
+Q4W2	L[cm]=$LQSS4	G[kG/cm]=-$K1QSS4		Tilt[deg]=0.
+Q5W2	L[cm]=$LQSS5	G[kG/cm]=$K1QSS5		Tilt[deg]=0.
+Q6W2	L[cm]=$LQSS6	G[kG/cm]=-$K1QSS6		Tilt[deg]=0.
+
+# MPD(IP1)
+QFF6E 	L[cm]=94.5       	G[kG/cm]=-1.905293 	Tilt[deg]=0
+QFF5E 	L[cm]=141.5      	G[kG/cm]=1.924347 	Tilt[deg]=0
+QFF4E 	L[cm]=68         	G[kG/cm]=-1.946176 	Tilt[deg]=0
+QFF3E 	L[cm]=68         	G[kG/cm]=1.918033 	Tilt[deg]=0
+QFF2E 	L[cm]=141.5      	G[kG/cm]=-1.922993 	Tilt[deg]=0
+QFF1E 	L[cm]=94.5       	G[kG/cm]=1.922936 	Tilt[deg]=0
+#---------------------------------------------------------------------------------
+
+KMC	L[cm]=$CORR_L/2.	B[kG]=0.	Tilt[deg]=0.
+KHV	L[cm]=0.	B[kG]=0.	Tilt[deg]=0.
+
+#----------------------------------correctors-----------------------------------------------
+MCQ0	Order:	m=1	Bm*L[kG/cm^(m-1)]=$MCQ0	Tilt[deg]=0.
+
+MCS0	Order:	m=2	Bm*L[kG/cm^(m-1)]=$MCS0	Tilt[deg]=0.
+MCS1	Order:	m=2	Bm*L[kG/cm^(m-1)]=$MCS1	Tilt[deg]=0.
+MCS2	Order:	m=2	Bm*L[kG/cm^(m-1)]=$MCS2	Tilt[deg]=0.
+MCS3	Order:	m=2	Bm*L[kG/cm^(m-1)]=$MCS3	Tilt[deg]=0.
+MCS4	Order:	m=2	Bm*L[kG/cm^(m-1)]=$MCS4	Tilt[deg]=0.
+
+MCO0	Order:	m=3	Bm*L[kG/cm^(m-1)]=$MCO0	Tilt[deg]=0.
+MCO1	Order:	m=3	Bm*L[kG/cm^(m-1)]=$MCO1	Tilt[deg]=0.
+MCO2	Order:	m=3	Bm*L[kG/cm^(m-1)]=$MCO2	Tilt[deg]=0.
+MCO3	Order:	m=3	Bm*L[kG/cm^(m-1)]=$MCO3	Tilt[deg]=0.
+
+# MPD, SPD and EC solenoids
+C_MPD	L[cm]=$MPD_L	B[kG]=5.*$ON_COUPLING*$BV_FLAG
+C_SPD	L[cm]=$SPD_L	B[kG]=0.
+C_EC	L[cm]=$EC_L	B[kG]=2.*$ON_COUPLING*$BV_FLAG
+
+# RF-3 cavities
+ARF3W21	L[cm]=$RF3W21_L	Ncell=1	Eff_L[cm]=$RF3W21_L	A[MeV]=0.5*$ON_RF/8.	Phase[deg]=-90.	WaveL[cm]=$RF3W2_LAMBDA
+ARF3W22	L[cm]=$RF3W22_L	Ncell=1	Eff_L[cm]=$RF3W22_L	A[MeV]=0.5*$ON_RF/8.	Phase[deg]=-90.	WaveL[cm]=$RF3W2_LAMBDA
+ARF3W25	L[cm]=$RF3W25_L	Ncell=1	Eff_L[cm]=$RF3W25_L	A[MeV]=0.5*$ON_RF/8.	Phase[deg]=-90.	WaveL[cm]=$RF3W2_LAMBDA
+
+end list of elementsSpaceChargeBlock
+  BeamCurrent[A]=0.1
+  BunchLength[cm]=1.0   dP/P=0.001   Alpha[-1,1]=0.   S_Offset[cm]=0.
+EndSpaceChargeBlock
+
+SpaceChargeBlock
+  BeamCurrent[A]=0.1
+  BunchLength[cm]=1.0   dP/P=0.001   Alpha[-1,1]=0.   S_Offset[cm]=0.
+EndSpaceChargeBlock
+
+4D_BetaBlock
+	Beta_X_1[cm]=100. 	Beta_X_2[cm]=0.
+	Alfa_X_1=.1      	Alfa_X_2=0.
+	Beta_Y_1[cm]=0.  	Beta_Y_2[cm]=100.
+	Alfa_Y_1=0.      	Alfa_Y_2=0.1 
+	Teta_1[deg]=0.   	Teta_2[deg]=0    U=0
+	Emit1[cm]=1.e-5. 	Emit2[cm]=1.e-5
+	DispX[cm]=0.     	DispY[cm]=0
+	DispXpr[cm]=0.   	DispYpr[cm]=0
+End4DBetaBlock

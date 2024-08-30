@@ -1,0 +1,146 @@
+INCLUDE 'NICA_Gold';
+
+PROCEDURE MCMCALC ALPHA0 ALPHA1;
+      VARIABLE TMPALPHA 100;
+      VARIABLE I 1;
+      VARIABLE MCM0 1;
+      VARIABLE MCM1 1;
+      VARIABLE MCM2 1;
+      VARIABLE MCM3 1;
+      VARIABLE MCM4 1;
+
+      MCM MAP SPOS TMPALPHA;
+      MCM0 := -TMPALPHA|(0&0&0&0&0&0);
+      MCM1 := -TMPALPHA|(0&0&0&0&0&1);
+      MCM2 := -2*TMPALPHA|(0&0&0&0&0&2);
+      MCM3 := -2*3*TMPALPHA|(0&0&0&0&0&3);
+      MCM4 := -2*3*4*TMPALPHA|(0&0&0&0&0&4);
+
+      ALPHA0:= MCM1;
+      ALPHA1:= MCM2;
+
+      WRITE 6 '++++++++ MOMENTUM COMPACTION FACTOR ++++++++';
+      WRITE 6 'MC0 = '&ST(MCM0);
+      WRITE 6 'MC1 = '&ST(MCM1);
+      WRITE 6 'MC2 = '&ST(MCM2);
+      WRITE 6 'MC3 = '&ST(MCM3);
+      WRITE 6 'MC4 = '&ST(MCM4);
+      WRITE 6 '++++++++++++++++++++++++++++++++++++++++++++';
+
+ENDPROCEDURE;
+
+PROCEDURE INJECT NUM PSI_DEG; {at injection: SX = 0, SY, SZ = sin PSI, cos PSI}
+  VARIABLE X 100; VARIABLE I 1;
+  VARIABLE PSI 1; VARIABLE SY 1; VARIABLE SZ 1;
+  PSI := DEG2RAD(PSI_DEG); {PSI IN RADIANS}
+  X := LINSPACE(10E-3, 10E-3, NUM*3);
+  SY := SIN(PSI); SZ := COS(PSI);
+  CR;
+  SR 0 0 0 0 0 0 0 0 1; SSR 0 SY SZ;
+  LOOP I 1 NUM;
+    SR X|I 0 0 0 0 0 0 0 1; SSR 0 SY SZ;
+    SR 0 0 X|I 0 0 0 0 0 1; SSR 0 SY SZ;
+    SR 0 0 0 0 0 (X|I)/10 0 0 1; SSR 0 SY SZ;
+    {SR 0 0 0 0 0 (X|I)/10 0 0 1; SSR 0 SY SZ;}
+  ENDLOOP;
+ENDPROCEDURE;
+
+PROCEDURE MAIN;
+
+  {data-files}
+  VARIABLE WHERE 500; VARIABLE MRKR 200;
+  {tracking}
+
+  VARIABLE DGAMMA 1;   {current beam y offset}
+  VARIABLE NFREE 1; {number of turns to track AFTER flipping}
+  VARIABLE FTR 1;   {"free"-block tracking data output scarcity control}
+  VARIABLE CASE 1; {current switch case} VARIABLE PCT 1; {tracking percent}
+  VARIABLE I 1; {data output counter}
+  VARIABLE NTURN 1;  {number of turn for diff process}
+  VARIABLE U 1;  {Acceleration Voltage, eV}
+  VARIABLE m_p 1; {proton mass, eV}
+  VARIABLE GAMMA 1; {equal to energy of proton}
+  VARIABLE BETA 1;
+  VARIABLE NTOT 1; {total turns of jump process}
+  VARIABLE dQ_max 1; VARIABLE dQ_min 1; {change of quadrupole strength at jump}
+  VARIABLE DELTAQ 1; {curent dQ from initial}
+  VARIABLE SCALE 1; VARIABLE NSWITCH 1; {for tracking}
+
+  VARIABLE ALPHA0 1; VARIABLE ALPHA1 1;
+  VARIABLE ETA0 1; VARIABLE ETA1 1;
+
+  {lattice}
+  VARIABLE SGX 1; VARIABLE SGY 1;
+
+  {particles}
+  VARIABLE PNUM 1; {number of particles per bunch}
+  VARIABLE PSI0_DEG 1; {initial SPIN tilt angle}
+  VARIABLE RAYH 10000 8; VARIABLE SPIH 10000 3; {keeps RAY, SPI data after each turn}
+  VARIABLE MUARR 100 4; {holds NU, NX, NY, NZ of the ray ensemble}
+  {^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^}
+
+  {Parameters before TRANSITION PROCEDURE}
+  U := 300;
+  m_p := 0.938e9;
+  DGAMMA := (U/m_p);
+  GAMMA := 4.042;
+  BETA := SQRT(1-1/(GAMMA*GAMMA));
+  NTOT := 200000; {number of turns for jump}
+  {SGX := 0.0;
+  SGY := 0.0;}
+  SGX := 0.3599718607904814E-001;
+  SGY := -.8627374333752474E-001;
+  DELTAQ := 0.0;
+
+  SET_FOR_PROTONS GAMMA;
+
+  LATTICE SGX SGY 1 DELTAQ;          {recompute lattice}
+  WRITE 6 '++++++++++ Magnetic Rigidity';
+  WRITE 6 CONS(CHIM);
+  WRITE 6 'END of LATTICE';
+  PM 6;
+
+  MCMCALC ALPHA0 ALPHA1;
+  WRITE 6 'ALPHA0 = '&ST(ALPHA0);
+  WRITE 6 'ALPHA1 = '&ST(ALPHA1);
+
+  ETA0 := ALPHA0 - 1/(GAMMA*GAMMA);
+  ETA1 := ALPHA1+(3/2)*(BETA*BETA)/(GAMMA*GAMMA)-ALPHA0/(GAMMA*GAMMA)+1/(GAMMA*GAMMA*GAMMA*GAMMA);
+  WRITE 6 'ETA0 = '&ST(ETA0);
+  WRITE 6 'ETA1 = '&ST(ETA1);
+
+  {^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^}
+  PNUM := 10; {x 3 bunches + 1 (reference ray)}
+  {********** CONTROLS **********}
+  PSI0_DEG := 45;    {align inital spin with the polarization axis for 100% initial polarization}
+  MRKR := 'B4_RF';
+  {***********************************}
+
+  OPENF 772 'dat/TR/'&MRKR&'/LATTICE.dat' 'REPLACE';
+  WRITE 772 'GAMMA ALPHA0 ALPHA1 ETA0 ETA1';
+  WRITE 772 ST(GAMMA)&' '&ST(ALPHA0)&' '&ST(ALPHA1)&' '&ST(ETA0)&' '&ST(ETA1);
+  CLOSEF 772;
+
+  {inject particles}
+  INJECT PNUM PSI0_DEG;
+  WRITE 6 '^^^^ INITIAL SPIN PSI'&SF(PSI0_DEG,'(F15.7)');
+  WRITE 6 '******************** STARTING TRACKING';
+  OPENF 99 'dat/TR/'&MRKR&'/PRAY_'&MRKR&'.dat' 'REPLACE';
+  PRAY 99; CLOSEF 99;
+  OPENF 772 'dat/TR/'&MRKR&'/TRPRAY_'&MRKR&'.dat' 'REPLACE';
+  OPENF 893 'dat/TR/'&MRKR&'/TRPSPI_'&MRKR&'.dat' 'REPLACE';
+  TRPRAY 772; TRPSPI 893;
+  TR NTOT (NTOT/100) -1 -3 1.2 1.2 0 0 -12;
+  CLOSEF 772; CLOSEF 893;
+  WRITE 6 'TRACKING END';
+
+ENDPROCEDURE; {MAIN}
+
+PROCEDURE RUN;
+
+  OV 3 3 0;
+  DAEPS 1E-12;
+  MAIN;
+
+ENDPROCEDURE; {RUN}
+RUN; END;
