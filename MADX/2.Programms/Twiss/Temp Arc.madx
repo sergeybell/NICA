@@ -1,14 +1,30 @@
 CHDIR, DIR = "/Users/Bell/GIT_REPOS/NICA/MADX/1.Sequences/Full Sequence";
+CHDIR, DIR = "/Users/Bell/GIT_REPOS/NICA/MADX/1.Sequences/for IBS";
 !CALL FILE = "NICA 2 families of quadrupoles g=15 9,44 7.seq";
 !CALL FILE = "NICA w Miss Edge Arc g=15 w QFE2 3 on arc(actual).seq";
 !CALL FILE = "coupling1.seq";
-CALL FILE = "My NICA (renew).seq";
+!CALL FILE = "My NICA (renew).seq";
+!CALL FILE = "NICA Gold (original)";
+!CALL FILE = "Resonant both arc";
+CALL FILE = "Resonant real arc img";
 
 !beam, MASS=2.32283962,CHARGE=1, ENERGY=13.54435861,
 !      EX= 3.96e-005, EY=  3.1e-005, SIGE=   0.00156;
 
-beam, MASS=1,CHARGE=1, ENERGY=7,
-      EX= 3.96e-005, EY=  3.1e-005, SIGE=   0.00156;
+A = 197;
+Z = 79;
+
+NM = 0.931494061; !Unified atomic mass unit, GeV/u
+W = 4.5; !Kinetic energy, GeV/u
+
+!beam, MASS=1,CHARGE=1, ENERGY=7,
+!      EX= 3.96e-005, EY=  3.1e-005, SIGE=   0.00156;
+beam, particle=ion, MASS=NM*A, CHARGE=Z, ENERGY=A*(NM+W),
+      !EX=3.96e-05, EY=3.1e-05, SIGE=0.00936,
+      !EX=3.96e-05, EY=3.1e-05, SIGT = 0.6, SIGE = 0.00156,
+      !EX=1e-05, EY=1e-05, SIGT = 0.6, SIGE = 0.00156,
+      EX=1.1e-06, EY=0.76e-06, SIGT = 60e-2,! SIGE = 1e-3,
+      bunched=true, kbunch = 22, NPART=2.2e9;
 
 USE, PERIOD = MACHINE;
 CHDIR, DIR = "/Users/Bell/GIT_REPOS/NICA/MADX";

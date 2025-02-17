@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?validation-md5-digest bc46c66dfbb80010b45a523f66164715?>
+<?validation-md5-digest 6c4db801c0bc9dc5d4249a9b4101ea8f?>
 <worksheet version="3.0.3" xmlns="http://schemas.mathsoft.com/worksheet30" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ws="http://schemas.mathsoft.com/worksheet30" xmlns:ml="http://schemas.mathsoft.com/math30" xmlns:u="http://schemas.mathsoft.com/units10" xmlns:p="http://schemas.mathsoft.com/provenance10">
 	<pointReleaseData/>
 	<metadata>
@@ -13,9 +13,9 @@
 			<revisedBy>User Windows</revisedBy>
 		</userData>
 		<identityInfo>
-			<revision>12</revision>
+			<revision>13</revision>
 			<documentID>573E9A29-48EC-40D7-B0D2-3561CE0B1A56</documentID>
-			<versionID>FF23E39F-D5E4-47F2-BC82-096C2ED3988E</versionID>
+			<versionID>CC28E1E6-9CB1-4699-96AF-58332F283FFE</versionID>
 			<parentVersionID>00000000-0000-0000-0000-000000000000</parentVersionID>
 			<branchID>00000000-0000-0000-0000-000000000000</branchID>
 		</identityInfo>
@@ -114,7 +114,7 @@
 				<p style="Heading 2" margin-left="inherit" margin-right="inherit" text-indent="inherit" text-align="inherit" list-style-type="inherit" tabs="inherit">Equations of longitudinal motion</p>
 			</text>
 		</region>
-		<region region-id="748" left="84" top="50.25" width="11.25" height="27.75" align-x="87.75" align-y="66" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+		<region region-id="748" left="84" top="50.25" width="10.5" height="27.75" align-x="87.75" align-y="66" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
 			<math optimize="false" disable-calc="false">
 				<ml:apply xmlns:ml="http://schemas.mathsoft.com/math30">
 					<ml:div/>
@@ -263,7 +263,7 @@
 			</math>
 			<rendering item-idref="7"/>
 		</region>
-		<region region-id="791" left="18" top="81" width="48" height="15" align-x="36" align-y="90" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+		<region region-id="791" left="18" top="81" width="45.75" height="15" align-x="35.25" align-y="90" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
 			<math optimize="false" disable-calc="false">
 				<ml:define xmlns:ml="http://schemas.mathsoft.com/math30">
 					<ml:id xml:space="preserve" subscript="p">m</ml:id>
@@ -272,7 +272,7 @@
 			</math>
 			<rendering item-idref="8"/>
 		</region>
-		<region region-id="792" left="72" top="81" width="18.75" height="12.75" align-x="80.25" align-y="90" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
+		<region region-id="792" left="72" top="81" width="17.25" height="12.75" align-x="79.5" align-y="90" show-border="false" show-highlight="false" is-protected="true" z-order="0" background-color="inherit" tag="">
 			<math optimize="false" disable-calc="false">
 				<ml:id xml:space="preserve" xmlns:ml="http://schemas.mathsoft.com/math30">GeV</ml:id>
 			</math>
@@ -2020,10 +2020,10 @@
 		<region region-id="1175" left="18" top="1196.25" width="210.75" height="39.75" align-x="39" align-y="1218" show-border="false" show-highlight="true" is-protected="true" z-order="0" background-color="inherit" tag="">
 			<math optimize="false" disable-calc="false">
 				<ml:provenance expr-id="1" xmlns:ml="http://schemas.mathsoft.com/math30">
-					<originRef doc-id="A444C7FB-7787-4FED-8DA9-A298E1F84D56" version-id="ED7B299F-EDEB-41DF-B5B1-52B329A3D4E9" branch-id="00000000-0000-0000-0000-000000000000" revision-num="25057844" is-modified="true" region-id="0" href="Y:\GIT_REPOS\NICA\Transition crossing\NICA\TransitionCrossingCDR1.xmcd" xmlns="http://schemas.mathsoft.com/provenance10">
+					<originRef doc-id="A444C7FB-7787-4FED-8DA9-A298E1F84D56" version-id="ED7B299F-EDEB-41DF-B5B1-52B329A3D4E9" branch-id="00000000-0000-0000-0000-000000000000" revision-num="581368028" is-modified="true" region-id="0" href="Y:\GIT_REPOS\NICA\Transition crossing\NICA\TransitionCrossingCDR1.xmcd" xmlns="http://schemas.mathsoft.com/provenance10">
 						<hash/>
 					</originRef>
-					<parentRef doc-id="A444C7FB-7787-4FED-8DA9-A298E1F84D56" version-id="ED7B299F-EDEB-41DF-B5B1-52B329A3D4E9" branch-id="00000000-0000-0000-0000-000000000000" revision-num="25058484" is-modified="true" region-id="0" href="Y:\GIT_REPOS\NICA\Transition crossing\NICA\TransitionCrossingCDR1.xmcd" xmlns="http://schemas.mathsoft.com/provenance10">
+					<parentRef doc-id="A444C7FB-7787-4FED-8DA9-A298E1F84D56" version-id="ED7B299F-EDEB-41DF-B5B1-52B329A3D4E9" branch-id="00000000-0000-0000-0000-000000000000" revision-num="581368628" is-modified="true" region-id="0" href="Y:\GIT_REPOS\NICA\Transition crossing\NICA\TransitionCrossingCDR1.xmcd" xmlns="http://schemas.mathsoft.com/provenance10">
 						<hash/>
 					</parentRef>
 					<comment xmlns="http://schemas.mathsoft.com/provenance10"/>
@@ -12862,19 +12862,19 @@ QNVqCIA7EuWhjJCGnEFRASxE4QBSy9EBKwwNwNw6KYAyxIqQaFw44NDvO2+O49KjAHLoXfJK
 SwAwuQcUOXdFSgxgnZ12pyypBhlzhjCfW4kBhHOoL2zYygRGpfl0cgBVeKqYQP871Hhqn+Y4
 rHrDsDUtkvSBq95cOgOAJISPyjpQz33KJZ2Hap9niyDMYZ3hgTi6MJlfcQqTDUCofaL3MbVP
 9CZQ+0h5mKahfaS8qSmx5vkvcnkrJOJnFgkAAAAASUVORK5CYII=</item>
-		<item item-id="314" content-encoding="gzip">H4sIAAAAAAAA/+xWT2sTURD/7eZPE5s03VRbTUGlV6HgqgdLEdNYoVJtSKCnILTJ0kbbbLvZ
-gt4C+g16FcQvIHj1JohX61UvCp689QOY+Jv3uusaqFjtRZpZ5s178+fNvHn7hskAMIhV4ik1
-NznGfc9xJiFgE1Ob9aXVB07dVxxUiLM0uhmzn78BOnH7/j5Jws5uKXnyYD1kmzmgkQRiZlk8
-pLR+Mm0r85S4FHfp0nJ1fnvBdzYNtUFGNokyssRhpZpytivOWtNtJZTgqlg33LrmxRXveniM
-ZHt9a859pKNeJA6RUQnPcVf2I761gGekiTxwgXTP0vLdp4DFAEyYGZWkfOip6Ptec3XHd3R8
-M8QcopCdmfplPRIkJ6eTMzKqk5MLk2Pp5OTyOjmWJGfMlm07Oh4j2Ou0OlyGSSu5m6uupEkL
-RuWIZP/kSFCzvNdLpB+4zTbpFWKvJ9pUXdpwShtNp+UrG7oYCz2pkbZ7763PL14VvqAPbiCG
-bi+NZIRnROMchQpU1t2eeNTQG8B/Bd+J3QgO4GRBBS4/Hxcxjxaph8f9peC3MI5E+OalFjzB
-NWPK+mTtdpBdfpcoRHXLi+df73/9aMQiBa9E7+LXUWP7SL4F8jCN6Hn+1O7bkT0dDn/j/zjh
-X/zLNUgdlzsZvP+TBwm2X4Ivh4F53XaxLZDGKRX5QwIqFgGNB7xu7840plGDHuewwiriock3
-7bGuzGEHdTzkyqf0Nt+7p+rMCl98DfewwBpQpF6JPJcVoE3LFtYo82jTpvWGqgw13KKkrWxr
-7Fwvo4x17tKmVhVbnNU5KzKGBue+xBWgWaT2YfwB4IzuRPWNGxjvb+0nDlr7s7p7nZBf5Jy2
-mdA2hYhkMirh+gcAAAD//wMALxnUKoYMAAA=</item>
+		<item item-id="314" content-encoding="gzip">H4sIAAAAAAAA/+xWzWsTURD/7eajiU2abKqttgdLr0LBVQ+WIKYxYkVtSbGnILTJ0kbTbLO7
+Bb0V9D/oVRDPguCfIIhX67kXvXrz4NHE37zXjWuhYrUXaWaZN+/Nx5t58/YNkwFgEJeIp9Tc
+5BgPPMeZhIBNTG3UF1YfOvVAcVAlFml0PWa/eAtsx+0HX0kSdnZTyZP76yHbzAGNJBAzF8VD
+Susn07YyT4lLcZcuLy9VOvOBs2GoDTKySZSRJQ4r1ZTTqTprTbedUILLYt1w65oXV7yr/WMk
+/fXNOfexjvoOcYiMav8cd2U/4jsLeE6aKADnSXctLd95BlgMwISZUUkq9D2VgsBrrm4Fjo5v
+lphDFLKz07+sR8Lk5HRyRvI6Obl+ciydnFxBJ8eS5Izasu22jscI9zqtDpdh0sruxqoradKC
+vByR7J8cCarIe71A+pHbdEgvEXs90abqQsspt5pOO1A2dDHa96RG2u5+sD69fDPxGQfgGmLo
+9tJIRnhGNM48VKCy7vbEo4beAP4r+E7sRnAAJwuqcPkFmEIFbVIPTw6Wgt/CGBL9Ny+14Cmu
+GNPWnrWzjezy+8REVHfq1bdbxft7RixS8Mr0Ln4dNfpH8i1QgGlEz/Ondl+O7Olw+Bv/xwn/
+4l+uQeq43Mng/Z88SLD9Enw9DFR028W2QBqnVOQPCalYhDQe8rq92zOYQQ16nMMKq4iHJt+0
+x7oyhy3U8YirgNKbfO+eqjMrfPE13MM8a0CJemXyXFYAn5ZtrFHm0candUtVhhpuUOIr2xo7
+14tYxDp38am1hE3O6pyVGEOD80DiCtEsUfsw/gBwRnei+sYNjB1s7cf3W/uzunsdl1/knLYZ
+1zYTEclkVML1DwAAAP//AwALJnkNhgwAAA==</item>
 		<item item-id="315">iVBORw0KGgoAAAANSUhEUgAAAJQAAABBCAYAAAA3z41IAAAAAXNSR0IArs4c6QAAAARnQU1B
 AACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANxSURBVHhe7Z1RkpswDEBzrhyI83Ca
 fO89chhqGWRkIxNotdOBvDfjbtYRFsYPwf64jwkgEISCUBAKQkEoCGUR6j2Nz8f0eNTtOb7n
