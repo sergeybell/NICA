@@ -1,5 +1,6 @@
 !CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX/1.Sequences/Full Sequence";
-CHDIR, DIR = "/Users/Bell/GIT_REPOS/NICA/MADX/1.Sequences/for IBS";
+!CHDIR, DIR = "/Users/Bell/GIT_REPOS/NICA/MADX/1.Sequences/for IBS";
+CHDIR, DIR = "C:\GIT_REPOS\NICA\MADX\1.Sequences\for IBS";
 !CALL FILE = "My NICA.seq";
 !CALL FILE = "FODO cell.opt";
 !CALL FILE = "FDO cell.opt";
@@ -14,8 +15,9 @@ CHDIR, DIR = "/Users/Bell/GIT_REPOS/NICA/MADX/1.Sequences/for IBS";
 !CALL FILE = "Resonant both arc";
 CALL FILE = "Resonant real arc img";
 
-A = 197;
-Z = 79;
+!A = 197; Z = 79;
+
+A = 1; Z = 1;
 
 NM = 0.931494061; !Unified atomic mass unit, GeV/u
 !W = 1; !Kinetic energy, GeV/u
@@ -25,16 +27,19 @@ NM = 0.931494061; !Unified atomic mass unit, GeV/u
 !W = 3;
 !W = 3.5;
 !W = 4;
-W = 4.5;
+!W = 4.5;
 !W = 5;
+W = 12.6;
 
 !GOLD beam parameters
 beam, particle=ion, MASS=NM*A, CHARGE=Z, ENERGY=A*(NM+W),
+!beam, particle=proton, ENERGY=A*(NM+W),
       !EX=3.96e-05, EY=3.1e-05, SIGE=0.00936,
       !EX=3.96e-05, EY=3.1e-05, SIGT = 0.6, SIGE = 0.00156,
       !EX=1e-05, EY=1e-05, SIGT = 0.6, SIGE = 0.00156,
       EX=1.1e-06, EY=0.76e-06, SIGT = 60e-2, SIGE = 1.6e-3,
-      bunched=true, kbunch = 22, NPART=2.2e9;
+      !bunched=true, kbunch = 22, NPART=2.2e9;
+	  bunched=true, kbunch = 22, NPART=1e12;
 USE, period = MACHINE;
 twiss;
 IBS;
