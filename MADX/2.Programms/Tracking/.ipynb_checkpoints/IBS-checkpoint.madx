@@ -1,10 +1,10 @@
-!CHDIR, DIR = "C:\GIT_REPOS\NICA\MADX\1.Sequences\Full Sequence";
+!CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX/1.Sequences/Full Sequence";
 !CHDIR, DIR = "/Users/Bell/GIT_REPOS/NICA/MADX/1.Sequences/for IBS";
 CHDIR, DIR = "C:\GIT_REPOS\NICA\MADX\1.Sequences\for_IBS";
-!CALL FILE = "My NICA (renew).seq";
+!CALL FILE = "My NICA.seq";
 !CALL FILE = "FODO cell.opt";
 !CALL FILE = "FDO cell.opt";
-!CALL FILE = "ODFDO cell.opt";
+!ALL FILE = "ODFDO cell.opt";
 !CALL FILE = "FODO regular arc (4 superperiods and 3 tunes).opt";
 !CALL FILE = "FDO regular arc (4 superperiods and 3 tunes).opt";
 !CALL FILE = "ODFDO regular arc (4 superperiods and 3 tunes).opt";
