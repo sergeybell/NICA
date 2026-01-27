@@ -1,19 +1,19 @@
-!CHDIR, DIR = "/Users/Bell 1/GIT_REPOS/NICA/MADX/1.Sequences/Full Sequence";
+!CHDIR, DIR = "C:\GIT_REPOS\NICA\MADX\1.Sequences\Full Sequence";
 !CHDIR, DIR = "/Users/Bell/GIT_REPOS/NICA/MADX/1.Sequences/for IBS";
 CHDIR, DIR = "C:\GIT_REPOS\NICA\MADX\1.Sequences\for_IBS";
-!CALL FILE = "My NICA.seq";
+!CALL FILE = "My NICA (renew).seq";
 !CALL FILE = "FODO cell.opt";
 !CALL FILE = "FDO cell.opt";
-!ALL FILE = "ODFDO cell.opt";
+!CALL FILE = "ODFDO cell.opt";
 !CALL FILE = "FODO regular arc (4 superperiods and 3 tunes).opt";
 !CALL FILE = "FDO regular arc (4 superperiods and 3 tunes).opt";
 !CALL FILE = "ODFDO regular arc (4 superperiods and 3 tunes).opt";
 !CALL FILE = "FODO resonant arc (4 superperiods and 3 tunes).opt";
 !CALL FILE = "FDO resonant arc (4 superperiods and 3 tunes).opt";
 !CALL FILE = "ODFDO resonant arc (4 superperiods and 3 tunes).opt";
-!CALL FILE = "NICA_Gold_(original).seq";
+CALL FILE = "NICA_Gold_(original).seq";
 !CALL FILE = "Resonant both arc";
-CALL FILE = "Resonant real arc img";
+!CALL FILE = "Resonant real arc img";
 
 !A = 197; Z = 79;
 A = 1; Z = 1;
@@ -28,13 +28,15 @@ NM = 0.931494061; !Unified atomic mass unit, GeV/u
 !W = 4;
 !W = 4.5;
 !W = 5;
+W = 5.7;
 !W = 6;
 !W = 7;
 !W = 8;
 !W = 9;
 !W = 10;
 !W = 11;
-W = 12.6;
+!W = 12.6;
+!W = 13;
 
 !GOLD and PROTON beam parameters
 !beam, particle=ion, MASS=NM*A, CHARGE=Z, ENERGY=A*(NM+W),
@@ -47,5 +49,6 @@ beam, particle=proton, ENERGY=A*(NM+W),
 	  bunched=true, kbunch = 22, NPART=1.2e12;
 USE, period = MACHINE;
 twiss;
-IBS;
+CHDIR, DIR = "C:\GIT_REPOS\NICA\MADX\2.Programms\Tracking";
+IBS, file = "IBS_over_lattice.dat";
 stop;

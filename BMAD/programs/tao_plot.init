@@ -1,0 +1,115 @@
+&tao_plot_page
+  plot_page%size = 900, 1200
+  plot_page%text_height = 24.0 
+  plot_page%border = 0, 0, 0, 0, '%PAGE'
+  plot_page%n_curve_pts = 1024
+  place(1) = "r13", "beta"
+  place(2) = "r23", "dispersion"
+  place(3) = "r33", "deta"
+  place(4) = "layout", "lat_layout"
+/
+
+!&tao_template_plot
+  plot%name = "floor"
+  plot%n_graph = 1
+!/
+
+&tao_template_plot
+  plot%name = "xphase"
+  plot%n_graph = 1
+/
+
+&tao_template_graph
+  graph_index = 1
+  graph%name = "x"
+  graph%type = "phase_space"
+  graph%box = 1, 1, 1, 1
+  graph%title = "X-Px"
+  graph%margin = 0.15, 0.06, 0.12, 0.12, "%BOX"
+  graph%x%min = -2.5
+  graph%x%max = 0.5
+  graph%x%label = "x (mm)"
+  graph%x_axis_scale_factor = 1000.00 !m->mm
+  graph%y%label = "p\dx\u/p\d0\u (mrad)"
+  graph%y%major_div = 4
+  graph%y%label_offset=.4
+  curve(1)%data_type_x = "x"
+  curve(1)%data_type = "px"
+  curve(1)%y_axis_scale_factor = 1000 !rad->mrad
+  curve(1)%data_source = "beam_tracking"
+  curve(1)%ele_ref_name = "END"
+  curve(1)%symbol_every = 10
+  curve(1)%symbol%type = 1
+  curve(1)%z_color%data_type = "pz"
+  curve(1)%z_color%is_on = T
+/
+
+!&tao_template_graph
+  graph_index = 1
+  graph%name = "0"
+  graph%type = "floor_plan"
+  graph%box = 1, 1, 1, 1
+  graph%margin = 0.10, 0.10, 0.10, 0.10, "%BOX"
+  graph%ix_universe = -2 ! Draw all universes.
+  graph%x%min = -12
+  graph%x%max = 0
+  graph%x%major_div_nominal = 4
+  graph%x%minor_div = 3
+  graph%x%label = "SMART LABEL"
+  graph%y%label = "SMART LABEL"
+  graph%y%max = 2
+  graph%y%min = -1
+  graph%floor_plan%correct_distortion = T
+  graph%floor_plan%size_is_absolute = T
+  graph%floor_plan%view = "xz" ! Looking from beneath
+  graph%floor_plan%orbit_scale = 500
+!/
+
+!------------------ layout ------
+&tao_template_plot
+  plot%name = 'layout'
+  default_graph%x%label = ' '
+  plot%n_graph = 1
+  plot%x_axis_type = 's'
+/
+
+&tao_template_graph
+  graph_index = 1
+  graph%name = 'u1'
+  graph%type = 'lat_layout'
+  graph%box = 1, 1, 1, 1
+  graph%x%draw_numbers = False
+  graph%ix_universe = -1 !Syntax Changed from 0
+  graph%margin =  0.15, 0.05, 0.12, 0.12, '%BOX'
+  graph%y%max =  20
+  graph%y%min = -20
+  graph%y%major_div = 4
+/
+
+&lat_layout_drawing
+  ele_shape(1)  = "Quadrupole::*"      "asym_var_box"  "red"     0.5   'none'
+  ele_shape(2)  = "SBend::*"           "Box"           "blue"      0.3   'none'
+  ele_shape(3)  = "wiggler::*"         "XBox"          "Orange"   0.5   'none'
+  ele_shape(4)  = "Sextupole::*"       "asym_var_box"  "magenta"  0.5   'none'
+  ele_shape(5)  = "hkicker::*"         "XBox"          "Red"      0.75  'none'
+  ele_shape(6)  = "vkicker::*"         "bow_tie"       "Red"      0.75  'none'
+  ele_shape(7) = "kicker::*"          "Box"           "Red"      0.15    'name'
+  ele_shape(8) = "SOLENOID::*"        "Xbox"          "orange"   0.7    'none'
+  ele_shape(9) = "rfcavity::*"        "XBox"          "Green"    0.5    'none'
+  ele_shape(10) = "marker::*"			"circle"     "black"	0.05	'name'
+  ele_shape(11) = "elseparator::*"        "Box"          "Green"    0.3    'name'
+/       
+
+!&floor_plan_drawing
+  ele_shape(1)  = "Quadrupole::*q"      "Box"      "Red"     1     'none'
+  ele_shape(2)  = "SBend::*"           "Box"      "Green"      1     'none'
+  ele_shape(3)  = "wiggler::*"         "XBox"     "Orange"   1    'none'
+  ele_shape(4)  = "Sextupole::*"       "Box"      "orange"   1    'none'
+  ele_shape(5)  = "hkicker::*"         "XBox"     "Red"      1    'none'
+  ele_shape(6)  = "vkicker::*"         "bow_tie"  "Red"      1    'none'
+  ele_shape(7) = "kicker::*"          "Box"      "Red"       1   'none'
+  ele_shape(8) = "SOLENOID::*"        "Xbox"     "orange"    3.5	  'none'
+  ele_shape(9) = "rfcavity::*"        "XBox"     "Green"     2.5    'none'
+  ele_shape(10) = "marker::*"		"circle"     "black"	 0.5    'none'
+  ele_shape(11) = "elseparator::*"        "Box"     "Green"     1    'none'
+!/  

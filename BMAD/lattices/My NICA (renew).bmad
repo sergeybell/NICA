@@ -1,0 +1,199 @@
+!+
+! Translated from MADX to Bmad by madx_to_bmad.py
+! File: My NICA (renew).seq
+!-
+
+
+!TITLE Converted from LATTICE EDITOR: My NICA 1.opt[*].  Tue Sep 22 12:44:20 2020
+
+!  Kinetic energy=11221.5 MeV, mass=2322.84 MeV
+!  BetaX=0.6 m,  AlphaX=0,  BetaY=0.6 m,  AlphaY=0
+!  DispX=0 m,  DispPX=0,  DispY=0 m,  DispPY=0
+
+
+hd: monitor
+mb2l: multipole, k2l = 0.05750859885
+bh: sbend, l = 1.94, angle = 0.07853981634, e1 = 0.03926990817, hgap = 0.03586152553, fint = 0.5, e2 = 0.03926990817
+omc: drift, l = 0.3
+oqlbm: drift, l = 0.665
+oqlbm1: drift, l = 0.675
+oqlbm2: drift, l = 0.7125
+obmbm: drift, l = 0.3
+obmmc: drift, l = 0.289
+obmmc1: drift, l = 0.3365
+obmmc2: drift, l = 0.299
+omcql: drift, l = 0.076
+okm1: drift, l = 4.4525
+osm1: drift, l = 2.49
+okm1mc: drift, l = 0.129
+osm1mc: drift, l = 2.134
+osm2: drift, l = 2.49
+okm2: drift, l = 4.4525
+osm2mc: drift, l = 0.124
+okm2mc: drift, l = 0.129
+obv12: drift, l = 2.52301481
+osw3: drift, l = 4.5675
+osw2: drift, l = 8.1
+osw1: drift, l = 3.98475
+ose2: drift, l = 8.1
+ose1: drift, l = 10.0545
+one3: drift, l = 1.8975
+one2: drift, l = 8.1
+one1: drift, l = 10.0545
+onw3: drift, l = 3.5
+onw2: drift, l = 8.1
+onw1: drift, l = 10.0545
+oo1: drift, l = 0.3225
+oo2: drift, l = 0.7375
+oq0: drift, l = 0.2
+oq1: drift, l = 0.1
+oq2: drift, l = 0.1
+oq3: drift, l = 0.1846151933
+oq4: drift, l = 1.54
+oq5: drift, l = 0.415
+oq6: drift, l = 0.11787
+o85: drift, l = 0.085
+oqlbmd: drift, l = 0.215
+obmmcomcomcql: drift, l = 0.215
+omiss1: drift, l = 5.1815
+omiss2: drift, l = 5.144
+omiss3: drift, l = 5.144
+omiss4: drift, l = 5.1815
+oqlkm1: drift, l = 0.6
+oqlsm1: drift, l = 0.52
+oqlsm2: drift, l = 2.53
+oqlkm2: drift, l = 0.6
+osw3o85: drift, l = 4.4825
+ose3o85: drift, l = 12.915
+one3o85: drift, l = 1.8125
+onw3o85: drift, l = 3.415
+h_bv1: monitor
+h_bv2: monitor
+bv1e: sbend, l = 1.38, angle = -0.04100340928, ref_tilt = 1.570796327
+bv1w: sbend, l = 1.38, angle = -0.04100340928, ref_tilt = 1.570796327
+bv2e2: sbend, l = 1.38, angle = 0.04100340928, ref_tilt = 1.570796327
+bv2w2: sbend, l = 1.38, angle = 0.04100340928, ref_tilt = 1.570796327
+bv3e2: sbend, l = 1.38, angle = 0.04100340928, ref_tilt = 1.570796327
+bv3w2: sbend, l = 1.38, angle = 0.04100340928, ref_tilt = 1.570796327
+bv4e: sbend, l = 1.38, angle = -0.04100340928, ref_tilt = 1.570796327
+bv4w: sbend, l = 1.38, angle = -0.04100340928, ref_tilt = 1.570796327
+hq: monitor
+hqff: monitor
+qff6w: quadrupole, l = 0.945, k1 = -0.4320257024
+qff5w: quadrupole, l = 1.415, k1 = 0.4320385086
+qff4w: quadrupole, l = 0.68, k1 = -0.4309241463
+qff3w: quadrupole, l = 0.68, k1 = 0.4296563344
+qff2w: quadrupole, l = 1.415, k1 = -0.4327210556
+qff1w: quadrupole, l = 0.945, k1 = 0.4355907633
+q7w2: quadrupole, l = 0.375, k1 = 0.5100182514
+q9w2: quadrupole, l = 0.45, k1 = 0.5165649809
+qd: quadrupole, l = 0.235, k1 = -0.5037116682
+qf1: quadrupole, l = 0.47, k1 = 0.5148373645
+q1w2: quadrupole, l = 0.545, k1 = -0.5144561001
+q2w2: quadrupole, l = 0.59, k1 = 0.5206704002
+q3w2: quadrupole, l = 0.56, k1 = 0.5101517326
+q4w2: quadrupole, l = 0.67, k1 = -0.5166681483
+q5w2: quadrupole, l = 0.69, k1 = 0.5185577457
+q6w2: quadrupole, l = 0.785, k1 = -0.5184853392
+qff6e: quadrupole, l = 0.945, k1 = -0.4280618527
+qff5e: quadrupole, l = 1.415, k1 = 0.4323427116
+qff4e: quadrupole, l = 0.68, k1 = -0.4372470293
+qff3e: quadrupole, l = 0.68, k1 = 0.4309241463
+qff2e: quadrupole, l = 1.415, k1 = -0.4320385086
+qff1e: quadrupole, l = 0.945, k1 = 0.4320257024
+kmc: kicker, l = 0.15, hkick = 0, vkick = 0
+khv: kicker, l = 0, hkick = 0, vkick = 0
+mcq0: multipole
+mcs0: multipole
+mcs1: multipole, k2l = -1.05624831
+mcs2: multipole, k2l = 0.2436156071
+mco0: multipole
+mco1: multipole, k3l = -3
+mco2: multipole, k3l = -6
+c_mpd: solenoid, l = 5.25, ks = 0.01123349145
+c_spd: solenoid, l = 5.25, ks = 0
+c_ec: solenoid, l = 6, ks = 0.004493396582
+arf3w21: rfcavity, l = 2.085, voltage = 0 * 1e6, phi0 = --0.5 - 0.5, harmon = 65
+arf3w22: rfcavity, l = 1.9325, voltage = 0 * 1e6, phi0 = --0.5 - 0.5, harmon = 65
+arf3w25: rfcavity, l = 1.841, voltage = 0 * 1e6, phi0 = --0.5 - 0.5, harmon = 65
+
+MACHINE: LINE=(C_SPD, HQFF, QFF6W, HQFF, OO1, HQFF, QFF5W, HQFF, OO2,HQFF, QFF4W, HQFF, OQ2, KMC, KHV, MCQ0, MCS0, MCO0,
+          KMC, OQ0, H_BV1, BV4W,H_BV1, OBV12, H_BV2, BV3W2, H_BV2, OQ1, KMC, KHV, MCQ0, MCS0, MCO0, KMC,OQ3, OSW1, ARF3W21, OSW1,
+          OQ1, OMC, OQ4, OSW2, HQFF, Q1W2, HQFF, OQ1, KMC,KHV, MCQ0, MCS0, MCO1, KMC, OQ1, HQFF, Q2W2, HQFF, OQ5, HQFF, Q3W2,
+          HQFF,OQ1, KMC, KHV, MCQ0, MCS0, MCO2, KMC, OQ1, HQFF, Q4W2, HQFF, OSW3, ARF3W22,ARF3W22, OSW3O85, HQFF, Q5W2, HQFF,
+          OQ1, KMC, KHV, MCQ0, MCS0, MCO1, KMC,OQ6, HQFF, Q6W2, HQFF, O85, OQLBMD, MB2L, HD, BH, HD, MB2L, OBMBM, MB2L,HD, BH,
+          HD, MB2L, OBMMC1, KMC, KHV, MCQ0, MCS0, MCO0, KMC, OMCQL, HQ, Q7W2,HQ, OMISS1, KMC, KHV, MCQ0, MCS0, MCO0, KMC, OMCQL,
+          HQ, QD, HQ, HQ, QD, HQ,OMISS2, KMC, KHV, MCQ0, MCS0, MCO0, KMC, OMCQL, HQ, Q9W2, HQ, OQLBM1, MB2L,HD, BH, HD, MB2L,
+          OBMBM, MB2L, HD, BH, HD, MB2L, OBMMC, KMC, KHV, MCQ0,MCS1, MCO0, KMC, OMCQL, HQ, QD, HQ, HQ, QD, HQ, OQLBM, MB2L, HD,
+          BH, HD,MB2L, OBMBM, MB2L, HD, BH, HD, MB2L, OBMMC, KMC, KHV, MCQ0, MCS2, MCO0,KMC, OMCQL, HQ, QF1, HQ, OQLBM, MB2L, HD,
+          BH, HD, MB2L, OBMBM, MB2L, HD,BH, HD, MB2L, OBMMC, KMC, KHV, MCQ0, MCS1, MCO0, KMC, OMCQL, HQ, QD, HQ,HQ, QD, HQ,
+          OQLBM, MB2L, HD, BH, HD, MB2L, OBMBM, MB2L, HD, BH, HD, MB2L,OBMMC, KMC, KHV, MCQ0, MCS2, MCO0, KMC, OMCQL, HQ, QF1,
+          HQ, OQLBM, MB2L,HD, BH, HD, MB2L, OBMBM, MB2L, HD, BH, HD, MB2L, OBMMC, KMC, KHV, MCQ0,MCS1, MCO0, KMC, OMCQL, HQ, QD,
+          HQ, HQ, QD, HQ, OQLBM, MB2L, HD, BH, HD,MB2L, OBMBM, MB2L, HD, BH, HD, MB2L, OBMMC, KMC, KHV, MCQ0, MCS2, MCO0,KMC,
+          OMCQL, HQ, QF1, HQ, OQLBM, MB2L, HD, BH, HD, MB2L, OBMBM, MB2L, HD,BH, HD, MB2L, OBMMC, KMC, KHV, MCQ0, MCS1, MCO0,
+          KMC, OMCQL, HQ, QD, HQ,HQ, QD, HQ, OQLBM, MB2L, HD, BH, HD, MB2L, OBMBM, MB2L, HD, BH, HD, MB2L,OBMMC, KMC, KHV, MCQ0,
+          MCS2, MCO0, KMC, OMCQL, HQ, QF1, HQ, OQLBM, MB2L,HD, BH, HD, MB2L, OBMBM, MB2L, HD, BH, HD, MB2L, OBMMC, KMC, KHV,
+          MCQ0,MCS1, MCO0, KMC, OMCQL, HQ, QD, HQ, HQ, QD, HQ, OQLBM, MB2L, HD, BH, HD,MB2L, OBMBM, MB2L, HD, BH, HD, MB2L,
+          OBMMC, KMC, KHV, MCQ0, MCS2, MCO0,KMC, OMCQL, HQ, QF1, HQ, OQLBM, MB2L, HD, BH, HD, MB2L, OBMBM, MB2L, HD,BH, HD, MB2L,
+          OBMMC, KMC, KHV, MCQ0, MCS1, MCO0, KMC, OMCQL, HQ, QD, HQ,HQ, QD, HQ, OQLBM, MB2L, HD, BH, HD, MB2L, OBMBM, MB2L, HD,
+          BH, HD, MB2L,OBMMC, KMC, KHV, MCQ0, MCS2, MCO0, KMC, OMCQL, HQ, QF1, HQ, OQLBM, MB2L,HD, BH, HD, MB2L, OBMBM, MB2L, HD,
+          BH, HD, MB2L, OBMMC, KMC, KHV, MCQ0,MCS1, MCO0, KMC, OMCQL, HQ, QD, HQ, HQ, QD, HQ, OQLBM, MB2L, HD, BH, HD,MB2L,
+          OBMBM, MB2L, HD, BH, HD, MB2L, OBMMC, KMC, KHV, MCQ0, MCS2, MCO0,KMC, OMCQL, HQ, QF1, HQ, OQLBM, MB2L, HD, BH, HD,
+          MB2L, OBMBM, MB2L, HD,BH, HD, MB2L, OBMMC, KMC, KHV, MCQ0, MCS1, MCO0, KMC, OMCQL, HQ, QD, HQ,HQ, QD, HQ, OQLBM, MB2L,
+          HD, BH, HD, MB2L, OBMBM, MB2L, HD, BH, HD, MB2L,OBMMC, KMC, KHV, MCQ0, MCS2, MCO0, KMC, OMCQL, HQ, QF1, HQ, OQLBM,
+          MB2L,HD, BH, HD, MB2L, OBMBM, MB2L, HD, BH, HD, MB2L, OBMMC, KMC, KHV, MCQ0,MCS0, MCO0, KMC, OMCQL, HQ, QD, HQ, HQ, QD,
+          HQ, OQLBM, MB2L, HD, BH, HD,MB2L, OBMBM, MB2L, HD, BH, HD, MB2L, OBMMC2, KMC, KHV, MCQ0, MCS0, MCO0,KMC, OMCQL, HQ,
+          Q9W2, HQ, OMISS3, KMC, KHV, MCQ0, MCS0, MCO0, KMC, OMCQL,HQ, QD, HQ, HQ, QD, HQ, OMISS4, KMC, KHV, MCQ0, MCS0, MCO0,
+          KMC, OMCQL, HQ,Q7W2, HQ, OQLBM2, MB2L, HD, BH, HD, MB2L, OBMBM, MB2L, HD, BH, HD, MB2L,OBMMCOMCOMCQL, O85, HQFF, Q6W2,
+          HQFF, OQ6, KMC, KHV, MCQ0, MCS0, MCO1, KMC,OQ1, HQFF, Q5W2, HQFF, ONW3O85, C_EC, ONW3, HQFF, Q4W2, HQFF, OQ1, KMC,KHV,
+          MCQ0, MCS0, MCO2, KMC, OQ1, HQFF, Q3W2, HQFF, OQ5, HQFF, Q2W2, HQFF,OQ1, KMC, KHV, MCQ0, MCS0, MCO1, KMC, OQ1, HQFF,
+          Q1W2, HQFF, ONW2, OQ4,OMC, OQ1, ONW1, OQ3, KMC, KHV, MCQ0, MCS0, MCO0, KMC, OQ1, H_BV2, BV2W2,H_BV2, OBV12, H_BV1,
+          BV1W, H_BV1, OQ0, KMC, KHV, MCQ0, MCS0, MCO0, KMC,OQ2, HQFF, QFF3W, HQFF, OO2, HQFF, QFF2W, HQFF, OO1, HQFF, QFF1W,
+          HQFF,C_MPD, C_MPD, HQFF, QFF6E, HQFF, OO1, HQFF, QFF5E, HQFF, OO2, HQFF, QFF4E,HQFF, OQ2, KMC, KHV, MCQ0, MCS0, MCO0,
+          KMC, OQ0, H_BV1, BV4E, H_BV1, OBV12,H_BV2, BV3E2, H_BV2, OQ1, KMC, KHV, MCQ0, MCS0, MCO0, KMC, OQ3, ONE1, OQ1,OMC, OQ4,
+          ONE2, HQFF, Q1W2, HQFF, OQ1, KMC, KHV, MCQ0, MCS0, MCO1, KMC,OQ1, HQFF, Q2W2, HQFF, OQ5, HQFF, Q3W2, HQFF, OQ1, KMC,
+          KHV, MCQ0, MCS0,MCO2, KMC, OQ1, HQFF, Q4W2, HQFF, ONE3, ARF3W25, ARF3W25, ARF3W25, ARF3W25,ARF3W25, ONE3O85, HQFF,
+          Q5W2, HQFF, OQ1, KMC, KHV, MCQ0, MCS0, MCO1, KMC,OQ6, HQFF, Q6W2, HQFF, O85, OQLBMD, MB2L, HD, BH, HD, MB2L, OBMBM,
+          MB2L,HD, BH, HD, MB2L, OBMMC1, KMC, KHV, MCQ0, MCS0, MCO0, KMC, OMCQL, HQ, Q7W2,HQ, OQLKM1, OKM1, OKM1MC, KMC, KHV,
+          MCQ0, MCS0, MCO0, KMC, OMCQL, HQ, QD,HQ, HQ, QD, HQ, OQLSM1, OSM1, OSM1MC, KMC, KHV, MCQ0, MCS0, MCO0, KMC,OMCQL, HQ,
+          Q9W2, HQ, OQLBM1, MB2L, HD, BH, HD, MB2L, OBMBM, MB2L, HD, BH,HD, MB2L, OBMMC, KMC, KHV, MCQ0, MCS1, MCO0, KMC, OMCQL,
+          HQ, QD, HQ, HQ,QD, HQ, OQLBM, MB2L, HD, BH, HD, MB2L, OBMBM, MB2L, HD, BH, HD, MB2L,OBMMC, KMC, KHV, MCQ0, MCS2, MCO0,
+          KMC, OMCQL, HQ, QF1, HQ, OQLBM, MB2L,HD, BH, HD, MB2L, OBMBM, MB2L, HD, BH, HD, MB2L, OBMMC, KMC, KHV, MCQ0,MCS1, MCO0,
+          KMC, OMCQL, HQ, QD, HQ, HQ, QD, HQ, OQLBM, MB2L, HD, BH, HD,MB2L, OBMBM, MB2L, HD, BH, HD, MB2L, OBMMC, KMC, KHV, MCQ0,
+          MCS2, MCO0,KMC, OMCQL, HQ, QF1, HQ, OQLBM, MB2L, HD, BH, HD, MB2L, OBMBM, MB2L, HD,BH, HD, MB2L, OBMMC, KMC, KHV, MCQ0,
+          MCS1, MCO0, KMC, OMCQL, HQ, QD, HQ,HQ, QD, HQ, OQLBM, MB2L, HD, BH, HD, MB2L, OBMBM, MB2L, HD, BH, HD, MB2L,OBMMC, KMC,
+          KHV, MCQ0, MCS2, MCO0, KMC, OMCQL, HQ, QF1, HQ, OQLBM, MB2L,HD, BH, HD, MB2L, OBMBM, MB2L, HD, BH, HD, MB2L, OBMMC,
+          KMC, KHV, MCQ0,MCS1, MCO0, KMC, OMCQL, HQ, QD, HQ, HQ, QD, HQ, OQLBM, MB2L, HD, BH, HD,MB2L, OBMBM, MB2L, HD, BH, HD,
+          MB2L, OBMMC, KMC, KHV, MCQ0, MCS2, MCO0,KMC, OMCQL, HQ, QF1, HQ, OQLBM, MB2L, HD, BH, HD, MB2L, OBMBM, MB2L, HD,BH, HD,
+          MB2L, OBMMC, KMC, KHV, MCQ0, MCS1, MCO0, KMC, OMCQL, HQ, QD, HQ,HQ, QD, HQ, OQLBM, MB2L, HD, BH, HD, MB2L, OBMBM, MB2L,
+          HD, BH, HD, MB2L,OBMMC, KMC, KHV, MCQ0, MCS2, MCO0, KMC, OMCQL, HQ, QF1, HQ, OQLBM, MB2L,HD, BH, HD, MB2L, OBMBM, MB2L,
+          HD, BH, HD, MB2L, OBMMC, KMC, KHV, MCQ0,MCS1, MCO0, KMC, OMCQL, HQ, QD, HQ, HQ, QD, HQ, OQLBM, MB2L, HD, BH, HD,MB2L,
+          OBMBM, MB2L, HD, BH, HD, MB2L, OBMMC, KMC, KHV, MCQ0, MCS2, MCO0,KMC, OMCQL, HQ, QF1, HQ, OQLBM, MB2L, HD, BH, HD,
+          MB2L, OBMBM, MB2L, HD,BH, HD, MB2L, OBMMC, KMC, KHV, MCQ0, MCS1, MCO0, KMC, OMCQL, HQ, QD, HQ,HQ, QD, HQ, OQLBM, MB2L,
+          HD, BH, HD, MB2L, OBMBM, MB2L, HD, BH, HD, MB2L,OBMMC, KMC, KHV, MCQ0, MCS2, MCO0, KMC, OMCQL, HQ, QF1, HQ, OQLBM,
+          MB2L,HD, BH, HD, MB2L, OBMBM, MB2L, HD, BH, HD, MB2L, OBMMC, KMC, KHV, MCQ0,MCS1, MCO0, KMC, OMCQL, HQ, QD, HQ, HQ, QD,
+          HQ, OQLBM, MB2L, HD, BH, HD,MB2L, OBMBM, MB2L, HD, BH, HD, MB2L, OBMMC, KMC, KHV, MCQ0, MCS2, MCO0,KMC, OMCQL, HQ, QF1,
+          HQ, OQLBM, MB2L, HD, BH, HD, MB2L, OBMBM, MB2L, HD,BH, HD, MB2L, OBMMC, KMC, KHV, MCQ0, MCS0, MCO0, KMC, OMCQL, HQ, QD,
+          HQ,HQ, QD, HQ, OQLBM, MB2L, HD, BH, HD, MB2L, OBMBM, MB2L, HD, BH, HD, MB2L,OBMMC2, KMC, KHV, MCQ0, MCS0, MCO0, KMC,
+          OMCQL, HQ, Q9W2, HQ, OQLSM2, OSM2,OSM2MC, KMC, KHV, MCQ0, MCS0, MCO0, KMC, OMCQL, HQ, QD, HQ, HQ, QD, HQ,OQLKM2, OKM2,
+          OKM2MC, KMC, KHV, MCQ0, MCS0, MCO0, KMC, OMCQL, HQ, Q7W2, HQ,OQLBM2, MB2L, HD, BH, HD, MB2L, OBMBM, MB2L, HD, BH, HD,
+          MB2L,OBMMCOMCOMCQL, O85, HQFF, Q6W2, HQFF, OQ6, KMC, KHV, MCQ0, MCS0, MCO1, KMC,OQ1, HQFF, Q5W2, HQFF, OSE3O85, HQFF,
+          Q4W2, HQFF, OQ1, KMC, KHV, MCQ0,MCS0, MCO2, KMC, OQ1, HQFF, Q3W2, HQFF, OQ5, HQFF, Q2W2, HQFF, OQ1, KMC,KHV, MCQ0,
+          MCS0, MCO1, KMC, OQ1, HQFF, Q1W2, HQFF, OSE2, OQ4, OMC, OQ1,OSE1, OQ3, KMC, KHV, MCQ0, MCS0, MCO0, KMC, OQ1, H_BV2,
+          BV2E2, H_BV2,OBV12, H_BV1, BV1E, H_BV1, OQ0, KMC, KHV, MCQ0, MCS0, MCO0, KMC, OQ2, HQFF,QFF3E, HQFF, OO2, HQFF, QFF2E,
+          HQFF, OO1, HQFF, QFF1E, HQFF, C_SPD)
+
+parameter[E_tot] = 13.54435861 * 1e9
+
+use, machine
+
+beginning[beta_a] = 0.6
+beginning[beta_b] = 0.6
+beginning[alpha_a] = 0
+beginning[alpha_a] = 0
+beginning[eta_x] = 0
+beginning[eta_y] = 0
+beginning[etap_x] = 0
+beginning[etap_y] = 0
+
+

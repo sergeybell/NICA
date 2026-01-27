@@ -1,0 +1,24 @@
+ Beam parameters from radiation calculation:
+    emit_a (m*rad)  :    3.6340766986020113E-005
+    emit_b (m*rad)  :    4.6752951576026026E-014
+    sigmaE_E (rel.) :    2.3037703947684208E-003
+    sigma_z (m)     :    1.0000000000000000E+030
+
+ User-adjusted beam parameters at zero current:
+    emit_a (m*rad)  :    3.8000000000000001E-009
+    emit_b (m*rad)  :    1.7900000000000001E-011
+    sigmaE_E (rel.) :    2.3037703947684208E-003
+    sigma_z (m)     :    1.0000000000000000E+030
+
+ Beam parameters at full current with PWD, but without IBS:
+    emit_a (m*rad)  :    3.8000000000000001E-009
+    emit_b (m*rad)  :    1.7900000000000001E-011
+    sigmaE_E (rel.) :    2.3037703947684208E-003
+    sigma_z (m)     :    1.0000000000000000E+030
+
+ Beam parameters at full current with PWD and IBS:
+    emit_a (m*rad)  :    3.8000000000000001E-009
+    emit_b (m*rad)  :    1.7900000000000001E-011
+    sigmaE_E (rel.) :    2.3037703947684208E-003
+    sigma_z (m)     :    1.0000000000000000E+030
+

@@ -1,0 +1,44 @@
+&tao_start
+  n_universes = 1
+  plot_file = 'tao_plot_1.init' 
+  startup_file = "tao.startup"
+/
+
+&tao_design_lattice
+  design_lattice(1)%file='/media/sf_GIT_REPOS/NICA/BMAD/lattices/My NICA (renew).bmad'
+
+/
+
+&tao_global_struct
+  global%stop_on_error = T
+/
+
+&tao_params
+  global%prompt_color = "CYAN"
+  global%n_opti_loops = 10
+  global%n_opti_cycles = 30
+  global%plot_on = T
+  global%track_type = 'beam'
+  global%beam_timer_on = F
+  bmad_com%spin_tracking_on = F
+  bmad_com%radiation_damping_on = F
+  bmad_com%radiation_fluctuations_on = F
+  bmad_com%radiation_zero_average = F
+  global%rf_on = F
+/
+
+&tao_beam_init
+  beam_init%n_particle = 10
+  !beam_init%random_engine = 'quasi'
+  beam_init%random_engine = 'pseudo'
+  ix_universe = 1
+  saved_at =  "MARKER::*, BEGINNING, END"
+  beam_init%a_norm_emit = 1.0e-6  ! normalized emit = emit * gamma
+  beam_init%b_norm_emit = 1.0e-6  ! normalized emit = emit * gamma
+  beam_init%dPz_dz = 0.0
+  beam_init%n_bunch = 10
+  beam_init%bunch_charge = 1.6E-14
+  beam_init%sig_pz = 0e-9
+  beam_init%sig_z = 0.000899377 ! 3 ps * cLight
+/
+
