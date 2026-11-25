@@ -10,33 +10,148 @@
   superscriptaddress
 ]{revtex4-2}
 
+% REVTeX already loads natbib and, with the class options above, amsmath/amssymb.
+% Do not load cite, caption, or subcaption: they are incompatible with revtex4-2.
 \usepackage[T2A]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[russian]{babel}
 \usepackage{graphicx}
 \usepackage{booktabs}
 \usepackage{array}
+\usepackage{longtable}
+\usepackage{makecell}
 \usepackage{siunitx}
+\sisetup{inter-unit-product=\ensuremath{\cdot}}
+\usepackage{etoolbox}
+\setlength{\marginparwidth}{2cm}
+\usepackage{todonotes}
 \usepackage{url}
 
+% REVTeX 4.2f does not recognize array.sty from 2024 and replaces both the
+% column parser and longtable with older copies. Those copies cannot build
+% p{} columns, so the parameter tables fail. Restore the current array and
+% longtable definitions after the class has patched them.
+\makeatletter
+\let\CDR@mkpream\@mkpream
+\let\CDR@classx\@classx
+\let\CDR@array\@array
+\let\CDR@tabular\@tabular
+\let\CDR@tabarray\@tabarray
+\let\CDR@@array\array
+\let\CDR@endarray\endarray
+\let\CDR@endtabular\endtabular
+\let\CDR@arrayacol\@arrayacol
+\let\CDR@tabacol\@tabacol
+\let\CDR@insert@column\insert@column
+\let\CDR@arraycr\@arraycr
+\let\CDR@xarraycr\@xarraycr
+\let\CDR@xargarraycr\@xargarraycr
+\let\CDR@yargarraycr\@yargarraycr
+\let\CDR@longtable\longtable
+\let\CDR@endlongtable\endlongtable
+\let\CDR@LT@start\LT@start
+\let\CDR@LT@end\LT@end@hd@ft
+\let\CDR@LT@array\LT@array
+\AtBeginDocument{%
+  \let\@mkpream\CDR@mkpream
+  \let\@classx\CDR@classx
+  \let\@array\CDR@array
+  \let\@tabular\CDR@tabular
+  \let\@tabarray\CDR@tabarray
+  \let\array\CDR@@array
+  \let\endarray\CDR@endarray
+  \let\endtabular\CDR@endtabular
+  \let\@arrayacol\CDR@arrayacol
+  \let\@tabacol\CDR@tabacol
+  \let\insert@column\CDR@insert@column
+  \let\@arraycr\CDR@arraycr
+  \let\@xarraycr\CDR@xarraycr
+  \let\@xargarraycr\CDR@xargarraycr
+  \let\@yargarraycr\CDR@yargarraycr
+  \let\longtable\CDR@longtable
+  \let\endlongtable\CDR@endlongtable
+  \let\LT@start\CDR@LT@start
+  \let\LT@end@hd@ft\CDR@LT@end
+  \let\LT@array\CDR@LT@array
+  % REVTeX removes \@makecol. longtable calls it when a table breaks
+  % across pages; the page body is already boxed in \@cclv.
+  \gdef\@makecol{\setbox\@outputbox\box\@cclv}%
+}
+% Date without the ``Dated:'' prefix; keep mixed case (APS uppercases RRAP).
+\def\Dated@name{}%
+\def\@gobble@leavemode@uppercase#1#2{}%
+% Hide subsubsections/paragraphs in the TOC. Replace REVTeX's adaptive
+% \l@@sections (which drifts after a page break in long TOCs) with fixed
+% indents so every subsection line aligns.
+\def\l@subsubsection#1#2{}%
+\def\l@paragraph#1#2{}%
+\def\l@section#1#2{%
+  \addpenalty{\@secpenalty}%
+  \addvspace{0.85em plus 0.2em}%
+  \begingroup
+    \parindent\z@\rightskip\@pnumwidth\parfillskip-\@pnumwidth
+    \def\numberline##1{%
+      \hb@xt@3.0em{\if\relax\detokenize{##1}\relax\else##1.\fi\hfil}}%
+    \bfseries\leavevmode#1\nobreak\hfil\nobreak
+    \hb@xt@\@pnumwidth{\hss\mdseries#2}\par
+  \endgroup
+}%
+\def\l@subsection#1#2{%
+  \addpenalty{\@secpenalty}%
+  \begingroup
+    \parindent\z@\leftskip2.2em\relax
+    \rightskip\@pnumwidth\parfillskip-\@pnumwidth
+    \def\numberline##1{\hb@xt@1.6em{##1.\hfil}}%
+    \leavevmode#1\nobreak\hfil\nobreak
+    \hb@xt@\@pnumwidth{\hss#2}\par
+  \endgroup
+}%
+\makeatother
+
 \graphicspath{{figures/}}
+% Keep floats near their first citation and avoid large empty regions.
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\renewcommand{\textfraction}{0.07}
+\renewcommand{\floatpagefraction}{0.7}
+\setcounter{topnumber}{4}
+\setcounter{bottomnumber}{3}
+\setcounter{totalnumber}{6}
+\setlength{\textfloatsep}{12pt plus 4pt minus 3pt}
+\setlength{\floatsep}{10pt plus 3pt minus 3pt}
+\setlength{\intextsep}{10pt plus 3pt minus 3pt}
+
+% Empty subcaptions previously came from subcaption. This panel environment
+% prints (a), (b), ... under each image without loading caption.sty.
+\newcounter{panel}
+\renewcommand{\thepanel}{\alph{panel}}
+\AtBeginEnvironment{figure}{\setcounter{panel}{0}}
+\newenvironment{panel}[2][c]{%
+  \begin{minipage}[#1]{#2}%
+    \centering
+    \refstepcounter{panel}%
+}{%
+    \par\vspace{0.35em}{\footnotesize(\thepanel)}\par
+  \end{minipage}%
+}
 
 \begin{document}
 
 \title{Прохождение критической энергии в коллайдере NICA}
-
-\author{С.~Д.~Колокольчиков}
-\affiliation{Институт ядерных исследований РАН, Москва, Россия}
-\email{sergey.bell13@gmail.com}
-
 \date{\today}
 
-\begin{abstract}
-Рассмотрено прохождение критической энергии протонного пучка в коллайдере NICA.
-Текст находится в подготовке.
-\end{abstract}
+\author{S.~D. Kolokolchikov}
+\affiliation{Institute for Nuclear Research of the Russian Academy of Sciences, Moscow 117312, Russia}
+\affiliation{Moscow Institute of Physics and Technology, Dolgoprudny 141701, Russia}
 
+% Vertically center the title block on the first page.
+\null\vspace*{\fill}
 \maketitle
+\vspace*{\fill}
+\newpage
+
+\tableofcontents
+\newpage
 
 \input{chapters/01-introduction}
 \input{chapters/02-longitudinal}
@@ -46,8 +161,6 @@
 \input{chapters/06-common-limits}
 \input{chapters/07-comparison}
 \input{chapters/08-work-plan}
-
-\nocite{*}
 
 \bibliography{bib/references}
 
