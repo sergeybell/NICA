@@ -1,0 +1,14 @@
+# Сборка LaTeX (PDF не коммитим)
+latex/*.aux
+latex/*.log
+latex/*.out
+latex/*.toc
+latex/*.bbl
+latex/*.blg
+latex/*.synctex.gz
+latex/*.fdb_latexmk
+latex/*.fls
+latex/*.pdf
+latex/mainNotes.bib
+latex/*.nav
+latex/*.snm
