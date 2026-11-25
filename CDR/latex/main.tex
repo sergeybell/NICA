@@ -1,0 +1,54 @@
+\documentclass[%
+  aps,
+  pra,
+  preprint,
+  a4paper,
+  amsmath,
+  amssymb,
+  floatfix,
+  longbibliography,
+  superscriptaddress
+]{revtex4-2}
+
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{siunitx}
+\usepackage{url}
+
+\graphicspath{{figures/}}
+
+\begin{document}
+
+\title{Прохождение критической энергии в коллайдере NICA}
+
+\author{С.~Д.~Колокольчиков}
+\affiliation{Институт ядерных исследований РАН, Москва, Россия}
+\email{sergey.bell13@gmail.com}
+
+\date{\today}
+
+\begin{abstract}
+Рассмотрено прохождение критической энергии протонного пучка в коллайдере NICA.
+Текст находится в подготовке.
+\end{abstract}
+
+\maketitle
+
+\input{chapters/01-introduction}
+\input{chapters/02-longitudinal}
+\input{chapters/03-u70}
+\input{chapters/04-path-a-jump}
+\input{chapters/05-path-b-resonant}
+\input{chapters/06-common-limits}
+\input{chapters/07-comparison}
+\input{chapters/08-work-plan}
+
+\nocite{*}
+
+\bibliography{bib/references}
+
+\end{document}
